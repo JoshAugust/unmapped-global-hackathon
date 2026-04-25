@@ -105,14 +105,14 @@ function Amara() {
             <span className="text-ink"> UNMAPPED is built for her — not a generic 'youth user'.</span>
           </p>
         </div>
-        <div className="relative rounded-sm border border-ink bg-paper p-6 shadow-[8px_8px_0_0_var(--ink)]">
-          <div className="flex items-start justify-between border-b border-ink pb-3">
+        <div className="relative border border-line bg-sand p-6">
+          <div className="flex items-start justify-between border-b border-line pb-3">
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Skill Passport · sample</div>
-              <div className="font-display text-2xl font-bold">Amara O.</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Skill Passport · sample</div>
+              <div className="font-display text-2xl font-black">Amara O.</div>
               <div className="text-sm text-muted-foreground">Accra, Ghana · age 22</div>
             </div>
-            <div className="font-mono text-[10px] uppercase tracking-wider text-cobalt">verified · portable</div>
+            <div className="bg-cobalt px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-paper">verified</div>
           </div>
           <div className="mt-4 space-y-3">
             {[
@@ -125,18 +125,18 @@ function Amara() {
               <div key={label as string}>
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-medium">{label}</span>
-                  <span className="font-mono text-[10px] uppercase text-muted-foreground">
+                  <span className="text-xs text-muted-foreground">
                     {yrs ? `${yrs}y` : "fluent"} · conf {(Number(conf) * 100).toFixed(0)}%
                   </span>
                 </div>
-                <div className="mt-1 h-1.5 w-full bg-sand">
+                <div className="mt-1 h-1.5 w-full bg-paper">
                   <div className="h-full bg-cobalt" style={{ width: `${(Number(conf)) * 100}%` }} />
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-5 flex items-center justify-between border-t border-line pt-3">
-            <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">ESCO-aligned · ISCO clusters resolved</div>
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">ESCO-aligned · ISCO clusters resolved</div>
             <div className="font-mono text-xs">PASS-7F2A·4Q19</div>
           </div>
         </div>
@@ -158,23 +158,27 @@ function Modules() {
       meta: "WBES · ILOSTAT · Wittgenstein 25–35" },
   ];
   return (
-    <section className="border-b border-line">
+    <section className="border-b border-line bg-sand">
       <div className="mx-auto max-w-[1400px] px-6 py-20">
-        <div className="flex items-end justify-between">
-          <h2 className="max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">
-            Three failures.<br/>One protocol.
-          </h2>
-          <div className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:block">infrastructure · not product</div>
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cobalt">What we built</div>
+            <h2 className="mt-3 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">
+              Three failures.<br/>One protocol.
+            </h2>
+          </div>
+          <div className="hidden text-xs uppercase tracking-[0.2em] text-muted-foreground md:block">infrastructure · not product</div>
         </div>
-        <div className="mt-12 grid gap-px bg-ink md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {items.map(i => (
-            <Link key={i.n} to={i.to} className="group relative bg-paper p-8 transition-colors hover:bg-cobalt-soft">
-              <div className="font-display text-7xl font-black text-cobalt">{i.n}</div>
-              <h3 className="mt-4 font-display text-2xl font-bold">{i.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{i.body}</p>
-              <div className="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-[10px] uppercase tracking-wider">
-                <span className="text-muted-foreground">{i.meta}</span>
-                <span className="text-ink group-hover:translate-x-1 transition-transform">open →</span>
+            <Link key={i.n} to={i.to}
+              className="group relative flex flex-col border-t-4 border-cobalt bg-paper p-8 transition-shadow hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]">
+              <div className="text-xs font-semibold uppercase tracking-wider text-cobalt">Module {i.n}</div>
+              <h3 className="mt-2 font-display text-2xl font-black">{i.title}</h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/70">{i.body}</p>
+              <div className="mt-6 flex items-center justify-between border-t border-line pt-3 text-xs">
+                <span className="uppercase tracking-wider text-muted-foreground">{i.meta}</span>
+                <span className="font-semibold text-cobalt transition-transform group-hover:translate-x-1">Explore →</span>
               </div>
             </Link>
           ))}
@@ -189,25 +193,25 @@ function getCountry(key: keyof typeof COUNTRIES) { return COUNTRIES[key]; }
 
 function Configurability({ country }: { country: Country }) {
   return (
-    <section className="bg-ink text-paper">
+    <section className="bg-cobalt text-paper">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-2">
         <div>
-          <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-cobalt-soft">The country-agnostic requirement</div>
-          <h2 className="mt-3 font-display text-4xl font-black leading-tight md:text-5xl">
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/80">The country-agnostic requirement</div>
+          <h2 className="mt-3 font-display text-4xl font-black leading-tight text-paper md:text-5xl">
             Same code.<br/>Different country.<br/>No rebuild.
           </h2>
-          <p className="mt-6 max-w-md text-lg text-paper/70">
+          <p className="mt-6 max-w-md text-lg text-paper/95">
             Currently configured for <span className="font-semibold text-paper">{country.region}</span>.
             Swap the config and the entire stack — taxonomy, language, automation calibration, opportunity types — re-orients to a new context.
           </p>
           <Link to="/configure"
-            className="mt-8 inline-flex items-center gap-2 rounded-sm bg-cobalt px-6 py-3 font-mono text-xs uppercase tracking-wider text-paper hover:bg-paper hover:text-ink">
-            See the config layer →
+            className="mt-8 inline-flex items-center gap-2 bg-paper px-6 py-3 text-sm font-semibold text-cobalt hover:bg-ink hover:text-paper">
+            See the config layer
           </Link>
         </div>
-        <div className="rounded-sm border border-paper/20 bg-ink/40 p-6 font-mono text-xs leading-relaxed">
+        <div className="border border-paper/30 bg-ink p-6 font-mono text-xs leading-relaxed text-paper">
           <div className="mb-3 flex items-center justify-between">
-            <span className="text-cobalt-soft uppercase tracking-wider">{country.country.toLowerCase()}.config.json</span>
+            <span className="uppercase tracking-wider text-cobalt">{country.country.toLowerCase()}.config.json</span>
             <span className="text-paper/40">read-only</span>
           </div>
           <pre className="overflow-x-auto whitespace-pre text-paper/90">
