@@ -1,0 +1,588 @@
+{
+  "country_code": "NGA",
+  "country_name": "Nigeria",
+  "occupation_lookup": [
+    {
+      "isco08": 7422,
+      "title": "Electronics Mechanics and Servicers",
+      "sector": "ICT/Electronics",
+      "notes": "Phone repair, device servicing \u2014 dominant in urban Ghana/Nigeria",
+      "automation_prob": 0.261,
+      "risk_tier": "low",
+      "risk_explanation": "This occupation shows low automation exposure (26%) in NGA. Skills involving judgment, care, and physical dexterity are harder to automate.",
+      "durable_skills": [
+        "Specialisation in your current field",
+        "Leadership and team management",
+        "Digital tools",
+        "Entrepreneurship"
+      ],
+      "adjacent_upskill": [
+        "Solar panel installation and repair",
+        "CCTV and security systems",
+        "Computer networking basics"
+      ],
+      "sector_median_wage_usd": 512,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 5221,
+      "title": "Shopkeepers and Stall Keepers",
+      "sector": "Trade",
+      "notes": "Market traders, small retail \u2014 largest urban informal sector",
+      "automation_prob": 0.616,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (62% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital marketing and social media selling",
+        "Mobile money business account management",
+        "Inventory management software"
+      ],
+      "sector_median_wage_usd": 118,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 5222,
+      "title": "Shop Salespersons",
+      "sector": "Trade",
+      "notes": "Retail assistants in small shops",
+      "automation_prob": 0.616,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (62% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital marketing and social media selling",
+        "Mobile money business account management",
+        "Inventory management software"
+      ],
+      "sector_median_wage_usd": 118,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 7543,
+      "title": "Product Graders and Testers",
+      "sector": "Agriculture/Trade",
+      "notes": "Agricultural produce sorting and grading",
+      "automation_prob": 0.657,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (66% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital literacy",
+        "Business management basics"
+      ],
+      "sector_median_wage_usd": 61,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 7531,
+      "title": "Tailors, Dressmakers, Hatters",
+      "sector": "Garment/Textile",
+      "notes": "Tailoring \u2014 significant informal sector in Ghana/Nigeria",
+      "automation_prob": 0.395,
+      "risk_tier": "low",
+      "risk_explanation": "This occupation shows low automation exposure (40%) in NGA. Skills involving judgment, care, and physical dexterity are harder to automate.",
+      "durable_skills": [
+        "Specialisation in your current field",
+        "Leadership and team management",
+        "Digital tools",
+        "Entrepreneurship"
+      ],
+      "adjacent_upskill": [
+        "Fashion design software",
+        "Export market quality standards",
+        "Pattern cutting for export"
+      ],
+      "sector_median_wage_usd": 142,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 5141,
+      "title": "Hairdressers, Barbers",
+      "sector": "Personal Services",
+      "notes": "Large informal personal services sector",
+      "automation_prob": null,
+      "risk_tier": "unknown",
+      "risk_explanation": "Automation risk data not available for this occupation in this region.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital literacy",
+        "Business management basics"
+      ],
+      "sector_median_wage_usd": 118,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 8322,
+      "title": "Car, Taxi and Van Drivers",
+      "sector": "Transport",
+      "notes": "Okada/trotro/keke \u2014 dominant informal transport",
+      "automation_prob": 0.576,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (58% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Logistics and delivery platform apps",
+        "Vehicle maintenance basics",
+        "Customer service for gig platforms"
+      ],
+      "sector_median_wage_usd": 142,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 8331,
+      "title": "Bus and Tram Drivers",
+      "sector": "Transport",
+      "notes": "Minibus operators",
+      "automation_prob": 0.596,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (60% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Logistics and delivery platform apps",
+        "Vehicle maintenance basics",
+        "Customer service for gig platforms"
+      ],
+      "sector_median_wage_usd": 142,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 9111,
+      "title": "Domestic Cleaners and Helpers",
+      "sector": "Domestic Services",
+      "notes": "Domestic workers \u2014 significant female employment",
+      "automation_prob": 0.442,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (44% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital literacy",
+        "Business management basics"
+      ],
+      "sector_median_wage_usd": 118,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 9412,
+      "title": "Kitchen Helpers",
+      "sector": "Food Services",
+      "notes": "Informal food preparation/chop bar workers",
+      "automation_prob": null,
+      "risk_tier": "unknown",
+      "risk_explanation": "Automation risk data not available for this occupation in this region.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Food safety certification",
+        "Catering business management",
+        "Online food ordering platforms"
+      ],
+      "sector_median_wage_usd": 118,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 5120,
+      "title": "Cooks",
+      "sector": "Food Services",
+      "notes": "Street food vendors, chop bar cooks",
+      "automation_prob": 0.643,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (64% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Food safety certification",
+        "Catering business management",
+        "Online food ordering platforms"
+      ],
+      "sector_median_wage_usd": 118,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 7112,
+      "title": "Bricklayers and Related Workers",
+      "sector": "Construction",
+      "notes": "Construction \u2014 key male informal employment",
+      "automation_prob": null,
+      "risk_tier": "unknown",
+      "risk_explanation": "Automation risk data not available for this occupation in this region.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Building inspection",
+        "Project management basics",
+        "Safety supervision"
+      ],
+      "sector_median_wage_usd": 109,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 7115,
+      "title": "Carpenters and Joiners",
+      "sector": "Construction",
+      "notes": "Artisanal carpentry",
+      "automation_prob": 0.482,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (48% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Building inspection",
+        "Project management basics",
+        "Safety supervision"
+      ],
+      "sector_median_wage_usd": 109,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 4132,
+      "title": "Data Entry Clerks",
+      "sector": "Admin/ICT",
+      "notes": "Growing with digital economy",
+      "automation_prob": 0.663,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (66% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital literacy",
+        "Business management basics"
+      ],
+      "sector_median_wage_usd": 512,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 2512,
+      "title": "Software Developers",
+      "sector": "ICT",
+      "notes": "Growing tech sector in Lagos/Accra",
+      "automation_prob": 0.028,
+      "risk_tier": "low",
+      "risk_explanation": "This occupation shows low automation exposure (3%) in NGA. Skills involving judgment, care, and physical dexterity are harder to automate.",
+      "durable_skills": [
+        "Specialisation in your current field",
+        "Leadership and team management",
+        "Digital tools",
+        "Entrepreneurship"
+      ],
+      "adjacent_upskill": [
+        "Cloud computing basics",
+        "Cybersecurity fundamentals",
+        "Mobile app development"
+      ],
+      "sector_median_wage_usd": 512,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 2356,
+      "title": "Vocational Education Teachers",
+      "sector": "Education",
+      "notes": "TVET teachers",
+      "automation_prob": 0.003,
+      "risk_tier": "low",
+      "risk_explanation": "This occupation shows low automation exposure (0%) in NGA. Skills involving judgment, care, and physical dexterity are harder to automate.",
+      "durable_skills": [
+        "Specialisation in your current field",
+        "Leadership and team management",
+        "Digital tools",
+        "Entrepreneurship"
+      ],
+      "adjacent_upskill": [
+        "E-learning content development",
+        "TVET instructional design",
+        "Assessment and certification"
+      ],
+      "sector_median_wage_usd": 198,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 2221,
+      "title": "Nursing Professionals",
+      "sector": "Health",
+      "notes": "Community nurses",
+      "automation_prob": 0.006,
+      "risk_tier": "low",
+      "risk_explanation": "This occupation shows low automation exposure (1%) in NGA. Skills involving judgment, care, and physical dexterity are harder to automate.",
+      "durable_skills": [
+        "Specialisation in your current field",
+        "Leadership and team management",
+        "Digital tools",
+        "Entrepreneurship"
+      ],
+      "adjacent_upskill": [
+        "Community health worker certification",
+        "Health data management",
+        "Telemedicine support"
+      ],
+      "sector_median_wage_usd": 231,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 9211,
+      "title": "Crop Farm Labourers",
+      "sector": "Agriculture",
+      "notes": "Peri-urban farming, significant in Ghana",
+      "automation_prob": 0.657,
+      "risk_tier": "medium",
+      "risk_explanation": "Some tasks in this work (66% probability) could be automated, but hands-on, relationship-based aspects are more durable.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital literacy",
+        "Business management basics"
+      ],
+      "sector_median_wage_usd": 61,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    },
+    {
+      "isco08": 3439,
+      "title": "Administrative and Executive Secretaries",
+      "sector": "Admin",
+      "notes": "Growing formal sector",
+      "automation_prob": null,
+      "risk_tier": "unknown",
+      "risk_explanation": "Automation risk data not available for this occupation in this region.",
+      "durable_skills": [
+        "Advanced technical skills in your trade",
+        "Digital tools for your sector",
+        "Customer service",
+        "Business development"
+      ],
+      "adjacent_upskill": [
+        "Digital literacy",
+        "Business management basics"
+      ],
+      "sector_median_wage_usd": 287,
+      "wage_source": "ILO ILOSTAT / NBS (formal sector only)",
+      "wage_caveat": "Formal sector median. Informal sector wages typically 30-60% lower."
+    }
+  ],
+  "econometric_signal_1_wages": {
+    "title": "Monthly earnings by sector \u2014 Nigeria (formal sector)",
+    "source": "Converted from NGN at 2022 parallel market rate (~700 NGN/USD). Official rate understates real purchasing power loss.",
+    "vintage": "NBS Labour Force Survey 2022",
+    "caveat": "Formal sector only. Converted at 2022 parallel market rate. Informal sector wages typically 20-50% lower.",
+    "data": [
+      {
+        "sector": "ICT & Communications",
+        "wage_usd": 512
+      },
+      {
+        "sector": "Public Admin",
+        "wage_usd": 287
+      },
+      {
+        "sector": "Health",
+        "wage_usd": 231
+      },
+      {
+        "sector": "Education",
+        "wage_usd": 198
+      },
+      {
+        "sector": "Industry/Manufacturing",
+        "wage_usd": 142
+      },
+      {
+        "sector": "Construction",
+        "wage_usd": 109
+      },
+      {
+        "sector": "Trade & Retail",
+        "wage_usd": 118
+      },
+      {
+        "sector": "Agriculture",
+        "wage_usd": 61
+      }
+    ]
+  },
+  "econometric_signal_2_growth": {
+    "title": "Sector growth outlook \u2014 Nigeria",
+    "source": "World Bank Nigeria Economic Update 2023; ILO Nigeria Country Brief; PwC Nigeria Economic Outlook 2024",
+    "caveat": "Forward-looking estimate. Nigeria's economy is volatile \u2014 monitor FX and oil price movements.",
+    "growing": [
+      {
+        "sector": "Information & Communication Technology",
+        "growth_tag": "Very High",
+        "rationale": "Lagos tech ecosystem (Yaba, Lekki) \u2014 fastest growing in SSA. Andela, Flutterwave, Paystack effect."
+      },
+      {
+        "sector": "Financial Services & Fintech",
+        "growth_tag": "Very High",
+        "rationale": "Post-CBN liberalisation: OPay, PalmPay, Moniepoint growing agent networks rapidly"
+      },
+      {
+        "sector": "Creative Economy (Nollywood, Music)",
+        "growth_tag": "High",
+        "rationale": "Afrobeats global expansion; streaming revenue; formal employment growth in content"
+      },
+      {
+        "sector": "E-commerce & Logistics",
+        "growth_tag": "High",
+        "rationale": "Jumia, Konga, informal WhatsApp commerce expansion"
+      },
+      {
+        "sector": "Health Services",
+        "growth_tag": "Medium",
+        "rationale": "Population growth driving demand; significant undersupply"
+      }
+    ],
+    "at_risk": [
+      {
+        "sector": "Routine Clerical & Admin",
+        "growth_tag": "Declining",
+        "rationale": "Automation of routine office tasks. BPO sector under pressure."
+      },
+      {
+        "sector": "Traditional Banking Counter Services",
+        "growth_tag": "Declining",
+        "rationale": "ATM and mobile banking reducing teller demand"
+      },
+      {
+        "sector": "Agricultural Labouring",
+        "growth_tag": "Stagnant",
+        "rationale": "Low productivity; structural transformation slow"
+      }
+    ]
+  },
+  "wittgenstein_chart": {
+    "title": "Education levels for young people (15-29) in Nigeria",
+    "subtitle": "Where your region is heading by 2035",
+    "source": "Wittgenstein Centre for Demography and Global Human Capital (2018)",
+    "years": [
+      2025,
+      2035
+    ],
+    "categories": [
+      "No education",
+      "Primary",
+      "Lower secondary",
+      "Upper secondary",
+      "Post-secondary"
+    ],
+    "values_2025": [
+      18.4,
+      26.1,
+      22.8,
+      24.9,
+      7.8
+    ],
+    "values_2035": [
+      11.2,
+      21.3,
+      22.1,
+      31.4,
+      14.0
+    ],
+    "key_trend": "Nigeria has much larger no-education and primary-only population than Ghana. By 2035, meaningful improvement projected but slower than Ghana trajectory. Massive youth cohort means absolute numbers of out-of-school youth remain high even as percentages improve."
+  },
+  "key_stats": {
+    "youth_neet_pct": {
+      "value": 26.8,
+      "year": 2021,
+      "source": "ILO modelled estimate, ILOSTAT SDG 8.6.1",
+      "note": "Significantly higher than Ghana. Reflects large northern states with low female education participation"
+    },
+    "internet_penetration_pct": {
+      "value": 45.0,
+      "year": 2022,
+      "source": "WDI IT.NET.USER.ZS"
+    },
+    "informal_employment_pct": {
+      "value": 92.0,
+      "year": 2022,
+      "source": "NBS; ILO informal economy estimates",
+      "note": "One of the highest informal employment shares globally"
+    },
+    "gdp_per_capita_usd": {
+      "value": 2065,
+      "year": 2022,
+      "source": "WDI NY.GDP.PCAP.CD",
+      "note": "Sharp decline from 2014 peak of $3222 due to oil price crash and naira depreciation"
+    },
+    "human_capital_index": {
+      "value": 0.36,
+      "year": 2020,
+      "source": "World Bank Human Capital Index",
+      "note": "Significantly below Ghana (0.45). Large gap between Lagos/Abuja and north."
+    }
+  }
+}

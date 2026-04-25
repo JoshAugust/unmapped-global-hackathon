@@ -1,0 +1,138 @@
+{
+  "country_code": "NGA",
+  "country_name": "Nigeria",
+  "skill_gap_heatmap": {
+    "title": "Skills supply-demand gap \u2014 Nigeria (2025 estimate)",
+    "source": "UNMAPPED analysis: ILO ILOSTAT + Wittgenstein Centre + World Bank WDI",
+    "note": "Gap score = (employer demand signal) minus (estimated supply from education projection). Positive = shortage. Negative = oversupply.",
+    "sectors": [
+      {
+        "sector": "ICT & Digital",
+        "demand_index": 9.6,
+        "supply_index": 2.4,
+        "gap_score": 7.2,
+        "gap_direction": "shortage",
+        "wage_premium_vs_median_pct": 180
+      },
+      {
+        "sector": "Creative Economy",
+        "demand_index": 7.1,
+        "supply_index": 3.3,
+        "gap_score": 3.8,
+        "gap_direction": "shortage",
+        "wage_premium_vs_median_pct": 90
+      },
+      {
+        "sector": "Financial Services",
+        "demand_index": 7.8,
+        "supply_index": 4.1,
+        "gap_score": 3.7,
+        "gap_direction": "shortage",
+        "wage_premium_vs_median_pct": 110
+      },
+      {
+        "sector": "Health & Social Care",
+        "demand_index": 7.4,
+        "supply_index": 4.8,
+        "gap_score": 2.6,
+        "gap_direction": "shortage",
+        "wage_premium_vs_median_pct": 65
+      },
+      {
+        "sector": "Education & TVET",
+        "demand_index": 6.2,
+        "supply_index": 5.9,
+        "gap_score": 0.3,
+        "gap_direction": "shortage",
+        "wage_premium_vs_median_pct": 30
+      },
+      {
+        "sector": "Construction",
+        "demand_index": 6.8,
+        "supply_index": 7.2,
+        "gap_score": -0.4,
+        "gap_direction": "oversupply",
+        "wage_premium_vs_median_pct": 10
+      },
+      {
+        "sector": "Garment/Textile",
+        "demand_index": 3.8,
+        "supply_index": 6.4,
+        "gap_score": -2.6,
+        "gap_direction": "oversupply",
+        "wage_premium_vs_median_pct": -10
+      },
+      {
+        "sector": "Retail & Trade",
+        "demand_index": 5.1,
+        "supply_index": 9.4,
+        "gap_score": -4.3,
+        "gap_direction": "oversupply",
+        "wage_premium_vs_median_pct": -15
+      },
+      {
+        "sector": "Agriculture",
+        "demand_index": 4.2,
+        "supply_index": 8.8,
+        "gap_score": -4.6,
+        "gap_direction": "oversupply",
+        "wage_premium_vs_median_pct": -40
+      }
+    ]
+  },
+  "cohort_automation_exposure": {
+    "title": "Estimated automation exposure \u2014 Nigeria youth (15-29)",
+    "source": "UNMAPPED analysis: ILO employment shares + Frey-Osborne (LMIC calibrated)",
+    "caveat": "Estimates based on sector employment shares and occupation-level automation scores. Actual exposure depends on task composition within sectors.",
+    "total_youth_millions": 47.3,
+    "exposure": [
+      {
+        "tier": "High exposure",
+        "pct": 29.4,
+        "absolute_millions": 13.9,
+        "description": "Primarily in routine retail, manufacturing, basic admin, and agricultural sorting",
+        "policy_implication": "Highest priority for reskilling programmes. Immediate transition support needed."
+      },
+      {
+        "tier": "Medium exposure",
+        "pct": 47.8,
+        "absolute_millions": 22.6,
+        "description": "Agriculture, transport, construction, food services. LMIC infrastructure limits near-term displacement.",
+        "policy_implication": "Build durable skills (digital tools, entrepreneurship) now. Monitor automation infrastructure deployment."
+      },
+      {
+        "tier": "Low exposure",
+        "pct": 22.8,
+        "absolute_millions": 10.8,
+        "description": "Healthcare, education, ICT, skilled trades. Judgment, care, and complex technical skills.",
+        "policy_implication": "Invest in growing these pathways. Address credential recognition barriers."
+      }
+    ]
+  },
+  "neet_overview": {
+    "title": "Youth not in education, employment or training \u2014 Nigeria",
+    "source": "ILO modelled estimate, ILOSTAT SDG 8.6.1",
+    "vintage": "2021",
+    "overall_pct": 26.8,
+    "note": "Significantly higher than Ghana. Reflects large northern states with low female education participation",
+    "policy_implication": "At 26.8% NEET rate, a significant share of youth is entirely outside formal tracking systems. These are the users UNMAPPED is designed to reach first."
+  },
+  "education_trajectory": {
+    "title": "Education trajectory \u2014 Nigeria youth (15-29), 2025\u21922035",
+    "source": "Wittgenstein Centre (2018) v2.0",
+    "insight": "Nigeria has much larger no-education and primary-only population than Ghana. By 2035, meaningful improvement projected but slower than Ghana trajectory. Massive youth cohort means absolute numbers of out-of-school youth remain high even as percentages improve.",
+    "upper_secondary_plus_2025_pct": 32.7,
+    "upper_secondary_plus_2035_pct": 45.4,
+    "policy_implication": "Rising credential levels do not automatically translate to employment. Skills matching infrastructure must scale alongside education expansion."
+  },
+  "data_quality_notes": {
+    "overall_confidence": "Medium",
+    "rationale": "All signals grounded in published datasets but involve sectoral aggregation and LMIC calibration assumptions. Individual occupation-level data is more reliable than cohort aggregates.",
+    "key_gaps": [
+      "Informal sector wage data: NBS Labour Force Survey 2022 provides partial coverage; urban informal wages poorly tracked",
+      "Occupation-level wage data: Not available at ISCO-08 disaggregation for Nigeria",
+      "Youth NEET rate: NBS LFS 2022 estimate; significant measurement uncertainty",
+      "Regional variation: National figures mask major Lagos/Abuja vs. rural North divergence"
+    ]
+  }
+}

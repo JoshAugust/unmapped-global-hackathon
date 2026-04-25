@@ -1,0 +1,116 @@
+{
+  "_metadata": {
+    "country": "Nigeria",
+    "iso3": "NGA",
+    "region": "Sub-Saharan Africa",
+    "income_group": "Lower Middle Income",
+    "last_updated": "2024-04",
+    "sources": {
+      "WDI": "World Bank World Development Indicators, https://data.worldbank.org",
+      "ILOSTAT": "International Labour Organization, ILOSTAT, https://ilostat.ilo.org",
+      "NBS": "Nigeria National Bureau of Statistics, Labour Force Survey 2022 Q4",
+      "WorldBankNigeria": "World Bank Nigeria Economic Update 2023"
+    },
+    "data_gaps": [
+      "Informal sector wage data: NBS Labour Force Survey 2022 provides partial coverage; urban informal wages poorly tracked",
+      "Occupation-level wage data: Not available at ISCO-08 disaggregation for Nigeria",
+      "Youth NEET rate: NBS LFS 2022 estimate; significant measurement uncertainty",
+      "Regional variation: National figures mask major Lagos/Abuja vs. rural North divergence"
+    ]
+  },
+  "macro": {
+    "gdp_per_capita_usd": {"value": 2065, "year": 2022, "source": "WDI NY.GDP.PCAP.CD",
+      "note": "Sharp decline from 2014 peak of $3222 due to oil price crash and naira depreciation"},
+    "gdp_growth_pct": {"value": 3.3, "year": 2022, "source": "WDI NY.GDP.MKTP.KD.ZG"},
+    "population_millions": {"value": 218.5, "year": 2022, "source": "WDI SP.POP.TOTL",
+      "note": "Largest population in Africa. Adding ~5 million people per year"},
+    "youth_population_15_24_millions": {"value": 47.3, "year": 2022, "source": "WDI SP.POP.1524.TO"},
+    "urban_population_pct": {"value": 53.5, "year": 2022, "source": "WDI SP.URB.TOTL.IN.ZS"}
+  },
+  "labour_market": {
+    "unemployment_rate_pct": {"value": 5.3, "year": 2022, "source": "WDI SL.UEM.TOTL.ZS — NBS revised definition",
+      "note": "Nigeria changed its unemployment definition in 2022. Pre-2022 rate was ~33% under old NBS methodology. Not comparable across years."},
+    "youth_unemployment_rate_pct": {"value": 8.4, "year": 2022, "source": "ILO modelled estimate; NBS LFS 2022"},
+    "youth_neet_pct": {"value": 26.8, "year": 2021, "source": "ILO modelled estimate, ILOSTAT SDG 8.6.1",
+      "note": "Significantly higher than Ghana. Reflects large northern states with low female education participation"},
+    "self_employment_pct": {"value": 83.0, "year": 2022, "source": "NBS Labour Force Survey 2022"},
+    "informal_employment_pct": {"value": 92.0, "year": 2022, "source": "NBS; ILO informal economy estimates",
+      "note": "One of the highest informal employment shares globally"},
+    "female_labour_participation_pct": {"value": 56.4, "year": 2022, "source": "WDI SL.TLF.CACT.FE.ZS",
+      "note": "Lower than Ghana; reflects lower participation in northern states"},
+    "employment_by_sector": {
+      "agriculture_pct": {"value": 35.5, "year": 2022, "source": "WDI SL.AGR.EMPL.ZS"},
+      "industry_pct": {"value": 12.1, "year": 2022, "source": "WDI SL.IND.EMPL.ZS"},
+      "services_pct": {"value": 52.4, "year": 2022, "source": "WDI SL.SRV.EMPL.ZS"}
+    }
+  },
+  "wages": {
+    "_note": "Formal sector wage data only. Informal sector wages not systematically tracked at national level.",
+    "mean_monthly_earnings_usd": {
+      "_note": "Converted from NGN at 2022 parallel market rate (~700 NGN/USD). Official rate understates real purchasing power loss.",
+      "all_sectors": {"value": 164, "year": 2022, "source": "NBS Labour Force Survey 2022; ILO ILOSTAT partial"},
+      "agriculture": {"value": 61, "year": 2022, "source": "NBS LFS 2022 sector breakdown estimate"},
+      "industry_manufacturing": {"value": 142, "year": 2022, "source": "NBS LFS 2022"},
+      "wholesale_retail_trade": {"value": 118, "year": 2022, "source": "NBS LFS 2022"},
+      "information_communication": {"value": 512, "year": 2022, "source": "NBS LFS 2022; Lagos tech sector premium"},
+      "construction": {"value": 109, "year": 2022, "source": "NBS LFS 2022"},
+      "health_social_work": {"value": 231, "year": 2022, "source": "NBS LFS 2022"},
+      "education": {"value": 198, "year": 2022, "source": "NBS LFS 2022"},
+      "public_admin": {"value": 287, "year": 2022, "source": "NBS LFS 2022"}
+    },
+    "minimum_wage_usd_monthly": {"value": 62, "year": 2023, "source": "Nigeria NMW NGN 30,000/month at ~480 NGN/USD (2023 official rate)",
+      "note": "Minimum wage rarely enforced in informal sector. Increased to NGN 70,000 in 2024 under new administration."}
+  },
+  "education": {
+    "primary_completion_rate_pct": {"value": 70.4, "year": 2021, "source": "WDI SE.PRM.CMPT.ZS",
+      "note": "Well below Ghana. Significant regional disparity — northern states average ~40%"},
+    "secondary_enrollment_gross_pct": {"value": 51.4, "year": 2021, "source": "WDI SE.SEC.ENRR"},
+    "tertiary_enrollment_gross_pct": {"value": 10.4, "year": 2021, "source": "WDI SE.TER.ENRR"},
+    "mean_years_schooling": {"value": 6.7, "year": 2021, "source": "UNDP HDI data"},
+    "human_capital_index": {"value": 0.36, "year": 2020, "source": "World Bank Human Capital Index",
+      "note": "Significantly below Ghana (0.45). Large gap between Lagos/Abuja and north."}
+  },
+  "digital": {
+    "internet_penetration_pct": {"value": 45.0, "year": 2022, "source": "WDI IT.NET.USER.ZS"},
+    "mobile_broadband_subscriptions_per_100": {"value": 44.2, "year": 2022, "source": "ITU ICT Data Hub"},
+    "mobile_money_adoption_pct_adults": {"value": 34.0, "year": 2021, "source": "Global Findex 2021",
+      "note": "Lower than Ghana due to bank-centric fintech regulation (CBN policies restricted mobile money until 2022)"}
+  },
+  "sector_growth_outlook": {
+    "_source": "World Bank Nigeria Economic Update 2023; ILO Nigeria Country Brief; PwC Nigeria Economic Outlook 2024",
+    "_note": "Second econometric signal — sector employment growth trajectory",
+    "sectors_growing": [
+      {"sector": "Information & Communication Technology", "growth_tag": "Very High", "rationale": "Lagos tech ecosystem (Yaba, Lekki) — fastest growing in SSA. Andela, Flutterwave, Paystack effect."},
+      {"sector": "Financial Services & Fintech", "growth_tag": "Very High", "rationale": "Post-CBN liberalisation: OPay, PalmPay, Moniepoint growing agent networks rapidly"},
+      {"sector": "Creative Economy (Nollywood, Music)", "growth_tag": "High", "rationale": "Afrobeats global expansion; streaming revenue; formal employment growth in content"},
+      {"sector": "E-commerce & Logistics", "growth_tag": "High", "rationale": "Jumia, Konga, informal WhatsApp commerce expansion"},
+      {"sector": "Health Services", "growth_tag": "Medium", "rationale": "Population growth driving demand; significant undersupply"}
+    ],
+    "sectors_at_risk": [
+      {"sector": "Routine Clerical & Admin", "growth_tag": "Declining", "rationale": "Automation of routine office tasks. BPO sector under pressure."},
+      {"sector": "Traditional Banking Counter Services", "growth_tag": "Declining", "rationale": "ATM and mobile banking reducing teller demand"},
+      {"sector": "Agricultural Labouring", "growth_tag": "Stagnant", "rationale": "Low productivity; structural transformation slow"}
+    ]
+  },
+  "wittgenstein_projections": {
+    "_source": "Wittgenstein Centre for Demography and Global Human Capital (2018), Education projection v.2.0",
+    "_note": "Education level distribution for Nigeria, ages 15-29, 2025 vs 2035",
+    "ages_15_29": {
+      "2025": {
+        "no_education_pct": 18.4,
+        "primary_pct": 26.1,
+        "lower_secondary_pct": 22.8,
+        "upper_secondary_pct": 24.9,
+        "post_secondary_pct": 7.8
+      },
+      "2035": {
+        "no_education_pct": 11.2,
+        "primary_pct": 21.3,
+        "lower_secondary_pct": 22.1,
+        "upper_secondary_pct": 31.4,
+        "post_secondary_pct": 14.0
+      },
+      "key_trend": "Nigeria has much larger no-education and primary-only population than Ghana. By 2035, meaningful improvement projected but slower than Ghana trajectory. Massive youth cohort means absolute numbers of out-of-school youth remain high even as percentages improve."
+    }
+  }
+}
