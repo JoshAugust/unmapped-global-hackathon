@@ -43,10 +43,7 @@ function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/30 to-transparent" />
           <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-16">
             <div className="max-w-2xl">
-              <span className="inline-block bg-cobalt px-3 py-1 text-xs font-semibold uppercase tracking-wider text-paper">
-                Challenge 05 · World Bank Youth Summit × Hack-Nation
-              </span>
-              <h1 className="mt-5 font-display text-[clamp(2.25rem,5.2vw,4.5rem)] font-black leading-[1.05] text-paper">
+              <h1 className="font-display text-[clamp(2.25rem,5.2vw,4.5rem)] font-black leading-[1.05] text-paper">
                 <span className="bg-ink box-decoration-clone px-3 py-1">Real skills.<br/>For every young person.</span>
               </h1>
               <p className="mt-6 max-w-xl bg-ink/85 px-3 py-3 text-base text-paper md:text-lg">
