@@ -176,7 +176,10 @@ function Modules() {
   );
 }
 
-function Configurability({ country }: { country: ReturnType<typeof useCountry> }) {
+type Country = ReturnType<typeof getCountry>;
+function getCountry(key: keyof typeof COUNTRIES) { return COUNTRIES[key]; }
+
+function Configurability({ country }: { country: Country }) {
   return (
     <section className="bg-ink text-paper">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-2">
@@ -218,5 +221,4 @@ function Configurability({ country }: { country: ReturnType<typeof useCountry> }
   );
 }
 
-function useCountry() { const [p] = useProfile(); return COUNTRIES[p.countryKey]; }
 }
