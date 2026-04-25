@@ -191,13 +191,13 @@ function getCountry(key: keyof typeof COUNTRIES) { return COUNTRIES[key]; }
 function Configurability({ country }: { country: Country }) {
   return (
     <section className="bg-cobalt text-paper">
-      <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-2">
+        <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-16 md:grid-cols-2 md:px-6 md:py-20">
         <div>
           <div className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/80">The country-agnostic requirement</div>
           <h2 className="mt-3 font-display text-4xl font-black leading-tight text-paper md:text-5xl">
             Same code.<br/>Different country.<br/>No rebuild.
           </h2>
-          <p className="mt-6 max-w-md text-lg text-paper/95">
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-paper/95">
             Currently configured for <span className="font-semibold text-paper">{country.region}</span>.
             Swap the config and the entire stack — taxonomy, language, automation calibration, opportunity types — re-orients to a new context.
           </p>
@@ -206,12 +206,12 @@ function Configurability({ country }: { country: Country }) {
             See the config layer
           </Link>
         </div>
-        <div className="border border-paper/30 bg-ink p-6 font-mono text-xs leading-relaxed text-paper">
+        <div className="min-w-0 border border-paper/30 bg-ink p-4 font-mono text-xs leading-relaxed text-paper md:p-6">
           <div className="mb-3 flex items-center justify-between">
             <span className="uppercase tracking-wider text-cobalt">{country.country.toLowerCase()}.config.json</span>
             <span className="text-paper/40">read-only</span>
           </div>
-          <pre className="overflow-x-auto whitespace-pre text-paper/90">
+          <pre className="max-w-full whitespace-pre-wrap break-words text-[11px] text-paper/90 md:whitespace-pre md:text-xs">
 {`{
   "region":          "${country.region}",
   "language":        "${country.language}",
