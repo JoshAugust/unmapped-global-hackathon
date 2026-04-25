@@ -23,7 +23,7 @@ export function SiteNav() {
           </Link>
           <div className="flex items-center gap-3">
             <CountryPill />
-            <a href="https://www.worldbank.org/en/events/2026/youth-summit" target="_blank" rel="noreferrer"
+            <a href="https://www.worldbank.org/en/events/2026/06/11/youth-summit-2026-future-works-designing-jobs-for-the-digital-age" target="_blank" rel="noreferrer"
               className="hidden rounded-none border-2 border-paper px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-paper hover:text-cobalt md:inline-block">
               Youth Summit
             </a>
