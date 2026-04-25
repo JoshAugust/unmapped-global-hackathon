@@ -33,7 +33,7 @@ function Passport() {
   return (
     <PageShell
       eyebrow="Module 01 · Skills Signal Engine"
-      title={<>Build a passport that <span className="italic text-cobalt">travels</span>.</>}
+      title={<>Build a passport that <span className="text-cobalt">travels</span>.</>}
       lede={`Map informal experience and demonstrated competencies into a portable, human-readable profile aligned to ESCO and ${country.educationLevels.length} ISCED-mapped local credentials. Amara owns it. So can ${country.country === "Ghana" ? "every other" : "any"} youth user.`}
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">

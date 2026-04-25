@@ -38,7 +38,7 @@ function Readiness() {
   return (
     <PageShell
       eyebrow="Module 02 · AI Readiness Lens"
-      title={<>Honest exposure. <span className="italic text-cobalt">Local</span> calibration.</>}
+      title={<>Honest exposure. <span className="text-cobalt">Local</span> calibration.</>}
       lede={`Calibrated to ${country.region} (multiplier ${country.automationCalibration}). A data-entry job in Bengaluru and a phone-repair stall in Kumasi face very different automation pressures — this lens does not pretend otherwise.`}
     >
       <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr]">
