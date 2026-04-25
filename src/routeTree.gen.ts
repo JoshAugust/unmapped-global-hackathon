@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ReadinessRouteImport } from './routes/readiness'
 import { Route as PassportRouteImport } from './routes/passport'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as ConfigureRouteImport } from './routes/configure'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ReadinessRoute = ReadinessRouteImport.update({
@@ -23,6 +25,16 @@ const PassportRoute = PassportRouteImport.update({
   path: '/passport',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfigureRoute = ConfigureRouteImport.update({
+  id: '/configure',
+  path: '/configure',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +43,44 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/configure': typeof ConfigureRoute
+  '/dashboard': typeof DashboardRoute
   '/passport': typeof PassportRoute
   '/readiness': typeof ReadinessRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/configure': typeof ConfigureRoute
+  '/dashboard': typeof DashboardRoute
   '/passport': typeof PassportRoute
   '/readiness': typeof ReadinessRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/configure': typeof ConfigureRoute
+  '/dashboard': typeof DashboardRoute
   '/passport': typeof PassportRoute
   '/readiness': typeof ReadinessRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/passport' | '/readiness'
+  fullPaths: '/' | '/configure' | '/dashboard' | '/passport' | '/readiness'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/passport' | '/readiness'
-  id: '__root__' | '/' | '/passport' | '/readiness'
+  to: '/' | '/configure' | '/dashboard' | '/passport' | '/readiness'
+  id:
+    | '__root__'
+    | '/'
+    | '/configure'
+    | '/dashboard'
+    | '/passport'
+    | '/readiness'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ConfigureRoute: typeof ConfigureRoute
+  DashboardRoute: typeof DashboardRoute
   PassportRoute: typeof PassportRoute
   ReadinessRoute: typeof ReadinessRoute
 }
@@ -75,6 +101,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PassportRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configure': {
+      id: '/configure'
+      path: '/configure'
+      fullPath: '/configure'
+      preLoaderRoute: typeof ConfigureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +127,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ConfigureRoute: ConfigureRoute,
+  DashboardRoute: DashboardRoute,
   PassportRoute: PassportRoute,
   ReadinessRoute: ReadinessRoute,
 }
