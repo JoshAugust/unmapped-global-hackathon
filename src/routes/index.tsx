@@ -35,7 +35,6 @@ function Index() {
 function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-ink">
-      <div className="absolute inset-0 grid-paper opacity-50" />
       <div className="relative mx-auto max-w-[1400px] px-6 pb-20 pt-16">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
