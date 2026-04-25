@@ -21,7 +21,7 @@ function Index() {
   const [profile] = useProfile();
   const country = COUNTRIES[profile.countryKey];
   return (
-    <div className="min-h-screen bg-paper text-ink">
+    <div className="min-h-screen overflow-x-hidden bg-paper text-ink">
       <SiteNav />
       <Hero />
       <Amara />
