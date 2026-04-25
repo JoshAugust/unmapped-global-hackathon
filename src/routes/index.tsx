@@ -44,7 +44,7 @@ function Hero() {
         </div>
         <h1 className="mt-10 font-display text-[clamp(3rem,8vw,7.5rem)] font-black leading-[0.92] tracking-[-0.04em]">
           Six hundred million<br />
-          <span className="italic text-cobalt">unmapped</span> people.
+          <span className="text-cobalt">unmapped</span> people.
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
           The world's most capable generation is also the most invisible to it.

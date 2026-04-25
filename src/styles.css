@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
 
 /*
  * Design system definition.
@@ -21,7 +21,7 @@
  */
 
 @theme inline {
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-display: "Source Sans 3", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --color-ink: var(--ink);
@@ -75,16 +75,17 @@
 }
 
 :root {
-  --radius: 0.375rem;
-  /* Editorial palette: warm paper, deep ink, electric cobalt */
-  --paper: oklch(0.985 0.008 85);
-  --ink: oklch(0.18 0.025 260);
-  --cobalt: oklch(0.48 0.24 268);
-  --cobalt-soft: oklch(0.93 0.04 268);
-  --rust: oklch(0.62 0.18 35);
-  --moss: oklch(0.55 0.13 145);
-  --sand: oklch(0.93 0.03 80);
-  --line: oklch(0.86 0.015 80);
+  --radius: 0.25rem;
+  /* UNICEF-inspired palette: pure white, signature cyan, deep ink */
+  --paper: oklch(1 0 0);
+  --ink: oklch(0.18 0.02 240);
+  /* UNICEF Cyan #00AEEF */
+  --cobalt: oklch(0.72 0.16 230);
+  --cobalt-soft: oklch(0.95 0.04 230);
+  --rust: oklch(0.66 0.2 28);
+  --moss: oklch(0.62 0.14 155);
+  --sand: oklch(0.96 0.005 240);
+  --line: oklch(0.9 0.01 240);
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -169,8 +170,7 @@
 
   h1, h2, h3, .font-display {
     font-family: var(--font-display);
-    font-feature-settings: "ss01";
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
   }
 
   .font-mono {

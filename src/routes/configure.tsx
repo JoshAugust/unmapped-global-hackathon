@@ -27,7 +27,7 @@ function Configure() {
   return (
     <PageShell
       eyebrow="Infrastructure layer"
-      title={<>One protocol. <span className="italic text-cobalt">Many</span> countries.</>}
+      title={<>One protocol. <span className="text-cobalt">Many</span> countries.</>}
       lede="Country-specific parameters — labor data, education taxonomy, language, automation calibration, opportunity types — are inputs to the system. Swap the file, get a new context. No code changes."
     >
       <div className="grid gap-6 md:grid-cols-2">

@@ -175,7 +175,7 @@ function Dashboard() {
   return (
     <PageShell
       eyebrow="Module 03 · Opportunity Matching"
-      title={<>Honest matching. <span className="italic text-cobalt">Local</span> wages. Real signals.</>}
+      title={<>Honest matching. <span className="text-cobalt">Local</span> wages. Real signals.</>}
       lede="Two interfaces, one engine. Youth see realistic opportunities with the wage floor, sector momentum, and education premium they actually face. Program officers see the aggregate."
     >
       <div className="mb-8 inline-flex rounded-sm border border-ink bg-paper p-1">
