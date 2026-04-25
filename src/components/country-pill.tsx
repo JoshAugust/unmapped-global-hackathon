@@ -6,18 +6,18 @@ export function CountryPill() {
   const [profile, setProfile] = useProfile();
   const c = COUNTRIES[profile.countryKey];
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-3 py-1.5 text-xs">
+    <label className="inline-flex items-center gap-2 border border-paper/40 px-3 py-2 text-xs text-paper">
       <span className="text-base leading-none">{c.flag}</span>
-      <span className="font-mono uppercase tracking-wider text-muted-foreground">Context</span>
+      <span className="hidden uppercase tracking-wider text-paper/70 sm:inline">Context</span>
       <select
         value={profile.countryKey}
         onChange={e => setProfile({ ...profile, countryKey: e.target.value as CountryKey })}
-        className="cursor-pointer bg-transparent font-medium text-ink outline-none"
+        className="cursor-pointer bg-transparent font-semibold text-paper outline-none"
       >
         {Object.values(COUNTRIES).map(co => (
-          <option key={co.key} value={co.key}>{co.region}</option>
+          <option key={co.key} value={co.key} className="text-ink">{co.region}</option>
         ))}
       </select>
-    </div>
+    </label>
   );
 }

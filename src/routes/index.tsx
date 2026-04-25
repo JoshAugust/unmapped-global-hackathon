@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteNav, SiteFooter } from "@/components/site-nav";
-import { CountryPill } from "@/components/country-pill";
 import { COUNTRIES } from "@/data/countries";
 import { useProfile } from "@/lib/profile-store";
+import heroImg from "@/assets/hero-amara.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -34,48 +34,57 @@ function Index() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-ink">
-      <div className="relative mx-auto max-w-[1400px] px-6 pb-20 pt-16">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-            World Bank Youth Summit · Hack-Nation 2026 · Challenge 05
+    <>
+      {/* Photographic hero, UNICEF-style */}
+      <section className="relative">
+        <div className="relative h-[78vh] min-h-[560px] w-full overflow-hidden bg-ink">
+          <img src={heroImg} alt="A young woman repairs a smartphone in her workshop in Accra"
+            className="absolute inset-0 h-full w-full object-cover" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/30 to-transparent" />
+          <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-16">
+            <div className="max-w-2xl">
+              <span className="inline-block bg-cobalt px-3 py-1 text-xs font-semibold uppercase tracking-wider text-paper">
+                Challenge 05 · World Bank Youth Summit × Hack-Nation
+              </span>
+              <h1 className="mt-5 font-display text-[clamp(2.25rem,5.2vw,4.5rem)] font-black leading-[1.05] text-paper">
+                <span className="bg-ink box-decoration-clone px-3 py-1">Real skills.<br/>For every young person.</span>
+              </h1>
+              <p className="mt-6 max-w-xl bg-ink/85 px-3 py-3 text-base text-paper md:text-lg">
+                Six hundred million young people across low- and middle-income countries hold real, unrecognised skills.
+                UNMAPPED is the open infrastructure that lets the world finally see them.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Link to="/passport"
+                  className="inline-flex items-center gap-2 bg-cobalt px-6 py-3 text-sm font-semibold text-paper hover:bg-paper hover:text-cobalt">
+                  Build Amara's passport
+                </Link>
+                <Link to="/dashboard"
+                  className="inline-flex items-center gap-2 border-2 border-paper bg-transparent px-6 py-3 text-sm font-semibold text-paper hover:bg-paper hover:text-ink">
+                  Policymaker view
+                </Link>
+              </div>
+            </div>
           </div>
-          <CountryPill />
         </div>
-        <h1 className="mt-10 font-display text-[clamp(3rem,8vw,7.5rem)] font-black leading-[0.92] tracking-[-0.04em]">
-          Six hundred million<br />
-          <span className="text-cobalt">unmapped</span> people.
-        </h1>
-        <p className="mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          The world's most capable generation is also the most invisible to it.
-          UNMAPPED is an open infrastructure layer that turns informal skills into portable,
-          credible, opportunity-bearing signals — calibrated to local labor realities, not Silicon Valley benchmarks.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Link to="/passport"
-            className="inline-flex items-center gap-2 rounded-sm bg-ink px-6 py-3 font-mono text-xs uppercase tracking-wider text-paper transition-transform hover:-translate-y-0.5">
-            Build Amara's passport →
-          </Link>
-          <Link to="/dashboard"
-            className="inline-flex items-center gap-2 rounded-sm border border-ink px-6 py-3 font-mono text-xs uppercase tracking-wider hover:bg-ink hover:text-paper">
-            Policymaker view
-          </Link>
-        </div>
-        <div className="mt-16 grid gap-6 border-t border-ink pt-8 md:grid-cols-3">
+      </section>
+
+      {/* Stat band */}
+      <section className="border-b border-line bg-paper">
+        <div className="mx-auto grid max-w-[1400px] gap-px bg-line md:grid-cols-3">
           {[
             { k: "71%", v: "of Sub-Saharan youth work in the informal economy", src: "ILO 2024" },
             { k: "1 in 4", v: "tasks held by LMIC youth face automation pressure within a decade", src: "Frey-Osborne, calibrated" },
-            { k: "<3%", v: "of informal workers hold a credential employers can verify", src: "WBES, World Bank STEP" },
+            { k: "<3%", v: "of informal workers hold a credential employers can verify", src: "WBES · World Bank STEP" },
           ].map(s => (
-            <div key={s.k}>
-              <div className="font-display text-5xl font-black tracking-tight">{s.k}</div>
-              <div className="mt-2 text-sm">{s.v}</div>
-              <div className="mt-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">{s.src}</div>
+            <div key={s.k} className="bg-paper p-8">
+              <div className="font-display text-5xl font-black tracking-tight text-cobalt">{s.k}</div>
+              <div className="mt-3 text-base">{s.v}</div>
+              <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">{s.src}</div>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
@@ -96,14 +105,14 @@ function Amara() {
             <span className="text-ink"> UNMAPPED is built for her — not a generic 'youth user'.</span>
           </p>
         </div>
-        <div className="relative rounded-sm border border-ink bg-paper p-6 shadow-[8px_8px_0_0_var(--ink)]">
-          <div className="flex items-start justify-between border-b border-ink pb-3">
+        <div className="relative border border-line bg-sand p-6">
+          <div className="flex items-start justify-between border-b border-line pb-3">
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Skill Passport · sample</div>
-              <div className="font-display text-2xl font-bold">Amara O.</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Skill Passport · sample</div>
+              <div className="font-display text-2xl font-black">Amara O.</div>
               <div className="text-sm text-muted-foreground">Accra, Ghana · age 22</div>
             </div>
-            <div className="font-mono text-[10px] uppercase tracking-wider text-cobalt">verified · portable</div>
+            <div className="bg-cobalt px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-paper">verified</div>
           </div>
           <div className="mt-4 space-y-3">
             {[
@@ -116,18 +125,18 @@ function Amara() {
               <div key={label as string}>
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-medium">{label}</span>
-                  <span className="font-mono text-[10px] uppercase text-muted-foreground">
+                  <span className="text-xs text-muted-foreground">
                     {yrs ? `${yrs}y` : "fluent"} · conf {(Number(conf) * 100).toFixed(0)}%
                   </span>
                 </div>
-                <div className="mt-1 h-1.5 w-full bg-sand">
+                <div className="mt-1 h-1.5 w-full bg-paper">
                   <div className="h-full bg-cobalt" style={{ width: `${(Number(conf)) * 100}%` }} />
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-5 flex items-center justify-between border-t border-line pt-3">
-            <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">ESCO-aligned · ISCO clusters resolved</div>
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">ESCO-aligned · ISCO clusters resolved</div>
             <div className="font-mono text-xs">PASS-7F2A·4Q19</div>
           </div>
         </div>
@@ -149,23 +158,27 @@ function Modules() {
       meta: "WBES · ILOSTAT · Wittgenstein 25–35" },
   ];
   return (
-    <section className="border-b border-line">
+    <section className="border-b border-line bg-sand">
       <div className="mx-auto max-w-[1400px] px-6 py-20">
-        <div className="flex items-end justify-between">
-          <h2 className="max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">
-            Three failures.<br/>One protocol.
-          </h2>
-          <div className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:block">infrastructure · not product</div>
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cobalt">What we built</div>
+            <h2 className="mt-3 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">
+              Three failures.<br/>One protocol.
+            </h2>
+          </div>
+          <div className="hidden text-xs uppercase tracking-[0.2em] text-muted-foreground md:block">infrastructure · not product</div>
         </div>
-        <div className="mt-12 grid gap-px bg-ink md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {items.map(i => (
-            <Link key={i.n} to={i.to} className="group relative bg-paper p-8 transition-colors hover:bg-cobalt-soft">
-              <div className="font-display text-7xl font-black text-cobalt">{i.n}</div>
-              <h3 className="mt-4 font-display text-2xl font-bold">{i.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{i.body}</p>
-              <div className="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-[10px] uppercase tracking-wider">
-                <span className="text-muted-foreground">{i.meta}</span>
-                <span className="text-ink group-hover:translate-x-1 transition-transform">open →</span>
+            <Link key={i.n} to={i.to}
+              className="group relative flex flex-col border-t-4 border-cobalt bg-paper p-8 transition-shadow hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]">
+              <div className="text-xs font-semibold uppercase tracking-wider text-cobalt">Module {i.n}</div>
+              <h3 className="mt-2 font-display text-2xl font-black">{i.title}</h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/70">{i.body}</p>
+              <div className="mt-6 flex items-center justify-between border-t border-line pt-3 text-xs">
+                <span className="uppercase tracking-wider text-muted-foreground">{i.meta}</span>
+                <span className="font-semibold text-cobalt transition-transform group-hover:translate-x-1">Explore →</span>
               </div>
             </Link>
           ))}
@@ -180,25 +193,25 @@ function getCountry(key: keyof typeof COUNTRIES) { return COUNTRIES[key]; }
 
 function Configurability({ country }: { country: Country }) {
   return (
-    <section className="bg-ink text-paper">
+    <section className="bg-cobalt text-paper">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-2">
         <div>
-          <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-cobalt-soft">The country-agnostic requirement</div>
-          <h2 className="mt-3 font-display text-4xl font-black leading-tight md:text-5xl">
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/80">The country-agnostic requirement</div>
+          <h2 className="mt-3 font-display text-4xl font-black leading-tight text-paper md:text-5xl">
             Same code.<br/>Different country.<br/>No rebuild.
           </h2>
-          <p className="mt-6 max-w-md text-lg text-paper/70">
+          <p className="mt-6 max-w-md text-lg text-paper/95">
             Currently configured for <span className="font-semibold text-paper">{country.region}</span>.
             Swap the config and the entire stack — taxonomy, language, automation calibration, opportunity types — re-orients to a new context.
           </p>
           <Link to="/configure"
-            className="mt-8 inline-flex items-center gap-2 rounded-sm bg-cobalt px-6 py-3 font-mono text-xs uppercase tracking-wider text-paper hover:bg-paper hover:text-ink">
-            See the config layer →
+            className="mt-8 inline-flex items-center gap-2 bg-paper px-6 py-3 text-sm font-semibold text-cobalt hover:bg-ink hover:text-paper">
+            See the config layer
           </Link>
         </div>
-        <div className="rounded-sm border border-paper/20 bg-ink/40 p-6 font-mono text-xs leading-relaxed">
+        <div className="border border-paper/30 bg-ink p-6 font-mono text-xs leading-relaxed text-paper">
           <div className="mb-3 flex items-center justify-between">
-            <span className="text-cobalt-soft uppercase tracking-wider">{country.country.toLowerCase()}.config.json</span>
+            <span className="uppercase tracking-wider text-cobalt">{country.country.toLowerCase()}.config.json</span>
             <span className="text-paper/40">read-only</span>
           </div>
           <pre className="overflow-x-auto whitespace-pre text-paper/90">
