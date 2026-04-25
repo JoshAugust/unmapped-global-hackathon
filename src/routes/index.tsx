@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteNav, SiteFooter } from "@/components/site-nav";
-import { CountryPill } from "@/components/country-pill";
 import { COUNTRIES } from "@/data/countries";
 import { useProfile } from "@/lib/profile-store";
+import heroImg from "@/assets/hero-amara.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -34,48 +34,57 @@ function Index() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-ink">
-      <div className="relative mx-auto max-w-[1400px] px-6 pb-20 pt-16">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-            World Bank Youth Summit · Hack-Nation 2026 · Challenge 05
+    <>
+      {/* Photographic hero, UNICEF-style */}
+      <section className="relative">
+        <div className="relative h-[78vh] min-h-[560px] w-full overflow-hidden bg-ink">
+          <img src={heroImg} alt="A young woman repairs a smartphone in her workshop in Accra"
+            className="absolute inset-0 h-full w-full object-cover" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/30 to-transparent" />
+          <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-16">
+            <div className="max-w-2xl">
+              <span className="inline-block bg-cobalt px-3 py-1 text-xs font-semibold uppercase tracking-wider text-paper">
+                Challenge 05 · World Bank Youth Summit × Hack-Nation
+              </span>
+              <h1 className="mt-5 font-display text-[clamp(2.25rem,5.2vw,4.5rem)] font-black leading-[1.05] text-paper">
+                <span className="bg-ink box-decoration-clone px-3 py-1">Real skills.<br/>For every young person.</span>
+              </h1>
+              <p className="mt-6 max-w-xl bg-ink/85 px-3 py-3 text-base text-paper md:text-lg">
+                Six hundred million young people across low- and middle-income countries hold real, unrecognised skills.
+                UNMAPPED is the open infrastructure that lets the world finally see them.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Link to="/passport"
+                  className="inline-flex items-center gap-2 bg-cobalt px-6 py-3 text-sm font-semibold text-paper hover:bg-paper hover:text-cobalt">
+                  Build Amara's passport
+                </Link>
+                <Link to="/dashboard"
+                  className="inline-flex items-center gap-2 border-2 border-paper bg-transparent px-6 py-3 text-sm font-semibold text-paper hover:bg-paper hover:text-ink">
+                  Policymaker view
+                </Link>
+              </div>
+            </div>
           </div>
-          <CountryPill />
         </div>
-        <h1 className="mt-10 font-display text-[clamp(3rem,8vw,7.5rem)] font-black leading-[0.92] tracking-[-0.04em]">
-          Six hundred million<br />
-          <span className="text-cobalt">unmapped</span> people.
-        </h1>
-        <p className="mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          The world's most capable generation is also the most invisible to it.
-          UNMAPPED is an open infrastructure layer that turns informal skills into portable,
-          credible, opportunity-bearing signals — calibrated to local labor realities, not Silicon Valley benchmarks.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Link to="/passport"
-            className="inline-flex items-center gap-2 rounded-sm bg-ink px-6 py-3 font-mono text-xs uppercase tracking-wider text-paper transition-transform hover:-translate-y-0.5">
-            Build Amara's passport →
-          </Link>
-          <Link to="/dashboard"
-            className="inline-flex items-center gap-2 rounded-sm border border-ink px-6 py-3 font-mono text-xs uppercase tracking-wider hover:bg-ink hover:text-paper">
-            Policymaker view
-          </Link>
-        </div>
-        <div className="mt-16 grid gap-6 border-t border-ink pt-8 md:grid-cols-3">
+      </section>
+
+      {/* Stat band */}
+      <section className="border-b border-line bg-paper">
+        <div className="mx-auto grid max-w-[1400px] gap-px bg-line md:grid-cols-3">
           {[
             { k: "71%", v: "of Sub-Saharan youth work in the informal economy", src: "ILO 2024" },
             { k: "1 in 4", v: "tasks held by LMIC youth face automation pressure within a decade", src: "Frey-Osborne, calibrated" },
-            { k: "<3%", v: "of informal workers hold a credential employers can verify", src: "WBES, World Bank STEP" },
+            { k: "<3%", v: "of informal workers hold a credential employers can verify", src: "WBES · World Bank STEP" },
           ].map(s => (
-            <div key={s.k}>
-              <div className="font-display text-5xl font-black tracking-tight">{s.k}</div>
-              <div className="mt-2 text-sm">{s.v}</div>
-              <div className="mt-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">{s.src}</div>
+            <div key={s.k} className="bg-paper p-8">
+              <div className="font-display text-5xl font-black tracking-tight text-cobalt">{s.k}</div>
+              <div className="mt-3 text-base">{s.v}</div>
+              <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">{s.src}</div>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
