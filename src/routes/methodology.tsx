@@ -151,15 +151,15 @@ function Methodology() {
           <div className="flex items-center gap-2 text-rust">
             <EyeOff className="h-4 w-4" />
             <div className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em]">
-              What we don't know
+              Limitations
             </div>
           </div>
           <h2 className="mt-2 font-display text-2xl font-black leading-snug md:text-3xl">
-            Five things we are <span className="text-rust">explicitly not</span> good at — and why we say so up front.
+            Five <span className="text-rust">limitations</span> we name up front.
           </h2>
           <p className="mt-3 max-w-3xl text-sm text-foreground/80">
-            Tools that hide their gaps cause real harm. These are the limits we hold ourselves to.
-            Each one is a known, named blind spot — not a bug we plan to fix quietly.
+            Tools that hide their gaps cause real harm. These are the limits we hold ourselves to —
+            each one acknowledged openly, not quietly papered over.
           </p>
           <ol className="mt-6 grid gap-4 sm:grid-cols-2">
             {[
