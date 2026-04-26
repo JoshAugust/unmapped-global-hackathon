@@ -32,14 +32,17 @@ export const Route = createFileRoute("/localisability")({
   }),
 });
 
-const ALL_KEYS: CountryKey[] = ["ssa-ghana", "ssa-nigeria"];
-
 function LocalisabilityPage() {
   const [leftKey, setLeftKey] = useState<CountryKey>("ssa-nigeria");
   const [rightKey, setRightKey] = useState<CountryKey>("ssa-ghana");
 
   const left = COUNTRIES[leftKey];
   const right = COUNTRIES[rightKey];
+
+  function swap() {
+    setLeftKey(rightKey);
+    setRightKey(leftKey);
+  }
 
   return (
     <PageShell
@@ -52,20 +55,19 @@ function LocalisabilityPage() {
       }
       lede="The brief asks for a tool that is not hardcoded to one country. Compare any two contexts below — every difference you see is driven by a JSON config, not a separate codebase."
     >
-      {/* Selector row */}
-      <section className="mb-8 grid gap-4 md:grid-cols-2">
-        <ContextSelector
-          label="Context A"
-          value={leftKey}
-          onChange={setLeftKey}
-          accent="cobalt"
-        />
-        <ContextSelector
-          label="Context B"
-          value={rightKey}
-          onChange={setRightKey}
-          accent="rust"
-        />
+      {/* Swap control — only two configured contexts, so a single
+          toggle is friendlier than two dropdowns of two options each. */}
+      <section className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-sm border border-line bg-card px-4 py-3">
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+          Comparing <span className="text-cobalt">{left.flag} {left.country}</span> ↔ <span className="text-rust">{right.flag} {right.country}</span>
+        </div>
+        <button
+          type="button"
+          onClick={swap}
+          className="inline-flex items-center gap-2 border-2 border-ink bg-paper px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider text-ink hover:bg-ink hover:text-paper"
+        >
+          ↔ Swap sides
+        </button>
       </section>
 
       {/* Side-by-side comparison */}
@@ -163,40 +165,6 @@ function LocalisabilityPage() {
         </Link>
       </section>
     </PageShell>
-  );
-}
-
-/* ── Selector ─────────────────────────────────────────────────────── */
-
-function ContextSelector({
-  label,
-  value,
-  onChange,
-  accent,
-}: {
-  label: string;
-  value: CountryKey;
-  onChange: (k: CountryKey) => void;
-  accent: "cobalt" | "rust";
-}) {
-  const accentClass = accent === "cobalt" ? "text-cobalt" : "text-rust";
-  return (
-    <label className="block rounded-sm border border-line bg-card p-4">
-      <div className={`font-mono text-[10px] uppercase tracking-[0.2em] ${accentClass}`}>
-        {label}
-      </div>
-      <select
-        value={value}
-        onChange={e => onChange(e.target.value as CountryKey)}
-        className="mt-2 w-full cursor-pointer border border-line bg-paper px-3 py-2 font-display text-base font-bold text-ink outline-none focus:border-cobalt"
-      >
-        {ALL_KEYS.map(k => (
-          <option key={k} value={k}>
-            {COUNTRIES[k].flag}  {COUNTRIES[k].country} — {COUNTRIES[k].region}
-          </option>
-        ))}
-      </select>
-    </label>
   );
 }
 
