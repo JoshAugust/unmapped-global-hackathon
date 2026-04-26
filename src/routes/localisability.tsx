@@ -44,7 +44,7 @@ function LocalisabilityPage() {
           <span className="text-cobalt">very different economies</span>.
         </>
       }
-      lede="The brief asks for a tool that is not hardcoded to one country. Compare any two contexts below — every difference you see is driven by a JSON config, not a separate codebase."
+      lede="Our tool is not hardcoded to any one country. It can be directly plugged into any geographic context — every difference you see is driven by a JSON config, not a separate codebase."
     >
       {/* Side-by-side comparison */}
       <section className="grid gap-6 md:grid-cols-2">
