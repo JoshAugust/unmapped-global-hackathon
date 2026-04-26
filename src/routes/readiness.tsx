@@ -333,6 +333,63 @@ function Readiness() {
         </section>
       </div>
 
+      {/* EXPORT YOUR PASSPORT — appears after the assessment */}
+      <section className="mt-10 rounded-sm border-2 border-ink bg-paper p-6 sm:p-8 shadow-[6px_6px_0_0_var(--ink)]">
+        <div className="grid gap-6 md:grid-cols-[1.4fr_auto] md:items-center">
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
+              Your assessment is ready
+            </div>
+            <h3 className="mt-2 font-display text-2xl font-bold">
+              Take your readiness passport with you.
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80 max-w-xl">
+              A clean one-pager with your outlook, durable strengths, and next-step skills —
+              ready to print or share with a trainer, mentor, or employer.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row md:flex-col">
+            <button
+              type="button"
+              onClick={handleDownloadPDF}
+              disabled={pdfState === "generating"}
+              className={cn(
+                "inline-flex items-center justify-center gap-2 rounded-sm border-2 border-ink px-5 py-3 font-mono text-xs uppercase tracking-wider font-bold shadow-[4px_4px_0_0_var(--ink)] transition-all disabled:opacity-60",
+                pdfState === "done"
+                  ? "bg-moss text-paper"
+                  : "bg-ink text-paper hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_var(--cobalt)]",
+              )}
+              aria-live="polite"
+            >
+              {pdfState === "generating" ? (
+                <>
+                  <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                  Preparing PDF…
+                </>
+              ) : pdfState === "done" ? (
+                <>
+                  <Check className="h-4 w-4" /> Downloaded
+                </>
+              ) : pdfState === "error" ? (
+                <>
+                  <AlertCircle className="h-4 w-4" /> Retry
+                </>
+              ) : (
+                <>
+                  <Download className="h-4 w-4" /> Download PDF
+                </>
+              )}
+            </button>
+            <Link
+              to="/share"
+              className="inline-flex items-center justify-center gap-2 rounded-sm border-2 border-ink bg-paper px-5 py-3 font-mono text-xs uppercase tracking-wider font-bold text-ink hover:bg-sand"
+            >
+              More ways to share
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FUTURE CONTEXT */}
       <section className="mt-10 rounded-sm border border-ink bg-paper p-6 sm:p-8">
         <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
