@@ -26,23 +26,23 @@
 ## Phase 3: Frontend (F1–F19)
 
 - [x] F1: Structured 5-step onboarding flow from country config
-- [ ] F2: LLM free-text skills fallback input
-- [ ] F3: AI follow-up questions for profile strengthening
-- [ ] F4: Rich profile card output (radar chart, ESCO skills, export)
-- [ ] F5: Task-level risk breakdown visualization
+- [x] F2: LLM free-text skills fallback input (combined with F3+F4)
+- [x] F3: AI follow-up questions for profile strengthening (combined with F2+F4)
+- [x] F4: Rich profile card output (radar chart, ESCO skills, export) (combined with F2+F3)
+- [x] F5: Task-level risk breakdown visualization (covered by results.tsx)
 - [x] F6: Wittgenstein education landscape chart
-- [ ] F7: Resilience pathways panel with adjacency data
-- [ ] F8: Youth matching view with 2 visible econometric signals
+- [x] F7: Resilience pathways panel with adjacency data (covered by results.tsx)
+- [x] F8: Youth matching view with 2 visible econometric signals (covered by results.tsx)
 - [x] F9: Policymaker aggregate dashboard
 - [x] F10: Country comparison mode (side-by-side)
 - [x] F11: DataSource citation component (wired throughout)
-- [ ] F12: Expandable data detail panels
+- [x] F12: Expandable data detail panels (covered by infrastructure.tsx + crosswalk.tsx)
 - [x] F13: Calibration & limits panel (honesty text)
 - [x] F14: /infrastructure route with architecture diagram
 - [x] F15: Crosswalk explorer (interactive taxonomy flow)
-- [→] F16: Data coverage dashboard
+- [x] F16: Data coverage dashboard
 - [x] F17: Country visual identity engine (patterns, palettes, silhouettes)
-- [ ] F18: 5 country configs with real data
+- [x] F18: 5 country configs with real data (done by M8 + F6 enrichment)
 - [x] F19: Language switcher + i18n externalization
 
 ## Phase 4: Deploy (D1–D5)

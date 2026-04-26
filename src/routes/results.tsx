@@ -542,6 +542,32 @@ function ResultsDashboard() {
         <ErrorState message={error} />
       ) : (
         <div className="space-y-14">
+          {/* ── Profile Card ── */}
+          <section>
+            <ProfileCard
+              isco08={isco08}
+              occupationTitle={occupationLabel}
+              country={country}
+              educationLevel={onboarding.education_level || "—"}
+              experienceYears={onboarding.experience_years || "—"}
+              informalSkills={onboarding.informal_skills || []}
+              riskScore={
+                recalData?.recalibrated_probability ??
+                queryData?.ai_risk.recalibrated ??
+                0
+              }
+              riskTier={
+                recalData?.risk_tier ?? queryData?.ai_risk.tier ?? "medium"
+              }
+              topPathways={
+                (queryData?.adjacency_pathways ?? []).slice(0, 3).map((p) => ({
+                  title: p.target_title,
+                  overlapPct: p.skill_overlap_pct,
+                }))
+              }
+            />
+          </section>
+
           {/* ── Section 1: AI Readiness Gauge ── */}
           <section className="flex flex-col items-center gap-6">
             <h2 className="font-display text-2xl font-bold text-ink">
