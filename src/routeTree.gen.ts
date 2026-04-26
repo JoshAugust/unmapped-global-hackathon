@@ -9,46 +9,34 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ResultsRouteImport } from './routes/results'
 import { Route as ReadinessRouteImport } from './routes/readiness'
+import { Route as DemoRouteImport } from './routes/demo'
 import { Route as PolicymakerRouteImport } from './routes/policymaker'
 import { Route as PassportRouteImport } from './routes/passport'
+import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as InfrastructureRouteImport } from './routes/infrastructure'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as CrosswalkRouteImport } from './routes/crosswalk'
 import { Route as CoverageRouteImport } from './routes/coverage'
-import { Route as CompareRouteImport } from './routes/compare'
 import { Route as ConfigureRouteImport } from './routes/configure'
+import { Route as CompareRouteImport } from './routes/compare'
 import { Route as IndexRouteImport } from './routes/index'
 
-const InfrastructureRoute = InfrastructureRouteImport.update({
-  id: '/infrastructure',
-  path: '/infrastructure',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EducationRoute = EducationRouteImport.update({
-  id: '/education',
-  path: '/education',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CrosswalkRoute = CrosswalkRouteImport.update({
-  id: '/crosswalk',
-  path: '/crosswalk',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CoverageRoute = CoverageRouteImport.update({
-  id: '/coverage',
-  path: '/coverage',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompareRoute = CompareRouteImport.update({
-  id: '/compare',
-  path: '/compare',
+const ResultsRoute = ResultsRouteImport.update({
+  id: '/results',
+  path: '/results',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReadinessRoute = ReadinessRouteImport.update({
   id: '/readiness',
   path: '/readiness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PolicymakerRoute = PolicymakerRouteImport.update({
@@ -61,14 +49,44 @@ const PassportRoute = PassportRouteImport.update({
   path: '/passport',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MethodologyRoute = MethodologyRouteImport.update({
+  id: '/methodology',
+  path: '/methodology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InfrastructureRoute = InfrastructureRouteImport.update({
+  id: '/infrastructure',
+  path: '/infrastructure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EducationRoute = EducationRouteImport.update({
+  id: '/education',
+  path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CrosswalkRoute = CrosswalkRouteImport.update({
+  id: '/crosswalk',
+  path: '/crosswalk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoverageRoute = CoverageRouteImport.update({
+  id: '/coverage',
+  path: '/coverage',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ConfigureRoute = ConfigureRouteImport.update({
   id: '/configure',
   path: '/configure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -84,11 +102,14 @@ export interface FileRoutesByFullPath {
   '/coverage': typeof CoverageRoute
   '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
+  '/results': typeof ResultsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -97,11 +118,14 @@ export interface FileRoutesByTo {
   '/coverage': typeof CoverageRoute
   '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
+  '/results': typeof ResultsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -111,17 +135,48 @@ export interface FileRoutesById {
   '/coverage': typeof CoverageRoute
   '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
+  '/results': typeof ResultsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/compare' | '/configure' | '/coverage' | '/crosswalk' | '/dashboard' | '/education' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
+  fullPaths:
+    | '/'
+    | '/compare'
+    | '/configure'
+    | '/coverage'
+    | '/crosswalk'
+    | '/dashboard'
+    | '/demo'
+    | '/education'
+    | '/infrastructure'
+    | '/methodology'
+    | '/passport'
+    | '/policymaker'
+    | '/readiness'
+    | '/results'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/compare' | '/configure' | '/coverage' | '/crosswalk' | '/dashboard' | '/education' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
+  to:
+    | '/'
+    | '/compare'
+    | '/configure'
+    | '/coverage'
+    | '/crosswalk'
+    | '/dashboard'
+    | '/demo'
+    | '/education'
+    | '/infrastructure'
+    | '/methodology'
+    | '/passport'
+    | '/policymaker'
+    | '/readiness'
+    | '/results'
   id:
     | '__root__'
     | '/'
@@ -130,11 +185,14 @@ export interface FileRouteTypes {
     | '/coverage'
     | '/crosswalk'
     | '/dashboard'
+    | '/demo'
     | '/education'
     | '/infrastructure'
+    | '/methodology'
     | '/passport'
     | '/policymaker'
     | '/readiness'
+    | '/results'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -144,15 +202,25 @@ export interface RootRouteChildren {
   CoverageRoute: typeof CoverageRoute
   CrosswalkRoute: typeof CrosswalkRoute
   DashboardRoute: typeof DashboardRoute
+  DemoRoute: typeof DemoRoute
   EducationRoute: typeof EducationRoute
   InfrastructureRoute: typeof InfrastructureRoute
+  MethodologyRoute: typeof MethodologyRoute
   PassportRoute: typeof PassportRoute
   PolicymakerRoute: typeof PolicymakerRoute
   ReadinessRoute: typeof ReadinessRoute
+  ResultsRoute: typeof ResultsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/results': {
+      id: '/results'
+      path: '/results'
+      fullPath: '/results'
+      preLoaderRoute: typeof ResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/readiness': {
       id: '/readiness'
       path: '/readiness'
@@ -160,18 +228,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReadinessRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/passport': {
-      id: '/passport'
-      path: '/passport'
-      fullPath: '/passport'
-      preLoaderRoute: typeof PassportRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard': {
-      id: '/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardRouteImport
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/policymaker': {
@@ -181,11 +242,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PolicymakerRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/education': {
-      id: '/education'
-      path: '/education'
-      fullPath: '/education'
-      preLoaderRoute: typeof EducationRouteImport
+    '/passport': {
+      id: '/passport'
+      path: '/passport'
+      fullPath: '/passport'
+      preLoaderRoute: typeof PassportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/methodology': {
+      id: '/methodology'
+      path: '/methodology'
+      fullPath: '/methodology'
+      preLoaderRoute: typeof MethodologyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/infrastructure': {
@@ -193,6 +261,20 @@ declare module '@tanstack/react-router' {
       path: '/infrastructure'
       fullPath: '/infrastructure'
       preLoaderRoute: typeof InfrastructureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/education': {
+      id: '/education'
+      path: '/education'
+      fullPath: '/education'
+      preLoaderRoute: typeof EducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/crosswalk': {
@@ -209,18 +291,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CoverageRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/compare': {
-      id: '/compare'
-      path: '/compare'
-      fullPath: '/compare'
-      preLoaderRoute: typeof CompareRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/configure': {
       id: '/configure'
       path: '/configure'
       fullPath: '/configure'
       preLoaderRoute: typeof ConfigureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare': {
+      id: '/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -240,11 +322,14 @@ const rootRouteChildren: RootRouteChildren = {
   CoverageRoute: CoverageRoute,
   CrosswalkRoute: CrosswalkRoute,
   DashboardRoute: DashboardRoute,
+  DemoRoute: DemoRoute,
   EducationRoute: EducationRoute,
   InfrastructureRoute: InfrastructureRoute,
+  MethodologyRoute: MethodologyRoute,
   PassportRoute: PassportRoute,
   PolicymakerRoute: PolicymakerRoute,
   ReadinessRoute: ReadinessRoute,
+  ResultsRoute: ResultsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

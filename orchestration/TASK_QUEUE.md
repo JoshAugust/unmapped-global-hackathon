@@ -50,5 +50,5 @@
 - [ ] D1: Deploy backend (Railway/Fly.io)
 - [ ] D2: Deploy frontend to joshuaaugustine.page/unmapped
 - [ ] D3: Mobile responsiveness pass
-- [→] D4: Demo flow & narrative
+- [x] D4: Demo flow & narrative
 - [ ] D5: Error handling & edge cases
