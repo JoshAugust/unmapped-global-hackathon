@@ -165,7 +165,7 @@ function ActiveConfigInspector() {
         </p>
 
         <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {(Object.keys(COUNTRIES) as CountryKey[]).map(k => {
+          {(["ssa-nigeria", "ssa-ghana"] as CountryKey[]).map(k => {
             const c = COUNTRIES[k];
             const isActive = active.key === k;
             return (
