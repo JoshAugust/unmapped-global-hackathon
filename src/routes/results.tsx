@@ -6,6 +6,7 @@ import { SOURCES } from "@/lib/sources";
 import { useOnboarding } from "@/lib/profile-store";
 import { fetchWithFallback } from "@/lib/api-client";
 import { getQueryResponse, getRecalibratedData } from "@/lib/static-data";
+import { useI18n } from "@/lib/i18n";
 import { ProfileCard } from "@/components/profile-card";
 import {
   Card,
@@ -50,8 +51,6 @@ export const Route = createFileRoute("/results")({
 // ────────────────────────────────────────────
 // Constants & types
 // ────────────────────────────────────────────
-
-const API = import.meta.env.VITE_API_URL || "";
 
 interface TaskBreakdown {
   share: number;
@@ -463,6 +462,7 @@ function ErrorState({ message }: { message: string }) {
 // ────────────────────────────────────────────
 
 function ResultsDashboard() {
+  const { t } = useI18n();
   const [onboarding] = useOnboarding();
   const [queryData, setQueryData] = useState<QueryResponse | null>(null);
   const [recalData, setRecalData] = useState<RecalibrationOccupation | null>(
@@ -591,7 +591,7 @@ function ResultsDashboard() {
           {/* ── Section 1: AI Readiness Gauge ── */}
           <section className="flex flex-col items-center gap-6">
             <h2 className="font-display text-2xl font-bold text-ink">
-              AI Readiness Score
+              {t('results.ai_gauge.title', 'AI Readiness')}
             </h2>
             <ReadinessGauge
               percentage={
@@ -643,7 +643,7 @@ function ResultsDashboard() {
               <div className="flex items-center gap-2">
                 <BarChart3 className="h-5 w-5 text-cobalt" />
                 <h2 className="font-display text-xl font-bold text-ink">
-                  Task Breakdown
+                  {t('results.tasks.title', 'How Your Work Breaks Down')}
                 </h2>
               </div>
               <p className="text-sm text-muted-foreground max-w-2xl">
@@ -671,7 +671,7 @@ function ResultsDashboard() {
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-cobalt" />
                 <h2 className="font-display text-xl font-bold text-ink">
-                  Transition Pathways
+                  {t('results.pathways.title', 'Where You Could Go Next')}
                 </h2>
               </div>
               <p className="text-sm text-muted-foreground max-w-2xl">
@@ -719,7 +719,7 @@ function ResultsDashboard() {
               <div className="flex items-center gap-2">
                 <Briefcase className="h-5 w-5 text-cobalt" />
                 <h2 className="font-display text-xl font-bold text-ink">
-                  Labour Market Demand
+                  {t('results.demand.title', 'Demand for Your Skills')}
                 </h2>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -813,7 +813,7 @@ function ResultsDashboard() {
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-cobalt" />
                 <h2 className="font-display text-xl font-bold text-ink">
-                  Econometric Signals
+                  {t('results.econometric.title', 'Econometric Signals')}
                 </h2>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">

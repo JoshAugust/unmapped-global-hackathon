@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "";
 
 /* ── Fallback occupations (all 14 from passport.tsx) ── */
 const FALLBACK_OCCUPATIONS = [

@@ -4,6 +4,8 @@ import { PageShell } from "@/components/page-shell";
 import { LlmInput } from "@/components/llm-input";
 import { FollowupQuestions } from "@/components/followup-questions";
 import { useOnboarding } from "@/lib/profile-store";
+import { useI18n } from "@/lib/i18n";
+import { getCountryTheme } from "@/lib/country-theme";
 
 export const Route = createFileRoute("/passport")({
   component: Passport,
@@ -87,9 +89,19 @@ const TOTAL_STEPS = 5;
 /* ── Main component ── */
 
 function Passport() {
+  const { t } = useI18n();
   const [onboarding, setOnboarding] = useOnboarding();
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
+
+  // Read country from the country-theme picker (persisted in localStorage), fallback to NGA
+  const currentCountry = (() => {
+    try {
+      return localStorage.getItem('unmapped-country')?.toUpperCase() || 'NGA';
+    } catch {
+      return 'NGA';
+    }
+  })();
   const [direction, setDirection] = useState<"forward" | "back">("forward");
   const [animating, setAnimating] = useState(false);
   const [building, setBuilding] = useState(false);
@@ -161,7 +173,7 @@ function Passport() {
       informal_skills: selectedInformal,
       experience_years: selectedExp,
       user_goal: selectedGoal,
-      country: "NGA",
+      country: currentCountry,
       completed: true,
     });
     setBuilding(true);
@@ -211,7 +223,7 @@ function Passport() {
         <FollowupQuestions
           isco08={llmIsco08 || ""}
           detectedSkills={detectedSkills}
-          country="NGA"
+          country={currentCountry}
           onComplete={(_answers) => {
             // Answers captured — proceed to build
             commitAndNavigate();
@@ -365,10 +377,11 @@ function StepHeading({
   number: number;
   question: string;
 }) {
+  const { t } = useI18n();
   return (
     <div className="mb-6">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
-        Question {number}
+        {t(`onboarding.step${number}.question_label`, `Question ${number}`)}
       </div>
       <h2 className="mt-2 font-display text-2xl font-black leading-tight text-ink md:text-3xl">
         {question}
@@ -415,11 +428,12 @@ function StepWork({
   llmLabel: string;
   onLlmConfirm: (isco08: string, label: string, skills: string[]) => void;
 }) {
+  const { t } = useI18n();
   return (
     <div>
       <StepHeading
         number={1}
-        question="What do you spend most of your working time doing?"
+        question={t('onboarding.step1.title', 'What do you spend most of your working time doing?')}
       />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {WORK_OPTIONS.map((opt) => (
@@ -441,7 +455,7 @@ function StepWork({
         ))}
       </div>
       {selected === "Something else" && !llmConfirmed && (
-        <LlmInput country="NGA" onConfirm={onLlmConfirm} />
+        <LlmInput country={currentCountry} onConfirm={onLlmConfirm} />
       )}
       {selected === "Something else" && llmConfirmed && (
         <div className="mt-4 rounded-sm border border-emerald-200 bg-emerald-50 p-3">
@@ -469,11 +483,12 @@ function StepEducation({
   selected: string;
   onSelect: (v: string) => void;
 }) {
+  const { t } = useI18n();
   return (
     <div>
       <StepHeading
         number={2}
-        question="What is your highest level of education?"
+        question={t('onboarding.step2.title', 'What is your highest level of education?')}
       />
       <div className="grid gap-3">
         {EDUCATION_OPTIONS.map((opt) => (
@@ -503,11 +518,12 @@ function StepInformalSkills({
   selected: string[];
   onToggle: (skill: string) => void;
 }) {
+  const { t } = useI18n();
   return (
     <div>
       <StepHeading
         number={3}
-        question="Have you taught yourself any skills?"
+        question={t('onboarding.step3.title', 'Have you taught yourself any skills?')}
       />
       <p className="mb-4 text-sm text-muted-foreground">
         Select all that apply.
@@ -567,11 +583,12 @@ function StepExperience({
   selected: string;
   onSelect: (v: string) => void;
 }) {
+  const { t } = useI18n();
   return (
     <div>
       <StepHeading
         number={4}
-        question="How many years have you been doing your main work?"
+        question={t('onboarding.step4.title', 'How many years have you been doing your main work?')}
       />
       {/* Visual timeline */}
       <div className="mb-6 flex items-center justify-between px-2">
@@ -618,11 +635,12 @@ function StepGoal({
   selected: string;
   onSelect: (v: string) => void;
 }) {
+  const { t } = useI18n();
   return (
     <div>
       <StepHeading
         number={5}
-        question="What are you most hoping to do?"
+        question={t('onboarding.step5.title', 'What are you most hoping to do?')}
       />
       <div className="grid gap-3">
         {GOAL_OPTIONS.map((opt) => (

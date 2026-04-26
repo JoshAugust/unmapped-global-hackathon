@@ -18,7 +18,7 @@ Traditional labour market tools assume formal employment, standardised credentia
 
 UNMAPPED is an open infrastructure layer that maps informal talent to real economic opportunity. It works like this:
 
-1. **Capture** — A 5-step onboarding (available in 7 languages) translates informal work descriptions into ISCO-08 occupation codes
+1. **Capture** — A 5-step onboarding (available in 8 languages) translates informal work descriptions into ISCO-08 occupation codes
 2. **Bridge** — A unified crosswalk engine connects SOC ↔ ISCO-08 ↔ ESCO ↔ O\*NET, linking 4 international taxonomy systems
 3. **Analyse** — Task-level automation recalibration adjusts Frey & Osborne probabilities for informal economy contexts
 4. **Project** — Wittgenstein SSP2 education projections and ILO labour market signals show where the economy is heading
@@ -74,7 +74,7 @@ UNMAPPED is an open infrastructure layer that maps informal talent to real econo
 ## Features
 
 ### Youth Interface
-- 5-step onboarding in 7 languages (English, French, Yoruba, Hausa, Swahili, Hindi, Kinyarwanda)
+- 5-step onboarding in 8 languages (English, French, Yoruba, Hausa, Swahili, Hindi, Kinyarwanda, Bengali)
 - AI-powered occupation matching for freetext descriptions
 - Animated readiness gauge with task-level automation breakdown
 - Career transition pathways with specific skill gaps and training cost tiers
@@ -103,7 +103,7 @@ UNMAPPED is an open infrastructure layer that maps informal talent to real econo
 - **Frontend:** React 19, TanStack Router, TanStack Start, Tailwind CSS v4, Radix UI, Recharts, Lucide icons
 - **AI:** OpenAI GPT-4o-mini (occupation classification + skill extraction)
 - **Data:** Embedded static JSON with API fallback, O\*NET + ESCO + ISCO-08 crosswalks
-- **i18n:** 7 languages with dynamic locale loading
+- **i18n:** 8 languages with dynamic locale loading
 - **Deploy:** GitHub Pages (frontend), static data fallback for full offline demo
 
 ## Setup
@@ -139,7 +139,7 @@ src/
 ├── components/       # Shared UI components
 ├── lib/              # Core logic (API client, i18n, stores, engine)
 ├── data/             # Country configs, skill data
-└── locales/          # Translation files (7 languages)
+└── locales/          # Translation files (8 languages)
 ```
 
 ## Team
