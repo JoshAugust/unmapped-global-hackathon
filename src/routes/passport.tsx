@@ -315,6 +315,7 @@ function Passport() {
                   setDetectedSkills(skills);
                 }
               }}
+              currentCountry={currentCountry}
             />
           )}
           {step === 2 && (
