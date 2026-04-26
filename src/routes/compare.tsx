@@ -95,6 +95,9 @@ function enrichConfig(iso3: string, raw: unknown) {
   if (!raw || typeof raw !== "object") return raw;
   const cfg = raw as Record<string, unknown>;
   const wdiRaw = WDI_LABOUR_BY_ISO[iso3.toUpperCase()] ?? {};
+  const educationProjections =
+    (cfg.educationProjections as CountryConfig["educationProjections"] | undefined) ??
+    (cfg.education_projections as CountryConfig["educationProjections"] | undefined);
   const wdi = {
     gdp_per_capita: wdiRaw.macro?.gdp_per_capita_usd?.value,
     youth_unemployment: wdiRaw.labour_market?.youth_unemployment_rate_pct?.value,
@@ -110,6 +113,7 @@ function enrichConfig(iso3: string, raw: unknown) {
     calibration_factor:
       (cfg.automation as { calibration_factor?: number } | undefined)
         ?.calibration_factor,
+    educationProjections,
     hci: wdiRaw.education?.human_capital_index?.value,
     wdi,
   };
