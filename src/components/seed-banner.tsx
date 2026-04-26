@@ -28,7 +28,7 @@ export function SeedBanner() {
   return (
     <div
       data-presenter-hide="true"
-      className="seed-banner border-b border-amber-300 bg-amber-50 px-4 py-2 text-amber-900 print:hidden"
+      className="seed-banner border-b border-line bg-cobalt-soft px-4 py-2 text-ink print:hidden"
     >
       <div className="mx-auto flex max-w-[1400px] items-start gap-3">
         <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
@@ -45,7 +45,7 @@ export function SeedBanner() {
             setDismissed(true);
           }}
           aria-label="Dismiss disclosure banner"
-          className="-m-1 rounded p-1 text-amber-900/70 hover:bg-amber-100 hover:text-amber-900"
+          className="-m-1 rounded p-1 text-ink/70 hover:bg-paper hover:text-ink"
         >
           <X className="h-4 w-4" />
         </button>
