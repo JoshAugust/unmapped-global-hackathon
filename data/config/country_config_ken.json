@@ -1,0 +1,326 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Kenya configuration. Swap this file for country_config_nga.json to reconfigure UNMAPPED for Kenya. No codebase changes required.",
+  "country": {
+    "name": "Kenya",
+    "iso3": "KEN",
+    "iso2": "KE",
+    "region": "Sub-Saharan Africa",
+    "subregion": "East Africa",
+    "economy_type": "mixed_formal_informal",
+    "primary_language": "en",
+    "supported_languages": [
+      "en",
+      "sw"
+    ],
+    "currency": "KES",
+    "currency_symbol": "KSh",
+    "usd_exchange_rate_approx": 155,
+    "usd_exchange_rate_year": 2024
+  },
+  "data_paths": {
+    "labour_market": "data/ken/wdi_labour.json",
+    "occupation_lookup": "data/isco_fo_joined.csv",
+    "automation_calibration": "config/calibration.json"
+  },
+  "automation": {
+    "calibration_factor": 0.63,
+    "calibration_rationale": "Kenya mixed formal/informal. Lower formal sector share than Nigeria but strong mobile money infrastructure and growing tech scene (Silicon Savannah).",
+    "source_dataset": "Frey-Osborne 2013, ISCO-08 crosswalk",
+    "recalibration_trigger": "TODO: Update when Kenya publishes updated occupation-level task data"
+  },
+  "education_taxonomy": {
+    "levels": [
+      {
+        "code": "L0",
+        "label": "No formal education",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L1",
+        "label": "Primary (incomplete)",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L2",
+        "label": "Kenya Certificate of Primary Education (KCPE)",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L3",
+        "label": "Kenya Certificate of Secondary Education (KCSE)",
+        "isco_skill_level": 2
+      },
+      {
+        "code": "L4",
+        "label": "Craft / Artisan certificate (TVET)",
+        "isco_skill_level": 2
+      },
+      {
+        "code": "L5",
+        "label": "Diploma (college / polytechnic)",
+        "isco_skill_level": 3
+      },
+      {
+        "code": "L6",
+        "label": "Higher National Diploma",
+        "isco_skill_level": 3
+      },
+      {
+        "code": "L7",
+        "label": "University degree (B.Sc / B.A)",
+        "isco_skill_level": 4
+      },
+      {
+        "code": "L8",
+        "label": "Postgraduate (Masters / PhD)",
+        "isco_skill_level": 4
+      }
+    ],
+    "informal_recognition": {
+      "enabled": true,
+      "categories": [
+        "jua_kali_apprenticeship",
+        "self_taught",
+        "community_training",
+        "on_job_experience"
+      ],
+      "note": "Kenya's Jua Kali informal sector is a major skills pathway. CBC (Competency-Based Curriculum) transition underway since 2017."
+    }
+  },
+  "opportunity_types": {
+    "formal_employment": {
+      "enabled": true,
+      "label": "Formal job"
+    },
+    "self_employment": {
+      "enabled": true,
+      "label": "Start or grow a business"
+    },
+    "gig_platform": {
+      "enabled": true,
+      "label": "Platform work (Bolt, Glovo, Uber)"
+    },
+    "training_pathway": {
+      "enabled": true,
+      "label": "Training or upskilling"
+    },
+    "apprenticeship": {
+      "enabled": true,
+      "label": "Jua Kali apprenticeship or formal TVET"
+    },
+    "fintech_agent": {
+      "enabled": true,
+      "label": "M-Pesa / mobile money agent"
+    },
+    "cooperative": {
+      "enabled": true,
+      "label": "SACCO or cooperative (strong in Kenya)"
+    }
+  },
+  "econometric_signals": {
+    "signal_1": {
+      "name": "Sector wage comparison",
+      "description": "Monthly earnings by economic sector (formal sector only)",
+      "data_field": "wages.mean_monthly_earnings_usd",
+      "vintage": "TODO: Kenya Labour Force Survey",
+      "display_unit": "USD/month",
+      "display_caveat": "Formal sector only. Informal sector wages typically lower."
+    },
+    "signal_2": {
+      "name": "Sector growth outlook",
+      "description": "Which sectors are growing or declining",
+      "data_field": "sector_growth_outlook",
+      "vintage": "World Bank Kenya Economic Update 2023",
+      "display_unit": "Qualitative (Very High / High / Medium / Declining)",
+      "display_caveat": "Forward-looking estimate."
+    }
+  },
+  "ui": {
+    "default_language": "en",
+    "font_stack": "system-ui, sans-serif",
+    "locale": "en-KE",
+    "number_format": "1,234.56",
+    "date_format": "DD/MM/YYYY",
+    "low_bandwidth_mode": true,
+    "image_loading": "lazy",
+    "max_initial_payload_kb": 150,
+    "primary_color": "#BB0000",
+    "accent_color": "#006600",
+    "onboarding_tone": "warm_direct",
+    "reading_level_target": "secondary_school"
+  },
+  "skill_input_questions": [
+    {
+      "id": "q_work_activity",
+      "question_en": "What do you spend most of your working time doing?",
+      "question_sw": "TODO",
+      "type": "select_with_freetext",
+      "options_en": [
+        "Selling goods (market, shop, online)",
+        "Repairing phones, electronics, or appliances",
+        "Sewing, tailoring, or making clothes",
+        "Driving (matatu, boda-boda, Bolt)",
+        "Cooking, food prep, or catering",
+        "Construction or building work",
+        "Farming or growing food",
+        "M-Pesa / mobile money agent work",
+        "Teaching or training others",
+        "Office or admin work",
+        "Healthcare or caring for others",
+        "IT, tech, or computer work",
+        "Creative work (content, design, music)",
+        "Something else"
+      ],
+      "maps_to": "isco08_primary"
+    },
+    {
+      "id": "q_education",
+      "question_en": "What is your highest level of education?",
+      "question_sw": "TODO",
+      "type": "select",
+      "options_en": [
+        "No formal education",
+        "Primary (incomplete)",
+        "Kenya Certificate of Primary Education (KCPE)",
+        "Kenya Certificate of Secondary Education (KCSE)",
+        "Craft / Artisan certificate (TVET)",
+        "Diploma (college / polytechnic)",
+        "Higher National Diploma",
+        "University degree (B.Sc / B.A)",
+        "Postgraduate (Masters / PhD)"
+      ],
+      "maps_to": "education_level_code"
+    },
+    {
+      "id": "q_informal_skills",
+      "question_en": "Have you taught yourself any skills? (select all that apply)",
+      "question_sw": "TODO",
+      "type": "multi_select",
+      "options_en": [
+        "Basic computer use",
+        "Using smartphones and apps",
+        "Social media for business",
+        "Accounting or bookkeeping",
+        "A trade through Jua Kali apprenticeship",
+        "M-Pesa / mobile money management",
+        "Coding or tech skills",
+        "A language",
+        "Nothing specific"
+      ],
+      "maps_to": "informal_skills_tags"
+    },
+    {
+      "id": "q_years_experience",
+      "question_en": "How many years have you been doing your main work?",
+      "question_sw": "TODO",
+      "type": "select",
+      "options_en": [
+        "Less than 1 year",
+        "1-2 years",
+        "3-5 years",
+        "More than 5 years"
+      ],
+      "maps_to": "experience_years_band"
+    },
+    {
+      "id": "q_goal",
+      "question_en": "What are you most hoping to do?",
+      "question_sw": "TODO",
+      "type": "select",
+      "options_en": [
+        "Find a formal job",
+        "Grow my own business",
+        "Learn a new skill or get certified",
+        "Understand what different jobs pay",
+        "See how AI might affect my work"
+      ],
+      "maps_to": "user_goal"
+    }
+  ],
+  "sector_growth_outlook": {
+    "_source": "World Bank Kenya Economic Update 2023; ILO Kenya; McKinsey Africa report",
+    "sectors_growing": [
+      {
+        "sector": "Financial Services & Mobile Money",
+        "growth_tag": "Very High",
+        "rationale": "M-Pesa ecosystem, fintech innovation hub. Kenya leads Africa in mobile money."
+      },
+      {
+        "sector": "Information & Communication Technology",
+        "growth_tag": "Very High",
+        "rationale": "Silicon Savannah \u2014 iHub, Konza Technopolis. Growing BPO and software development sector."
+      },
+      {
+        "sector": "Agriculture & Agritech",
+        "growth_tag": "High",
+        "rationale": "Tea, coffee, horticulture export growth. Agritech startups (Twiga Foods, Apollo Agriculture)."
+      },
+      {
+        "sector": "Renewable Energy",
+        "growth_tag": "High",
+        "rationale": "Geothermal leader in Africa, solar expansion, off-grid solutions."
+      },
+      {
+        "sector": "Tourism & Hospitality",
+        "growth_tag": "Medium",
+        "rationale": "Safari tourism recovering post-COVID, MICE (meetings/conferences) growing."
+      }
+    ],
+    "sectors_at_risk": [
+      {
+        "sector": "Routine Clerical & Admin",
+        "growth_tag": "Declining",
+        "rationale": "Automation of routine office tasks."
+      },
+      {
+        "sector": "Traditional Banking Counter Services",
+        "growth_tag": "Declining",
+        "rationale": "M-Pesa and digital banking reducing branch teller demand"
+      },
+      {
+        "sector": "Subsistence Agriculture",
+        "growth_tag": "Stagnant",
+        "rationale": "Climate risk, low productivity, youth exodus to urban areas"
+      }
+    ]
+  },
+  "education_projections": {
+    "2025": {
+      "no_education": 0.18,
+      "primary": 0.28,
+      "lower_secondary": 0.26,
+      "upper_secondary": 0.18,
+      "post_secondary": 0.1
+    },
+    "2035": {
+      "no_education": 0.12,
+      "primary": 0.24,
+      "lower_secondary": 0.28,
+      "upper_secondary": 0.24,
+      "post_secondary": 0.12
+    }
+  },
+  "literacy_rate_wdi": {
+    "value": 81.5,
+    "year": 2023,
+    "source": "UNESCO UIS / WDI 2024"
+  },
+  "youth_literacy_rate_wdi": {
+    "value": 88.1,
+    "year": 2023,
+    "source": "UNESCO UIS 2024"
+  },
+  "school_enrollment": {
+    "primary_gross": {
+      "value": 102,
+      "year": 2022,
+      "source": "WDI 2024"
+    },
+    "secondary_gross": {
+      "value": 62,
+      "year": 2022,
+      "source": "WDI 2024"
+    }
+  }
+}

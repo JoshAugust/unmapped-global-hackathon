@@ -1,0 +1,1635 @@
+soc_code,soc_title,isco08_code,isco08_title,mapping_type
+29-1125,Recreational Therapists,2264,Physiotherapists,partial
+29-1125,Recreational Therapists,2330,Secondary Education Teachers,partial
+29-1125,Recreational Therapists,3251,Dental Assistants and Therapists,partial
+49-1011,"First-Line Supervisorsof Mechanics, Installers, and Repairers",7232,Aircraft Engine Mechanics and Repairers,partial
+49-1011,"First-Line Supervisorsof Mechanics, Installers, and Repairers",7413,Electrical Line Installers and Repairers,partial
+49-1011,"First-Line Supervisorsof Mechanics, Installers, and Repairers",7311,Precision-instrument Makers and Repairers,partial
+11-9161,Emergency Management Directors,1120,Managing Directors and Chief Executives,approximate
+11-9161,Emergency Management Directors,1342,Health Service Managers,approximate
+11-9161,Emergency Management Directors,1412,Restaurant Managers,approximate
+21-1023,Mental Healthand Substance Abuse Social Workers,3257,Environmental and Occupational Health Inspectors and Associates,partial
+21-1023,Mental Healthand Substance Abuse Social Workers,3253,Community Health Workers,partial
+29-1181,Audiologists,2266,Audiologists and Speech Therapists,direct
+29-1122,Occupational Therapists,2264,Physiotherapists,partial
+29-1122,Occupational Therapists,2320,Vocational Education Teachers,partial
+29-1122,Occupational Therapists,2266,Audiologists and Speech Therapists,partial
+29-2091,Orthotistsand Prosthetists,2266,Audiologists and Speech Therapists,partial
+29-2091,Orthotistsand Prosthetists,2114,Geologists and geophysicists,partial
+21-1022,Healthcare Social Workers,3253,Community Health Workers,partial
+21-1022,Healthcare Social Workers,2641,Authors and Related Writers,approximate
+21-1022,Healthcare Social Workers,3412,Social Work Associate Professionals,direct
+29-1022,Oraland Maxillofacial Surgeons,3352,Government Tax and Excise Officials,approximate
+29-1022,Oraland Maxillofacial Surgeons,2211,Generalist Medical Practitioners,direct
+33-1021,First-Line Supervisorsof Fire Fightingand Prevention Workers,5411,Fire Fighters,direct
+29-1031,Dietitiansand Nutritionists,2265,Dieticians and Nutritionists,direct
+11-9081,Lodging Managers,1322,Mining Managers,direct
+11-9081,Lodging Managers,1211,Finance Managers,partial
+11-9081,Lodging Managers,1411,Hotel Managers,partial
+27-2032,Choreographers,2653,Dancers and Choreographers,direct
+27-2032,Choreographers,3431,Photographers,direct
+41-9031,Sales Engineers,3151,Ships' Engineers,direct
+41-9031,Sales Engineers,5242,Sales Demonstrators,partial
+29-1060,Physiciansand Surgeons,2111,Physicists and Astronomers,partial
+29-1060,Physiciansand Surgeons,2652,"Musicians, Singers and Composers",partial
+29-1060,Physiciansand Surgeons,2265,Dieticians and Nutritionists,partial
+25-9031,Instructional Coordinators,2141,Industrial and Production Engineers,partial
+25-9031,Instructional Coordinators,2320,Vocational Education Teachers,partial
+25-9031,Instructional Coordinators,2651,Visual Artists,approximate
+19-3039,"Psychologists, All Other",2634,Psychologists,direct
+33-1012,First-Line Supervisorsof Policeand Detectives,3355,Police Inspectors and Detectives,approximate
+33-1012,First-Line Supervisorsof Policeand Detectives,3341,Office Supervisors,approximate
+33-1012,First-Line Supervisorsof Policeand Detectives,5151,"Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments",approximate
+29-1021,"Dentists, General",2261,Dentists,direct
+25-2021,"Elementary School Teachers, Except Special Education",2341,Primary School Teachers,partial
+25-2021,"Elementary School Teachers, Except Special Education",2342,Early Childhood Educators,direct
+19-1042,"Medical Scientists, Except Epidemiologists",2240,Paramedical Practitioners,partial
+19-1042,"Medical Scientists, Except Epidemiologists",2112,Meteorologists,approximate
+19-1042,"Medical Scientists, Except Epidemiologists",2211,Generalist Medical Practitioners,approximate
+11-9032,"Education Administrators, Elementaryand Secondary School",1345,Education Managers,direct
+11-9032,"Education Administrators, Elementaryand Secondary School",1330,Information and Communications Technology Service Managers,direct
+29-1081,Podiatrists,2262,Pharmacists,partial
+29-1081,Podiatrists,2261,Dentists,partial
+29-1081,Podiatrists,2651,Visual Artists,partial
+19-3031,"Clinical, Counseling, and School Psychologists",2634,Psychologists,direct
+21-1014,Mental Health Counselors,3253,Community Health Workers,partial
+21-1014,Mental Health Counselors,3333,Employment agents and contractors,partial
+21-1014,Mental Health Counselors,2143,Environmental Engineers,partial
+51-6092,Fabricand Apparel Patternmakers,7532,Garment and Related Patternmakers and Cutters,partial
+51-6092,Fabricand Apparel Patternmakers,7112,Bricklayers and Related Workers,partial
+51-6092,Fabricand Apparel Patternmakers,7234,Bicycle and Related Repairers,approximate
+27-1027,Setand Exhibit Designers,2166,Graphic and Multimedia Designers,partial
+27-1027,Setand Exhibit Designers,2163,Product and Garment Designers,partial
+27-1027,Setand Exhibit Designers,2144,Mechanical Engineers,approximate
+11-3121,Human Resources Managers,1212,Human Resource Managers,direct
+39-9032,Recreation Workers,5311,Child Care Workers,partial
+39-9032,Recreation Workers,5142,Beauticians and Related Workers,partial
+39-9032,Recreation Workers,5241,Fashion and Other Models,approximate
+11-3131,Trainingand Development Managers,1223,Research and Development Managers,direct
+11-3131,Trainingand Development Managers,1322,Mining Managers,partial
+11-3131,Trainingand Development Managers,1211,Finance Managers,partial
+29-1127,Speech-Language Pathologists,2353,Other Language Teachers,partial
+29-1127,Speech-Language Pathologists,2634,Psychologists,partial
+29-1127,Speech-Language Pathologists,2112,Meteorologists,approximate
+15-1121,Computer Systems Analysts,2511,Systems Analysts,direct
+11-9151,Socialand Community Service Managers,1341,Child Care Service Managers,direct
+11-9151,Socialand Community Service Managers,1342,Health Service Managers,partial
+11-9151,Socialand Community Service Managers,1343,Aged Care Service Managers,partial
+25-4012,Curators,2621,Archivists and Curators,direct
+29-9091,Athletic Trainers,3421,Athletes and Sports Players,partial
+29-9091,Athletic Trainers,2151,Electrical Engineers,partial
+29-9091,Athletic Trainers,2354,Other Music Teachers,partial
+11-9111,Medicaland Health Services Managers,1342,Health Service Managers,direct
+11-9111,Medicaland Health Services Managers,1343,Aged Care Service Managers,direct
+11-9111,Medicaland Health Services Managers,1341,Child Care Service Managers,partial
+25-2011,"Preschool Teachers, Except Special Education",2341,Primary School Teachers,partial
+25-2011,"Preschool Teachers, Except Special Education",2212,Specialist Medical Practitioners,approximate
+25-2011,"Preschool Teachers, Except Special Education",2342,Early Childhood Educators,direct
+25-9021,Farmand Home Management Advisors,2412,Financial and Investment Advisers,partial
+25-9021,Farmand Home Management Advisors,2132,"Farming, Forestry and Fisheries Advisers",partial
+19-3091,Anthropologistsand Archeologists,2266,Audiologists and Speech Therapists,partial
+19-3091,Anthropologistsand Archeologists,2632,"Sociologists, Anthropologists and Related Professionals",partial
+19-3091,Anthropologistsand Archeologists,2162,Landscape Architects,approximate
+25-2054,"Special Education Teachers, Secondary School",2330,Secondary Education Teachers,partial
+25-2054,"Special Education Teachers, Secondary School",2320,Vocational Education Teachers,partial
+25-2054,"Special Education Teachers, Secondary School",2352,Special Needs Teachers,partial
+25-2031,"Secondary School Teachers, Except Specialand Career/Technical Edu- cation",2330,Secondary Education Teachers,approximate
+25-2031,"Secondary School Teachers, Except Specialand Career/Technical Edu- cation",2341,Primary School Teachers,direct
+25-2031,"Secondary School Teachers, Except Specialand Career/Technical Edu- cation",2342,Early Childhood Educators,direct
+21-2011,Clergy,2611,Lawyers,approximate
+19-1032,Foresters,2642,Journalists,approximate
+19-1032,Foresters,2113,Chemists,approximate
+19-1032,Foresters,2261,Dentists,approximate
+21-1012,"Educational, Guidance, School, and Vocational Counselors",2635,Social Work and Counselling Professionals,direct
+25-2032,"Career/Technical Education Teachers, Secondary School",2320,Vocational Education Teachers,partial
+25-2032,"Career/Technical Education Teachers, Secondary School",2330,Secondary Education Teachers,partial
+25-2032,"Career/Technical Education Teachers, Secondary School",2310,University and Higher Education Teachers,partial
+29-1111,Registered Nurses,2250,Veterinarians,approximate
+21-1015,Rehabilitation Counselors,2514,Applications Programmers,partial
+21-1015,Rehabilitation Counselors,2356,Information Technology Trainers,approximate
+21-1015,Rehabilitation Counselors,3135,Metal Production Process Controllers,approximate
+25-3999,"Teachersand Instructors, All Other",2521,Database Designers and Administrators,partial
+25-3999,"Teachersand Instructors, All Other",2522,Systems Aministrators,partial
+25-3999,"Teachersand Instructors, All Other",2621,Archivists and Curators,partial
+19-4092,Forensic Science Technicians,2354,Other Music Teachers,approximate
+17-2121,Marine Engineersand Naval Architects,2162,Landscape Architects,partial
+17-2121,Marine Engineersand Naval Architects,3115,Mechanical Engineering Technicians,partial
+17-2121,Marine Engineersand Naval Architects,2161,Building Architects,partial
+11-9033,"Education Administrators, Postsecondary",1345,Education Managers,partial
+11-9033,"Education Administrators, Postsecondary",1219,Business Services and Administration Managers Not Elsewhere Classified,approximate
+11-9033,"Education Administrators, Postsecondary",1349,Professional Services Managers Not Elsewhere Classified,direct
+17-2141,Mechanical Engineers,2144,Mechanical Engineers,direct
+17-2141,Mechanical Engineers,2145,Chemical Engineers,direct
+17-2141,Mechanical Engineers,2151,Electrical Engineers,direct
+29-1051,Pharmacists,2262,Pharmacists,direct
+13-1081,Logisticians,3143,Forestry Technicians,partial
+13-1081,Logisticians,3254,Dispensing Opticians,partial
+13-1081,Logisticians,2634,Psychologists,partial
+19-1022,Microbiologists,2112,Meteorologists,partial
+19-1022,Microbiologists,2634,Psychologists,partial
+19-3032,Industrial-Organizational Psychologists,2634,Psychologists,direct
+27-2022,Coachesand Scouts,2165,Cartographers and Surveyors,approximate
+27-2022,Coachesand Scouts,2411,Accountants,approximate
+27-2022,Coachesand Scouts,2113,Chemists,approximate
+11-2022,Sales Managers,1221,Sales and Marketing Managers,direct
+11-2022,Sales Managers,1211,Finance Managers,direct
+11-2022,Sales Managers,1411,Hotel Managers,direct
+19-2043,Hydrologists,2634,Psychologists,direct
+19-2043,Hydrologists,2112,Meteorologists,partial
+19-2043,Hydrologists,2631,Economists,partial
+11-2021,Marketing Managers,1221,Sales and Marketing Managers,direct
+11-2021,Marketing Managers,1322,Mining Managers,direct
+21-1013,Marriageand Family Therapists,3251,Dental Assistants and Therapists,partial
+21-1013,Marriageand Family Therapists,2266,Audiologists and Speech Therapists,partial
+21-1013,Marriageand Family Therapists,2264,Physiotherapists,approximate
+17-2199,"Engineers, All Other",2142,Civil Engineers,direct
+17-2199,"Engineers, All Other",3151,Ships' Engineers,direct
+17-2199,"Engineers, All Other",2145,Chemical Engineers,direct
+13-1151,Trainingand Development Specialists,2424,Training and Staff Development Professionals,direct
+13-1151,Trainingand Development Specialists,2351,Education Methods Specialists,partial
+43-1011,First-Line Supervisorsof Officeand Administrative Support Workers,4212,"Bookmakers, Croupiers and Related Gaming Workers",approximate
+43-1011,First-Line Supervisorsof Officeand Administrative Support Workers,3343,Administrative and Executive Secretaries,direct
+43-1011,First-Line Supervisorsof Officeand Administrative Support Workers,3341,Office Supervisors,direct
+19-1029,"Biological Scientists, All Other",2633,"Philosophers, Historians and Political Scientists",partial
+19-1029,"Biological Scientists, All Other",2266,Audiologists and Speech Therapists,partial
+19-1029,"Biological Scientists, All Other",2651,Visual Artists,partial
+11-2031,Public Relationsand Fundraising Managers,1213,Policy and Planning Managers,partial
+11-2031,Public Relationsand Fundraising Managers,1222,Advertising and Public Relations Managers,partial
+11-2031,Public Relationsand Fundraising Managers,1431,"Sports, Recreation and Cultural Centre Managers",partial
+27-1014,Multimedia Artistsand Animators,3256,Medical Assistants,partial
+27-1014,Multimedia Artistsand Animators,2513,Web and Multimedia Developers,partial
+27-1014,Multimedia Artistsand Animators,2166,Graphic and Multimedia Designers,partial
+15-1111,Computerand Information Research Scientists,3252,Medical Records and Health Information Technicians,partial
+15-1111,Computerand Information Research Scientists,2633,"Philosophers, Historians and Political Scientists",partial
+15-1111,Computerand Information Research Scientists,2622,Librarians and Related Information Professionals,approximate
+11-1011,Chief Executives,1120,Managing Directors and Chief Executives,direct
+11-9031,"Education Administrators, Preschooland Childcare Center/Program",1345,Education Managers,direct
+27-2041,Music Directorsand Composers,2652,"Musicians, Singers and Composers",direct
+51-1011,First-Line Supervisorsof Productionand Operating Workers,8141,Rubber Products Machine Operators,partial
+51-1011,First-Line Supervisorsof Productionand Operating Workers,8143,Paper Products Machine Operators,partial
+51-1011,First-Line Supervisorsof Productionand Operating Workers,8112,Mineral and Stone Processing Plant Operators,partial
+41-3031,"Securities, Commodities, and Financial Services Sales Agents",3311,Securities and Finance Dealers and Brokers,partial
+41-3031,"Securities, Commodities, and Financial Services Sales Agents",3322,Commercial Sales Representatives,approximate
+41-3031,"Securities, Commodities, and Financial Services Sales Agents",2434,Information and Communications Technology Sales Professionals,direct
+19-1031,Conservation Scientists,2351,Education Methods Specialists,partial
+19-1031,Conservation Scientists,2265,Dieticians and Nutritionists,partial
+19-1031,Conservation Scientists,2153,Telecommunications Engineers,partial
+25-2053,"Special Education Teachers, Middle School",2330,Secondary Education Teachers,partial
+25-2053,"Special Education Teachers, Middle School",2320,Vocational Education Teachers,partial
+25-2053,"Special Education Teachers, Middle School",2352,Special Needs Teachers,partial
+17-2041,Chemical Engineers,2145,Chemical Engineers,direct
+17-2041,Chemical Engineers,2144,Mechanical Engineers,direct
+11-9041,Architecturaland Engineering Managers,1341,Child Care Service Managers,partial
+11-9041,Architecturaland Engineering Managers,1321,Manufacturing Managers,partial
+11-9041,Architecturaland Engineering Managers,1342,Health Service Managers,partial
+17-2011,Aerospace Engineers,2152,Electronics Engineers,partial
+17-2011,Aerospace Engineers,3151,Ships' Engineers,partial
+17-2011,Aerospace Engineers,2143,Environmental Engineers,partial
+11-9121,Natural Sciences Managers,1211,Finance Managers,partial
+11-9121,Natural Sciences Managers,1321,Manufacturing Managers,partial
+11-9121,Natural Sciences Managers,1342,Health Service Managers,partial
+17-2081,Environmental Engineers,2143,Environmental Engineers,direct
+17-1011,"Architects, Except Landscapeand Naval",2161,Building Architects,direct
+17-1011,"Architects, Except Landscapeand Naval",2162,Landscape Architects,direct
+31-2021,Physical Therapist Assistants,3255,Physiotherapy Technicians and Assistants,direct
+31-2021,Physical Therapist Assistants,5223,Shop Sales Assistants,partial
+31-2021,Physical Therapist Assistants,3213,Pharmaceutical Technicians and Assistants,partial
+17-2051,Civil Engineers,2142,Civil Engineers,direct
+29-1199,"Health Diagnosingand Treating Practitioners, All Other",2211,Generalist Medical Practitioners,partial
+29-1199,"Health Diagnosingand Treating Practitioners, All Other",2212,Specialist Medical Practitioners,partial
+29-1199,"Health Diagnosingand Treating Practitioners, All Other",2431,Advertising and Marketing Professionals,partial
+19-1013,Soiland Plant Scientists,2633,"Philosophers, Historians and Political Scientists",partial
+19-1013,Soiland Plant Scientists,2261,Dentists,approximate
+19-1013,Soiland Plant Scientists,2265,Dieticians and Nutritionists,approximate
+19-2032,Materials Scientists,2112,Meteorologists,partial
+19-2032,Materials Scientists,2651,Visual Artists,partial
+19-2032,Materials Scientists,2261,Dentists,approximate
+17-2131,Materials Engineers,2144,Mechanical Engineers,direct
+17-2131,Materials Engineers,2151,Electrical Engineers,direct
+17-2131,Materials Engineers,2145,Chemical Engineers,direct
+27-1022,Fashion Designers,2166,Graphic and Multimedia Designers,partial
+27-1022,Fashion Designers,2163,Product and Garment Designers,partial
+27-1022,Fashion Designers,3432,Interior Designers and Decorators,partial
+29-1123,Physical Therapists,2264,Physiotherapists,direct
+27-4021,Photographers,3431,Photographers,direct
+27-2012,Producersand Directors,3432,Interior Designers and Decorators,partial
+27-2012,Producersand Directors,2653,Dancers and Choreographers,approximate
+27-2012,Producersand Directors,3131,Power Production Plant Operators,approximate
+27-1025,Interior Designers,3432,Interior Designers and Decorators,direct
+29-1023,Orthodontists,2261,Dentists,partial
+29-1023,Orthodontists,2112,Meteorologists,partial
+29-1023,Orthodontists,2642,Journalists,partial
+27-1011,Art Directors,2655,Actors,partial
+27-1011,Art Directors,2621,Archivists and Curators,partial
+27-1011,Art Directors,2240,Paramedical Practitioners,partial
+33-1011,First-Line Supervisorsof Correctional Officers,3341,Office Supervisors,approximate
+33-1011,First-Line Supervisorsof Correctional Officers,3355,Police Inspectors and Detectives,approximate
+33-1011,First-Line Supervisorsof Correctional Officers,3123,Construction Supervisors,approximate
+21-2021,"Directors, Religious Activitiesand Education",3413,Religious Associate Professionals,approximate
+21-2021,"Directors, Religious Activitiesand Education",2310,University and Higher Education Teachers,approximate
+21-2021,"Directors, Religious Activitiesand Education",2636,Religious Professionals,direct
+17-2072,"Electronics Engineers, Except Computer",2152,Electronics Engineers,direct
+19-1021,Biochemistsand Biophysicists,2113,Chemists,direct
+29-1011,Chiropractors,2655,Actors,direct
+31-2011,Occupational Therapy Assistants,3255,Physiotherapy Technicians and Assistants,partial
+31-2011,Occupational Therapy Assistants,3213,Pharmaceutical Technicians and Assistants,partial
+31-2011,Occupational Therapy Assistants,5223,Shop Sales Assistants,partial
+21-1021,"Child, Family, and School Social Workers",2341,Primary School Teachers,partial
+21-1021,"Child, Family, and School Social Workers",3253,Community Health Workers,partial
+21-1021,"Child, Family, and School Social Workers",2342,Early Childhood Educators,approximate
+17-2111,"Healthand Safety Engineers, Except Mining Safety Engineersand In- spectors",3115,Mechanical Engineering Technicians,approximate
+17-2111,"Healthand Safety Engineers, Except Mining Safety Engineersand In- spectors",3114,Electronics Engineering Technicians,approximate
+17-2111,"Healthand Safety Engineers, Except Mining Safety Engineersand In- spectors",3116,Chemical Engineering Technicians,approximate
+17-2112,Industrial Engineers,2141,Industrial and Production Engineers,direct
+17-2112,Industrial Engineers,2151,Electrical Engineers,direct
+17-2112,Industrial Engineers,2142,Civil Engineers,direct
+53-1031,First-Line Supervisorsof Transportationand Material-Moving Machine and Vehicle Operators,8151,"Fibre Preparing, Spinning and Winding Machine Operators",partial
+53-1031,First-Line Supervisorsof Transportationand Material-Moving Machine and Vehicle Operators,8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+53-1031,First-Line Supervisorsof Transportationand Material-Moving Machine and Vehicle Operators,8155,Fur and Leather Preparing Machine Operators,approximate
+29-2056,Veterinary Technologistsand Technicians,3240,Veterinary Technicians and Assistants,partial
+29-2056,Veterinary Technologistsand Technicians,3513,Computer Network and Systems Technicians,partial
+29-2056,Veterinary Technologistsand Technicians,3112,Civil Engineering Technicians,partial
+11-3051,Industrial Production Managers,1323,Construction Managers,direct
+11-3051,Industrial Production Managers,1311,Agricultural and Forestry Production Managers,direct
+11-3051,Industrial Production Managers,1312,Aquaculture and Fisheries Production Managers,partial
+17-3026,Industrial Engineering Technicians,3112,Civil Engineering Technicians,direct
+17-3026,Industrial Engineering Technicians,3113,Electrical Engineering Technicians,direct
+17-3026,Industrial Engineering Technicians,3116,Chemical Engineering Technicians,direct
+15-1142,Networkand Computer Systems Administrators,2522,Systems Aministrators,partial
+15-1142,Networkand Computer Systems Administrators,3132,Incinerator and Water Treatment Plant Operators,partial
+15-1142,Networkand Computer Systems Administrators,3513,Computer Network and Systems Technicians,partial
+15-1141,Database Administrators,2521,Database Designers and Administrators,direct
+15-1141,Database Administrators,2522,Systems Aministrators,direct
+11-3061,Purchasing Managers,1345,Education Managers,direct
+11-3061,Purchasing Managers,1322,Mining Managers,direct
+11-3061,Purchasing Managers,1213,Policy and Planning Managers,partial
+25-1000,Postsecondary Teachers,2330,Secondary Education Teachers,direct
+25-1000,Postsecondary Teachers,2352,Special Needs Teachers,partial
+25-1000,Postsecondary Teachers,2353,Other Language Teachers,partial
+19-2041,"Environmental Scientistsand Specialists, Including Health",2133,Environmental Protection Professionals,approximate
+19-2041,"Environmental Scientistsand Specialists, Including Health",2263,Environmental and Occupational Health and Hygiene Professionals,approximate
+19-2041,"Environmental Scientistsand Specialists, Including Health",2143,Environmental Engineers,approximate
+21-1011,Substance Abuseand Behavioral Disorder Counselors,3351,Customs and Border Inspectors,approximate
+21-1011,Substance Abuseand Behavioral Disorder Counselors,2635,Social Work and Counselling Professionals,direct
+23-1011,Lawyers,2611,Lawyers,direct
+27-1012,Craft Artists,2651,Visual Artists,partial
+27-1012,Craft Artists,3256,Medical Assistants,partial
+27-1012,Craft Artists,2262,Pharmacists,approximate
+15-2031,Operations Research Analysts,2432,Public Relations Professionals,partial
+15-2031,Operations Research Analysts,2421,Management and Organization Analysts,partial
+15-2031,Operations Research Analysts,2351,Education Methods Specialists,partial
+11-3021,Computerand Information Systems Managers,1311,Agricultural and Forestry Production Managers,partial
+11-3021,Computerand Information Systems Managers,1330,Information and Communications Technology Service Managers,partial
+11-3021,Computerand Information Systems Managers,1323,Construction Managers,partial
+27-1021,Commercialand Industrial Designers,3322,Commercial Sales Representatives,partial
+27-1021,Commercialand Industrial Designers,2144,Mechanical Engineers,partial
+27-1021,Commercialand Industrial Designers,2141,Industrial and Production Engineers,partial
+17-2031,Biomedical Engineers,2144,Mechanical Engineers,direct
+17-2031,Biomedical Engineers,2145,Chemical Engineers,direct
+17-2031,Biomedical Engineers,2151,Electrical Engineers,direct
+13-1121,"Meeting, Convention, and Event Planners",3332,Conference and Event Planners,partial
+13-1121,"Meeting, Convention, and Event Planners",2164,Town and Traffic Planners,partial
+13-1121,"Meeting, Convention, and Event Planners",1222,Advertising and Public Relations Managers,partial
+29-1131,Veterinarians,2250,Veterinarians,direct
+27-3043,Writersand Authors,2165,Cartographers and Surveyors,approximate
+27-3043,Writersand Authors,2621,Archivists and Curators,approximate
+27-3043,Writersand Authors,2511,Systems Analysts,approximate
+11-2011,Advertisingand Promotions Managers,1222,Advertising and Public Relations Managers,direct
+19-3094,Political Scientists,2633,"Philosophers, Historians and Political Scientists",direct
+13-2071,Credit Counselors,3312,Credit and Loans Officers,partial
+13-2071,Credit Counselors,2621,Archivists and Curators,approximate
+19-3099,"Social Scientistsand Related Workers, All Other",2632,"Sociologists, Anthropologists and Related Professionals",partial
+19-3099,"Social Scientistsand Related Workers, All Other",2654,"Film, Stage and Related Directors and Producers",partial
+19-3099,"Social Scientistsand Related Workers, All Other",2641,Authors and Related Writers,partial
+19-2011,Astronomers,2111,Physicists and Astronomers,direct
+53-5031,Ship Engineers,8311,Locomotive Engine Drivers,partial
+53-5031,Ship Engineers,9312,Civil Engineering Labourers,partial
+53-5031,Ship Engineers,9122,Vehicle Cleaners,partial
+15-1132,"Software Developers, Applications",2512,Software Developers,direct
+29-2053,Psychiatric Technicians,3143,Forestry Technicians,partial
+29-2053,Psychiatric Technicians,3142,Agricultural Technicians,partial
+29-2053,Psychiatric Technicians,3116,Chemical Engineering Technicians,partial
+17-1012,Landscape Architects,2162,Landscape Architects,direct
+21-1091,Health Educators,2342,Early Childhood Educators,partial
+21-1091,Health Educators,2330,Secondary Education Teachers,partial
+21-1091,Health Educators,2655,Actors,partial
+15-2021,Mathematicians,2120,"Mathematicians, Actuaries and Statisticians",direct
+27-1023,Floral Designers,2151,Electrical Engineers,partial
+27-1023,Floral Designers,2166,Graphic and Multimedia Designers,partial
+27-1023,Floral Designers,2163,Product and Garment Designers,partial
+11-9013,"Farmers, Ranchers, and Other Agricultural Managers",1431,"Sports, Recreation and Cultural Centre Managers",partial
+11-9013,"Farmers, Ranchers, and Other Agricultural Managers",1212,Human Resource Managers,partial
+11-9013,"Farmers, Ranchers, and Other Agricultural Managers",1311,Agricultural and Forestry Production Managers,direct
+33-2022,Forest Fire Inspectorsand Prevention Specialists,3355,Police Inspectors and Detectives,approximate
+33-2022,Forest Fire Inspectorsand Prevention Specialists,3422,"Sports Coaches, Instructors and Officials",approximate
+29-2041,Emergency Medical Techniciansand Paramedics,3141,Life Science Technicians (excluding Medical),partial
+29-2041,Emergency Medical Techniciansand Paramedics,3117,Mining and metallurgical technicians,partial
+29-2041,Emergency Medical Techniciansand Paramedics,3240,Veterinary Technicians and Assistants,partial
+27-3041,Editors,2655,Actors,partial
+27-3041,Editors,2113,Chemists,partial
+27-3041,Editors,2261,Dentists,partial
+29-1024,Prosthodontists,2634,Psychologists,partial
+29-1024,Prosthodontists,2261,Dentists,partial
+29-1024,Prosthodontists,2264,Physiotherapists,partial
+29-9799,"Healthcare Practitionersand Technical Workers, All Other",2211,Generalist Medical Practitioners,partial
+29-9799,"Healthcare Practitionersand Technical Workers, All Other",2212,Specialist Medical Practitioners,partial
+29-9799,"Healthcare Practitionersand Technical Workers, All Other",3116,Chemical Engineering Technicians,partial
+39-7012,Travel Guides,5113,Travel Guides,direct
+29-2061,Licensed Practicaland Licensed Vocational Nurses,3314,"Statistical, Mathematical and Related Associate Professionals",approximate
+29-2061,Licensed Practicaland Licensed Vocational Nurses,2265,Dieticians and Nutritionists,direct
+29-2061,Licensed Practicaland Licensed Vocational Nurses,2263,Environmental and Occupational Health and Hygiene Professionals,direct
+19-3041,Sociologists,2632,"Sociologists, Anthropologists and Related Professionals",direct
+19-3041,Sociologists,2634,Psychologists,direct
+23-1022,"Arbitrators, Mediators, and Conciliators",2643,"Translators, Interpreters and Other Linguists",approximate
+19-1011,Animal Scientists,2651,Visual Artists,partial
+19-1011,Animal Scientists,2262,Pharmacists,partial
+19-1011,Animal Scientists,2413,Financial Analysts,partial
+39-9041,Residential Advisors,5242,Sales Demonstrators,partial
+39-9041,Residential Advisors,5164,Pet Groomers and Animal Care Workers,direct
+39-9041,Residential Advisors,5165,Driving Instructors,direct
+53-1011,Aircraft Cargo Handling Supervisors,8344,Lifting Truck Operators,approximate
+53-1011,Aircraft Cargo Handling Supervisors,8142,Plastic Products Machine Operators,approximate
+53-1011,Aircraft Cargo Handling Supervisors,8343,"Crane, hoist and related plant operators",approximate
+29-1126,Respiratory Therapists,2264,Physiotherapists,partial
+29-1126,Respiratory Therapists,3251,Dental Assistants and Therapists,partial
+29-1126,Respiratory Therapists,3143,Forestry Technicians,partial
+27-3021,Broadcast News Analysts,2511,Systems Analysts,partial
+27-3021,Broadcast News Analysts,2413,Financial Analysts,partial
+27-3021,Broadcast News Analysts,2421,Management and Organization Analysts,partial
+11-3031,Financial Managers,1211,Finance Managers,direct
+11-3031,Financial Managers,1322,Mining Managers,direct
+17-2161,Nuclear Engineers,2142,Civil Engineers,direct
+17-2161,Nuclear Engineers,2144,Mechanical Engineers,direct
+17-2161,Nuclear Engineers,2151,Electrical Engineers,direct
+11-9021,Construction Managers,1323,Construction Managers,direct
+27-2042,Musiciansand Singers,2652,"Musicians, Singers and Composers",direct
+27-2042,Musiciansand Singers,2153,Telecommunications Engineers,partial
+27-2042,Musiciansand Singers,2145,Chemical Engineers,partial
+41-1012,First-Line Supervisorsof Non-Retail Sales Workers,5161,"Astrologers, Fortune-tellers and Related Workers",approximate
+41-1012,First-Line Supervisorsof Non-Retail Sales Workers,5322,Home-based Personal Care Workers,approximate
+41-1012,First-Line Supervisorsof Non-Retail Sales Workers,5222,Shop Supervisors,direct
+39-1021,First-Line Supervisorsof Personal Service Workers,5322,Home-based Personal Care Workers,partial
+39-1021,First-Line Supervisorsof Personal Service Workers,5164,Pet Groomers and Animal Care Workers,partial
+39-1021,First-Line Supervisorsof Personal Service Workers,5169,Personal Services Workers Not Elsewhere Classified,approximate
+19-1012,Food Scientistsand Technologists,2356,Information Technology Trainers,partial
+19-1012,Food Scientistsand Technologists,2634,Psychologists,approximate
+19-1012,Food Scientistsand Technologists,2112,Meteorologists,approximate
+13-1041,Compliance Officers,3312,Credit and Loans Officers,partial
+13-1041,Compliance Officers,3258,Ambulance Workers,partial
+13-1041,Compliance Officers,3354,Government Licensing Officials,partial
+33-3031,Fishand Game Wardens,5413,Prison Guards,partial
+33-3031,Fishand Game Wardens,5311,Child Care Workers,partial
+33-3031,Fishand Game Wardens,5414,Security Guards,direct
+27-1024,Graphic Designers,2166,Graphic and Multimedia Designers,direct
+27-1024,Graphic Designers,2163,Product and Garment Designers,partial
+27-1024,Graphic Designers,2145,Chemical Engineers,partial
+11-9051,Food Service Managers,1342,Health Service Managers,direct
+11-9051,Food Service Managers,1343,Aged Care Service Managers,direct
+11-9051,Food Service Managers,1341,Child Care Service Managers,direct
+39-9011,Childcare Workers,5311,Child Care Workers,direct
+39-9031,Fitness Trainersand Aerobics Instructors,5165,Driving Instructors,partial
+39-9031,Fitness Trainersand Aerobics Instructors,5112,Transport Conductors,direct
+39-9031,Fitness Trainersand Aerobics Instructors,5164,Pet Groomers and Animal Care Workers,direct
+11-9071,Gaming Managers,1322,Mining Managers,direct
+11-9071,Gaming Managers,1345,Education Managers,direct
+11-9071,Gaming Managers,1221,Sales and Marketing Managers,direct
+49-9051,Electrical Power-Line Installersand Repairers,7413,Electrical Line Installers and Repairers,direct
+33-3051,Policeand Sheriff’s Patrol Officers,5412,Police Officers,partial
+33-3051,Policeand Sheriff’s Patrol Officers,3355,Police Inspectors and Detectives,partial
+33-3051,Policeand Sheriff’s Patrol Officers,3422,"Sports Coaches, Instructors and Officials",partial
+41-3041,Travel Agents,5113,Travel Guides,direct
+35-1011,Chefsand Head Cooks,5120,Cooks,direct
+39-2011,Animal Trainers,5242,Sales Demonstrators,approximate
+39-2011,Animal Trainers,5164,Pet Groomers and Animal Care Workers,approximate
+39-2011,Animal Trainers,5131,Waiters,approximate
+27-3011,Radioand Television Announcers,2656,"Announcers on Radio, Television and Other Media",partial
+27-3011,Radioand Television Announcers,2240,Paramedical Practitioners,partial
+27-3011,Radioand Television Announcers,2320,Vocational Education Teachers,partial
+17-2071,Electrical Engineers,2151,Electrical Engineers,direct
+17-2071,Electrical Engineers,2152,Electronics Engineers,direct
+17-2071,Electrical Engineers,2144,Mechanical Engineers,direct
+19-2031,Chemists,2113,Chemists,direct
+29-2054,Respiratory Therapy Technicians,3143,Forestry Technicians,partial
+29-2054,Respiratory Therapy Technicians,3255,Physiotherapy Technicians and Assistants,partial
+29-2054,Respiratory Therapy Technicians,3433,"Gallery, Museum and Library Technicians",partial
+19-2012,Physicists,2111,Physicists and Astronomers,direct
+19-2012,Physicists,2114,Geologists and geophysicists,direct
+39-5012,"Hairdressers, Hairstylists, and Cosmetologists",5141,Hairdressers,direct
+27-3022,Reportersand Correspondents,2423,Personnel and Careers Professionals,approximate
+27-3022,Reportersand Correspondents,2523,Computer Network Professionals,approximate
+27-3022,Reportersand Correspondents,2653,Dancers and Choreographers,direct
+53-2021,Air Traffic Controllers,8181,Glass and Ceramics Plant Operators,approximate
+53-2021,Air Traffic Controllers,9313,Building Construction Labourers,approximate
+53-2021,Air Traffic Controllers,9624,Water and Firewood Collectors,approximate
+27-2031,Dancers,2653,Dancers and Choreographers,direct
+29-2033,Nuclear Medicine Technologists,2112,Meteorologists,partial
+29-2033,Nuclear Medicine Technologists,3116,Chemical Engineering Technicians,partial
+29-2033,Nuclear Medicine Technologists,2230,Traditional and Complementary Medicine Professionals,partial
+15-1133,"Software Developers, Systems Software",2512,Software Developers,direct
+13-1111,Management Analysts,2421,Management and Organization Analysts,direct
+13-1111,Management Analysts,2413,Financial Analysts,partial
+13-1111,Management Analysts,2511,Systems Analysts,partial
+29-2051,Dietetic Technicians,3514,Web Technicians,direct
+29-2051,Dietetic Technicians,3214,Medical and Dental Prosthetic Technicians,direct
+29-2051,Dietetic Technicians,3143,Forestry Technicians,partial
+19-3051,Urbanand Regional Planners,2164,Town and Traffic Planners,partial
+19-3051,Urbanand Regional Planners,2221,Nursing Professionals,partial
+19-3051,Urbanand Regional Planners,2240,Paramedical Practitioners,partial
+21-1093,Socialand Human Service Assistants,3256,Medical Assistants,partial
+21-1093,Socialand Human Service Assistants,3255,Physiotherapy Technicians and Assistants,partial
+21-1093,Socialand Human Service Assistants,3240,Veterinary Technicians and Assistants,approximate
+25-3021,Self-Enrichment Education Teachers,2330,Secondary Education Teachers,direct
+25-3021,Self-Enrichment Education Teachers,2320,Vocational Education Teachers,partial
+25-3021,Self-Enrichment Education Teachers,2310,University and Higher Education Teachers,partial
+27-4014,Sound Engineering Technicians,3112,Civil Engineering Technicians,direct
+27-4014,Sound Engineering Technicians,3115,Mechanical Engineering Technicians,direct
+27-4014,Sound Engineering Technicians,3116,Chemical Engineering Technicians,direct
+29-1041,Optometrists,2267,Optometrists and Ophthalmic Opticians,direct
+17-2151,"Miningand Geological Engineers, Including Mining Safety Engineers",3115,Mechanical Engineering Technicians,approximate
+17-2151,"Miningand Geological Engineers, Including Mining Safety Engineers",3113,Electrical Engineering Technicians,approximate
+17-2151,"Miningand Geological Engineers, Including Mining Safety Engineers",3116,Chemical Engineering Technicians,approximate
+29-1071,Physician Assistants,3256,Medical Assistants,direct
+29-1071,Physician Assistants,3255,Physiotherapy Technicians and Assistants,direct
+29-1071,Physician Assistants,3240,Veterinary Technicians and Assistants,partial
+25-2012,"Kindergarten Teachers, Except Special Education",2342,Early Childhood Educators,direct
+25-2012,"Kindergarten Teachers, Except Special Education",2355,Other Arts Teachers,approximate
+25-2012,"Kindergarten Teachers, Except Special Education",2353,Other Language Teachers,approximate
+47-2111,Electricians,7411,Building and Related Electricians,direct
+17-2171,Petroleum Engineers,2151,Electrical Engineers,direct
+17-2171,Petroleum Engineers,2152,Electronics Engineers,partial
+17-2171,Petroleum Engineers,2143,Environmental Engineers,partial
+43-9031,Desktop Publishers,4321,Stock Clerks,partial
+43-9031,Desktop Publishers,4132,Data Entry Clerks,approximate
+43-9031,Desktop Publishers,4322,Production Clerks,approximate
+11-1021,Generaland Operations Managers,1345,Education Managers,partial
+11-1021,Generaland Operations Managers,1222,Advertising and Public Relations Managers,partial
+11-1021,Generaland Operations Managers,1221,Sales and Marketing Managers,partial
+29-9011,Occupational Healthand Safety Specialists,2351,Education Methods Specialists,partial
+29-9011,Occupational Healthand Safety Specialists,2263,Environmental and Occupational Health and Hygiene Professionals,partial
+29-9011,Occupational Healthand Safety Specialists,3257,Environmental and Occupational Health Inspectors and Associates,partial
+33-2011,Firefighters,5411,Fire Fighters,direct
+13-2061,Financial Examiners,2413,Financial Analysts,direct
+13-2061,Financial Examiners,1211,Finance Managers,partial
+13-2061,Financial Examiners,2412,Financial and Investment Advisers,partial
+47-1011,First-Line Supervisorsof Construction Tradesand Extraction Workers,7119,Building Frame and Related Trades Workers Not Elsewhere Classified,direct
+25-2022,"Middle School Teachers, Except Specialand Career/Technical Educa- tion",2341,Primary School Teachers,direct
+27-3031,Public Relations Specialists,2432,Public Relations Professionals,direct
+27-3031,Public Relations Specialists,2351,Education Methods Specialists,direct
+49-9092,Commercial Divers,7541,Underwater Divers,partial
+49-9092,Commercial Divers,7111,House Builders,partial
+49-9092,Commercial Divers,7313,Jewellery and Precious Metal Workers,direct
+49-9095,Manufactured Buildingand Mobile Home Installers,7413,Electrical Line Installers and Repairers,approximate
+53-2011,"Airline Pilots, Copilots, and Flight Engineers",8311,Locomotive Engine Drivers,partial
+25-3011,Adult Basic and Secondary Education and Literacy Teachers and In- structors,2330,Secondary Education Teachers,partial
+25-3011,Adult Basic and Secondary Education and Literacy Teachers and In- structors,2320,Vocational Education Teachers,partial
+25-3011,Adult Basic and Secondary Education and Literacy Teachers and In- structors,2310,University and Higher Education Teachers,partial
+19-1041,Epidemiologists,2112,Meteorologists,partial
+19-1041,Epidemiologists,2634,Psychologists,partial
+19-1041,Epidemiologists,2113,Chemists,partial
+39-4831,"Funeral Service Managers, Directors, Morticians, and Undertakers",511,"Travel Attendants, Conductors and Guides",approximate
+15-1179,"Information Security Analysts,  Web Developers,  and Computer Net- work Architects",223,Traditional and Complementary Medicine Professionals,approximate
+15-2011,Actuaries,2120,"Mathematicians, Actuaries and Statisticians",direct
+33-9011,Animal Control Workers,5311,Child Care Workers,partial
+33-9011,Animal Control Workers,5164,Pet Groomers and Animal Care Workers,partial
+33-9011,Animal Control Workers,3154,Air Traffic Controllers,partial
+39-6012,Concierges,5412,Police Officers,approximate
+39-6012,Concierges,5131,Waiters,approximate
+15-1799,"Computer Occupations, All Other",2523,Computer Network Professionals,partial
+15-1799,"Computer Occupations, All Other",3513,Computer Network and Systems Technicians,partial
+15-1799,"Computer Occupations, All Other",2621,Archivists and Curators,approximate
+15-2041,Statisticians,2120,"Mathematicians, Actuaries and Statisticians",direct
+17-2061,Computer Hardware Engineers,2144,Mechanical Engineers,partial
+17-2061,Computer Hardware Engineers,2151,Electrical Engineers,partial
+17-2061,Computer Hardware Engineers,2145,Chemical Engineers,partial
+19-3022,Survey Researchers,2352,Special Needs Teachers,partial
+19-3022,Survey Researchers,2341,Primary School Teachers,partial
+19-3022,Survey Researchers,2330,Secondary Education Teachers,partial
+13-1199,"Business Operations Specialists, All Other",2351,Education Methods Specialists,partial
+13-1199,"Business Operations Specialists, All Other",2421,Management and Organization Analysts,partial
+13-1199,"Business Operations Specialists, All Other",2221,Nursing Professionals,approximate
+13-2051,Financial Analysts,2413,Financial Analysts,direct
+29-2037,Radiologic Technologistsand Technicians,3511,Information and Communications Technology Operations Technicians,partial
+29-2037,Radiologic Technologistsand Technicians,3512,Information and Communications Technology User Support Technicians,partial
+29-2037,Radiologic Technologistsand Technicians,3155,Air Traffic Safety Electronics Technicians,partial
+29-2031,Cardiovascular Technologistsand Technicians,3112,Civil Engineering Technicians,partial
+29-2031,Cardiovascular Technologistsand Technicians,3142,Agricultural Technicians,partial
+29-2031,Cardiovascular Technologistsand Technicians,3511,Information and Communications Technology Operations Technicians,partial
+17-3029,"Engineering Technicians, Except Drafters, All Other",3112,Civil Engineering Technicians,direct
+17-3029,"Engineering Technicians, Except Drafters, All Other",3116,Chemical Engineering Technicians,direct
+17-3029,"Engineering Technicians, Except Drafters, All Other",3113,Electrical Engineering Technicians,partial
+19-3092,Geographers,2653,Dancers and Choreographers,partial
+19-3092,Geographers,2165,Cartographers and Surveyors,partial
+19-3092,Geographers,2355,Other Arts Teachers,approximate
+29-9012,Occupational Healthand Safety Technicians,3111,Chemical and Physical Science Technicians,partial
+29-9012,Occupational Healthand Safety Technicians,2320,Vocational Education Teachers,partial
+29-9012,Occupational Healthand Safety Technicians,3257,Environmental and Occupational Health Inspectors and Associates,partial
+21-1092,Probation Officersand Correctional Treatment Specialists,2351,Education Methods Specialists,approximate
+21-1092,Probation Officersand Correctional Treatment Specialists,2412,Financial and Investment Advisers,approximate
+21-1092,Probation Officersand Correctional Treatment Specialists,3521,Broadcasting and Audio-visual Technicians,approximate
+17-3025,Environmental Engineering Technicians,3112,Civil Engineering Technicians,direct
+17-3025,Environmental Engineering Technicians,3115,Mechanical Engineering Technicians,direct
+17-3025,Environmental Engineering Technicians,3116,Chemical Engineering Technicians,direct
+11-9199,"Managers, All Other",1411,Hotel Managers,direct
+11-9199,"Managers, All Other",1322,Mining Managers,direct
+11-9199,"Managers, All Other",1211,Finance Managers,direct
+25-2023,"Career/Technical Education Teachers, Middle School",2320,Vocational Education Teachers,partial
+25-2023,"Career/Technical Education Teachers, Middle School",2330,Secondary Education Teachers,partial
+25-2023,"Career/Technical Education Teachers, Middle School",2310,University and Higher Education Teachers,partial
+53-5021,"Captains, Mates, and Pilotsof Water Vessels",9112,"Cleaners and Helpers in Offices, Hotels and Other Establishments",approximate
+31-2012,Occupational Therapy Aides,5241,Fashion and Other Models,partial
+31-2012,Occupational Therapy Aides,3257,Environmental and Occupational Health Inspectors and Associates,partial
+31-2012,Occupational Therapy Aides,5312,Teachers' Aides,approximate
+49-9062,Medical Equipment Repairers,7413,Electrical Line Installers and Repairers,partial
+49-9062,Medical Equipment Repairers,7311,Precision-instrument Makers and Repairers,partial
+49-9062,Medical Equipment Repairers,7312,Musical Instrument Makers and Tuners,partial
+41-1011,First-Line Supervisorsof Retail Sales Workers,5161,"Astrologers, Fortune-tellers and Related Workers",approximate
+41-1011,First-Line Supervisorsof Retail Sales Workers,5322,Home-based Personal Care Workers,approximate
+41-1011,First-Line Supervisorsof Retail Sales Workers,3341,Office Supervisors,approximate
+27-2021,Athletesand Sports Competitors,3421,Athletes and Sports Players,direct
+39-1011,Gaming Supervisors,5222,Shop Supervisors,direct
+39-5094,Skincare Specialists,5321,Health Care Assistants,approximate
+13-1022,"Wholesaleand Retail Buyers, Except Farm Products",3323,Buyers,direct
+19-4021,Biological Technicians,2151,Electrical Engineers,partial
+19-4021,Biological Technicians,2114,Geologists and geophysicists,partial
+19-4021,Biological Technicians,2145,Chemical Engineers,approximate
+31-9092,Medical Assistants,3256,Medical Assistants,direct
+19-1023,Zoologistsand Wildlife Biologists,2114,Geologists and geophysicists,approximate
+19-1023,Zoologistsand Wildlife Biologists,2131,"Biologists, Botanists, Zoologists and Related Professionals",direct
+35-2013,"Cooks, Private Household",5120,Cooks,direct
+13-1078,"Human Resources, Training, and Labor Relations Specialists, All Other",3252,Medical Records and Health Information Technicians,partial
+13-1078,"Human Resources, Training, and Labor Relations Specialists, All Other",2351,Education Methods Specialists,approximate
+13-1078,"Human Resources, Training, and Labor Relations Specialists, All Other",2421,Management and Organization Analysts,approximate
+33-9021,Private Detectivesand Investigators,5165,Driving Instructors,partial
+33-9021,Private Detectivesand Investigators,3213,Pharmaceutical Technicians and Assistants,approximate
+33-9021,Private Detectivesand Investigators,5242,Sales Demonstrators,approximate
+27-4032,Filmand Video Editors,2342,Early Childhood Educators,approximate
+27-4032,Filmand Video Editors,2654,"Film, Stage and Related Directors and Producers",direct
+27-4032,Filmand Video Editors,2653,Dancers and Choreographers,direct
+13-2099,"Financial Specialists, All Other",2413,Financial Analysts,direct
+13-2099,"Financial Specialists, All Other",2412,Financial and Investment Advisers,partial
+33-3021,Detectivesand Criminal Investigators,5165,Driving Instructors,partial
+29-2055,Surgical Technologists,2634,Psychologists,partial
+29-2055,Surgical Technologists,2112,Meteorologists,partial
+29-2055,Surgical Technologists,2651,Visual Artists,partial
+29-1124,Radiation Therapists,2264,Physiotherapists,partial
+29-1124,Radiation Therapists,3251,Dental Assistants and Therapists,partial
+29-1124,Radiation Therapists,2351,Education Methods Specialists,partial
+47-2152,"Plumbers, Pipefitters, and Steamfitters",7126,Plumbers and Pipe Fitters,direct
+53-2031,Flight Attendants,9333,Freight Handlers,partial
+29-2032,Diagnostic Medical Sonographers,2212,Specialist Medical Practitioners,partial
+29-2032,Diagnostic Medical Sonographers,2211,Generalist Medical Practitioners,partial
+29-2032,Diagnostic Medical Sonographers,2653,Dancers and Choreographers,partial
+33-3011,Bailiffs,5412,Police Officers,direct
+51-4012,"Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic",7223,Metal Working Machine Tool Setters and  Operators,approximate
+51-4012,"Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic",8114,"Cement, Stone and Other Mineral Products Machine Operators",approximate
+51-4012,"Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic",7523,Woodworking Machine Tool Setters and Operators,direct
+49-2022,"Telecommunications Equipment Installersand Repairers, Except Line Installers",7422,Information and Communications Technology Installers and Servicers,partial
+49-2022,"Telecommunications Equipment Installersand Repairers, Except Line Installers",7311,Precision-instrument Makers and Repairers,partial
+49-2022,"Telecommunications Equipment Installersand Repairers, Except Line Installers",7413,Electrical Line Installers and Repairers,approximate
+51-9051,"Furnace, Kiln, Oven, Drier, and Kettle Operatorsand Tenders",7523,Woodworking Machine Tool Setters and Operators,approximate
+51-9051,"Furnace, Kiln, Oven, Drier, and Kettle Operatorsand Tenders",7223,Metal Working Machine Tool Setters and  Operators,approximate
+51-9051,"Furnace, Kiln, Oven, Drier, and Kettle Operatorsand Tenders",8183,"Packing, Bottling and Labelling Machine Operators",direct
+53-7061,Cleanersof Vehiclesand Equipment,9112,"Cleaners and Helpers in Offices, Hotels and Other Establishments",approximate
+53-7061,Cleanersof Vehiclesand Equipment,8212,Electrical and Electronic Equipment Assemblers,approximate
+53-7061,Cleanersof Vehiclesand Equipment,9111,Domestic Cleaners and Helpers,approximate
+39-4021,Funeral Attendants,5246,Food Service Counter Attendants,partial
+39-4021,Funeral Attendants,5245,Service Station Attendants,partial
+39-4021,Funeral Attendants,5111,Travel Attendants and Travel Stewards,partial
+47-5081,Helpers–Extraction Workers,7124,Insulation Workers,partial
+47-5081,Helpers–Extraction Workers,7536,Shoemakers and Related Workers,partial
+47-5081,Helpers–Extraction Workers,7314,Potters and Related Workers,partial
+27-2011,Actors,2655,Actors,direct
+27-2011,Actors,3333,Employment agents and contractors,direct
+53-7111,Mine Shuttle Car Operators,8182,Steam Engine and Boiler Operators,partial
+53-7111,Mine Shuttle Car Operators,8112,Mineral and Stone Processing Plant Operators,partial
+53-7111,Mine Shuttle Car Operators,8344,Lifting Truck Operators,partial
+49-2095,"Electricaland Electronics Repairers, Powerhouse, Substation, and Re- lay",7413,Electrical Line Installers and Repairers,approximate
+49-2095,"Electricaland Electronics Repairers, Powerhouse, Substation, and Re- lay",7412,Electrical Mechanics and Fitters,approximate
+49-2095,"Electricaland Electronics Repairers, Powerhouse, Substation, and Re- lay",7233,Agricultural and Industrial Machinery Mechanics and Repairers,direct
+17-1022,Surveyors,2165,Cartographers and Surveyors,direct
+17-3027,Mechanical Engineering Technicians,3115,Mechanical Engineering Technicians,direct
+17-3027,Mechanical Engineering Technicians,3116,Chemical Engineering Technicians,direct
+17-3027,Mechanical Engineering Technicians,3113,Electrical Engineering Technicians,direct
+53-7064,"Packersand Packagers, Hand",9321,Hand Packers,partial
+53-7064,"Packersand Packagers, Hand",9621,"Messengers, Package Deliverers and Luggage Porters",direct
+27-3091,Interpretersand Translators,3432,Interior Designers and Decorators,partial
+27-3091,Interpretersand Translators,2521,Database Designers and Administrators,approximate
+27-3091,Interpretersand Translators,3333,Employment agents and contractors,approximate
+31-1011,Home Health Aides,3253,Community Health Workers,partial
+31-1011,Home Health Aides,5312,Teachers' Aides,partial
+31-1011,Home Health Aides,5321,Health Care Assistants,partial
+51-6093,Upholsterers,7534,Upholsterers and Related Workers,direct
+51-6093,Upholsterers,7123,Plasterers,direct
+47-4021,Elevator Installersand Repairers,7413,Electrical Line Installers and Repairers,direct
+47-4021,Elevator Installersand Repairers,7311,Precision-instrument Makers and Repairers,partial
+47-4021,Elevator Installersand Repairers,7231,Motor Vehicle Mechanics and Repairers,partial
+43-3041,Gaming Cage Workers,4415,Filing and Copying Clerks,approximate
+43-3041,Gaming Cage Workers,4225,Inquiry Clerks,approximate
+43-3041,Gaming Cage Workers,4214,Debt Collectors and Related Workers,approximate
+25-9011,Audio-Visualand Multimedia Collections Specialists,2351,Education Methods Specialists,partial
+25-9011,Audio-Visualand Multimedia Collections Specialists,2266,Audiologists and Speech Therapists,approximate
+25-9011,Audio-Visualand Multimedia Collections Specialists,2166,Graphic and Multimedia Designers,approximate
+23-1023,"Judges, Magistrate Judges, and Magistrates",2612,Judges,direct
+49-3042,"Mobile Heavy Equipment Mechanics, Except Engines",7232,Aircraft Engine Mechanics and Repairers,partial
+49-3042,"Mobile Heavy Equipment Mechanics, Except Engines",7231,Motor Vehicle Mechanics and Repairers,partial
+49-3042,"Mobile Heavy Equipment Mechanics, Except Engines",7421,Electronics Mechanics and Servicers,partial
+29-2799,"Health Technologistsand Technicians, All Other",3116,Chemical Engineering Technicians,partial
+29-2799,"Health Technologistsand Technicians, All Other",3113,Electrical Engineering Technicians,partial
+29-2799,"Health Technologistsand Technicians, All Other",3212,Medical and Pathology Laboratory Technicians,partial
+45-2041,"Gradersand Sorters, Agricultural Products",6113,"Gardeners, Horticultural and Nursery Growers",partial
+45-2041,"Gradersand Sorters, Agricultural Products",6123,Apiarists and Sericulturists,approximate
+45-2041,"Gradersand Sorters, Agricultural Products",6122,Poultry Producers,approximate
+51-2041,Structural Metal Fabricatorsand Fitters,7214,Structural Metal Preparers and Erectors,partial
+51-2041,Structural Metal Fabricatorsand Fitters,7412,Electrical Mechanics and Fitters,partial
+51-2041,Structural Metal Fabricatorsand Fitters,7213,Sheet Metal Workers,direct
+23-1012,Judicial Law Clerks,2240,Paramedical Practitioners,approximate
+23-1012,Judicial Law Clerks,2352,Special Needs Teachers,approximate
+23-1012,Judicial Law Clerks,2652,"Musicians, Singers and Composers",approximate
+49-2094,"Electricaland Electronics Repairers, Commercialand Industrial Equip- ment",7413,Electrical Line Installers and Repairers,approximate
+49-2094,"Electricaland Electronics Repairers, Commercialand Industrial Equip- ment",7233,Agricultural and Industrial Machinery Mechanics and Repairers,direct
+49-2094,"Electricaland Electronics Repairers, Commercialand Industrial Equip- ment",7231,Motor Vehicle Mechanics and Repairers,direct
+19-4093,Forestand Conservation Technicians,2356,Information Technology Trainers,partial
+19-4093,Forestand Conservation Technicians,2330,Secondary Education Teachers,partial
+19-4093,Forestand Conservation Technicians,2320,Vocational Education Teachers,partial
+39-3093,"Locker Room, Coatroom, and Dressing Room Attendants",5245,Service Station Attendants,partial
+39-3093,"Locker Room, Coatroom, and Dressing Room Attendants",5246,Food Service Counter Attendants,approximate
+19-2099,"Physical Scientists, All Other",2264,Physiotherapists,partial
+19-2099,"Physical Scientists, All Other",2633,"Philosophers, Historians and Political Scientists",partial
+19-2099,"Physical Scientists, All Other",2651,Visual Artists,partial
+19-3011,Economists,2631,Economists,direct
+19-3093,Historians,2633,"Philosophers, Historians and Political Scientists",direct
+51-9082,Medical Appliance Technicians,7321,Pre-press Technicians,partial
+51-9082,Medical Appliance Technicians,7412,Electrical Mechanics and Fitters,approximate
+51-9082,Medical Appliance Technicians,7231,Motor Vehicle Mechanics and Repairers,approximate
+43-4031,"Court, Municipal, and License Clerks",4312,"Statistical, Finance and Insurance Clerks",partial
+43-4031,"Court, Municipal, and License Clerks",4110,General Office Clerks,partial
+43-4031,"Court, Municipal, and License Clerks",4313,Payroll Clerks,approximate
+13-1141,"Compensation, Benefits, and Job Analysis Specialists",2351,Education Methods Specialists,partial
+13-1141,"Compensation, Benefits, and Job Analysis Specialists",3353,Government Social Benefits Officials,partial
+13-1141,"Compensation, Benefits, and Job Analysis Specialists",3522,Telecommunications Engineering Technicians,approximate
+31-1013,Psychiatric Aides,5312,Teachers' Aides,partial
+31-1013,Psychiatric Aides,5414,Security Guards,approximate
+31-1013,Psychiatric Aides,5241,Fashion and Other Models,approximate
+29-2012,Medicaland Clinical Laboratory Technicians,3212,Medical and Pathology Laboratory Technicians,direct
+29-2012,Medicaland Clinical Laboratory Technicians,3252,Medical Records and Health Information Technicians,partial
+29-2012,Medicaland Clinical Laboratory Technicians,3214,Medical and Dental Prosthetic Technicians,partial
+33-2021,Fire Inspectorsand Investigators,3355,Police Inspectors and Detectives,partial
+33-2021,Fire Inspectorsand Investigators,3351,Customs and Border Inspectors,approximate
+33-2021,Fire Inspectorsand Investigators,5411,Fire Fighters,direct
+17-3021,Aerospace Engineeringand Operations Technicians,3114,Electronics Engineering Technicians,partial
+17-3021,Aerospace Engineeringand Operations Technicians,3112,Civil Engineering Technicians,partial
+17-3021,Aerospace Engineeringand Operations Technicians,3115,Mechanical Engineering Technicians,partial
+27-1026,Merchandise Displayersand Window Trimmers,2521,Database Designers and Administrators,approximate
+15-1131,Computer Programmers,2514,Applications Programmers,partial
+15-1131,Computer Programmers,2653,Dancers and Choreographers,partial
+15-1131,Computer Programmers,2523,Computer Network Professionals,partial
+33-9091,Crossing Guards,5413,Prison Guards,direct
+33-9091,Crossing Guards,5414,Security Guards,partial
+17-2021,Agricultural Engineers,3142,Agricultural Technicians,direct
+17-2021,Agricultural Engineers,2144,Mechanical Engineers,direct
+17-2021,Agricultural Engineers,2151,Electrical Engineers,direct
+47-5061,"Roof Bolters, Mining",7121,Roofers,partial
+49-9052,Telecommunications Line Installersand Repairers,7413,Electrical Line Installers and Repairers,direct
+49-9052,Telecommunications Line Installersand Repairers,7422,Information and Communications Technology Installers and Servicers,partial
+49-9052,Telecommunications Line Installersand Repairers,7311,Precision-instrument Makers and Repairers,partial
+43-5031,"Police, Fire, and Ambulance Dispatchers",4312,"Statistical, Finance and Insurance Clerks",direct
+53-7033,"Loading Machine Operators, Underground Mining",8153,Sewing Machine Operators,partial
+53-7033,"Loading Machine Operators, Underground Mining",8157,Laundry Machine Operators,partial
+53-7033,"Loading Machine Operators, Underground Mining",8156,Shoemaking and Related Machine Operators,partial
+49-9799,"Installation, Maintenance, and Repair Workers, All Other",7124,Insulation Workers,partial
+49-9799,"Installation, Maintenance, and Repair Workers, All Other",7233,Agricultural and Industrial Machinery Mechanics and Repairers,partial
+49-9799,"Installation, Maintenance, and Repair Workers, All Other",7131,Painters and Related Workers,partial
+23-2091,Court Reporters,2641,Authors and Related Writers,partial
+23-2091,Court Reporters,2655,Actors,approximate
+23-2091,Court Reporters,2355,Other Arts Teachers,approximate
+41-9011,Demonstratorsand Product Promoters,3135,Metal Production Process Controllers,partial
+41-9011,Demonstratorsand Product Promoters,5242,Sales Demonstrators,direct
+41-9011,Demonstratorsand Product Promoters,3131,Power Production Plant Operators,approximate
+31-9091,Dental Assistants,3251,Dental Assistants and Therapists,direct
+31-9091,Dental Assistants,3256,Medical Assistants,direct
+51-6041,Shoeand Leather Workersand Repairers,7536,Shoemakers and Related Workers,partial
+51-6041,Shoeand Leather Workersand Repairers,7319,Handicraft Workers Not Elsewhere Classified,partial
+51-6041,Shoeand Leather Workersand Repairers,7413,Electrical Line Installers and Repairers,partial
+17-3011,Architecturaland Civil Drafters,2621,Archivists and Curators,partial
+17-3011,Architecturaland Civil Drafters,2342,Early Childhood Educators,approximate
+47-5012,"Rotary Drill Operators, Oiland Gas",7115,Carpenters and Joiners,approximate
+47-5012,"Rotary Drill Operators, Oiland Gas",8113,Well Drillers and Borers and Related Workers,direct
+47-5012,"Rotary Drill Operators, Oiland Gas",8112,Mineral and Stone Processing Plant Operators,direct
+47-4041,Hazardous Materials Removal Workers,7536,Shoemakers and Related Workers,partial
+47-4041,Hazardous Materials Removal Workers,7534,Upholsterers and Related Workers,partial
+47-4041,Hazardous Materials Removal Workers,7222,Toolmakers and Related Workers,partial
+39-4011,Embalmers,5163,Undertakers and Embalmers,direct
+47-5041,Continuous Mining Machine Operators,7523,Woodworking Machine Tool Setters and Operators,partial
+47-5041,Continuous Mining Machine Operators,8114,"Cement, Stone and Other Mineral Products Machine Operators",partial
+47-5041,Continuous Mining Machine Operators,7223,Metal Working Machine Tool Setters and  Operators,partial
+39-1012,Slot Supervisors,5222,Shop Supervisors,direct
+31-9011,Massage Therapists,3251,Dental Assistants and Therapists,partial
+41-3011,Advertising Sales Agents,2431,Advertising and Marketing Professionals,partial
+41-3011,Advertising Sales Agents,5223,Shop Sales Assistants,partial
+41-3011,Advertising Sales Agents,3331,Clearing and Forwarding Aents,partial
+49-3022,Automotive Glass Installersand Repairers,7413,Electrical Line Installers and Repairers,partial
+49-3022,Automotive Glass Installersand Repairers,7234,Bicycle and Related Repairers,partial
+49-3022,Automotive Glass Installersand Repairers,7231,Motor Vehicle Mechanics and Repairers,partial
+43-4051,Customer Service Representatives,4212,"Bookmakers, Croupiers and Related Gaming Workers",direct
+43-4051,Customer Service Representatives,4214,Debt Collectors and Related Workers,direct
+43-4051,Customer Service Representatives,4211,Bank Tellers and Related Clerks,direct
+27-4011,Audioand Video Equipment Technicians,3211,Medical Imaging and Therapeutic Equipment Technicians,partial
+27-4011,Audioand Video Equipment Technicians,3112,Civil Engineering Technicians,partial
+27-4011,Audioand Video Equipment Technicians,3521,Broadcasting and Audio-visual Technicians,partial
+25-9041,Teacher Assistants,2113,Chemists,partial
+25-9041,Teacher Assistants,2264,Physiotherapists,partial
+25-9041,Teacher Assistants,2250,Veterinarians,partial
+45-1011,"First-Line Supervisorsof Farming, Fishing, and Forestry Workers",6223,Deep-sea Fishery Workers,partial
+19-4031,Chemical Technicians,2145,Chemical Engineers,direct
+19-4031,Chemical Technicians,2144,Mechanical Engineers,partial
+19-4031,Chemical Technicians,2151,Electrical Engineers,partial
+47-3015,"Helpers–Pipelayers, Plumbers, Pipefitters, and Steamfitters",7126,Plumbers and Pipe Fitters,partial
+47-3015,"Helpers–Pipelayers, Plumbers, Pipefitters, and Steamfitters",7122,Floor Layers and Tile Setters,approximate
+47-3015,"Helpers–Pipelayers, Plumbers, Pipefitters, and Steamfitters",7132,Spray Painters and Varnishers,direct
+13-1051,Cost Estimators,1323,Construction Managers,partial
+13-1051,Cost Estimators,2522,Systems Aministrators,partial
+13-1051,Cost Estimators,2621,Archivists and Curators,partial
+37-1012,"First-Line Supervisors of Landscaping,  Lawn Service,  and Groundskeeping Workers",9510,Street and Related Service Workers,approximate
+37-1012,"First-Line Supervisors of Landscaping,  Lawn Service,  and Groundskeeping Workers",9129,Other Cleaning Workers,direct
+13-2052,Personal Financial Advisors,2412,Financial and Investment Advisers,partial
+13-2052,Personal Financial Advisors,2413,Financial Analysts,partial
+13-2052,Personal Financial Advisors,3240,Veterinary Technicians and Assistants,approximate
+25-4013,Museum Techniciansand Conservators,2652,"Musicians, Singers and Composers",partial
+25-4013,Museum Techniciansand Conservators,2621,Archivists and Curators,direct
+25-4013,Museum Techniciansand Conservators,2265,Dieticians and Nutritionists,approximate
+47-5042,Mine Cuttingand Channeling Machine Operators,8112,Mineral and Stone Processing Plant Operators,partial
+47-5042,Mine Cuttingand Channeling Machine Operators,7223,Metal Working Machine Tool Setters and  Operators,partial
+47-5042,Mine Cuttingand Channeling Machine Operators,8114,"Cement, Stone and Other Mineral Products Machine Operators",partial
+11-3071,"Transportation, Storage, and Distribution Managers",1431,"Sports, Recreation and Cultural Centre Managers",partial
+11-3071,"Transportation, Storage, and Distribution Managers",1324,"Supply, Distribution and Related Managers",partial
+11-3071,"Transportation, Storage, and Distribution Managers",1323,Construction Managers,partial
+49-3092,Recreational Vehicle Service Technicians,7321,Pre-press Technicians,partial
+49-3092,Recreational Vehicle Service Technicians,7231,Motor Vehicle Mechanics and Repairers,approximate
+49-3092,Recreational Vehicle Service Technicians,7421,Electronics Mechanics and Servicers,direct
+49-3023,Automotive Service Techniciansand Mechanics,7231,Motor Vehicle Mechanics and Repairers,approximate
+49-3023,Automotive Service Techniciansand Mechanics,7321,Pre-press Technicians,approximate
+49-3023,Automotive Service Techniciansand Mechanics,7421,Electronics Mechanics and Servicers,direct
+33-3012,Correctional Officersand Jailers,3312,Credit and Loans Officers,partial
+33-3012,Correctional Officersand Jailers,3152,Ships' Deck Officers and Pilots,partial
+33-3012,Correctional Officersand Jailers,3123,Construction Supervisors,approximate
+27-4031,"Camera Operators, Television, Video, and Motion Picture",2656,"Announcers on Radio, Television and Other Media",partial
+27-4031,"Camera Operators, Television, Video, and Motion Picture",2659,Creative and Performing Artists Not Elsewhere Classified,direct
+51-3023,Slaughterersand Meat Packers,7213,Sheet Metal Workers,partial
+51-3023,Slaughterersand Meat Packers,7542,Shotfirers and Blasters,partial
+51-3023,Slaughterersand Meat Packers,7534,Upholsterers and Related Workers,approximate
+49-2096,"Electronic Equipment Installersand Repairers, Motor Vehicles",7413,Electrical Line Installers and Repairers,partial
+49-2096,"Electronic Equipment Installersand Repairers, Motor Vehicles",7311,Precision-instrument Makers and Repairers,approximate
+49-2096,"Electronic Equipment Installersand Repairers, Motor Vehicles",7214,Structural Metal Preparers and Erectors,approximate
+31-2022,Physical Therapist Aides,5312,Teachers' Aides,partial
+31-2022,Physical Therapist Aides,3251,Dental Assistants and Therapists,partial
+31-2022,Physical Therapist Aides,3255,Physiotherapy Technicians and Assistants,partial
+39-3092,Costume Attendants,5245,Service Station Attendants,partial
+39-3092,Costume Attendants,5246,Food Service Counter Attendants,partial
+39-3092,Costume Attendants,5111,Travel Attendants and Travel Stewards,partial
+13-1161,Market Research Analystsand Marketing Specialists,2431,Advertising and Marketing Professionals,approximate
+13-1161,Market Research Analystsand Marketing Specialists,3115,Mechanical Engineering Technicians,approximate
+43-4181,Reservationand Transportation Ticket Agentsand Travel Clerks,4312,"Statistical, Finance and Insurance Clerks",approximate
+51-8031,Waterand Wastewater Treatment Plantand System Operators,8112,Mineral and Stone Processing Plant Operators,partial
+51-8031,Waterand Wastewater Treatment Plantand System Operators,8181,Glass and Ceramics Plant Operators,approximate
+51-8031,Waterand Wastewater Treatment Plantand System Operators,8172,Wood Processing Plant Operators,approximate
+51-3093,Food Cooking Machine Operatorsand Tenders,8153,Sewing Machine Operators,partial
+51-3093,Food Cooking Machine Operatorsand Tenders,7523,Woodworking Machine Tool Setters and Operators,partial
+51-3093,Food Cooking Machine Operatorsand Tenders,8152,Weaving and Knitting Machine Operators,partial
+51-4122,"Welding, Soldering, and Brazing Machine Setters, Operators, and Ten- ders",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4122,"Welding, Soldering, and Brazing Machine Setters, Operators, and Ten- ders",8154,"Bleaching, Dyeing and Fabric Cleaning Machine Operators",partial
+51-4122,"Welding, Soldering, and Brazing Machine Setters, Operators, and Ten- ders",7223,Metal Working Machine Tool Setters and  Operators,partial
+53-5022,Motorboat Operators,8172,Wood Processing Plant Operators,partial
+53-5022,Motorboat Operators,8341,Mobile Farm and Forestry Plant Operators,partial
+53-5022,Motorboat Operators,8112,Mineral and Stone Processing Plant Operators,partial
+47-2082,Tapers,7125,Glaziers,partial
+47-2082,Tapers,7322,Printers,partial
+47-2082,Tapers,7521,Wood Treaters,partial
+47-2151,Pipelayers,7123,Plasterers,partial
+47-2151,Pipelayers,7125,Glaziers,partial
+47-2151,Pipelayers,7322,Printers,partial
+19-2042,"Geoscientists, Except Hydrologistsand Geographers",2114,Geologists and geophysicists,partial
+19-2042,"Geoscientists, Except Hydrologistsand Geographers",2653,Dancers and Choreographers,approximate
+19-2042,"Geoscientists, Except Hydrologistsand Geographers",2111,Physicists and Astronomers,direct
+49-9012,"Controland Valve Installersand Repairers, Except Mechanical Door",7413,Electrical Line Installers and Repairers,partial
+49-9012,"Controland Valve Installersand Repairers, Except Mechanical Door",7214,Structural Metal Preparers and Erectors,approximate
+49-9012,"Controland Valve Installersand Repairers, Except Mechanical Door",7127,Air Conditioning and Refrigeration Mechanics,approximate
+31-9799,"Healthcare Support Workers, All Other",5311,Child Care Workers,partial
+31-9799,"Healthcare Support Workers, All Other",5142,Beauticians and Related Workers,partial
+31-9799,"Healthcare Support Workers, All Other",5321,Health Care Assistants,partial
+35-1012,First-Line Supervisorsof Food Preparationand Serving Workers,5151,"Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments",direct
+47-4011,Constructionand Building Inspectors,7214,Structural Metal Preparers and Erectors,approximate
+47-4011,Constructionand Building Inspectors,7323,Print Finishing and Binding Workers,approximate
+47-4011,Constructionand Building Inspectors,7133,Building Structure Cleaners,approximate
+51-9031,"Cuttersand Trimmers, Hand",7314,Potters and Related Workers,partial
+51-9031,"Cuttersand Trimmers, Hand",7131,Painters and Related Workers,approximate
+51-9031,"Cuttersand Trimmers, Hand",8181,Glass and Ceramics Plant Operators,direct
+49-9071,"Maintenanceand Repair Workers, General",7131,Painters and Related Workers,partial
+49-9071,"Maintenanceand Repair Workers, General",7232,Aircraft Engine Mechanics and Repairers,approximate
+49-9071,"Maintenanceand Repair Workers, General",7222,Toolmakers and Related Workers,approximate
+23-1021,"Administrative Law Judges, Adjudicators, and Hearing Officers",2612,Judges,direct
+43-5081,Stock Clerksand Order Fillers,4321,Stock Clerks,direct
+47-2132,"Insulation Workers, Mechanical",7124,Insulation Workers,direct
+19-4061,Social Science Research Assistants,2162,Landscape Architects,approximate
+19-4061,Social Science Research Assistants,2320,Vocational Education Teachers,approximate
+19-4061,Social Science Research Assistants,2352,Special Needs Teachers,approximate
+15-1150,Computer Support Specialists,2351,Education Methods Specialists,partial
+15-1150,Computer Support Specialists,2523,Computer Network Professionals,partial
+15-1150,Computer Support Specialists,3513,Computer Network and Systems Technicians,partial
+25-4021,Librarians,2622,Librarians and Related Information Professionals,direct
+49-2097,Electronic Home Entertainment Equipment Installersand Repairers,7413,Electrical Line Installers and Repairers,partial
+49-2097,Electronic Home Entertainment Equipment Installersand Repairers,7311,Precision-instrument Makers and Repairers,approximate
+49-9021,"Heating, Air Conditioning, and Refrigeration Mechanicsand Installers",7127,Air Conditioning and Refrigeration Mechanics,direct
+53-7041,Hoistand Winch Operators,8153,Sewing Machine Operators,partial
+53-7041,Hoistand Winch Operators,8157,Laundry Machine Operators,partial
+53-7041,Hoistand Winch Operators,8344,Lifting Truck Operators,partial
+37-2021,Pest Control Workers,9129,Other Cleaning Workers,partial
+37-2021,Pest Control Workers,9313,Building Construction Labourers,partial
+37-2021,Pest Control Workers,9214,Garden and Horticultural Labourers,direct
+51-9198,Helpers–Production Workers,7124,Insulation Workers,partial
+51-9198,Helpers–Production Workers,7313,Jewellery and Precious Metal Workers,partial
+51-9198,Helpers–Production Workers,7536,Shoemakers and Related Workers,partial
+43-9111,Statistical Assistants,4312,"Statistical, Finance and Insurance Clerks",partial
+37-2011,"Janitorsand Cleaners, Except Maidsand Housekeeping Cleaners",6113,"Gardeners, Horticultural and Nursery Growers",direct
+49-3051,Motorboat Mechanicsand Service Technicians,7421,Electronics Mechanics and Servicers,partial
+49-3051,Motorboat Mechanicsand Service Technicians,7321,Pre-press Technicians,partial
+49-3051,Motorboat Mechanicsand Service Technicians,7231,Motor Vehicle Mechanics and Repairers,partial
+51-9196,"Paper Goods Machine Setters, Operators, and Tenders",8143,Paper Products Machine Operators,direct
+51-9196,"Paper Goods Machine Setters, Operators, and Tenders",7523,Woodworking Machine Tool Setters and Operators,partial
+51-9196,"Paper Goods Machine Setters, Operators, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4071,Foundry Moldand Coremakers,7211,Metal Moulders and Coremakers,partial
+51-4071,Foundry Moldand Coremakers,7513,Dairy Products Makers,partial
+51-4071,Foundry Moldand Coremakers,7314,Potters and Related Workers,partial
+19-2021,Atmosphericand Space Scientists,2633,"Philosophers, Historians and Political Scientists",partial
+19-2021,Atmosphericand Space Scientists,2351,Education Methods Specialists,approximate
+19-2021,Atmosphericand Space Scientists,2162,Landscape Architects,approximate
+53-3021,"Bus Drivers, Transitand Intercity",9332,Drivers of Animal-drawn Vehicles and Machinery,partial
+53-3021,"Bus Drivers, Transitand Intercity",8331,Bus and Tram Drivers,direct
+33-9092,"Lifeguards, Ski Patrol, and Other Recreational Protective Service Work- ers",5419,Protective Services Workers Not Elsewhere Classified,direct
+49-9041,Industrial Machinery Mechanics,7233,Agricultural and Industrial Machinery Mechanics and Repairers,direct
+43-5052,Postal Service Mail Carriers,4312,"Statistical, Finance and Insurance Clerks",direct
+43-5052,Postal Service Mail Carriers,4412,Mail Carriers and Sorting Clerks,approximate
+43-5052,Postal Service Mail Carriers,4416,Personnel Clerks,approximate
+47-5071,"Roustabouts, Oiland Gas",7111,House Builders,approximate
+47-5071,"Roustabouts, Oiland Gas",8113,Well Drillers and Borers and Related Workers,direct
+47-5071,"Roustabouts, Oiland Gas",8112,Mineral and Stone Processing Plant Operators,direct
+47-2011,Boilermakers,7123,Plasterers,partial
+47-2011,Boilermakers,7211,Metal Moulders and Coremakers,partial
+47-2011,Boilermakers,7112,Bricklayers and Related Workers,partial
+17-3013,Mechanical Drafters,2144,Mechanical Engineers,direct
+17-3013,Mechanical Drafters,2240,Paramedical Practitioners,partial
+17-3013,Mechanical Drafters,3344,Medical Secretaries,partial
+29-2021,Dental Hygienists,2261,Dentists,partial
+29-2021,Dental Hygienists,3251,Dental Assistants and Therapists,partial
+29-2021,Dental Hygienists,2112,Meteorologists,partial
+53-3033,Light Truckor Delivery Services Drivers,8332,Heavy Truck and Lorry Drivers,partial
+53-3033,Light Truckor Delivery Services Drivers,9510,Street and Related Service Workers,partial
+53-3033,Light Truckor Delivery Services Drivers,8311,Locomotive Engine Drivers,partial
+37-2012,Maidsand Housekeeping Cleaners,9123,Window Cleaners,partial
+37-2012,Maidsand Housekeeping Cleaners,9122,Vehicle Cleaners,approximate
+37-2012,Maidsand Housekeeping Cleaners,9312,Civil Engineering Labourers,approximate
+51-9122,"Painters, Transportation Equipment",7131,Painters and Related Workers,approximate
+51-9122,"Painters, Transportation Equipment",8212,Electrical and Electronic Equipment Assemblers,approximate
+43-4061,"Eligibility Interviewers, Government Programs",4227,Survey and Market Research Interviewers,direct
+49-3093,Tire Repairersand Changers,7132,Spray Painters and Varnishers,partial
+49-3093,Tire Repairersand Changers,7214,Structural Metal Preparers and Erectors,partial
+49-3093,Tire Repairersand Changers,7234,Bicycle and Related Repairers,partial
+51-3092,Food Batchmakers,7521,Wood Treaters,partial
+51-3092,Food Batchmakers,7515,Food and Beverage Tasters and Graders,partial
+51-3092,Food Batchmakers,7513,Dairy Products Makers,direct
+49-2091,Avionics Technicians,7321,Pre-press Technicians,partial
+49-2091,Avionics Technicians,7421,Electronics Mechanics and Servicers,partial
+49-2091,Avionics Technicians,7127,Air Conditioning and Refrigeration Mechanics,approximate
+49-3011,Aircraft Mechanicsand Service Technicians,7421,Electronics Mechanics and Servicers,partial
+49-3011,Aircraft Mechanicsand Service Technicians,7232,Aircraft Engine Mechanics and Repairers,partial
+49-3011,Aircraft Mechanicsand Service Technicians,7321,Pre-press Technicians,partial
+53-2022,Airfield Operations Specialists,8342,Earthmoving and Related Plant Operators,approximate
+53-2022,Airfield Operations Specialists,8343,"Crane, hoist and related plant operators",approximate
+51-8093,"Petroleum Pump System Operators, Refinery Operators, and Gaugers",8131,Chemical Products Plant and Machine Operators,direct
+51-8093,"Petroleum Pump System Operators, Refinery Operators, and Gaugers",8155,Fur and Leather Preparing Machine Operators,direct
+47-4799,"Constructionand Related Workers, All Other",7534,Upholsterers and Related Workers,partial
+47-4799,"Constructionand Related Workers, All Other",7314,Potters and Related Workers,partial
+47-4799,"Constructionand Related Workers, All Other",7131,Painters and Related Workers,partial
+29-2081,"Opticians, Dispensing",2265,Dieticians and Nutritionists,direct
+29-2081,"Opticians, Dispensing",3254,Dispensing Opticians,approximate
+29-2081,"Opticians, Dispensing",3255,Physiotherapy Technicians and Assistants,approximate
+51-6011,Laundryand Dry-Cleaning Workers,8157,Laundry Machine Operators,partial
+51-6011,Laundryand Dry-Cleaning Workers,8154,"Bleaching, Dyeing and Fabric Cleaning Machine Operators",approximate
+51-6011,Laundryand Dry-Cleaning Workers,7533,"Sewing, Embroidery and Related Workers",approximate
+39-3091,Amusementand Recreation Attendants,5245,Service Station Attendants,partial
+39-3091,Amusementand Recreation Attendants,5246,Food Service Counter Attendants,partial
+31-9095,Pharmacy Aides,5312,Teachers' Aides,partial
+31-9095,Pharmacy Aides,5141,Hairdressers,approximate
+31-9095,Pharmacy Aides,5321,Health Care Assistants,direct
+47-3016,Helpers–Roofers,7121,Roofers,direct
+53-7121,"Tank Car, Truck, and Ship Loaders",8332,Heavy Truck and Lorry Drivers,partial
+53-7121,"Tank Car, Truck, and Ship Loaders",8344,Lifting Truck Operators,partial
+53-7121,"Tank Car, Truck, and Ship Loaders",9313,Building Construction Labourers,approximate
+49-9031,Home Appliance Repairers,7234,Bicycle and Related Repairers,partial
+49-9031,Home Appliance Repairers,7231,Motor Vehicle Mechanics and Repairers,partial
+49-9031,Home Appliance Repairers,7311,Precision-instrument Makers and Repairers,partial
+47-2031,Carpenters,7115,Carpenters and Joiners,direct
+27-3012,Public Address Systemand Other Announcers,3251,Dental Assistants and Therapists,approximate
+27-3012,Public Address Systemand Other Announcers,3133,Chemical Processing Plant Controllers,approximate
+27-3012,Public Address Systemand Other Announcers,2659,Creative and Performing Artists Not Elsewhere Classified,direct
+51-6063,"Textile Knittingand Weaving Machine Setters, Operators, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-6063,"Textile Knittingand Weaving Machine Setters, Operators, and Tenders",8152,Weaving and Knitting Machine Operators,partial
+51-6063,"Textile Knittingand Weaving Machine Setters, Operators, and Tenders",7523,Woodworking Machine Tool Setters and Operators,partial
+11-3011,Administrative Services Managers,1343,Aged Care Service Managers,direct
+11-3011,Administrative Services Managers,1342,Health Service Managers,partial
+11-3011,Administrative Services Managers,1341,Child Care Service Managers,partial
+47-2121,Glaziers,7125,Glaziers,direct
+51-2021,"Coil Winders, Tapers, and Finishers",7132,Spray Painters and Varnishers,partial
+51-2021,"Coil Winders, Tapers, and Finishers",7315,"Glass Makers, Cutters, Grinders and Finishers",partial
+51-2021,"Coil Winders, Tapers, and Finishers",7535,"Pelt Dressers, Tanners and Fellmongers",partial
+49-3031,Busand Truck Mechanicsand Diesel Engine Specialists,7421,Electronics Mechanics and Servicers,direct
+49-3031,Busand Truck Mechanicsand Diesel Engine Specialists,7412,Electrical Mechanics and Fitters,direct
+49-3031,Busand Truck Mechanicsand Diesel Engine Specialists,7413,Electrical Line Installers and Repairers,direct
+49-2011,"Computer, Automated Teller, and Office Machine Repairers",7231,Motor Vehicle Mechanics and Repairers,partial
+49-2011,"Computer, Automated Teller, and Office Machine Repairers",7232,Aircraft Engine Mechanics and Repairers,direct
+49-2011,"Computer, Automated Teller, and Office Machine Repairers",7234,Bicycle and Related Repairers,direct
+39-9021,Personal Care Aides,5322,Home-based Personal Care Workers,partial
+39-9021,Personal Care Aides,5413,Prison Guards,partial
+39-9021,Personal Care Aides,5164,Pet Groomers and Animal Care Workers,partial
+27-4012,Broadcast Technicians,3143,Forestry Technicians,direct
+27-4012,Broadcast Technicians,3521,Broadcasting and Audio-visual Technicians,direct
+27-4012,Broadcast Technicians,3514,Web Technicians,direct
+47-3013,Helpers–Electricians,7411,Building and Related Electricians,partial
+47-3013,Helpers–Electricians,7321,Pre-press Technicians,partial
+47-3013,Helpers–Electricians,7412,Electrical Mechanics and Fitters,approximate
+11-9131,Postmastersand Mail Superintendents,131,"Production Managers in Agriculture, Forestry and Fisheries",approximate
+47-2044,Tileand Marble Setters,7542,Shotfirers and Blasters,partial
+47-2044,Tileand Marble Setters,7212,Welders and Flame Cutters,partial
+47-2044,Tileand Marble Setters,7122,Floor Layers and Tile Setters,partial
+47-2141,"Painters, Constructionand Maintenance",7512,"Bakers, Pastry-cooks and Confectionery Makers",approximate
+53-6061,"Transportation Attendants, Except Flight Attendants",9333,Freight Handlers,direct
+17-3022,Civil Engineering Technicians,3112,Civil Engineering Technicians,direct
+17-3022,Civil Engineering Technicians,3116,Chemical Engineering Technicians,direct
+17-3022,Civil Engineering Technicians,3113,Electrical Engineering Technicians,direct
+49-3041,Farm Equipment Mechanicsand Service Technicians,7421,Electronics Mechanics and Servicers,partial
+49-3041,Farm Equipment Mechanicsand Service Technicians,7321,Pre-press Technicians,approximate
+49-3041,Farm Equipment Mechanicsand Service Technicians,7231,Motor Vehicle Mechanics and Repairers,approximate
+25-4011,Archivists,2621,Archivists and Curators,direct
+51-9011,Chemical Equipment Operatorsand Tenders,8131,Chemical Products Plant and Machine Operators,partial
+51-9011,Chemical Equipment Operatorsand Tenders,8121,Metal Processing Plant Operators,partial
+51-9011,Chemical Equipment Operatorsand Tenders,8181,Glass and Ceramics Plant Operators,partial
+49-2092,"Electric Motor, Power Tool, and Related Repairers",7234,Bicycle and Related Repairers,partial
+49-2092,"Electric Motor, Power Tool, and Related Repairers",7511,"Butchers, Fishmongers and Related Food Preparers",partial
+49-2092,"Electric Motor, Power Tool, and Related Repairers",7413,Electrical Line Installers and Repairers,partial
+19-4091,"Environmental Scienceand Protection Technicians, Including Health",2133,Environmental Protection Professionals,partial
+19-4091,"Environmental Scienceand Protection Technicians, Including Health",2263,Environmental and Occupational Health and Hygiene Professionals,partial
+49-9094,Locksmithsand Safe Repairers,7421,Electronics Mechanics and Servicers,partial
+49-9094,Locksmithsand Safe Repairers,7231,Motor Vehicle Mechanics and Repairers,partial
+49-9094,Locksmithsand Safe Repairers,7232,Aircraft Engine Mechanics and Repairers,partial
+37-3013,Tree Trimmersand Pruners,9613,Sweepers and Related Labourers,approximate
+35-3011,Bartenders,5132,Bartenders,direct
+13-1023,"Purchasing Agents, Except Wholesale, Retail, and Farm Products",1420,Retail and Wholesale Trade Managers,partial
+35-9021,Dishwashers,5131,Waiters,partial
+35-9021,Dishwashers,5141,Hairdressers,partial
+35-9021,Dishwashers,5221,Shopkeepers,approximate
+45-3021,Huntersand Trappers,6224,Hunters and Trappers,direct
+31-9093,Medical Equipment Preparers,3344,Medical Secretaries,partial
+31-9093,Medical Equipment Preparers,3211,Medical Imaging and Therapeutic Equipment Technicians,partial
+31-9093,Medical Equipment Preparers,3256,Medical Assistants,partial
+51-4031,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders,  Metaland Plastic",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,partial
+51-4031,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders,  Metaland Plastic",8159,"Textile, Fur and Leather Products Machine Operators Not Elsewhere Classified",partial
+51-4031,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders,  Metaland Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+43-9011,Computer Operators,4223,Telephone Switchboard Operators,partial
+43-9011,Computer Operators,4131,Typists and Word Processing Operators,approximate
+43-9011,Computer Operators,4416,Personnel Clerks,direct
+51-8092,Gas Plant Operators,8181,Glass and Ceramics Plant Operators,direct
+51-8092,Gas Plant Operators,8172,Wood Processing Plant Operators,partial
+51-8092,Gas Plant Operators,8121,Metal Processing Plant Operators,partial
+43-5053,"Postal Service Mail Sorters, Processors, and Processing Machine Oper- ators",4131,Typists and Word Processing Operators,partial
+53-3032,Heavyand Tractor-Trailer Truck Drivers,8332,Heavy Truck and Lorry Drivers,partial
+53-3032,Heavyand Tractor-Trailer Truck Drivers,9331,Hand and Pedal Vehicle Drivers,partial
+53-3032,Heavyand Tractor-Trailer Truck Drivers,8322,"Car, Taxi and Van Drivers",partial
+39-5093,Shampooers,5221,Shopkeepers,partial
+39-5093,Shampooers,5242,Sales Demonstrators,approximate
+39-5093,Shampooers,5412,Police Officers,approximate
+47-2081,Drywalland Ceiling Tile Installers,7413,Electrical Line Installers and Repairers,partial
+47-2081,Drywalland Ceiling Tile Installers,7122,Floor Layers and Tile Setters,partial
+47-2081,Drywalland Ceiling Tile Installers,7422,Information and Communications Technology Installers and Servicers,approximate
+49-9098,"Helpers–Installation, Maintenance, and Repair Workers",7233,Agricultural and Industrial Machinery Mechanics and Repairers,partial
+49-9098,"Helpers–Installation, Maintenance, and Repair Workers",7413,Electrical Line Installers and Repairers,partial
+49-9098,"Helpers–Installation, Maintenance, and Repair Workers",7124,Insulation Workers,partial
+49-3052,Motorcycle Mechanics,7231,Motor Vehicle Mechanics and Repairers,partial
+49-3052,Motorcycle Mechanics,7412,Electrical Mechanics and Fitters,direct
+49-3052,Motorcycle Mechanics,7127,Air Conditioning and Refrigeration Mechanics,approximate
+51-2011,"Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",8211,Mechanical Machinery Assemblers,approximate
+51-2011,"Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",7214,Structural Metal Preparers and Erectors,direct
+47-2042,"Floor Layers, Except Carpet, Wood, and Hard Tiles",7122,Floor Layers and Tile Setters,partial
+47-2042,"Floor Layers, Except Carpet, Wood, and Hard Tiles",7222,Toolmakers and Related Workers,partial
+47-2042,"Floor Layers, Except Carpet, Wood, and Hard Tiles",7112,Bricklayers and Related Workers,partial
+39-5011,Barbers,5132,Bartenders,direct
+39-5011,Barbers,5131,Waiters,partial
+39-5011,Barbers,5141,Hairdressers,partial
+47-5011,"Derrick Operators, Oiland Gas",7115,Carpenters and Joiners,approximate
+47-5011,"Derrick Operators, Oiland Gas",7112,Bricklayers and Related Workers,approximate
+47-5011,"Derrick Operators, Oiland Gas",8112,Mineral and Stone Processing Plant Operators,direct
+35-2011,"Cooks, Fast Food",5120,Cooks,direct
+43-9022,Word Processorsand Typists,4131,Typists and Word Processing Operators,partial
+17-3012,Electricaland Electronics Drafters,2151,Electrical Engineers,partial
+17-3012,Electricaland Electronics Drafters,3155,Air Traffic Safety Electronics Technicians,partial
+17-3012,Electricaland Electronics Drafters,2152,Electronics Engineers,partial
+17-3024,Electro-Mechanical Technicians,3113,Electrical Engineering Technicians,partial
+17-3024,Electro-Mechanical Technicians,3115,Mechanical Engineering Technicians,partial
+17-3024,Electro-Mechanical Technicians,3114,Electronics Engineering Technicians,partial
+51-9192,"Cleaning, Washing, and Metal Pickling Equipment Operatorsand Ten- ders",8152,Weaving and Knitting Machine Operators,partial
+51-9192,"Cleaning, Washing, and Metal Pickling Equipment Operatorsand Ten- ders",8121,Metal Processing Plant Operators,partial
+51-9192,"Cleaning, Washing, and Metal Pickling Equipment Operatorsand Ten- ders",8153,Sewing Machine Operators,partial
+11-9141,"Property, Real Estate, and Community Association Managers",1330,Information and Communications Technology Service Managers,approximate
+11-9141,"Property, Real Estate, and Community Association Managers",1221,Sales and Marketing Managers,approximate
+11-9141,"Property, Real Estate, and Community Association Managers",1222,Advertising and Public Relations Managers,approximate
+43-6013,Medical Secretaries,4120,Secretaries (general),partial
+43-6013,Medical Secretaries,4224,Hotel Receptionists,approximate
+43-6013,Medical Secretaries,4132,Data Entry Clerks,direct
+51-6021,"Pressers, Textile, Garment, and Related Materials",7318,"Handicraft Workers in Textile, Leather and Related Materials",direct
+51-6021,"Pressers, Textile, Garment, and Related Materials",7532,Garment and Related Patternmakers and Cutters,partial
+51-6021,"Pressers, Textile, Garment, and Related Materials",7317,"Handicraft Workers in Wood, Basketry and Related Materials",partial
+51-2031,Engineand Other Machine Assemblers,8211,Mechanical Machinery Assemblers,partial
+51-2031,Engineand Other Machine Assemblers,8157,Laundry Machine Operators,partial
+51-2031,Engineand Other Machine Assemblers,8153,Sewing Machine Operators,partial
+49-2098,Securityand Fire Alarm Systems Installers,7413,Electrical Line Installers and Repairers,approximate
+49-2098,Securityand Fire Alarm Systems Installers,7542,Shotfirers and Blasters,approximate
+49-9045,"Refractory Materials Repairers, Except Brickmasons",7214,Structural Metal Preparers and Erectors,partial
+49-9045,"Refractory Materials Repairers, Except Brickmasons",7311,Precision-instrument Makers and Repairers,partial
+49-9045,"Refractory Materials Repairers, Except Brickmasons",7232,Aircraft Engine Mechanics and Repairers,approximate
+39-2021,Nonfarm Animal Caretakers,5164,Pet Groomers and Animal Care Workers,partial
+39-2021,Nonfarm Animal Caretakers,5153,Building Caretakers,partial
+39-2021,Nonfarm Animal Caretakers,5311,Child Care Workers,partial
+47-2211,Sheet Metal Workers,7213,Sheet Metal Workers,direct
+47-2072,Pile-Driver Operators,7531,"Tailors, Dressmakers, Furriers and Hatters",approximate
+47-2072,Pile-Driver Operators,7535,"Pelt Dressers, Tanners and Fellmongers",approximate
+47-2072,Pile-Driver Operators,7523,Woodworking Machine Tool Setters and Operators,approximate
+47-2021,Brickmasonsand Blockmasons,7112,Bricklayers and Related Workers,direct
+45-3011,Fishersand Related Fishing Workers,6210,Forestry and Related Workers,partial
+45-3011,Fishersand Related Fishing Workers,6223,Deep-sea Fishery Workers,approximate
+47-2221,Structural Ironand Steel Workers,7214,Structural Metal Preparers and Erectors,partial
+47-2221,Structural Ironand Steel Workers,7131,Painters and Related Workers,partial
+47-2221,Structural Ironand Steel Workers,7124,Insulation Workers,partial
+53-4021,"Railroad Brake, Signal, and Switch Operators",8312,"Railway Brake, Signal and Switch Operators",direct
+53-4031,Railroad Conductorsand Yardmasters,9313,Building Construction Labourers,approximate
+53-4031,Railroad Conductorsand Yardmasters,8322,"Car, Taxi and Van Drivers",direct
+35-2012,"Cooks, Institutionand Cafeteria",5120,Cooks,direct
+53-5011,Sailorsand Marine Oilers,8153,Sewing Machine Operators,partial
+53-5011,Sailorsand Marine Oilers,8157,Laundry Machine Operators,partial
+53-5011,Sailorsand Marine Oilers,8156,Shoemaking and Related Machine Operators,partial
+51-9023,"Mixingand Blending Machine Setters, Operators, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-9023,"Mixingand Blending Machine Setters, Operators, and Tenders",7523,Woodworking Machine Tool Setters and Operators,partial
+51-9023,"Mixingand Blending Machine Setters, Operators, and Tenders",8183,"Packing, Bottling and Labelling Machine Operators",partial
+47-4091,Segmental Pavers,7213,Sheet Metal Workers,partial
+47-4091,Segmental Pavers,7214,Structural Metal Preparers and Erectors,approximate
+47-4091,Segmental Pavers,7412,Electrical Mechanics and Fitters,approximate
+47-2131,"Insulation Workers, Floor, Ceiling, and Wall",7124,Insulation Workers,direct
+51-5112,Printing Press Operators,8344,Lifting Truck Operators,direct
+51-5112,Printing Press Operators,8153,Sewing Machine Operators,partial
+51-5112,Printing Press Operators,8152,Weaving and Knitting Machine Operators,partial
+53-6031,Automotiveand Watercraft Service Attendants,9510,Street and Related Service Workers,approximate
+47-4071,Septic Tank Servicersand Sewer Pipe Cleaners,7133,Building Structure Cleaners,approximate
+47-4071,Septic Tank Servicersand Sewer Pipe Cleaners,7421,Electronics Mechanics and Servicers,approximate
+47-4071,Septic Tank Servicersand Sewer Pipe Cleaners,7549,Craft and Related Workers not Elsewhere Classified,direct
+39-6011,Baggage Portersand Bellhops,513,Waiters and Bartenders,approximate
+41-2012,Gaming Change Personsand Booth Cashiers,5151,"Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments",approximate
+41-2012,Gaming Change Personsand Booth Cashiers,5322,Home-based Personal Care Workers,approximate
+51-4023,"Rolling Machine Setters, Operators, and Tenders, Metaland Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4023,"Rolling Machine Setters, Operators, and Tenders, Metaland Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4023,"Rolling Machine Setters, Operators, and Tenders, Metaland Plastic",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,partial
+47-2071,"Paving, Surfacing, and Tamping Equipment Operators",7223,Metal Working Machine Tool Setters and  Operators,partial
+47-2071,"Paving, Surfacing, and Tamping Equipment Operators",7523,Woodworking Machine Tool Setters and Operators,partial
+47-2071,"Paving, Surfacing, and Tamping Equipment Operators",7127,Air Conditioning and Refrigeration Mechanics,direct
+51-4111,Tooland Die Makers,7521,Wood Treaters,partial
+51-4111,Tooland Die Makers,8321,Motorcycle Drivers,approximate
+51-4111,Tooland Die Makers,8322,"Car, Taxi and Van Drivers",approximate
+17-3023,Electricaland Electronics Engineering Technicians,3114,Electronics Engineering Technicians,direct
+17-3023,Electricaland Electronics Engineering Technicians,3113,Electrical Engineering Technicians,direct
+47-2161,Plasterersand Stucco Masons,7123,Plasterers,direct
+51-4192,"Layout Workers, Metaland Plastic",7549,Craft and Related Workers not Elsewhere Classified,approximate
+51-4192,"Layout Workers, Metaland Plastic",7319,Handicraft Workers Not Elsewhere Classified,approximate
+51-4034,"Latheand Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4034,"Latheand Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4034,"Latheand Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",8155,Fur and Leather Preparing Machine Operators,partial
+33-9032,Security Guards,5414,Security Guards,direct
+51-6052,"Tailors, Dressmakers, and Custom Sewers",7531,"Tailors, Dressmakers, Furriers and Hatters",partial
+51-6052,"Tailors, Dressmakers, and Custom Sewers",7122,Floor Layers and Tile Setters,partial
+51-6052,"Tailors, Dressmakers, and Custom Sewers",7211,Metal Moulders and Coremakers,partial
+53-7073,Wellhead Pumpers,9321,Hand Packers,partial
+53-7073,Wellhead Pumpers,9122,Vehicle Cleaners,approximate
+53-7073,Wellhead Pumpers,9411,Fast Food Preparers,approximate
+43-9081,Proofreadersand Copy Markers,4413,"Coding, Proofreading and Related Clerks",partial
+43-9081,Proofreadersand Copy Markers,4414,Scribes and Related Workers,partial
+43-9081,Proofreadersand Copy Markers,4416,Personnel Clerks,direct
+33-3041,Parking Enforcement Workers,3258,Ambulance Workers,partial
+33-3041,Parking Enforcement Workers,5161,"Astrologers, Fortune-tellers and Related Workers",partial
+33-3041,Parking Enforcement Workers,3331,Clearing and Forwarding Aents,approximate
+43-5041,"Meter Readers, Utilities",4224,Hotel Receptionists,partial
+43-5041,"Meter Readers, Utilities",4412,Mail Carriers and Sorting Clerks,approximate
+51-8013,Power Plant Operators,8172,Wood Processing Plant Operators,direct
+51-8013,Power Plant Operators,8121,Metal Processing Plant Operators,direct
+51-8013,Power Plant Operators,8171,Pulp and Papermaking Plant Operators,direct
+51-8091,Chemical Plantand System Operators,8131,Chemical Products Plant and Machine Operators,direct
+51-8091,Chemical Plantand System Operators,8181,Glass and Ceramics Plant Operators,partial
+51-8091,Chemical Plantand System Operators,8172,Wood Processing Plant Operators,partial
+47-5021,"Earth Drillers, Except Oiland Gas",8113,Well Drillers and Borers and Related Workers,partial
+47-5021,"Earth Drillers, Except Oiland Gas",7115,Carpenters and Joiners,partial
+47-5021,"Earth Drillers, Except Oiland Gas",7535,"Pelt Dressers, Tanners and Fellmongers",approximate
+19-4051,Nuclear Technicians,2355,Other Arts Teachers,approximate
+19-4051,Nuclear Technicians,2144,Mechanical Engineers,approximate
+19-4051,Nuclear Technicians,2162,Landscape Architects,approximate
+43-6011,Executive Secretariesand Executive Administrative Assistants,4120,Secretaries (general),direct
+51-8099,"Plantand System Operators, All Other",8157,Laundry Machine Operators,partial
+51-8099,"Plantand System Operators, All Other",8312,"Railway Brake, Signal and Switch Operators",partial
+51-8099,"Plantand System Operators, All Other",8131,Chemical Products Plant and Machine Operators,partial
+35-3041,"Food Servers, Nonrestaurant",5246,Food Service Counter Attendants,partial
+35-3041,"Food Servers, Nonrestaurant",5212,Street Food Salespersons,partial
+35-3041,"Food Servers, Nonrestaurant",5243,Door-to-door Salespersons,approximate
+51-7041,"Sawing Machine Setters, Operators, and Tenders, Wood",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-7041,"Sawing Machine Setters, Operators, and Tenders, Wood",7523,Woodworking Machine Tool Setters and Operators,partial
+51-7041,"Sawing Machine Setters, Operators, and Tenders, Wood",8153,Sewing Machine Operators,partial
+53-4041,Subwayand Streetcar Operators,8344,Lifting Truck Operators,partial
+53-4041,Subwayand Streetcar Operators,8153,Sewing Machine Operators,partial
+53-4041,Subwayand Streetcar Operators,8157,Laundry Machine Operators,partial
+31-9096,Veterinary Assistantsand Laboratory Animal Caretakers,5164,Pet Groomers and Animal Care Workers,approximate
+31-9096,Veterinary Assistantsand Laboratory Animal Caretakers,3240,Veterinary Technicians and Assistants,approximate
+31-9096,Veterinary Assistantsand Laboratory Animal Caretakers,3251,Dental Assistants and Therapists,approximate
+51-9032,"Cuttingand Slicing Machine Setters, Operators, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-9032,"Cuttingand Slicing Machine Setters, Operators, and Tenders",7523,Woodworking Machine Tool Setters and Operators,partial
+51-9032,"Cuttingand Slicing Machine Setters, Operators, and Tenders",8152,Weaving and Knitting Machine Operators,partial
+41-9022,Real Estate Sales Agents,3334,Real Estate Agents and Property Managers,partial
+41-9022,Real Estate Sales Agents,5223,Shop Sales Assistants,partial
+41-9022,Real Estate Sales Agents,5211,Stall and Market Salespersons,partial
+51-4011,"Computer-Controlled Machine Tool Operators, Metaland Plastic",8143,Paper Products Machine Operators,partial
+51-4011,"Computer-Controlled Machine Tool Operators, Metaland Plastic",8141,Rubber Products Machine Operators,partial
+51-4011,"Computer-Controlled Machine Tool Operators, Metaland Plastic",8159,"Textile, Fur and Leather Products Machine Operators Not Elsewhere Classified",partial
+49-9043,"Maintenance Workers, Machinery",7131,Painters and Related Workers,partial
+49-9043,"Maintenance Workers, Machinery",7124,Insulation Workers,partial
+49-9043,"Maintenance Workers, Machinery",7115,Carpenters and Joiners,approximate
+43-4021,Correspondence Clerks,4416,Personnel Clerks,partial
+43-4021,Correspondence Clerks,4323,Transport Clerks,partial
+43-4021,Correspondence Clerks,4132,Data Entry Clerks,partial
+45-2090,Miscellaneous Agricultural Workers,6221,Aquaculture Workers,partial
+45-2090,Miscellaneous Agricultural Workers,6113,"Gardeners, Horticultural and Nursery Growers",partial
+45-2090,Miscellaneous Agricultural Workers,6222,Inland and Coastal Waters Fishery Workers,direct
+45-4011,Forestand Conservation Workers,6210,Forestry and Related Workers,partial
+45-4011,Forestand Conservation Workers,6222,Inland and Coastal Waters Fishery Workers,partial
+45-4011,Forestand Conservation Workers,6223,Deep-sea Fishery Workers,approximate
+51-4052,"Pourersand Casters, Metal",7542,Shotfirers and Blasters,partial
+51-4052,"Pourersand Casters, Metal",7543,Product Graders and Testers (except Foods and Beverages),partial
+51-4052,"Pourersand Casters, Metal",7515,Food and Beverage Tasters and Graders,approximate
+47-2041,Carpet Installers,7322,Printers,partial
+47-2041,Carpet Installers,7413,Electrical Line Installers and Repairers,partial
+47-2041,Carpet Installers,7115,Carpenters and Joiners,partial
+47-2142,Paperhangers,7123,Plasterers,partial
+47-2142,Paperhangers,7322,Printers,partial
+47-2142,Paperhangers,7115,Carpenters and Joiners,approximate
+13-1021,"Buyersand Purchasing Agents, Farm Products",3323,Buyers,direct
+51-7021,Furniture Finishers,7132,Spray Painters and Varnishers,partial
+51-7021,Furniture Finishers,7323,Print Finishing and Binding Workers,partial
+51-7021,Furniture Finishers,7126,Plumbers and Pipe Fitters,approximate
+35-2021,Food Preparation Workers,5311,Child Care Workers,partial
+35-2021,Food Preparation Workers,5142,Beauticians and Related Workers,partial
+35-2021,Food Preparation Workers,5322,Home-based Personal Care Workers,approximate
+47-2043,Floor Sandersand Finishers,7122,Floor Layers and Tile Setters,partial
+47-2043,Floor Sandersand Finishers,7132,Spray Painters and Varnishers,partial
+47-2043,Floor Sandersand Finishers,7315,"Glass Makers, Cutters, Grinders and Finishers",partial
+53-6021,Parking Lot Attendants,8342,Earthmoving and Related Plant Operators,partial
+53-6021,Parking Lot Attendants,8171,Pulp and Papermaking Plant Operators,approximate
+53-6021,Parking Lot Attendants,9333,Freight Handlers,direct
+47-4051,Highway Maintenance Workers,7131,Painters and Related Workers,partial
+47-4051,Highway Maintenance Workers,7112,Bricklayers and Related Workers,partial
+47-4051,Highway Maintenance Workers,7124,Insulation Workers,partial
+47-2061,Construction Laborers,7124,Insulation Workers,partial
+43-5061,"Production, Planning, and Expediting Clerks",4322,Production Clerks,partial
+43-5061,"Production, Planning, and Expediting Clerks",4415,Filing and Copying Clerks,partial
+43-5061,"Production, Planning, and Expediting Clerks",4311,Accounting and Bookkeeping Clerks,partial
+51-9141,Semiconductor Processors,8321,Motorcycle Drivers,approximate
+51-9141,Semiconductor Processors,8172,Wood Processing Plant Operators,approximate
+51-9141,Semiconductor Processors,8112,Mineral and Stone Processing Plant Operators,approximate
+17-1021,Cartographersand Photogrammetrists,2165,Cartographers and Surveyors,partial
+17-1021,Cartographersand Photogrammetrists,2514,Applications Programmers,partial
+17-1021,Cartographersand Photogrammetrists,2633,"Philosophers, Historians and Political Scientists",approximate
+51-4051,Metal-Refining Furnace Operatorsand Tenders,8121,Metal Processing Plant Operators,partial
+51-4051,Metal-Refining Furnace Operatorsand Tenders,8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+51-4051,Metal-Refining Furnace Operatorsand Tenders,7223,Metal Working Machine Tool Setters and  Operators,partial
+51-9012,"Separating,  Filtering,  Clarifying, Precipitating,  and Still Machine Set- ters, Operators, and Tenders",8183,"Packing, Bottling and Labelling Machine Operators",partial
+51-9012,"Separating,  Filtering,  Clarifying, Precipitating,  and Still Machine Set- ters, Operators, and Tenders",8151,"Fibre Preparing, Spinning and Winding Machine Operators",partial
+51-9012,"Separating,  Filtering,  Clarifying, Precipitating,  and Still Machine Set- ters, Operators, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,approximate
+51-6091,"Extrudingand Forming Machine Setters, Operators, and Tenders, Syn- theticand Glass Fibers",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-6091,"Extrudingand Forming Machine Setters, Operators, and Tenders, Syn- theticand Glass Fibers",7523,Woodworking Machine Tool Setters and Operators,partial
+51-6091,"Extrudingand Forming Machine Setters, Operators, and Tenders, Syn- theticand Glass Fibers",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,partial
+47-2053,Terrazzo Workersand Finishers,7315,"Glass Makers, Cutters, Grinders and Finishers",partial
+47-2053,Terrazzo Workersand Finishers,7314,Potters and Related Workers,approximate
+47-2053,Terrazzo Workersand Finishers,7131,Painters and Related Workers,approximate
+51-4194,"Tool Grinders, Filers, and Sharpeners",7224,"Metal Polishers, Wheel Grinders and Tool Sharpeners",partial
+51-4194,"Tool Grinders, Filers, and Sharpeners",7122,Floor Layers and Tile Setters,partial
+51-4194,"Tool Grinders, Filers, and Sharpeners",7531,"Tailors, Dressmakers, Furriers and Hatters",partial
+49-3043,Rail Car Repairers,7232,Aircraft Engine Mechanics and Repairers,partial
+49-3043,Rail Car Repairers,7413,Electrical Line Installers and Repairers,partial
+49-3043,Rail Car Repairers,7234,Bicycle and Related Repairers,partial
+51-3011,Bakers,7512,"Bakers, Pastry-cooks and Confectionery Makers",direct
+31-9094,Medical Transcriptionists,3256,Medical Assistants,partial
+31-9094,Medical Transcriptionists,3344,Medical Secretaries,partial
+31-9094,Medical Transcriptionists,3213,Pharmaceutical Technicians and Assistants,approximate
+47-2022,Stonemasons,7113,"Stonemasons, Stone Cutters, Splitters and Carvers",direct
+53-3022,"Bus Drivers, Schoolor Special Client",8331,Bus and Tram Drivers,direct
+27-3042,Technical Writers,2144,Mechanical Engineers,direct
+27-3042,Technical Writers,2145,Chemical Engineers,partial
+27-3042,Technical Writers,2151,Electrical Engineers,partial
+49-9096,Riggers,7215,Riggers and Cable Splicers,direct
+47-4061,Rail-Track Layingand Maintenance Equipment Operators,7223,Metal Working Machine Tool Setters and  Operators,partial
+47-4061,Rail-Track Layingand Maintenance Equipment Operators,7523,Woodworking Machine Tool Setters and Operators,approximate
+51-8021,Stationary Engineersand Boiler Operators,8182,Steam Engine and Boiler Operators,direct
+51-6031,Sewing Machine Operators,8153,Sewing Machine Operators,direct
+53-3041,Taxi Driversand Chauffeurs,8322,"Car, Taxi and Van Drivers",partial
+53-3041,Taxi Driversand Chauffeurs,8331,Bus and Tram Drivers,direct
+53-3041,Taxi Driversand Chauffeurs,9332,Drivers of Animal-drawn Vehicles and Machinery,approximate
+43-4161,"Human Resources Assistants, Except Payrolland Timekeeping",4,Clerical Support Workers,approximate
+29-2011,Medicaland Clinical Laboratory Technologists,3212,Medical and Pathology Laboratory Technicians,partial
+29-2011,Medicaland Clinical Laboratory Technologists,3252,Medical Records and Health Information Technicians,partial
+29-2011,Medicaland Clinical Laboratory Technologists,3214,Medical and Dental Prosthetic Technicians,partial
+47-2171,Reinforcing Ironand Rebar Workers,7533,"Sewing, Embroidery and Related Workers",partial
+47-2171,Reinforcing Ironand Rebar Workers,7323,Print Finishing and Binding Workers,partial
+47-2171,Reinforcing Ironand Rebar Workers,7131,Painters and Related Workers,partial
+47-2181,Roofers,7121,Roofers,direct
+53-7021,Craneand Tower Operators,8182,Steam Engine and Boiler Operators,partial
+53-7021,Craneand Tower Operators,8343,"Crane, hoist and related plant operators",partial
+53-7021,Craneand Tower Operators,8344,Lifting Truck Operators,partial
+53-6051,Transportation Inspectors,8343,"Crane, hoist and related plant operators",approximate
+53-6051,Transportation Inspectors,8112,Mineral and Stone Processing Plant Operators,approximate
+53-6051,Transportation Inspectors,8122,"Metal Finishing, Plating and Coating Machine Operators",approximate
+51-4062,"Patternmakers, Metaland Plastic",7522,Cabinet-makers and Related Workers,direct
+51-4062,"Patternmakers, Metaland Plastic",7536,Shoemakers and Related Workers,direct
+51-4062,"Patternmakers, Metaland Plastic",7222,Toolmakers and Related Workers,approximate
+51-9195,"Molders, Shapers, and Casters, Except Metaland Plastic",7212,Welders and Flame Cutters,approximate
+13-2021,Appraisersand Assessorsof Real Estate,3315,Valuers and Loss Assessors,approximate
+13-2021,Appraisersand Assessorsof Real Estate,3153,Aircraft Pilots and Related Associate Professionals,approximate
+13-2021,Appraisersand Assessorsof Real Estate,3313,Accounting Associate Professionals,direct
+53-7072,"Pump Operators, Except Wellhead Pumpers",9111,Domestic Cleaners and Helpers,approximate
+53-7072,"Pump Operators, Except Wellhead Pumpers",9629,Elementary Workers Not Elsewhere Classified,direct
+49-9097,Signaland Track Switch Repairers,7311,Precision-instrument Makers and Repairers,partial
+49-9097,Signaland Track Switch Repairers,7232,Aircraft Engine Mechanics and Repairers,partial
+49-9097,Signaland Track Switch Repairers,7231,Motor Vehicle Mechanics and Repairers,approximate
+49-9063,Musical Instrument Repairersand Tuners,7312,Musical Instrument Makers and Tuners,direct
+39-7011,Tour Guidesand Escorts,5113,Travel Guides,partial
+49-9011,Mechanical Door Repairers,7231,Motor Vehicle Mechanics and Repairers,partial
+49-9011,Mechanical Door Repairers,7232,Aircraft Engine Mechanics and Repairers,partial
+49-9011,Mechanical Door Repairers,7413,Electrical Line Installers and Repairers,partial
+51-3091,"Foodand Tobacco Roasting,  Baking,  and Drying Machine Operators and Tenders",8183,"Packing, Bottling and Labelling Machine Operators",partial
+51-3091,"Foodand Tobacco Roasting,  Baking,  and Drying Machine Operators and Tenders",8151,"Fibre Preparing, Spinning and Winding Machine Operators",partial
+51-3091,"Foodand Tobacco Roasting,  Baking,  and Drying Machine Operators and Tenders",8152,Weaving and Knitting Machine Operators,partial
+53-7071,Gas Compressorand Gas Pumping Station Operators,8181,Glass and Ceramics Plant Operators,partial
+53-7071,Gas Compressorand Gas Pumping Station Operators,8121,Metal Processing Plant Operators,partial
+53-7071,Gas Compressorand Gas Pumping Station Operators,8142,Plastic Products Machine Operators,partial
+29-2071,Medical Recordsand Health Information Technicians,3252,Medical Records and Health Information Technicians,direct
+51-9121,"Coating, Painting, and Spraying Machine Setters, Operators, and Ten- ders",8183,"Packing, Bottling and Labelling Machine Operators",partial
+51-9121,"Coating, Painting, and Spraying Machine Setters, Operators, and Ten- ders",7523,Woodworking Machine Tool Setters and Operators,partial
+51-9121,"Coating, Painting, and Spraying Machine Setters, Operators, and Ten- ders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4081,"Multiple Machine Tool Setters, Operators, and Tenders, Metaland Plas- tic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4081,"Multiple Machine Tool Setters, Operators, and Tenders, Metaland Plas- tic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4081,"Multiple Machine Tool Setters, Operators, and Tenders, Metaland Plas- tic",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,partial
+53-4013,"Rail Yard Engineers, Dinkey Operators, and Hostlers",8182,Steam Engine and Boiler Operators,partial
+53-4013,"Rail Yard Engineers, Dinkey Operators, and Hostlers",9312,Civil Engineering Labourers,partial
+53-4013,"Rail Yard Engineers, Dinkey Operators, and Hostlers",8155,Fur and Leather Preparing Machine Operators,approximate
+49-2093,"Electrical and Electronics Installers and Repairers,  Transportation Equipment",7413,Electrical Line Installers and Repairers,partial
+49-2093,"Electrical and Electronics Installers and Repairers,  Transportation Equipment",7412,Electrical Mechanics and Fitters,approximate
+49-2093,"Electrical and Electronics Installers and Repairers,  Transportation Equipment",7311,Precision-instrument Makers and Repairers,approximate
+35-9011,Dining Roomand Cafeteria Attendantsand Bartender Helpers,5246,Food Service Counter Attendants,approximate
+51-4191,"Heat Treating Equipment Setters,  Operators,  and Tenders,  Metal and Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4191,"Heat Treating Equipment Setters,  Operators,  and Tenders,  Metal and Plastic",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,partial
+51-4191,"Heat Treating Equipment Setters,  Operators,  and Tenders,  Metal and Plastic",7523,Woodworking Machine Tool Setters and Operators,approximate
+19-4041,Geologicaland Petroleum Technicians,2114,Geologists and geophysicists,direct
+19-4041,Geologicaland Petroleum Technicians,2267,Optometrists and Ophthalmic Opticians,approximate
+49-3021,Automotive Bodyand Related Repairers,7234,Bicycle and Related Repairers,partial
+49-3021,Automotive Bodyand Related Repairers,7514,"Fruit, Vegetable and Related Preservers",partial
+49-3021,Automotive Bodyand Related Repairers,7511,"Butchers, Fishmongers and Related Food Preparers",partial
+51-7032,"Patternmakers, Wood",7123,Plasterers,partial
+51-7032,"Patternmakers, Wood",7532,Garment and Related Patternmakers and Cutters,partial
+51-7032,"Patternmakers, Wood",7314,Potters and Related Workers,approximate
+51-4021,"Extrudingand Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4021,"Extrudingand Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4021,"Extrudingand Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+43-9071,"Office Machine Operators, Except Computer",4223,Telephone Switchboard Operators,approximate
+43-9071,"Office Machine Operators, Except Computer",4131,Typists and Word Processing Operators,approximate
+43-9071,"Office Machine Operators, Except Computer",4415,Filing and Copying Clerks,direct
+29-2052,Pharmacy Technicians,3143,Forestry Technicians,partial
+29-2052,Pharmacy Technicians,3514,Web Technicians,partial
+29-2052,Pharmacy Technicians,3142,Agricultural Technicians,partial
+43-4131,Loan Interviewersand Clerks,4211,Bank Tellers and Related Clerks,partial
+43-4131,Loan Interviewersand Clerks,4132,Data Entry Clerks,partial
+43-4131,Loan Interviewersand Clerks,4222,Contact Centre Information Clerks,partial
+53-7031,Dredge Operators,8153,Sewing Machine Operators,partial
+53-7031,Dredge Operators,8157,Laundry Machine Operators,partial
+53-7031,Dredge Operators,8172,Wood Processing Plant Operators,partial
+41-3021,Insurance Sales Agents,3321,Insurance Representatives,partial
+41-3021,Insurance Sales Agents,5223,Shop Sales Assistants,partial
+41-3021,Insurance Sales Agents,5212,Street Food Salespersons,partial
+51-7011,Cabinetmakersand Bench Carpenters,7522,Cabinet-makers and Related Workers,partial
+51-7011,Cabinetmakersand Bench Carpenters,7312,Musical Instrument Makers and Tuners,approximate
+51-7011,Cabinetmakersand Bench Carpenters,7222,Toolmakers and Related Workers,approximate
+51-9123,"Painting, Coating, and Decorating Workers",7323,Print Finishing and Binding Workers,partial
+51-9123,"Painting, Coating, and Decorating Workers",7131,Painters and Related Workers,partial
+51-9123,"Painting, Coating, and Decorating Workers",8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+47-4031,Fence Erectors,7541,Underwater Divers,direct
+47-4031,Fence Erectors,7542,Shotfirers and Blasters,direct
+51-4193,"Plating and Coating Machine Setters,  Operators,  and Tenders,  Metal and Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4193,"Plating and Coating Machine Setters,  Operators,  and Tenders,  Metal and Plastic",8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+51-4193,"Plating and Coating Machine Setters,  Operators,  and Tenders,  Metal and Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+41-2031,Retail Salespersons,5212,Street Food Salespersons,direct
+41-2031,Retail Salespersons,5211,Stall and Market Salespersons,direct
+41-2031,Retail Salespersons,5243,Door-to-door Salespersons,partial
+35-3021,"Combined Food Preparationand Serving Workers, Including Fast Food",5169,Personal Services Workers Not Elsewhere Classified,approximate
+35-3021,"Combined Food Preparationand Serving Workers, Including Fast Food",5419,Protective Services Workers Not Elsewhere Classified,approximate
+51-9399,"Production Workers, All Other",7124,Insulation Workers,direct
+51-9399,"Production Workers, All Other",7513,Dairy Products Makers,partial
+51-9399,"Production Workers, All Other",7314,Potters and Related Workers,partial
+47-3012,Helpers–Carpenters,7115,Carpenters and Joiners,partial
+47-3012,Helpers–Carpenters,7322,Printers,partial
+47-3012,Helpers–Carpenters,7412,Electrical Mechanics and Fitters,partial
+51-9193,Coolingand Freezing Equipment Operatorsand Tenders,8172,Wood Processing Plant Operators,partial
+51-9193,Coolingand Freezing Equipment Operatorsand Tenders,8112,Mineral and Stone Processing Plant Operators,partial
+51-9193,Coolingand Freezing Equipment Operatorsand Tenders,8344,Lifting Truck Operators,approximate
+51-2091,Fiberglass Laminatorsand Fabricators,8181,Glass and Ceramics Plant Operators,approximate
+51-2091,Fiberglass Laminatorsand Fabricators,7212,Welders and Flame Cutters,direct
+47-5013,"Service Unit Operators, Oil, Gas, and Mining",8112,Mineral and Stone Processing Plant Operators,direct
+47-5013,"Service Unit Operators, Oil, Gas, and Mining",8114,"Cement, Stone and Other Mineral Products Machine Operators",direct
+53-7011,Conveyor Operatorsand Tenders,8153,Sewing Machine Operators,approximate
+53-7011,Conveyor Operatorsand Tenders,8157,Laundry Machine Operators,approximate
+53-7011,Conveyor Operatorsand Tenders,9211,Crop Farm Labourers,approximate
+49-3053,Outdoor Power Equipmentand Other Small Engine Mechanics,7412,Electrical Mechanics and Fitters,direct
+53-4012,Locomotive Firers,8311,Locomotive Engine Drivers,direct
+53-7063,Machine Feedersand Offbearers,8153,Sewing Machine Operators,partial
+53-7063,Machine Feedersand Offbearers,8157,Laundry Machine Operators,partial
+53-7063,Machine Feedersand Offbearers,9613,Sweepers and Related Labourers,direct
+51-4061,"Model Makers, Metaland Plastic",7536,Shoemakers and Related Workers,partial
+51-4061,"Model Makers, Metaland Plastic",7222,Toolmakers and Related Workers,partial
+51-4061,"Model Makers, Metaland Plastic",7522,Cabinet-makers and Related Workers,partial
+49-2021,"Radio, Cellular, and Tower Equipment Installersand Repairs",7413,Electrical Line Installers and Repairers,partial
+49-2021,"Radio, Cellular, and Tower Equipment Installersand Repairs",7311,Precision-instrument Makers and Repairers,approximate
+49-2021,"Radio, Cellular, and Tower Equipment Installersand Repairs",7422,Information and Communications Technology Installers and Servicers,approximate
+51-3021,Butchersand Meat Cutters,7212,Welders and Flame Cutters,partial
+51-3021,Butchersand Meat Cutters,7126,Plumbers and Pipe Fitters,partial
+51-3021,Butchersand Meat Cutters,7412,Electrical Mechanics and Fitters,approximate
+51-9041,"Extruding, Forming, Pressing, and Compacting Machine Setters, Oper- ators, and Tenders",8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+51-9041,"Extruding, Forming, Pressing, and Compacting Machine Setters, Oper- ators, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-9041,"Extruding, Forming, Pressing, and Compacting Machine Setters, Oper- ators, and Tenders",7523,Woodworking Machine Tool Setters and Operators,partial
+53-7081,Refuseand Recyclable Material Collectors,9611,Garbage and Recycling Collectors,partial
+53-7081,Refuseand Recyclable Material Collectors,9623,Meter Readers and Vending-machine Collectors,partial
+53-7081,Refuseand Recyclable Material Collectors,8156,Shoemaking and Related Machine Operators,approximate
+13-2081,"Tax Examinersand Collectors, and Revenue Agents",2423,Personnel and Careers Professionals,direct
+13-2081,"Tax Examinersand Collectors, and Revenue Agents",2413,Financial Analysts,direct
+51-4022,"Forging Machine Setters, Operators, and Tenders, Metaland Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4022,"Forging Machine Setters, Operators, and Tenders, Metaland Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4022,"Forging Machine Setters, Operators, and Tenders, Metaland Plastic",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,partial
+53-7051,Industrial Truckand Tractor Operators,8344,Lifting Truck Operators,partial
+53-7051,Industrial Truckand Tractor Operators,8112,Mineral and Stone Processing Plant Operators,partial
+53-7051,Industrial Truckand Tractor Operators,8131,Chemical Products Plant and Machine Operators,partial
+13-2011,Accountantsand Auditors,2411,Accountants,direct
+51-4032,"Drilling and Boring Machine Tool Setters,  Operators,  and Tenders,  Metaland Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4032,"Drilling and Boring Machine Tool Setters,  Operators,  and Tenders,  Metaland Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4032,"Drilling and Boring Machine Tool Setters,  Operators,  and Tenders,  Metaland Plastic",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,approximate
+35-3031,Waitersand Waitresses,5131,Waiters,direct
+51-3022,"Meat, Poultry, and Fish Cuttersand Trimmers",7114,"Concrete Placers, Concrete Finishers and Related Workers",approximate
+51-3022,"Meat, Poultry, and Fish Cuttersand Trimmers",7314,Potters and Related Workers,approximate
+51-3022,"Meat, Poultry, and Fish Cuttersand Trimmers",7532,Garment and Related Patternmakers and Cutters,approximate
+13-2031,Budget Analysts,2511,Systems Analysts,partial
+13-2031,Budget Analysts,2413,Financial Analysts,partial
+13-2031,Budget Analysts,2642,Journalists,partial
+47-2051,Cement Masonsand Concrete Finishers,7114,"Concrete Placers, Concrete Finishers and Related Workers",partial
+47-2051,Cement Masonsand Concrete Finishers,7315,"Glass Makers, Cutters, Grinders and Finishers",approximate
+47-2051,Cement Masonsand Concrete Finishers,7211,Metal Moulders and Coremakers,approximate
+49-3091,Bicycle Repairers,7234,Bicycle and Related Repairers,direct
+49-9091,"Coin, Vending, and Amusement Machine Servicersand Repairers",7233,Agricultural and Industrial Machinery Mechanics and Repairers,partial
+49-9091,"Coin, Vending, and Amusement Machine Servicersand Repairers",7231,Motor Vehicle Mechanics and Repairers,partial
+49-9091,"Coin, Vending, and Amusement Machine Servicersand Repairers",7311,Precision-instrument Makers and Repairers,partial
+51-4121,"Welders, Cutters, Solderers, and Brazers",7315,"Glass Makers, Cutters, Grinders and Finishers",partial
+51-4121,"Welders, Cutters, Solderers, and Brazers",7212,Welders and Flame Cutters,partial
+51-4121,"Welders, Cutters, Solderers, and Brazers",7543,Product Graders and Testers (except Foods and Beverages),partial
+43-5021,Couriersand Messengers,4412,Mail Carriers and Sorting Clerks,partial
+43-5021,Couriersand Messengers,4212,"Bookmakers, Croupiers and Related Gaming Workers",approximate
+43-5021,Couriersand Messengers,4120,Secretaries (general),approximate
+43-4111,"Interviewers, Except Eligibilityand Loan",411,General Office Clerks,approximate
+35-2015,"Cooks, Short Order",5120,Cooks,direct
+53-7032,Excavatingand Loading Machineand Dragline Operators,8152,Weaving and Knitting Machine Operators,partial
+53-7032,Excavatingand Loading Machineand Dragline Operators,8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+53-7032,Excavatingand Loading Machineand Dragline Operators,8183,"Packing, Bottling and Labelling Machine Operators",partial
+47-3014,"Helpers–Painters, Paperhangers, Plasterers, and Stucco Masons",7123,Plasterers,direct
+43-4081,"Hotel, Motel, and Resort Desk Clerks",4323,Transport Clerks,partial
+43-4081,"Hotel, Motel, and Resort Desk Clerks",4211,Bank Tellers and Related Clerks,partial
+43-4081,"Hotel, Motel, and Resort Desk Clerks",4412,Mail Carriers and Sorting Clerks,partial
+51-9197,Tire Builders,7111,House Builders,direct
+51-9197,Tire Builders,7542,Shotfirers and Blasters,partial
+41-9091,"Door-to-Door Sales Workers,  News and Street Vendors,  and Related Workers",5161,"Astrologers, Fortune-tellers and Related Workers",partial
+41-9091,"Door-to-Door Sales Workers,  News and Street Vendors,  and Related Workers",5243,Door-to-door Salespersons,partial
+41-9091,"Door-to-Door Sales Workers,  News and Street Vendors,  and Related Workers",5249,Sales Workers Not Elsewhere Classified,direct
+37-1011,First-Line Supervisorsof Housekeepingand Janitorial Workers,9129,Other Cleaning Workers,direct
+45-2011,Agricultural Inspectors,6123,Apiarists and Sericulturists,partial
+45-2011,Agricultural Inspectors,6221,Aquaculture Workers,partial
+45-2011,Agricultural Inspectors,6113,"Gardeners, Horticultural and Nursery Growers",approximate
+23-2011,Paralegalsand Legal Assistants,3411,Legal and Related Associate Professionals,direct
+43-5111,"Weighers, Measurers, Checkers, and Samplers, Recordkeeping",411,General Office Clerks,approximate
+51-6062,"Textile Cutting Machine Setters, Operators, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-6062,"Textile Cutting Machine Setters, Operators, and Tenders",7523,Woodworking Machine Tool Setters and Operators,partial
+51-6062,"Textile Cutting Machine Setters, Operators, and Tenders",8152,Weaving and Knitting Machine Operators,partial
+43-3011,Billand Account Collectors,4323,Transport Clerks,approximate
+43-3011,Billand Account Collectors,4311,Accounting and Bookkeeping Clerks,approximate
+43-3011,Billand Account Collectors,4132,Data Entry Clerks,direct
+51-8011,Nuclear Power Reactor Operators,8171,Pulp and Papermaking Plant Operators,partial
+51-8011,Nuclear Power Reactor Operators,8155,Fur and Leather Preparing Machine Operators,partial
+51-8011,Nuclear Power Reactor Operators,8141,Rubber Products Machine Operators,partial
+43-4121,"Library Assistants, Clerical",4411,Library Clerks,partial
+43-4121,"Library Assistants, Clerical",4221,Travel Consultants and Clerks,partial
+51-5113,Print Bindingand Finishing Workers,7323,Print Finishing and Binding Workers,direct
+45-2021,Animal Breeders,6130,Mixed Crop and Animal Producers,partial
+45-2021,Animal Breeders,6221,Aquaculture Workers,direct
+51-4072,"Molding,  Coremaking,  and Casting Machine Setters,  Operators,  and Tenders, Metaland Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4072,"Molding,  Coremaking,  and Casting Machine Setters,  Operators,  and Tenders, Metaland Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4072,"Molding,  Coremaking,  and Casting Machine Setters,  Operators,  and Tenders, Metaland Plastic",8154,"Bleaching, Dyeing and Fabric Cleaning Machine Operators",partial
+51-2022,Electricaland Electronic Equipment Assemblers,8212,Electrical and Electronic Equipment Assemblers,direct
+51-9191,Adhesive Bonding Machine Operatorsand Tenders,8153,Sewing Machine Operators,partial
+51-9191,Adhesive Bonding Machine Operatorsand Tenders,8152,Weaving and Knitting Machine Operators,partial
+51-9191,Adhesive Bonding Machine Operatorsand Tenders,8183,"Packing, Bottling and Labelling Machine Operators",partial
+37-3011,Landscapingand Groundskeeping Workers,9129,Other Cleaning Workers,approximate
+37-3011,Landscapingand Groundskeeping Workers,9312,Civil Engineering Labourers,approximate
+51-4033,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Oper- ators, and Tenders, Metaland Plastic",7523,Woodworking Machine Tool Setters and Operators,partial
+51-4033,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Oper- ators, and Tenders, Metaland Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4033,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Oper- ators, and Tenders, Metaland Plastic",8151,"Fibre Preparing, Spinning and Winding Machine Operators",approximate
+43-5051,Postal Service Clerks,4132,Data Entry Clerks,partial
+43-5051,Postal Service Clerks,4110,General Office Clerks,partial
+43-5051,Postal Service Clerks,4321,Stock Clerks,partial
+51-9071,Jewelersand Precious Stoneand Metal Workers,7313,Jewellery and Precious Metal Workers,direct
+43-4171,Receptionistsand Information Clerks,4222,Contact Centre Information Clerks,partial
+43-4171,Receptionistsand Information Clerks,4226,Receptionists (general),partial
+43-4171,Receptionistsand Information Clerks,4312,"Statistical, Finance and Insurance Clerks",partial
+43-9061,"Office Clerks, General",4110,General Office Clerks,partial
+43-9061,"Office Clerks, General",4120,Secretaries (general),partial
+43-9061,"Office Clerks, General",4321,Stock Clerks,partial
+11-3111,Compensationand Benefits Managers,1323,Construction Managers,partial
+11-3111,Compensationand Benefits Managers,1345,Education Managers,partial
+11-3111,Compensationand Benefits Managers,1412,Restaurant Managers,partial
+43-2011,"Switchboard Operators, Including Answering Service",4223,Telephone Switchboard Operators,partial
+35-3022,"Counter Attendants, Cafeteria, Food Concession, and Coffee Shop",5111,Travel Attendants and Travel Stewards,approximate
+47-5051,"Rock Splitters, Quarry",8111,Miners and Quarriers,partial
+47-5051,"Rock Splitters, Quarry",7132,Spray Painters and Varnishers,approximate
+47-5051,"Rock Splitters, Quarry",7113,"Stonemasons, Stone Cutters, Splitters and Carvers",approximate
+43-6014,"Secretariesand Administrative Assistants, Except Legal, Medical, and Executive",4120,Secretaries (general),direct
+17-3031,Surveyingand Mapping Technicians,3112,Civil Engineering Technicians,partial
+17-3031,Surveyingand Mapping Technicians,3117,Mining and metallurgical technicians,partial
+17-3031,Surveyingand Mapping Technicians,3521,Broadcasting and Audio-visual Technicians,partial
+51-7031,"Model Makers, Wood",7211,Metal Moulders and Coremakers,partial
+51-7031,"Model Makers, Wood",7222,Toolmakers and Related Workers,partial
+51-7031,"Model Makers, Wood",7536,Shoemakers and Related Workers,partial
+51-6064,"Textile Winding, Twisting, and Drawing Out Machine Setters, Opera- tors, and Tenders",8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+51-6064,"Textile Winding, Twisting, and Drawing Out Machine Setters, Opera- tors, and Tenders",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-6064,"Textile Winding, Twisting, and Drawing Out Machine Setters, Opera- tors, and Tenders",8183,"Packing, Bottling and Labelling Machine Operators",partial
+53-4011,Locomotive Engineers,8311,Locomotive Engine Drivers,direct
+39-3011,Gaming Dealers,5153,Building Caretakers,partial
+39-3011,Gaming Dealers,5141,Hairdressers,partial
+39-3011,Gaming Dealers,5162,Companions and Valets,partial
+49-9093,"Fabric Menders, Except Garment",7212,Welders and Flame Cutters,approximate
+49-9093,"Fabric Menders, Except Garment",7522,Cabinet-makers and Related Workers,approximate
+49-9093,"Fabric Menders, Except Garment",7311,Precision-instrument Makers and Repairers,direct
+35-2014,"Cooks, Restaurant",5120,Cooks,direct
+39-3031,"Ushers, Lobby Attendants, and Ticket Takers",5111,Travel Attendants and Travel Stewards,partial
+39-3031,"Ushers, Lobby Attendants, and Ticket Takers",5230,Cashiers and Ticket Clerks,partial
+39-3031,"Ushers, Lobby Attendants, and Ticket Takers",5245,Service Station Attendants,partial
+43-3021,Billingand Posting Clerks,4415,Filing and Copying Clerks,direct
+43-3021,Billingand Posting Clerks,4412,Mail Carriers and Sorting Clerks,partial
+43-3021,Billingand Posting Clerks,4323,Transport Clerks,partial
+53-6011,Bridgeand Lock Tenders,9321,Hand Packers,partial
+53-6011,Bridgeand Lock Tenders,9333,Freight Handlers,partial
+53-6011,Bridgeand Lock Tenders,9331,Hand and Pedal Vehicle Drivers,direct
+51-7042,"Woodworking Machine Setters, Operators, and Tenders, Except Sawing",7523,Woodworking Machine Tool Setters and Operators,direct
+51-7042,"Woodworking Machine Setters, Operators, and Tenders, Except Sawing",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-2092,Team Assemblers,8211,Mechanical Machinery Assemblers,partial
+51-2092,Team Assemblers,8182,Steam Engine and Boiler Operators,approximate
+51-2092,Team Assemblers,8212,Electrical and Electronic Equipment Assemblers,approximate
+51-6042,Shoe Machine Operatorsand Tenders,8153,Sewing Machine Operators,direct
+51-6042,Shoe Machine Operatorsand Tenders,8156,Shoemaking and Related Machine Operators,partial
+51-6042,Shoe Machine Operatorsand Tenders,8157,Laundry Machine Operators,partial
+51-2023,Electromechanical Equipment Assemblers,8212,Electrical and Electronic Equipment Assemblers,direct
+51-2023,Electromechanical Equipment Assemblers,8211,Mechanical Machinery Assemblers,partial
+51-2023,Electromechanical Equipment Assemblers,7421,Electronics Mechanics and Servicers,partial
+13-1074,Farm Labor Contractors,2655,Actors,direct
+51-6061,Textile Bleachingand Dyeing Machine Operatorsand Tenders,8154,"Bleaching, Dyeing and Fabric Cleaning Machine Operators",partial
+51-6061,Textile Bleachingand Dyeing Machine Operatorsand Tenders,8152,Weaving and Knitting Machine Operators,partial
+51-6061,Textile Bleachingand Dyeing Machine Operatorsand Tenders,8151,"Fibre Preparing, Spinning and Winding Machine Operators",partial
+51-9081,Dental Laboratory Technicians,7321,Pre-press Technicians,partial
+51-9081,Dental Laboratory Technicians,8121,Metal Processing Plant Operators,approximate
+51-9081,Dental Laboratory Technicians,7412,Electrical Mechanics and Fitters,approximate
+51-9021,"Crushing,  Grinding,  and Polishing Machine Setters,  Operators,  and Tenders",8151,"Fibre Preparing, Spinning and Winding Machine Operators",partial
+51-9021,"Crushing,  Grinding,  and Polishing Machine Setters,  Operators,  and Tenders",8154,"Bleaching, Dyeing and Fabric Cleaning Machine Operators",partial
+51-9021,"Crushing,  Grinding,  and Polishing Machine Setters,  Operators,  and Tenders",8183,"Packing, Bottling and Labelling Machine Operators",partial
+51-9022,"Grindingand Polishing Workers, Hand",7323,Print Finishing and Binding Workers,partial
+51-9022,"Grindingand Polishing Workers, Hand",7124,Insulation Workers,approximate
+37-3012,"Pesticide Handlers, Sprayers, and Applicators, Vegetation",911,"Domestic, Hotel and Office Cleaners and Helpers",approximate
+51-9083,Ophthalmic Laboratory Technicians,7321,Pre-press Technicians,partial
+51-9083,Ophthalmic Laboratory Technicians,7411,Building and Related Electricians,approximate
+51-9083,Ophthalmic Laboratory Technicians,8181,Glass and Ceramics Plant Operators,direct
+41-2011,Cashiers,5230,Cashiers and Ticket Clerks,direct
+49-9061,Cameraand Photographic Equipment Repairers,7231,Motor Vehicle Mechanics and Repairers,partial
+49-9061,Cameraand Photographic Equipment Repairers,7232,Aircraft Engine Mechanics and Repairers,approximate
+49-9061,Cameraand Photographic Equipment Repairers,7311,Precision-instrument Makers and Repairers,direct
+51-5111,Prepress Techniciansand Workers,7321,Pre-press Technicians,direct
+41-2021,Counterand Rental Clerks,5230,Cashiers and Ticket Clerks,partial
+41-2021,Counterand Rental Clerks,5244,Contact Centre Salespersons,partial
+41-2021,Counterand Rental Clerks,3321,Insurance Representatives,direct
+43-4071,File Clerks,4225,Inquiry Clerks,partial
+43-4071,File Clerks,4313,Payroll Clerks,partial
+43-4071,File Clerks,4411,Library Clerks,partial
+41-9021,Real Estate Brokers,3324,Trade Brokers,partial
+41-9021,Real Estate Brokers,3334,Real Estate Agents and Property Managers,partial
+41-9021,Real Estate Brokers,3258,Ambulance Workers,partial
+43-2021,Telephone Operators,4223,Telephone Switchboard Operators,direct
+43-3051,Payrolland Timekeeping Clerks,4311,Accounting and Bookkeeping Clerks,partial
+43-3051,Payrolland Timekeeping Clerks,4313,Payroll Clerks,partial
+43-3051,Payrolland Timekeeping Clerks,4322,Production Clerks,partial
+43-4041,"Credit Authorizers, Checkers, and Clerks",4412,Mail Carriers and Sorting Clerks,partial
+43-4041,"Credit Authorizers, Checkers, and Clerks",4321,Stock Clerks,approximate
+43-4041,"Credit Authorizers, Checkers, and Clerks",4110,General Office Clerks,approximate
+35-9031,"Hostsand Hostesses, Restaurant, Lounge, and Coffee Shop",5,Service and Sales Workers,approximate
+41-9012,Models,5241,Fashion and Other Models,direct
+51-9061,"Inspectors, Testers, Sorters, Samplers, and Weighers",7316,"Sign Writers, Decorative Painters, Engravers and Etchers",partial
+51-9061,"Inspectors, Testers, Sorters, Samplers, and Weighers",7315,"Glass Makers, Cutters, Grinders and Finishers",partial
+51-9061,"Inspectors, Testers, Sorters, Samplers, and Weighers",7113,"Stonemasons, Stone Cutters, Splitters and Carvers",approximate
+43-3031,"Bookkeeping, Accounting, and Auditing Clerks",4415,Filing and Copying Clerks,partial
+43-3031,"Bookkeeping, Accounting, and Auditing Clerks",4311,Accounting and Bookkeeping Clerks,partial
+43-3031,"Bookkeeping, Accounting, and Auditing Clerks",4413,"Coding, Proofreading and Related Clerks",partial
+43-6012,Legal Secretaries,4120,Secretaries (general),partial
+43-6012,Legal Secretaries,4224,Hotel Receptionists,approximate
+27-4013,Radio Operators,3131,Power Production Plant Operators,partial
+27-4013,Radio Operators,2621,Archivists and Curators,partial
+27-4013,Radio Operators,3123,Construction Supervisors,partial
+53-3031,Driver/Sales Workers,9129,Other Cleaning Workers,partial
+53-3031,Driver/Sales Workers,8113,Well Drillers and Borers and Related Workers,partial
+53-3031,Driver/Sales Workers,9216,Fishery and Aquaculture Labourers,partial
+13-1031,"Claims Adjusters, Examiners, and Investigators",3432,Interior Designers and Decorators,approximate
+13-1031,"Claims Adjusters, Examiners, and Investigators",2522,Systems Aministrators,approximate
+13-1031,"Claims Adjusters, Examiners, and Investigators",3351,Customs and Border Inspectors,approximate
+41-2022,Parts Salespersons,5211,Stall and Market Salespersons,direct
+41-2022,Parts Salespersons,5212,Street Food Salespersons,direct
+41-2022,Parts Salespersons,5243,Door-to-door Salespersons,partial
+13-2041,Credit Analysts,2413,Financial Analysts,partial
+13-2041,Credit Analysts,2511,Systems Analysts,partial
+13-2041,Credit Analysts,3312,Credit and Loans Officers,partial
+51-4035,"Milling and Planing Machine Setters,  Operators,  and Tenders,  Metal and Plastic",7223,Metal Working Machine Tool Setters and  Operators,partial
+51-4035,"Milling and Planing Machine Setters,  Operators,  and Tenders,  Metal and Plastic",8189,Stationary Plant and Machine Operators Not Elsewhere Classified,partial
+51-4035,"Milling and Planing Machine Setters,  Operators,  and Tenders,  Metal and Plastic",8122,"Metal Finishing, Plating and Coating Machine Operators",partial
+43-5071,"Shipping, Receiving, and Traffic Clerks",4415,Filing and Copying Clerks,partial
+43-5071,"Shipping, Receiving, and Traffic Clerks",4110,General Office Clerks,partial
+43-5071,"Shipping, Receiving, and Traffic Clerks",4312,"Statistical, Finance and Insurance Clerks",partial
+43-3061,Procurement Clerks,4322,Production Clerks,partial
+43-3061,Procurement Clerks,4416,Personnel Clerks,partial
+43-3061,Procurement Clerks,4313,Payroll Clerks,partial
+51-9111,Packagingand Filling Machine Operatorsand Tenders,8183,"Packing, Bottling and Labelling Machine Operators",partial
+51-9111,Packagingand Filling Machine Operatorsand Tenders,8152,Weaving and Knitting Machine Operators,partial
+51-9111,Packagingand Filling Machine Operatorsand Tenders,8156,Shoemaking and Related Machine Operators,partial
+51-9194,Etchersand Engravers,7314,Potters and Related Workers,partial
+51-9194,Etchersand Engravers,7131,Painters and Related Workers,approximate
+51-9194,Etchersand Engravers,7515,Food and Beverage Tasters and Graders,approximate
+43-3071,Tellers,4211,Bank Tellers and Related Clerks,direct
+27-2023,"Umpires, Referees, and Other Sports Officials",3252,Medical Records and Health Information Technicians,approximate
+27-2023,"Umpires, Referees, and Other Sports Officials",2423,Personnel and Careers Professionals,approximate
+27-2023,"Umpires, Referees, and Other Sports Officials",3352,Government Tax and Excise Officials,approximate
+13-1032,"Insurance Appraisers, Auto Damage",1346,Financial and Insurance Services Branch managers,partial
+13-1032,"Insurance Appraisers, Auto Damage",3321,Insurance Representatives,partial
+13-1032,"Insurance Appraisers, Auto Damage",1211,Finance Managers,approximate
+13-2072,Loan Officers,3312,Credit and Loans Officers,direct
+13-2072,Loan Officers,2164,Town and Traffic Planners,partial
+43-4151,Order Clerks,4411,Library Clerks,partial
+43-4151,Order Clerks,4321,Stock Clerks,partial
+43-4151,Order Clerks,4323,Transport Clerks,partial
+43-4011,Brokerage Clerks,4411,Library Clerks,partial
+43-4011,Brokerage Clerks,4321,Stock Clerks,partial
+43-4011,Brokerage Clerks,4416,Personnel Clerks,partial
+43-9041,Insurance Claimsand Policy Processing Clerks,4412,Mail Carriers and Sorting Clerks,partial
+43-9041,Insurance Claimsand Policy Processing Clerks,4131,Typists and Word Processing Operators,approximate
+43-9041,Insurance Claimsand Policy Processing Clerks,4415,Filing and Copying Clerks,direct
+51-2093,Timing Device Assemblersand Adjusters,8211,Mechanical Machinery Assemblers,approximate
+51-2093,Timing Device Assemblersand Adjusters,7212,Welders and Flame Cutters,direct
+43-9021,Data Entry Keyers,4132,Data Entry Clerks,direct
+25-4031,Library Technicians,2356,Information Technology Trainers,approximate
+25-4031,Library Technicians,2341,Primary School Teachers,approximate
+25-4031,Library Technicians,2355,Other Arts Teachers,approximate
+43-4141,New Accounts Clerks,4221,Travel Consultants and Clerks,partial
+43-4141,New Accounts Clerks,4415,Filing and Copying Clerks,partial
+43-4141,New Accounts Clerks,4311,Accounting and Bookkeeping Clerks,partial
+51-9151,Photographic Process Workersand Processing Machine Operators,8132,Photographic Products Machine Operators,direct
+51-9151,Photographic Process Workersand Processing Machine Operators,8142,Plastic Products Machine Operators,partial
+51-9151,Photographic Process Workersand Processing Machine Operators,8131,Chemical Products Plant and Machine Operators,partial
+13-2082,Tax Preparers,3324,Trade Brokers,partial
+13-2082,Tax Preparers,2641,Authors and Related Writers,approximate
+13-2082,Tax Preparers,2164,Town and Traffic Planners,approximate
+43-5011,Cargoand Freight Agents,4323,Transport Clerks,direct
+49-9064,Watch Repairers,7234,Bicycle and Related Repairers,partial
+49-9064,Watch Repairers,7123,Plasterers,partial
+49-9064,Watch Repairers,7232,Aircraft Engine Mechanics and Repairers,partial
+13-2053,Insurance Underwriters,1211,Finance Managers,partial
+13-2053,Insurance Underwriters,3321,Insurance Representatives,partial
+13-2053,Insurance Underwriters,2641,Authors and Related Writers,partial
+15-2091,Mathematical Technicians,3142,Agricultural Technicians,direct
+15-2091,Mathematical Technicians,3116,Chemical Engineering Technicians,partial
+15-2091,Mathematical Technicians,3514,Web Technicians,partial
+51-6051,"Sewers, Hand",7123,Plasterers,approximate
+23-2093,"Title Examiners, Abstractors, and Searchers",2655,Actors,direct
+41-9041,Telemarketers,5211,Stall and Market Salespersons,partial
+41-9041,Telemarketers,3324,Trade Brokers,partial
+41-9041,Telemarketers,5131,Waiters,approximate

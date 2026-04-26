@@ -1,0 +1,201 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Bangladesh configuration. Swap this for any other country_config to reconfigure UNMAPPED for Bangladesh. No codebase changes required.",
+  "country": {
+    "name": "Bangladesh",
+    "iso3": "BGD",
+    "iso2": "BD",
+    "region": "South Asia",
+    "subregion": "South Asia",
+    "economy_type": "garment_export_mixed",
+    "primary_language": "bn",
+    "supported_languages": ["bn", "en"],
+    "currency": "BDT",
+    "currency_symbol": "৳",
+    "usd_exchange_rate_approx": 110,
+    "usd_exchange_rate_year": 2023
+  },
+  "data_paths": {
+    "labour_market": "data/bgd/wdi_labour.json",
+    "occupation_lookup": "data/isco_fo_joined.csv",
+    "automation_calibration": "config/calibration.json"
+  },
+  "automation": {
+    "calibration_factor": 0.58,
+    "calibration_rationale": "Bangladesh has the world's second-largest garment sector with high routine manual task concentration, making automation potential significant. However, massive informal economy (85%+), low capital intensity, and cheap labour slow actual adoption. Factor reflects high theoretical exposure dampened by structural barriers.",
+    "source_dataset": "Frey-Osborne 2013, ISCO-08 crosswalk",
+    "recalibration_trigger": "Update when BBS Labour Force Survey 2025 publishes occupation-level task data"
+  },
+  "education_taxonomy": {
+    "levels": [
+      { "code": "L0", "label": "No formal education", "isco_skill_level": 1 },
+      { "code": "L1", "label": "Primary (Class 1-5)", "isco_skill_level": 1 },
+      { "code": "L2", "label": "Junior Secondary (Class 6-8)", "isco_skill_level": 1 },
+      { "code": "L3", "label": "Secondary School Certificate (SSC)", "isco_skill_level": 2 },
+      { "code": "L4", "label": "Higher Secondary Certificate (HSC)", "isco_skill_level": 2 },
+      { "code": "L5", "label": "Diploma / Technical certificate", "isco_skill_level": 2 },
+      { "code": "L6", "label": "Bachelor's degree", "isco_skill_level": 3 },
+      { "code": "L7", "label": "Master's degree", "isco_skill_level": 4 },
+      { "code": "L8", "label": "Postgraduate / MPhil / PhD", "isco_skill_level": 4 }
+    ],
+    "informal_recognition": {
+      "enabled": true,
+      "categories": [
+        "apprenticeship",
+        "self_taught",
+        "ngo_training",
+        "madrasa_education",
+        "on_job_experience"
+      ],
+      "note": "Bangladesh has extensive NGO-led skills training (BRAC, Grameen) and a parallel madrasa education system. Informal apprenticeship in garment and construction sectors is widespread."
+    }
+  },
+  "opportunity_types": {
+    "formal_employment": { "enabled": true, "label": "Formal job" },
+    "self_employment": { "enabled": true, "label": "Start or grow a business" },
+    "gig_platform": { "enabled": true, "label": "Platform work (Pathao, Uber, freelance)" },
+    "training_pathway": { "enabled": true, "label": "Training or upskilling" },
+    "garment_sector": { "enabled": true, "label": "Ready-Made Garment (RMG) sector" },
+    "remittance_services": { "enabled": true, "label": "Mobile financial services / bKash agent" },
+    "cooperative": { "enabled": true, "label": "Cooperative or NGO-supported enterprise" }
+  },
+  "econometric_signals": {
+    "signal_1": {
+      "name": "Sector wage comparison",
+      "description": "Monthly earnings by economic sector",
+      "data_field": "wages.mean_monthly_earnings_usd",
+      "vintage": "BBS Labour Force Survey 2022",
+      "display_unit": "USD/month",
+      "display_caveat": "Formal sector only. RMG sector minimum wage ~$113/month after 2023 revision."
+    },
+    "signal_2": {
+      "name": "Sector growth outlook",
+      "description": "Which sectors are growing or declining",
+      "data_field": "sector_growth_outlook",
+      "vintage": "World Bank Bangladesh Development Update 2024",
+      "display_unit": "Qualitative",
+      "display_caveat": "Garment export diversification and IT/BPO growth are key trends."
+    }
+  },
+  "ui": {
+    "default_language": "bn",
+    "font_stack": "system-ui, sans-serif",
+    "locale": "bn-BD",
+    "number_format": "1,234.56",
+    "date_format": "DD/MM/YYYY",
+    "low_bandwidth_mode": true,
+    "image_loading": "lazy",
+    "max_initial_payload_kb": 150,
+    "primary_color": "#006a4e",
+    "accent_color": "#f42a41",
+    "onboarding_tone": "warm_respectful",
+    "reading_level_target": "ssc_level"
+  },
+  "skill_input_questions": [
+    {
+      "id": "q_work_activity",
+      "question_en": "What do you spend most of your working time doing?",
+      "question_bn": "আপনি আপনার কাজের বেশিরভাগ সময় কী করেন?",
+      "type": "select_with_freetext",
+      "options_en": [
+        "Garment work (sewing, cutting, finishing)",
+        "Selling goods (market, shop, online)",
+        "Farming or growing food",
+        "Driving (CNG, rickshaw, ride-share)",
+        "Construction or building work",
+        "Cooking, food prep, or catering",
+        "Teaching or training others",
+        "Office or admin work",
+        "Healthcare or caring for others",
+        "IT, tech, or computer work",
+        "Mobile banking / bKash agent",
+        "Creative work (content, design)",
+        "Repairing electronics or appliances",
+        "Something else"
+      ],
+      "maps_to": "isco08_primary"
+    },
+    {
+      "id": "q_education",
+      "question_en": "What is your highest level of education?",
+      "type": "select",
+      "options_en": [
+        "No formal education",
+        "Primary (Class 1-5)",
+        "Junior Secondary (Class 6-8)",
+        "SSC",
+        "HSC",
+        "Diploma / Technical certificate",
+        "Bachelor's degree",
+        "Master's degree or higher"
+      ],
+      "maps_to": "education_level_code"
+    },
+    {
+      "id": "q_informal_skills",
+      "question_en": "Have you taught yourself any skills? (select all that apply)",
+      "type": "multi_select",
+      "options_en": [
+        "Basic computer use",
+        "Using smartphones and apps",
+        "Social media for business",
+        "Accounting or bookkeeping",
+        "A trade through apprenticeship",
+        "Coding or tech skills",
+        "A language (English or other)",
+        "Nothing specific"
+      ],
+      "maps_to": "informal_skills_tags"
+    },
+    {
+      "id": "q_years_experience",
+      "question_en": "How many years have you been doing your main work?",
+      "type": "select",
+      "options_en": ["Less than 1 year", "1-2 years", "3-5 years", "More than 5 years"],
+      "maps_to": "experience_years_band"
+    },
+    {
+      "id": "q_goal",
+      "question_en": "What are you most hoping to do?",
+      "type": "select",
+      "options_en": [
+        "Find a formal job",
+        "Grow my own business",
+        "Learn a new skill or get certified",
+        "Understand what different jobs pay",
+        "See how AI might affect my work"
+      ],
+      "maps_to": "user_goal"
+    }
+  ],
+  "education_projections": {
+    "2025": {
+      "no_education": 0.22,
+      "primary": 0.28,
+      "lower_secondary": 0.22,
+      "upper_secondary": 0.18,
+      "post_secondary": 0.10
+    },
+    "2035": {
+      "no_education": 0.14,
+      "primary": 0.22,
+      "lower_secondary": 0.24,
+      "upper_secondary": 0.24,
+      "post_secondary": 0.16
+    }
+  },
+  "literacy_rate_wdi": {
+    "value": 74.9,
+    "year": 2023,
+    "source": "UNESCO UIS / WDI 2024"
+  },
+  "youth_literacy_rate_wdi": {
+    "value": 92.2,
+    "year": 2023,
+    "source": "UNESCO UIS 2024"
+  },
+  "school_enrollment": {
+    "primary_gross": { "value": 112, "year": 2022, "source": "WDI 2024" },
+    "secondary_gross": { "value": 73, "year": 2022, "source": "WDI 2024" }
+  }
+}

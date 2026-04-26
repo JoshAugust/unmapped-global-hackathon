@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><head><script>
+var base = '/unmapped';
+var path = location.pathname;
+if (!path.startsWith(base)) {
+  location.replace(base + '/' + location.search + location.hash);
+} else {
+  sessionStorage.setItem('redirect', path + location.search + location.hash);
+  location.replace(base + '/');
+}
+</script></head></html>

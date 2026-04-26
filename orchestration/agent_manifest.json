@@ -1,0 +1,42 @@
+{
+  "run_started": "2026-04-25T16:36:00-07:00",
+  "max_concurrent": 3,
+  "agents": [
+    {
+      "id": "5e1180e4-f2fc-4955-a427-3e667fddacaa",
+      "task": "M1",
+      "label": "nightwatch-m1-onet",
+      "model": "opus",
+      "expected_outputs": ["data/onet/", "scripts/pull_onet.py"],
+      "heartbeat_path": "orchestration/agent_m1/heartbeat.txt",
+      "log_path": "orchestration/agent_m1/log.md",
+      "spawned": "2026-04-25T16:36:00-07:00",
+      "status": "running",
+      "retries": 0
+    },
+    {
+      "id": "27872be5-8ad3-4acd-934c-39e2cb8756a2",
+      "task": "M2",
+      "label": "nightwatch-m2-esco",
+      "model": "opus",
+      "expected_outputs": ["data/esco/", "scripts/pull_esco.py"],
+      "heartbeat_path": "orchestration/agent_m2/heartbeat.txt",
+      "log_path": "orchestration/agent_m2/log.md",
+      "spawned": "2026-04-25T16:36:00-07:00",
+      "status": "running",
+      "retries": 0
+    },
+    {
+      "id": "e1dc2a43-3752-4ccf-a639-4bf6aa261b53",
+      "task": "M3",
+      "label": "nightwatch-m3-crosswalk",
+      "model": "opus",
+      "expected_outputs": ["data/crosswalks/soc_isco_crosswalk.csv", "data/crosswalks/frey_osborne_isco.csv", "scripts/build_crosswalk.py"],
+      "heartbeat_path": "orchestration/agent_m3/heartbeat.txt",
+      "log_path": "orchestration/agent_m3/log.md",
+      "spawned": "2026-04-25T16:36:00-07:00",
+      "status": "running",
+      "retries": 0
+    }
+  ]
+}

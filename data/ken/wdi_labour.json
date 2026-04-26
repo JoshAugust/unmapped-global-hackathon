@@ -1,0 +1,205 @@
+{
+  "_metadata": {
+    "country": "Kenya",
+    "iso3": "KEN",
+    "region": "Sub-Saharan Africa",
+    "income_group": "Lower Middle Income",
+    "last_updated": "2024-04",
+    "sources": {
+      "WDI": "World Bank World Development Indicators, https://data.worldbank.org",
+      "ILOSTAT": "International Labour Organization, ILOSTAT, https://ilostat.ilo.org",
+      "Wittgenstein": "Wittgenstein Centre for Demography and Global Human Capital"
+    },
+    "data_gaps": [
+      "Informal sector wage data: limited systematic coverage",
+      "Occupation-level wage data: Not available at ISCO-08 disaggregation",
+      "TODO: Add country-specific data gap notes"
+    ]
+  },
+  "macro": {
+    "gdp_per_capita_usd": {
+      "value": 2132,
+      "year": 2024,
+      "source": "WDI NY.GDP.PCAP.CD"
+    },
+    "population_millions": {
+      "value": 56.4,
+      "year": 2024,
+      "source": "WDI SP.POP.TOTL"
+    },
+    "urban_population_pct": {
+      "value": "TODO",
+      "year": "TODO",
+      "source": "WDI SP.URB.TOTL.IN.ZS"
+    }
+  },
+  "labour_market": {
+    "unemployment_rate_pct": {
+      "value": 5.5,
+      "year": 2024,
+      "source": "WDI SL.UEM.TOTL.ZS"
+    },
+    "youth_unemployment_rate_pct": {
+      "value": 15.5,
+      "year": 2024,
+      "source": "WDI SL.UEM.1524.ZS"
+    },
+    "youth_neet_pct": {
+      "value": 16.7,
+      "year": 2022,
+      "source": "ILO modelled estimate, ILOSTAT SDG 8.6.1"
+    },
+    "labour_force_participation_pct": {
+      "value": 67.4,
+      "year": 2024,
+      "source": "WDI SL.TLF.CACT.ZS"
+    },
+    "female_labour_participation_pct": {
+      "value": 63.0,
+      "year": 2024,
+      "source": "WDI SL.TLF.CACT.FE.ZS"
+    },
+    "self_employment_pct": {
+      "value": 72.0,
+      "year": 2022,
+      "source": "KNBS Integrated Household Budget Survey 2022"
+    },
+    "informal_employment_pct": {
+      "value": 84.0,
+      "year": 2022,
+      "source": "KNBS; ILO Kenya decent work profile"
+    },
+    "employment_by_sector": {
+      "agriculture_pct": {
+        "value": 46.5,
+        "year": 2024,
+        "source": "WDI SL.AGR.EMPL.ZS"
+      },
+      "industry_pct": {
+        "value": 12.3,
+        "year": 2024,
+        "source": "WDI SL.IND.EMPL.ZS"
+      },
+      "services_pct": {
+        "value": 41.2,
+        "year": 2024,
+        "source": "WDI SL.SRV.EMPL.ZS"
+      }
+    }
+  },
+  "wages": {
+    "_note": "Formal sector wage data only. Informal sector (Jua Kali) wages not systematically tracked.",
+    "mean_monthly_earnings_usd": {
+      "all_sectors": {
+        "value": 195,
+        "year": 2022,
+        "source": "KNBS Integrated Household Budget Survey; ILO estimates"
+      },
+      "agriculture": {
+        "value": 72,
+        "year": 2022,
+        "source": "KNBS estimate"
+      },
+      "industry_manufacturing": {
+        "value": 168,
+        "year": 2022,
+        "source": "KNBS"
+      },
+      "wholesale_retail_trade": {
+        "value": 145,
+        "year": 2022,
+        "source": "KNBS"
+      },
+      "information_communication": {
+        "value": 580,
+        "year": 2022,
+        "source": "KNBS; tech sector premium"
+      },
+      "construction": {
+        "value": 132,
+        "year": 2022,
+        "source": "KNBS"
+      },
+      "health_social_work": {
+        "value": 275,
+        "year": 2022,
+        "source": "KNBS"
+      },
+      "education": {
+        "value": 245,
+        "year": 2022,
+        "source": "KNBS; TSC pay scales"
+      },
+      "public_admin": {
+        "value": 310,
+        "year": 2022,
+        "source": "KNBS"
+      }
+    },
+    "minimum_wage_usd_monthly": {
+      "value": 85,
+      "year": 2024,
+      "source": "Kenya minimum wage KES 13,572/month (lowest) at 155 KES/USD"
+    }
+  },
+  "education": {
+    "primary_completion_rate_pct": {
+      "value": 102.2,
+      "year": 2016,
+      "source": "WDI SE.PRM.CMPT.ZS"
+    },
+    "secondary_enrollment_gross_pct": {
+      "value": 84.3,
+      "year": 2023,
+      "source": "WDI SE.SEC.ENRR"
+    },
+    "tertiary_enrollment_gross_pct": {
+      "value": 10.4,
+      "year": 2024,
+      "source": "WDI SE.TER.ENRR"
+    },
+    "mean_years_schooling": {
+      "value": 6.6,
+      "year": 2021,
+      "source": "UNDP HDI data"
+    },
+    "human_capital_index": {
+      "value": 0.55,
+      "year": 2020,
+      "source": "World Bank Human Capital Index"
+    }
+  },
+  "digital": {
+    "internet_penetration_pct": {
+      "value": 35.0,
+      "year": 2024,
+      "source": "WDI IT.NET.USER.ZS"
+    },
+    "mobile_money_adoption_pct_adults": {
+      "value": 79.0,
+      "year": 2022,
+      "source": "Global Findex / national surveys",
+      "note": "M-Pesa penetration among adults. Kenya is the global leader in mobile money."
+    }
+  },
+  "wittgenstein_projections": {
+    "_source": "Wittgenstein Centre for Demography and Global Human Capital (2018), Education projection v.2.0",
+    "_note": "Education level distribution for Kenya, all ages 15+, 2025 vs 2035 (SSP2)",
+    "ages_15_plus": {
+      "2025": {
+        "no_education_pct": 11.0,
+        "primary_pct": 28.2,
+        "lower_secondary_pct": 26.9,
+        "upper_secondary_pct": 20.1,
+        "post_secondary_pct": 13.7
+      },
+      "2035": {
+        "no_education_pct": 8.8,
+        "primary_pct": 25.2,
+        "lower_secondary_pct": 25.0,
+        "upper_secondary_pct": 24.0,
+        "post_secondary_pct": 17.0
+      }
+    }
+  }
+}

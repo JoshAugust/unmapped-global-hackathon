@@ -1,0 +1,1 @@
+DONE - infrastructure.tsx written and route registered in routeTree.gen.ts

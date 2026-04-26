@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Adire: Yoruba indigo textile — concentric circles, spirals, geometric blocks -->
+  <defs>
+    <style>
+      .adire-stroke { fill: none; stroke: currentColor; stroke-width: 1.2; }
+      .adire-fill { fill: currentColor; opacity: 0.3; }
+    </style>
+  </defs>
+  <!-- Concentric circles top-left -->
+  <circle cx="25" cy="25" r="8" class="adire-stroke"/>
+  <circle cx="25" cy="25" r="14" class="adire-stroke"/>
+  <circle cx="25" cy="25" r="20" class="adire-stroke"/>
+  <circle cx="25" cy="25" r="3" class="adire-fill"/>
+  <!-- Spiral motif bottom-right -->
+  <path d="M75,75 C75,69 69,65 65,65 C59,65 55,69 55,75 C55,81 59,87 67,87 C77,87 83,79 83,71 C83,61 75,55 67,55" class="adire-stroke"/>
+  <!-- Geometric blocks -->
+  <rect x="60" y="10" width="12" height="12" class="adire-stroke"/>
+  <rect x="64" y="14" width="4" height="4" class="adire-fill"/>
+  <rect x="10" y="65" width="10" height="10" class="adire-stroke"/>
+  <line x1="10" y1="65" x2="20" y2="75" class="adire-stroke"/>
+  <line x1="20" y1="65" x2="10" y2="75" class="adire-stroke"/>
+  <!-- Dot grid accent -->
+  <circle cx="45" cy="5" r="1.5" class="adire-fill"/>
+  <circle cx="55" cy="5" r="1.5" class="adire-fill"/>
+  <circle cx="45" cy="15" r="1.5" class="adire-fill"/>
+  <circle cx="55" cy="15" r="1.5" class="adire-fill"/>
+  <circle cx="50" cy="10" r="1.5" class="adire-fill"/>
+  <!-- Triangle row bottom -->
+  <polygon points="30,90 35,82 40,90" class="adire-stroke"/>
+  <polygon points="42,90 47,82 52,90" class="adire-stroke"/>
+  <!-- Vertical lines accent -->
+  <line x1="90" y1="30" x2="90" y2="60" class="adire-stroke"/>
+  <line x1="95" y1="35" x2="95" y2="55" class="adire-stroke"/>
+</svg>

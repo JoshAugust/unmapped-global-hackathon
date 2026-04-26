@@ -1,0 +1,379 @@
+isco08_code,isco08_title,automation_probability,source_soc_codes,mapping_confidence
+1120,Managing Directors and Chief Executives,0.009,11-1011|11-9161,medium
+1211,Finance Managers,0.2778,11-2022|11-3031|11-3131|11-9081|11-9121|11-9199|13-1032|13-2053|13-2061,medium
+1212,Human Resource Managers,0.0262,11-3121|11-9013,medium
+1213,Policy and Planning Managers,0.0225,11-2031|11-3061,low
+1219,Business Services and Administration Managers Not Elsewhere Classified,0.01,11-9033,low
+1221,Sales and Marketing Managers,0.2176,11-1021|11-2021|11-2022|11-9071|11-9141,medium
+1222,Advertising and Public Relations Managers,0.2122,11-1021|11-2011|11-2031|11-9141|13-1121,medium
+1223,Research and Development Managers,0.0063,11-3131,high
+131,"Production Managers in Agriculture, Forestry and Fisheries",0.75,11-9131,low
+1311,Agricultural and Forestry Production Managers,0.0373,11-3021|11-3051|11-9013,medium
+1312,Aquaculture and Fisheries Production Managers,0.03,11-3051,low
+1321,Manufacturing Managers,0.0175,11-9041|11-9121,low
+1322,Mining Managers,0.0663,11-2021|11-3031|11-3061|11-3131|11-9071|11-9081|11-9199,medium
+1323,Construction Managers,0.376,11-3021|11-3051|11-3071|11-3111|11-9021|13-1051,medium
+1324,"Supply, Distribution and Related Managers",0.59,11-3071,low
+1330,Information and Communications Technology Service Managers,0.2832,11-3021|11-9032|11-9141,medium
+1341,Child Care Service Managers,0.1688,11-3011|11-9041|11-9051|11-9111|11-9151,medium
+1342,Health Service Managers,0.1236,11-3011|11-9041|11-9051|11-9111|11-9121|11-9151|11-9161,medium
+1343,Aged Care Service Managers,0.2067,11-3011|11-9051|11-9111|11-9151,medium
+1345,Education Managers,0.1815,11-1021|11-3061|11-3111|11-9031|11-9032|11-9033|11-9071,medium
+1346,Financial and Insurance Services Branch managers,0.98,13-1032,low
+1349,Professional Services Managers Not Elsewhere Classified,0.01,11-9033,high
+1411,Hotel Managers,0.089,11-2022|11-9081|11-9199,medium
+1412,Restaurant Managers,0.4815,11-3111|11-9161,low
+1420,Retail and Wholesale Trade Managers,0.77,13-1023,low
+1431,"Sports, Recreation and Cultural Centre Managers",0.2173,11-2031|11-3071|11-9013,low
+2111,Physicists and Astronomers,0.1938,19-2011|19-2012|19-2042|29-1060,medium
+2112,Meteorologists,0.1371,19-1012|19-1022|19-1041|19-1042|19-2032|19-2043|29-1023|29-1127|29-2021|29-2033|29-2055,low
+2113,Chemists,0.1376,19-1021|19-1032|19-1041|19-2031|25-9041|27-2022|27-3041,medium
+2114,Geologists and geophysicists,0.3739,19-1023|19-2012|19-2042|19-4021|19-4041|29-2091,medium
+2120,"Mathematicians, Actuaries and Statisticians",0.159,15-2011|15-2021|15-2041,high
+2131,"Biologists, Botanists, Zoologists and Related Professionals",0.3,19-1023,high
+2132,"Farming, Forestry and Fisheries Advisers",0.0075,25-9021,low
+2133,Environmental Protection Professionals,0.4015,19-2041|19-4091,low
+2141,Industrial and Production Engineers,0.0234,17-2112|25-9031|27-1021,medium
+2142,Civil Engineers,0.033,17-2051|17-2112|17-2161|17-2199,high
+2143,Environmental Engineers,0.0466,17-2011|17-2081|17-2171|19-2041|21-1014,medium
+2144,Mechanical Engineers,0.2856,17-2021|17-2031|17-2041|17-2061|17-2071|17-2131|17-2141|17-2161|17-3013|19-4031|19-4051|27-1021|27-1027|27-3042,medium
+2145,Chemical Engineers,0.2033,17-2031|17-2041|17-2061|17-2131|17-2141|17-2199|19-4021|19-4031|27-1024|27-2042|27-3042,medium
+2151,Electrical Engineers,0.2508,17-2021|17-2031|17-2061|17-2071|17-2112|17-2131|17-2141|17-2161|17-2171|17-3012|19-4021|19-4031|27-1023|27-3042|29-9091,medium
+2152,Electronics Engineers,0.2224,17-2011|17-2071|17-2072|17-2171|17-3012,medium
+2153,Telecommunications Engineers,0.045,19-1031|27-2042,low
+2161,Building Architects,0.014,17-1011|17-2121,medium
+2162,Landscape Architects,0.3215,17-1011|17-1012|17-2121|19-2021|19-3091|19-4051|19-4061,medium
+2163,Product and Garment Designers,0.0389,27-1022|27-1023|27-1024|27-1027,low
+2164,Town and Traffic Planners,0.5343,13-1121|13-2072|13-2082|19-3051,low
+2165,Cartographers and Surveyors,0.3122,17-1021|17-1022|19-3092|27-2022|27-3043,medium
+2166,Graphic and Multimedia Designers,0.0934,25-9011|27-1014|27-1022|27-1023|27-1024|27-1027,medium
+2211,Generalist Medical Practitioners,0.0866,19-1042|29-1022|29-1199|29-2032|29-9799,medium
+2212,Specialist Medical Practitioners,0.1081,25-2011|29-1199|29-2032|29-9799,low
+2221,Nursing Professionals,0.18,13-1199|19-3051,low
+223,Traditional and Complementary Medicine Professionals,0.21,15-1179,low
+2230,Traditional and Complementary Medicine Professionals,0.13,29-2033,low
+2240,Paramedical Practitioners,0.2246,17-3013|19-1042|19-3051|23-1012|27-1011|27-3011,low
+2250,Veterinarians,0.2023,25-9041|29-1111|29-1131,medium
+2261,Dentists,0.0969,19-1013|19-1032|19-2032|27-3041|29-1021|29-1023|29-1024|29-1081|29-2021,medium
+2262,Pharmacists,0.0282,19-1011|27-1012|29-1051|29-1081,medium
+2263,Environmental and Occupational Health and Hygiene Professionals,0.2578,19-2041|19-4091|29-2061|29-9011,medium
+2264,Physiotherapists,0.1658,19-2099|21-1013|25-9041|29-1024|29-1122|29-1123|29-1124|29-1125|29-1126,medium
+2265,Dieticians and Nutritionists,0.2004,19-1013|19-1031|25-4013|29-1031|29-1060|29-2061|29-2081,medium
+2266,Audiologists and Speech Therapists,0.0624,19-1029|19-3091|21-1013|25-9011|29-1122|29-1181|29-2091,medium
+2267,Optometrists and Ophthalmic Opticians,0.525,19-4041|29-1041,medium
+2310,University and Higher Education Teachers,0.1228,21-2021|25-2023|25-2032|25-3011|25-3021,low
+2320,Vocational Education Teachers,0.17,19-4061|19-4093|25-2023|25-2032|25-2053|25-2054|25-3011|25-3021|25-9031|27-3011|29-1122|29-9012,low
+2330,Secondary Education Teachers,0.1125,19-3022|19-4093|21-1091|25-1000|25-2023|25-2031|25-2032|25-2053|25-2054|25-3011|25-3021|29-1125,medium
+2341,Primary School Teachers,0.2054,19-3022|21-1021|25-2011|25-2021|25-2022|25-2031|25-4031,medium
+2342,Early Childhood Educators,0.1341,17-3011|21-1021|21-1091|25-2011|25-2012|25-2021|25-2031|27-4032,medium
+2351,Education Methods Specialists,0.2865,13-1078|13-1141|13-1151|13-1199|15-1150|15-2031|19-1031|19-2021|21-1092|25-9011|27-3031|29-1124|29-9011,medium
+2352,Special Needs Teachers,0.2243,19-3022|19-4061|23-1012|25-1000|25-2053|25-2054,low
+2353,Other Language Teachers,0.0628,25-1000|25-2012|29-1127,low
+2354,Other Music Teachers,0.0083,19-4092|29-9091,low
+2355,Other Arts Teachers,0.548,19-3092|19-4051|23-2091|25-2012|25-4031,low
+2356,Information Technology Trainers,0.3741,19-1012|19-4093|21-1015|25-4031,low
+2411,Accountants,0.4765,13-2011|27-2022,medium
+2412,Financial and Investment Advisers,0.2675,13-2052|13-2061|13-2099|21-1092|25-9021,low
+2413,Financial Analysts,0.4418,13-1111|13-2031|13-2041|13-2051|13-2052|13-2061|13-2081|13-2099|19-1011|27-3021,medium
+2421,Management and Organization Analysts,0.1544,13-1078|13-1111|13-1199|15-2031|27-3021,medium
+2423,Personnel and Careers Professionals,0.6733,13-2081|27-2023|27-3022,medium
+2424,Training and Staff Development Professionals,0.014,13-1151,high
+2431,Advertising and Marketing Professionals,0.39,13-1161|29-1199|41-3011,low
+2432,Public Relations Professionals,0.1075,15-2031|27-3031,medium
+2434,Information and Communications Technology Sales Professionals,0.016,41-3031,high
+2511,Systems Analysts,0.3602,13-1111|13-2031|13-2041|15-1121|27-3021|27-3043,medium
+2512,Software Developers,0.086,15-1132|15-1133,high
+2513,Web and Multimedia Developers,0.015,27-1014,low
+2514,Applications Programmers,0.4565,15-1131|17-1021|21-1015,low
+2521,Database Designers and Administrators,0.2249,15-1141|25-3999|27-1026|27-3091,medium
+2522,Systems Aministrators,0.3239,13-1031|13-1051|15-1141|15-1142|25-3999,medium
+2523,Computer Network Professionals,0.365,15-1131|15-1150|15-1799|27-3022,low
+2611,Lawyers,0.0215,21-2011|23-1011,medium
+2612,Judges,0.52,23-1021|23-1023,high
+2621,Archivists and Curators,0.3416,13-1051|13-2071|15-1799|17-3011|25-3999|25-4011|25-4012|25-4013|27-1011|27-3043|27-4013,medium
+2622,Librarians and Related Information Professionals,0.3325,15-1111|25-4021,medium
+2631,Economists,0.222,19-2043|19-3011,medium
+2632,"Sociologists, Anthropologists and Related Professionals",0.0356,19-3041|19-3091|19-3099,medium
+2633,"Philosophers, Historians and Political Scientists",0.3138,15-1111|17-1021|19-1013|19-1029|19-2021|19-2099|19-3093|19-3094,medium
+2634,Psychologists,0.0664,13-1081|19-1012|19-1022|19-1041|19-2043|19-3031|19-3032|19-3039|19-3041|29-1024|29-1127|29-2055,medium
+2635,Social Work and Counselling Professionals,0.0208,21-1011|21-1012,high
+2636,Religious Professionals,0.025,21-2021,high
+2641,Authors and Related Writers,0.5047,13-2053|13-2082|19-3099|21-1022|23-2091,low
+2642,Journalists,0.3237,13-2031|19-1032|29-1023,low
+2643,"Translators, Interpreters and Other Linguists",0.06,23-1022,low
+2651,Visual Artists,0.1139,19-1011|19-1029|19-2032|19-2099|25-9031|27-1012|29-1081|29-2055,low
+2652,"Musicians, Singers and Composers",0.2186,23-1012|25-4013|27-2041|27-2042|29-1060,medium
+2653,Dancers and Choreographers,0.254,15-1131|19-2042|19-3092|27-2012|27-2031|27-2032|27-3022|27-4032|29-2032,medium
+2654,"Film, Stage and Related Directors and Producers",0.175,19-3099|27-4032,medium
+2655,Actors,0.3725,13-1074|21-1091|23-2091|23-2093|27-1011|27-2011|27-3041|29-1011,medium
+2656,"Announcers on Radio, Television and Other Media",0.35,27-3011|27-4031,low
+2659,Creative and Performing Artists Not Elsewhere Classified,0.66,27-3012|27-4031,high
+3111,Chemical and Physical Science Technicians,0.25,29-9012,low
+3112,Civil Engineering Technicians,0.3649,17-3021|17-3022|17-3025|17-3026|17-3029|17-3031|27-4011|27-4014|29-2031|29-2056,medium
+3113,Electrical Engineering Technicians,0.4487,17-2151|17-3022|17-3023|17-3024|17-3026|17-3027|17-3029|29-2799,medium
+3114,Electronics Engineering Technicians,0.5395,17-2111|17-3021|17-3023|17-3024,medium
+3115,Mechanical Engineering Technicians,0.3153,13-1161|17-2111|17-2121|17-2151|17-3021|17-3024|17-3025|17-3027|27-4014,medium
+3116,Chemical Engineering Technicians,0.2743,15-2091|17-2111|17-2151|17-3022|17-3025|17-3026|17-3027|17-3029|27-4014|29-2033|29-2053|29-2799|29-9799,medium
+3117,Mining and metallurgical technicians,0.5045,17-3031|29-2041,low
+3123,Construction Supervisors,0.535,27-4013|33-1011|33-3012,low
+3131,Power Production Plant Operators,0.504,27-2012|27-4013|41-9011,low
+3132,Incinerator and Water Treatment Plant Operators,0.03,15-1142,low
+3133,Chemical Processing Plant Controllers,0.72,27-3012,low
+3135,Metal Production Process Controllers,0.2597,21-1015|41-9011,low
+3141,Life Science Technicians (excluding Medical),0.049,29-2041,low
+3142,Agricultural Technicians,0.5346,15-2091|17-2021|29-2031|29-2052|29-2053,medium
+3143,Forestry Technicians,0.2873,13-1081|27-4012|29-1126|29-2051|29-2052|29-2053|29-2054,medium
+3151,Ships' Engineers,0.0117,17-2011|17-2199|41-9031,medium
+3152,Ships' Deck Officers and Pilots,0.6,33-3012,low
+3153,Aircraft Pilots and Related Associate Professionals,0.9,13-2021,low
+3154,Air Traffic Controllers,0.21,33-9011,low
+3155,Air Traffic Safety Electronics Technicians,0.52,17-3012|29-2037,low
+3211,Medical Imaging and Therapeutic Equipment Technicians,0.665,27-4011|31-9093,low
+3212,Medical and Pathology Laboratory Technicians,0.59,29-2011|29-2012|29-2799,medium
+3213,Pharmaceutical Technicians and Assistants,0.3115,31-2011|31-2021|31-9094|33-9021,low
+3214,Medical and Dental Prosthetic Technicians,0.5,29-2011|29-2012|29-2051,medium
+3240,Veterinary Technicians and Assistants,0.298,13-2052|21-1093|29-1071|29-2041|29-2056|31-9096,low
+3251,Dental Assistants and Therapists,0.4343,21-1013|27-3012|29-1124|29-1125|29-1126|29-2021|31-2022|31-9011|31-9091|31-9096,medium
+3252,Medical Records and Health Information Technicians,0.5975,13-1078|15-1111|27-2023|29-2011|29-2012|29-2071,medium
+3253,Community Health Workers,0.0859,21-1014|21-1021|21-1022|21-1023|31-1011,low
+3254,Dispensing Opticians,0.361,13-1081|29-2081,low
+3255,Physiotherapy Technicians and Assistants,0.248,21-1093|29-1071|29-2054|29-2081|31-2011|31-2021|31-2022,medium
+3256,Medical Assistants,0.35,21-1093|27-1012|27-1014|29-1071|31-9091|31-9092|31-9093|31-9094,medium
+3257,Environmental and Occupational Health Inspectors and Associates,0.1733,21-1023|29-9011|29-9012|31-2012,low
+3258,Ambulance Workers,0.63,13-1041|33-3041|41-9021,low
+3311,Securities and Finance Dealers and Brokers,0.016,41-3031,low
+3312,Credit and Loans Officers,0.536,13-1041|13-2041|13-2071|13-2072|33-3012,medium
+3313,Accounting Associate Professionals,0.9,13-2021,high
+3314,"Statistical, Mathematical and Related Associate Professionals",0.058,29-2061,low
+3315,Valuers and Loss Assessors,0.9,13-2021,low
+3321,Insurance Representatives,0.965,13-1032|13-2053|41-2021|41-3021,medium
+3322,Commercial Sales Representatives,0.0265,27-1021|41-3031,low
+3323,Buyers,0.58,13-1021|13-1022,high
+3324,Trade Brokers,0.9833,13-2082|41-9021|41-9041,low
+3331,Clearing and Forwarding Aents,0.69,33-3041|41-3011,low
+3332,Conference and Event Planners,0.037,13-1121,low
+3333,Employment agents and contractors,0.2516,21-1014|27-2011|27-3091,medium
+3334,Real Estate Agents and Property Managers,0.915,41-9021|41-9022,low
+3341,Office Supervisors,0.0809,33-1011|33-1012|41-1011|43-1011,medium
+3343,Administrative and Executive Secretaries,0.014,43-1011,high
+3344,Medical Secretaries,0.7833,17-3013|31-9093|31-9094,low
+3351,Customs and Border Inspectors,0.4977,13-1031|21-1011|33-2021,low
+3352,Government Tax and Excise Officials,0.4918,27-2023|29-1022,low
+3353,Government Social Benefits Officials,0.47,13-1141,low
+3354,Government Licensing Officials,0.08,13-1041,low
+3355,Police Inspectors and Detectives,0.1311,33-1011|33-1012|33-2021|33-2022|33-3051,low
+3411,Legal and Related Associate Professionals,0.94,23-2011,high
+3412,Social Work Associate Professionals,0.0035,21-1022,high
+3413,Religious Associate Professionals,0.025,21-2021,low
+3421,Athletes and Sports Players,0.1436,27-2021|29-9091,medium
+3422,"Sports Coaches, Instructors and Officials",0.073,33-2022|33-3051,low
+3431,Photographers,0.0125,27-2032|27-4021,high
+3432,Interior Designers and Decorators,0.285,13-1031|27-1022|27-1025|27-2012|27-3091,medium
+3433,"Gallery, Museum and Library Technicians",0.1,29-2054,low
+3511,Information and Communications Technology Operations Technicians,0.23,29-2031|29-2037,low
+3512,Information and Communications Technology User Support Technicians,0.23,29-2037,low
+3513,Computer Network and Systems Technicians,0.2323,15-1142|15-1150|15-1799|29-2056,low
+3514,Web Technicians,0.695,15-2091|27-4012|29-2051|29-2052,medium
+3521,Broadcasting and Audio-visual Technicians,0.625,17-3031|21-1092|27-4011|27-4012,medium
+3522,Telecommunications Engineering Technicians,0.47,13-1141,low
+4,Clerical Support Workers,0.9,43-4161,low
+411,General Office Clerks,0.945,43-4111|43-5111,low
+4110,General Office Clerks,0.864,43-4031|43-4041|43-5051|43-5071|43-9061,low
+4120,Secretaries (general),0.9183,43-5021|43-6011|43-6012|43-6013|43-6014|43-9061,medium
+4131,Typists and Word Processing Operators,0.856,43-5053|43-9011|43-9022|43-9041|43-9071,low
+4132,Data Entry Clerks,0.8057,43-3011|43-4021|43-4131|43-5051|43-6013|43-9021|43-9031,medium
+4211,Bank Tellers and Related Clerks,0.8475,43-3071|43-4051|43-4081|43-4131,medium
+4212,"Bookmakers, Croupiers and Related Gaming Workers",0.5013,43-1011|43-4051|43-5021,medium
+4214,Debt Collectors and Related Workers,0.47,43-3041|43-4051,medium
+4221,Travel Consultants and Clerks,0.97,43-4121|43-4141,low
+4222,Contact Centre Information Clerks,0.94,43-4131|43-4171,low
+4223,Telephone Switchboard Operators,0.9075,43-2011|43-2021|43-9011|43-9071,medium
+4224,Hotel Receptionists,0.88,43-5041|43-6012|43-6013,low
+4225,Inquiry Clerks,0.68,43-3041|43-4071,low
+4226,Receptionists (general),0.96,43-4171,low
+4227,Survey and Market Research Interviewers,0.7,43-4061,high
+4311,Accounting and Bookkeeping Clerks,0.954,43-3011|43-3031|43-3051|43-4141|43-5061,low
+4312,"Statistical, Finance and Insurance Clerks",0.6914,43-4031|43-4171|43-4181|43-5031|43-5052|43-5071|43-9111,medium
+4313,Payroll Clerks,0.845,43-3051|43-3061|43-4031|43-4071,low
+4321,Stock Clerks,0.8057,43-4011|43-4041|43-4151|43-5051|43-5081|43-9031|43-9061,medium
+4322,Production Clerks,0.7475,43-3051|43-3061|43-5061|43-9031,low
+4323,Transport Clerks,0.9467,43-3011|43-3021|43-4021|43-4081|43-4151|43-5011,medium
+4411,Library Clerks,0.97,43-4011|43-4071|43-4121|43-4151,low
+4412,Mail Carriers and Sorting Clerks,0.9029,43-3021|43-4041|43-4081|43-5021|43-5041|43-5052|43-9041,low
+4413,"Coding, Proofreading and Related Clerks",0.91,43-3031|43-9081,low
+4414,Scribes and Related Workers,0.84,43-9081,low
+4415,Filing and Copying Clerks,0.885,43-3021|43-3031|43-3041|43-4141|43-5061|43-5071|43-9041|43-9071,medium
+4416,Personnel Clerks,0.8533,43-3061|43-4011|43-4021|43-5052|43-9011|43-9081,medium
+5,Service and Sales Workers,0.97,35-9031,low
+511,"Travel Attendants, Conductors and Guides",0.2,39-4831,low
+5111,Travel Attendants and Travel Stewards,0.725,35-3022|39-3031|39-3092|39-4021,low
+5112,Transport Conductors,0.085,39-9031,high
+5113,Travel Guides,0.3553,39-7011|39-7012|41-3041,medium
+5120,Cooks,0.6567,35-1011|35-2011|35-2012|35-2013|35-2014|35-2015,high
+513,Waiters and Bartenders,0.83,39-6011,low
+5131,Waiters,0.635,35-3031|35-9021|39-2011|39-5011|39-6012|41-9041,medium
+5132,Bartenders,0.785,35-3011|39-5011,high
+5141,Hairdressers,0.672,31-9095|35-9021|39-3011|39-5011|39-5012,medium
+5142,Beauticians and Related Workers,0.502,31-9799|35-2021|39-9032,low
+5151,"Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments",0.4881,33-1012|35-1012|41-2012,medium
+5153,Building Caretakers,0.89,39-2021|39-3011,low
+5161,"Astrologers, Fortune-tellers and Related Workers",0.5337,33-3041|41-1011|41-1012|41-9091,low
+5162,Companions and Valets,0.96,39-3011,low
+5163,Undertakers and Embalmers,0.54,39-4011,high
+5164,Pet Groomers and Animal Care Workers,0.3694,31-9096|33-9011|39-1021|39-2011|39-2021|39-9021|39-9031|39-9041,medium
+5165,Driving Instructors,0.1998,33-3021|33-9021|39-9031|39-9041,medium
+5169,Personal Services Workers Not Elsewhere Classified,0.498,35-3021|39-1021,low
+5211,Stall and Market Salespersons,0.9375,41-2022|41-2031|41-9022|41-9041,medium
+5212,Street Food Salespersons,0.92,35-3041|41-2022|41-2031|41-3021,medium
+5221,Shopkeepers,0.78,35-9021|39-5093,low
+5222,Shop Supervisors,0.2983,39-1011|39-1012|41-1012,high
+5223,Shop Sales Assistants,0.4732,31-2011|31-2021|41-3011|41-3021|41-9022,low
+5230,Cashiers and Ticket Clerks,0.9667,39-3031|41-2011|41-2021,medium
+5241,Fashion and Other Models,0.4315,31-1013|31-2012|39-9032|41-9012,medium
+5242,Sales Demonstrators,0.2964,33-9021|39-2011|39-5093|39-9041|41-9011|41-9031,medium
+5243,Door-to-door Salespersons,0.925,35-3041|41-2022|41-2031|41-9091,low
+5244,Contact Centre Salespersons,0.97,41-2021,low
+5245,Service Station Attendants,0.618,39-3031|39-3091|39-3092|39-3093|39-4021,low
+5246,Food Service Counter Attendants,0.65,35-3041|35-9011|39-3091|39-3092|39-3093|39-4021,low
+5249,Sales Workers Not Elsewhere Classified,0.94,41-9091,high
+5311,Child Care Workers,0.3857,31-9799|33-3031|33-9011|35-2021|39-2021|39-9011|39-9032,medium
+5312,Teachers' Aides,0.492,31-1011|31-1013|31-2012|31-2022|31-9095,low
+5321,Health Care Assistants,0.5075,31-1011|31-9095|31-9799|39-5094,medium
+5322,Home-based Personal Care Workers,0.4785,35-2021|39-1021|39-9021|41-1011|41-1012|41-2012,low
+5411,Fire Fighters,0.2179,33-1021|33-2011|33-2021,high
+5412,Police Officers,0.3645,33-3011|33-3051|39-5093|39-6012,medium
+5413,Prison Guards,0.4367,33-3031|33-9091|39-9021,medium
+5414,Security Guards,0.47,31-1013|33-3031|33-9032|33-9091,medium
+5419,Protective Services Workers Not Elsewhere Classified,0.795,33-9092|35-3021,medium
+6113,"Gardeners, Horticultural and Nursery Growers",0.72,37-2011|45-2011|45-2041|45-2090,medium
+6122,Poultry Producers,0.41,45-2041,low
+6123,Apiarists and Sericulturists,0.675,45-2011|45-2041,low
+6130,Mixed Crop and Animal Producers,0.95,45-2021,low
+6210,Forestry and Related Workers,0.85,45-3011|45-4011,low
+6221,Aquaculture Workers,0.92,45-2011|45-2021|45-2090,medium
+6222,Inland and Coastal Waters Fishery Workers,0.87,45-2090|45-4011,medium
+6223,Deep-sea Fishery Workers,0.7567,45-1011|45-3011|45-4011,low
+6224,Hunters and Trappers,0.77,45-3021,high
+7111,House Builders,0.6,47-5071|49-9092|51-9197,medium
+7112,Bricklayers and Related Workers,0.6608,47-2011|47-2021|47-2042|47-4051|47-5011|51-6092,medium
+7113,"Stonemasons, Stone Cutters, Splitters and Carvers",0.9433,47-2022|47-5051|51-9061,medium
+7114,"Concrete Placers, Concrete Finishers and Related Workers",0.94,47-2051|51-3022,low
+7115,Carpenters and Joiners,0.8025,47-2031|47-2041|47-2142|47-3012|47-5011|47-5012|47-5021|49-9043,medium
+7119,Building Frame and Related Trades Workers Not Elsewhere Classified,0.17,47-1011,high
+7121,Roofers,0.7033,47-2181|47-3016|47-5061,medium
+7122,Floor Layers and Tile Setters,0.7843,47-2042|47-2043|47-2044|47-2081|47-3015|51-4194|51-6052,low
+7123,Plasterers,0.8033,47-2011|47-2142|47-2151|47-2161|47-3014|49-9064|51-6051|51-6093|51-7032,medium
+7124,Insulation Workers,0.76,47-2061|47-2131|47-2132|47-2221|47-4051|47-5081|49-9043|49-9098|49-9799|51-9022|51-9198|51-9399,medium
+7125,Glaziers,0.6567,47-2082|47-2121|47-2151,medium
+7126,Plumbers and Pipe Fitters,0.68,47-2152|47-3015|51-3021|51-7021,medium
+7127,Air Conditioning and Refrigeration Mechanics,0.72,47-2071|49-2091|49-3052|49-9012|49-9021,medium
+7131,Painters and Related Workers,0.785,47-2053|47-2171|47-2221|47-4051|47-4799|49-9043|49-9071|49-9799|51-9031|51-9122|51-9123|51-9194,low
+7132,Spray Painters and Varnishers,0.7833,47-2043|47-3015|47-5051|49-3093|51-2021|51-7021,medium
+7133,Building Structure Cleaners,0.73,47-4011|47-4071,low
+7211,Metal Moulders and Coremakers,0.818,47-2011|47-2051|51-4071|51-6052|51-7031,low
+7212,Welders and Flame Cutters,0.9129,47-2044|49-9093|51-2091|51-2093|51-3021|51-4121|51-9195,medium
+7213,Sheet Metal Workers,0.665,47-2211|47-4091|51-2041|51-3023,medium
+7214,Structural Metal Preparers and Erectors,0.6944,47-2221|47-4011|47-4091|49-2096|49-3093|49-9012|49-9045|51-2011|51-2041,medium
+7215,Riggers and Cable Splicers,0.89,49-9096,high
+7222,Toolmakers and Related Workers,0.81,47-2042|47-4041|49-9071|51-4061|51-4062|51-7011|51-7031,low
+7223,Metal Working Machine Tool Setters and  Operators,0.8234,47-2071|47-4061|47-5041|47-5042|51-4012|51-4021|51-4022|51-4023|51-4031|51-4032|51-4033|51-4034|51-4035|51-4051|51-4072|51-4081|51-4122|51-4191|51-4193|51-6062|51-6063|51-6064|51-6091|51-7041|51-7042|51-9012|51-9023|51-9032|51-9041|51-9051|51-9121|51-9196,low
+7224,"Metal Polishers, Wheel Grinders and Tool Sharpeners",0.88,51-4194,low
+7231,Motor Vehicle Mechanics and Repairers,0.6782,47-4021|49-2011|49-2094|49-3022|49-3023|49-3041|49-3042|49-3051|49-3052|49-3092|49-9011|49-9031|49-9061|49-9091|49-9094|49-9097|51-9082,medium
+7232,Aircraft Engine Mechanics and Repairers,0.7278,49-1011|49-2011|49-3011|49-3042|49-3043|49-9011|49-9045|49-9061|49-9064|49-9071|49-9094|49-9097,medium
+7233,Agricultural and Industrial Machinery Mechanics and Repairers,0.615,49-2094|49-2095|49-9041|49-9091|49-9098|49-9799,medium
+7234,Bicycle and Related Repairers,0.7195,49-2011|49-2092|49-3021|49-3022|49-3043|49-3091|49-3093|49-9031|49-9064|51-6092,medium
+7311,Precision-instrument Makers and Repairers,0.6615,47-4021|49-1011|49-2021|49-2022|49-2093|49-2096|49-2097|49-9031|49-9045|49-9052|49-9061|49-9062|49-9091|49-9093|49-9097,medium
+7312,Musical Instrument Makers and Tuners,0.7,49-9062|49-9063|51-7011,medium
+7313,Jewellery and Precious Metal Workers,0.5967,49-9092|51-9071|51-9198,medium
+7314,Potters and Related Workers,0.78,47-2053|47-4799|47-5081|51-3022|51-4071|51-7032|51-9031|51-9194|51-9399,low
+7315,"Glass Makers, Cutters, Grinders and Finishers",0.89,47-2043|47-2051|47-2053|51-2021|51-4121|51-9061,low
+7316,"Sign Writers, Decorative Painters, Engravers and Etchers",0.98,51-9061,low
+7317,"Handicraft Workers in Wood, Basketry and Related Materials",0.81,51-6021,low
+7318,"Handicraft Workers in Textile, Leather and Related Materials",0.81,51-6021,high
+7319,Handicraft Workers Not Elsewhere Classified,0.68,51-4192|51-6041,low
+7321,Pre-press Technicians,0.7364,47-3013|49-2091|49-3011|49-3023|49-3041|49-3051|49-3092|51-5111|51-9081|51-9082|51-9083,medium
+7322,Printers,0.78,47-2041|47-2082|47-2142|47-2151|47-3012,low
+7323,Print Finishing and Binding Workers,0.8733,47-2171|47-4011|51-5113|51-7021|51-9022|51-9123,medium
+7411,Building and Related Electricians,0.62,47-2111|47-3013|51-9083,medium
+7412,Electrical Mechanics and Fitters,0.7492,47-3012|47-3013|47-4091|49-2093|49-2095|49-3031|49-3052|49-3053|51-2041|51-3021|51-9081|51-9082,medium
+7413,Electrical Line Installers and Repairers,0.5804,47-2041|47-2081|47-4021|49-1011|49-2021|49-2022|49-2092|49-2093|49-2094|49-2095|49-2096|49-2097|49-2098|49-3022|49-3031|49-3043|49-9011|49-9012|49-9051|49-9052|49-9062|49-9095|49-9098|51-6041,medium
+7421,Electronics Mechanics and Servicers,0.7,47-4071|49-2091|49-3011|49-3023|49-3031|49-3041|49-3042|49-3051|49-3092|49-9094|51-2023,medium
+7422,Information and Communications Technology Installers and Servicers,0.6425,47-2081|49-2021|49-2022|49-9052,low
+7511,"Butchers, Fishmongers and Related Food Preparers",0.835,49-2092|49-3021,low
+7512,"Bakers, Pastry-cooks and Confectionery Makers",0.82,47-2141|51-3011,medium
+7513,Dairy Products Makers,0.7633,51-3092|51-4071|51-9399,medium
+7514,"Fruit, Vegetable and Related Preservers",0.91,49-3021,low
+7515,Food and Beverage Tasters and Graders,0.85,51-3092|51-4052|51-9194,low
+7521,Wood Treaters,0.72,47-2082|51-3092|51-4111,low
+7522,Cabinet-makers and Related Workers,0.9275,49-9093|51-4061|51-4062|51-7011,medium
+7523,Woodworking Machine Tool Setters and Operators,0.8111,47-2071|47-2072|47-4061|47-5041|51-3093|51-4012|51-4021|51-4022|51-4023|51-4032|51-4033|51-4034|51-4072|51-4081|51-4122|51-4191|51-4193|51-6062|51-6063|51-6091|51-7041|51-7042|51-9023|51-9032|51-9041|51-9051|51-9121|51-9196,medium
+7531,"Tailors, Dressmakers, Furriers and Hatters",0.8467,47-2072|51-4194|51-6052,low
+7532,Garment and Related Patternmakers and Cutters,0.6662,51-3022|51-6021|51-6092|51-7032,low
+7533,"Sewing, Embroidery and Related Workers",0.805,47-2171|51-6011,low
+7534,Upholsterers and Related Workers,0.5575,47-4041|47-4799|51-3023|51-6093,medium
+7535,"Pelt Dressers, Tanners and Fellmongers",0.8,47-2072|47-5021|51-2021,low
+7536,Shoemakers and Related Workers,0.6957,47-4041|47-5081|51-4061|51-4062|51-6041|51-7031|51-9198,medium
+7541,Underwater Divers,0.55,47-4031|49-9092,medium
+7542,Shotfirers and Blasters,0.8167,47-2044|47-4031|49-2098|51-3023|51-4052|51-9197,medium
+7543,Product Graders and Testers (except Foods and Beverages),0.905,51-4052|51-4121,low
+7549,Craft and Related Workers not Elsewhere Classified,0.835,47-4071|51-4192,medium
+8111,Miners and Quarriers,0.96,47-5051,low
+8112,Mineral and Stone Processing Plant Operators,0.6758,47-5011|47-5012|47-5013|47-5042|47-5071|51-1011|51-8031|51-9141|51-9193|53-5022|53-6051|53-7051|53-7111,medium
+8113,Well Drillers and Borers and Related Workers,0.76,47-5012|47-5021|47-5071|53-3031,medium
+8114,"Cement, Stone and Other Mineral Products Machine Operators",0.605,47-5013|47-5041|47-5042|51-4012,medium
+8121,Metal Processing Plant Operators,0.8514,51-4051|51-8013|51-8092|51-9011|51-9081|51-9192|53-7071,medium
+8122,"Metal Finishing, Plating and Coating Machine Operators",0.8369,51-4021|51-4035|51-4051|51-4193|51-6064|51-9041|51-9123|53-1031|53-6051|53-7032,low
+8131,Chemical Products Plant and Machine Operators,0.85,51-8091|51-8093|51-8099|51-9011|51-9151|53-7051,medium
+8132,Photographic Products Machine Operators,0.99,51-9151,high
+8141,Rubber Products Machine Operators,0.6087,51-1011|51-4011|51-8011,low
+8142,Plastic Products Machine Operators,0.6553,51-9151|53-1011|53-7071,low
+8143,Paper Products Machine Operators,0.5153,51-1011|51-4011|51-9196,medium
+8151,"Fibre Preparing, Spinning and Winding Machine Operators",0.7848,51-3091|51-4033|51-6061|51-9012|51-9021|53-1031,low
+8152,Weaving and Knitting Machine Operators,0.8673,51-3091|51-3093|51-5112|51-6061|51-6062|51-6063|51-9032|51-9111|51-9191|51-9192|53-7032,low
+8153,Sewing Machine Operators,0.824,51-2031|51-3093|51-5112|51-6031|51-6042|51-7041|51-9191|51-9192|53-4041|53-5011|53-7011|53-7031|53-7033|53-7041|53-7063,medium
+8154,"Bleaching, Dyeing and Fabric Cleaning Machine Operators",0.842,51-4072|51-4122|51-6011|51-6061|51-9021,low
+8155,Fur and Leather Preparing Machine Operators,0.6878,51-4034|51-8011|51-8093|53-1031|53-4013,medium
+8156,Shoemaking and Related Machine Operators,0.842,51-6042|51-9111|53-5011|53-7033|53-7081,low
+8157,Laundry Machine Operators,0.8164,51-2031|51-6011|51-6042|51-8099|53-4041|53-5011|53-7011|53-7031|53-7033|53-7041|53-7063,low
+8159,"Textile, Fur and Leather Products Machine Operators Not Elsewhere Classified",0.82,51-4011|51-4031,low
+8171,Pulp and Papermaking Plant Operators,0.89,51-8011|51-8013|53-6021,medium
+8172,Wood Processing Plant Operators,0.805,51-8013|51-8031|51-8091|51-8092|51-9141|51-9193|53-5022|53-7031,medium
+8181,Glass and Ceramics Plant Operators,0.7289,51-2091|51-8031|51-8091|51-8092|51-9011|51-9031|51-9083|53-2021|53-7071,medium
+8182,Steam Engine and Boiler Operators,0.808,51-2092|51-8021|53-4013|53-7021|53-7111,medium
+8183,"Packing, Bottling and Labelling Machine Operators",0.87,51-3091|51-6064|51-9012|51-9021|51-9023|51-9051|51-9111|51-9121|51-9191|53-7032,medium
+8189,Stationary Plant and Machine Operators Not Elsewhere Classified,0.895,51-4022|51-4023|51-4031|51-4032|51-4035|51-4081|51-4191|51-6091,low
+8211,Mechanical Machinery Assemblers,0.906,51-2011|51-2023|51-2031|51-2092|51-2093,low
+8212,Electrical and Electronic Equipment Assemblers,0.79,51-2022|51-2023|51-2092|51-9122|53-7061,medium
+8311,Locomotive Engine Drivers,0.5602,53-2011|53-3033|53-4011|53-4012|53-5031,medium
+8312,"Railway Brake, Signal and Switch Operators",0.845,51-8099|53-4021,medium
+8321,Motorcycle Drivers,0.86,51-4111|51-9141,low
+8322,"Car, Taxi and Van Drivers",0.8375,51-4111|53-3032|53-3041|53-4031,medium
+8331,Bus and Tram Drivers,0.8167,53-3021|53-3022|53-3041,high
+8332,Heavy Truck and Lorry Drivers,0.7333,53-3032|53-3033|53-7121,low
+8341,Mobile Farm and Forestry Plant Operators,0.62,53-5022,low
+8342,Earthmoving and Related Plant Operators,0.79,53-2022|53-6021,low
+8343,"Crane, hoist and related plant operators",0.644,53-1011|53-2022|53-6051|53-7021,low
+8344,Lifting Truck Operators,0.6951,51-5112|51-9193|53-1011|53-4041|53-7021|53-7041|53-7051|53-7111|53-7121,medium
+911,"Domestic, Hotel and Office Cleaners and Helpers",0.97,37-3012,low
+9111,Domestic Cleaners and Helpers,0.635,53-7061|53-7072,low
+9112,"Cleaners and Helpers in Offices, Hotels and Other Establishments",0.32,53-5021|53-7061,low
+9122,Vehicle Cleaners,0.5237,37-2012|53-5031|53-7073,low
+9123,Window Cleaners,0.69,37-2012,low
+9129,Other Cleaning Workers,0.82,37-1011|37-1012|37-2021|37-3011|53-3031,medium
+9211,Crop Farm Labourers,0.93,53-7011,low
+9214,Garden and Horticultural Labourers,0.66,37-2021,high
+9216,Fishery and Aquaculture Labourers,0.98,53-3031,low
+9312,Civil Engineering Labourers,0.6477,37-2012|37-3011|53-4013|53-5031,low
+9313,Building Construction Labourers,0.58,37-2021|53-2021|53-4031|53-7121,low
+9321,Hand Packers,0.73,53-6011|53-7064|53-7073,low
+9331,Hand and Pedal Vehicle Drivers,0.88,53-3032|53-6011,medium
+9332,Drivers of Animal-drawn Vehicles and Machinery,0.78,53-3021|53-3041,low
+9333,Freight Handlers,0.735,53-2031|53-6011|53-6021|53-6061,medium
+9411,Fast Food Preparers,0.84,53-7073,low
+9510,Street and Related Service Workers,0.6967,37-1012|53-3033|53-6031,low
+9611,Garbage and Recycling Collectors,0.93,53-7081,low
+9613,Sweepers and Related Labourers,0.85,37-3013|53-7063,medium
+9621,"Messengers, Package Deliverers and Luggage Porters",0.38,53-7064,high
+9623,Meter Readers and Vending-machine Collectors,0.93,53-7081,low
+9624,Water and Firewood Collectors,0.11,53-2021,low
+9629,Elementary Workers Not Elsewhere Classified,0.9,53-7072,high
