@@ -275,13 +275,13 @@ function Passport() {
       {/* Progress bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          <span>Step {step} of {TOTAL_STEPS}</span>
-          <span>{Math.round((step / TOTAL_STEPS) * 100)}%</span>
+          <span>Step {step} of {TOTAL_STEPS_WITH_INTRO}</span>
+          <span>{Math.round((step / TOTAL_STEPS_WITH_INTRO) * 100)}%</span>
         </div>
         <div className="mt-2 h-1.5 w-full rounded-full bg-line">
           <div
             className="h-full rounded-full bg-cobalt transition-all duration-500 ease-out"
-            style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
+            style={{ width: `${(step / TOTAL_STEPS_WITH_INTRO) * 100}%` }}
           />
         </div>
       </div>
@@ -298,6 +298,14 @@ function Passport() {
           }`}
         >
           {step === 1 && (
+            <StepIntro
+              name={nameInput}
+              age={ageInput}
+              onName={setNameInput}
+              onAge={setAgeInput}
+            />
+          )}
+          {step === 2 && (
             <StepWork
               selected={selectedWork}
               onSelect={(v) => {
@@ -326,13 +334,13 @@ function Passport() {
               currentCountry={currentCountry}
             />
           )}
-          {step === 2 && (
+          {step === 3 && (
             <StepEducation
               selected={selectedEdu}
               onSelect={setSelectedEdu}
             />
           )}
-          {step === 3 && (
+          {step === 4 && (
             <StepInformalSkills
               selected={selectedInformal}
               onToggle={(skill) =>
@@ -344,13 +352,13 @@ function Passport() {
               }
             />
           )}
-          {step === 4 && (
+          {step === 5 && (
             <StepExperience
               selected={selectedExp}
               onSelect={setSelectedExp}
             />
           )}
-          {step === 5 && (
+          {step === 6 && (
             <StepGoal selected={selectedGoal} onSelect={setSelectedGoal} />
           )}
         </div>
@@ -369,7 +377,7 @@ function Passport() {
             disabled={!canNext()}
             className="min-h-[44px] min-w-[100px] rounded-sm border border-ink bg-ink px-6 py-2.5 font-mono text-xs uppercase tracking-wider text-paper transition-colors hover:bg-ink/90 disabled:cursor-not-allowed disabled:opacity-30"
           >
-            {step === TOTAL_STEPS ? "Build passport →" : "Next →"}
+            {step === TOTAL_STEPS_WITH_INTRO ? "Build passport →" : "Next →"}
           </button>
         </div>
       </div>
