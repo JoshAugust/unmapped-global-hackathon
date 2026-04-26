@@ -154,15 +154,6 @@ function Methodology() {
               <li><strong>No verdict on you personally.</strong> Scores reflect average task composition for a skill — not your individual talent, network, or local opportunities. Treat this as a compass, not a forecast.</li>
             </ul>
           </ExpandableNote>
-
-          <ExpandableNote eyebrow="Who built it" title="Who's behind UNMAPPED?">
-            <p>
-              UNMAPPED was built for the Workday × Bright Network Hackathon 2025 by a team with backgrounds in development economics, labour-market policy, and software engineering — with field experience across Sub-Saharan Africa and South Asia.
-            </p>
-            <p>
-              We use only publicly available datasets (ILO, World Bank, ESCO, O*NET, Wittgenstein Centre, UNESCO, UN Population) so anyone can audit and improve the methodology. Questions or corrections: <a href="mailto:team@unmapped.dev" className="text-cobalt hover:underline">team@unmapped.dev</a>.
-            </p>
-          </ExpandableNote>
         </div>
       </section>
 
