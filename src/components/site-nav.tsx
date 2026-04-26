@@ -145,11 +145,11 @@ function MobileDrawer({
       )}
       {/* Drawer */}
       <div
-        className={`fixed inset-y-0 right-0 z-50 w-72 transform bg-paper shadow-xl transition-transform duration-300 ${
+        className={`fixed inset-y-0 right-0 z-50 flex w-72 transform flex-col bg-paper shadow-xl transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between border-b border-line px-5 py-4">
+        <div className="flex shrink-0 items-center justify-between border-b border-line px-5 py-4">
           <span className="font-display text-lg font-black">Menu</span>
           <button
             onClick={onClose}
@@ -162,7 +162,7 @@ function MobileDrawer({
           </button>
         </div>
 
-        <nav className="overflow-y-auto px-3 py-4">
+        <nav className="flex-1 overflow-y-auto overscroll-contain px-3 py-4 pb-[max(env(safe-area-inset-bottom),1.5rem)]">
           {/* Home */}
           <Link
             to="/"
