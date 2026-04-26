@@ -46,9 +46,16 @@ function Hero() {
   const { t } = useI18n();
   return (
     <section className="relative overflow-hidden bg-ink">
-      <CulturalPattern opacity={0.06} size={120} />
+      {/* Hero background image */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url(/hero-amara.jpg)" }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 z-[1] bg-ink/70" aria-hidden="true" />
+      <CulturalPattern opacity={0.04} size={120} />
 
-      <div className="relative mx-auto flex min-h-[80vh] max-w-[1400px] flex-col items-center justify-center px-6 py-24 text-center">
+      <div className="relative z-[2] mx-auto flex min-h-[80vh] max-w-[1400px] flex-col items-center justify-center px-6 py-24 text-center">
         <h1 className="font-display text-[clamp(3rem,8vw,7rem)] font-black leading-[0.95] tracking-tight text-paper">
           {t("hero.title", "UNMAPPED")}
         </h1>
