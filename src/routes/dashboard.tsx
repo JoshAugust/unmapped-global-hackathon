@@ -6,6 +6,14 @@ import { SKILLS, type SkillId } from "@/data/skills";
 import { useProfile } from "@/lib/profile-store";
 import { matchOpportunities, type YouthProfile, type MatchResult } from "@/lib/engine";
 import { ArrowUpRight, Sparkles, TrendingUp, Wallet } from "lucide-react";
+import CalibrationPanel from "@/components/calibration-panel";
+
+/** Map engine CountryKey → ISO3 used by CalibrationPanel. */
+const COUNTRY_KEY_TO_ISO3: Record<string, string> = {
+  "ssa-ghana": "GHA",
+  "ssa-nigeria": "NGA",
+  "sa-bangladesh": "BGD",
+};
 
 export const Route = createFileRoute("/dashboard")({
   component: Dashboard,
@@ -392,6 +400,13 @@ function Dashboard() {
         ))}
       </div>
       {view === "youth" ? <YouthView profile={profile} country={country} matches={matches} /> : <PolicyView country={country} />}
+      <section className="mt-12">
+        <CalibrationPanel
+          country={COUNTRY_KEY_TO_ISO3[profile.countryKey] ?? "NGA"}
+          embedded
+          compact
+        />
+      </section>
     </PageShell>
   );
 }
