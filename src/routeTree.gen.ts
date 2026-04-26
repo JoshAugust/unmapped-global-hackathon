@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ShareRouteImport } from './routes/share'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as ReadinessRouteImport } from './routes/readiness'
 import { Route as PolicymakerRouteImport } from './routes/policymaker'
@@ -24,6 +25,11 @@ import { Route as ConfigureRouteImport } from './routes/configure'
 import { Route as CompareRouteImport } from './routes/compare'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ShareRoute = ShareRouteImport.update({
+  id: '/share',
+  path: '/share',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResultsRoute = ResultsRouteImport.update({
   id: '/results',
   path: '/results',
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
   '/results': typeof ResultsRoute
+  '/share': typeof ShareRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -126,6 +133,7 @@ export interface FileRoutesByTo {
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
   '/results': typeof ResultsRoute
+  '/share': typeof ShareRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -143,6 +151,7 @@ export interface FileRoutesById {
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
   '/results': typeof ResultsRoute
+  '/share': typeof ShareRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -161,6 +170,7 @@ export interface FileRouteTypes {
     | '/policymaker'
     | '/readiness'
     | '/results'
+    | '/share'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -177,6 +187,7 @@ export interface FileRouteTypes {
     | '/policymaker'
     | '/readiness'
     | '/results'
+    | '/share'
   id:
     | '__root__'
     | '/'
@@ -193,6 +204,7 @@ export interface FileRouteTypes {
     | '/policymaker'
     | '/readiness'
     | '/results'
+    | '/share'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -210,10 +222,18 @@ export interface RootRouteChildren {
   PolicymakerRoute: typeof PolicymakerRoute
   ReadinessRoute: typeof ReadinessRoute
   ResultsRoute: typeof ResultsRoute
+  ShareRoute: typeof ShareRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/share': {
+      id: '/share'
+      path: '/share'
+      fullPath: '/share'
+      preLoaderRoute: typeof ShareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/results': {
       id: '/results'
       path: '/results'
@@ -330,16 +350,8 @@ const rootRouteChildren: RootRouteChildren = {
   PolicymakerRoute: PolicymakerRoute,
   ReadinessRoute: ReadinessRoute,
   ResultsRoute: ResultsRoute,
+  ShareRoute: ShareRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

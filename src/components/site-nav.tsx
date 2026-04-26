@@ -16,6 +16,7 @@ const NAV_SECTIONS: NavSection[] = [
     items: [
       { to: "/passport", label: "Skills Passport" },
       { to: "/results", label: "Results" },
+      { to: "/share", label: "Export & Share" },
     ],
   },
   {
