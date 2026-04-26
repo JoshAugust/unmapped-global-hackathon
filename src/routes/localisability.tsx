@@ -13,9 +13,8 @@
  */
 
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
 import { PageShell } from "@/components/page-shell";
-import { COUNTRIES, type CountryKey, type CountryConfig } from "@/data/countries";
+import { COUNTRIES, type CountryConfig } from "@/data/countries";
 import { ArrowRight, Check, FileJson } from "lucide-react";
 
 export const Route = createFileRoute("/localisability")({
