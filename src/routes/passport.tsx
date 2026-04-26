@@ -591,8 +591,8 @@ function StepExperience({
         number={4}
         question={t('onboarding.step4.title', 'How many years have you been doing your main work?')}
       />
-      {/* Visual timeline */}
-      <div className="mb-6 flex items-center justify-between px-2">
+      {/* Visual timeline — also acts as the selector */}
+      <div className="flex items-start justify-between gap-2 px-2">
         {EXPERIENCE_OPTIONS.map((opt, i) => (
           <div key={opt.value} className="flex flex-col items-center">
             <button
@@ -610,18 +610,6 @@ function StepExperience({
               {opt.label}
             </span>
           </div>
-        ))}
-      </div>
-      {/* Also show as cards for easier mobile tap */}
-      <div className="grid gap-3">
-        {EXPERIENCE_OPTIONS.map((opt) => (
-          <OptionCard
-            key={opt.value}
-            selected={selected === opt.value}
-            onClick={() => onSelect(opt.value)}
-          >
-            <span className="text-sm font-medium">{opt.label}</span>
-          </OptionCard>
         ))}
       </div>
     </div>
