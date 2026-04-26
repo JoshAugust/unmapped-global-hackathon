@@ -1,4 +1,4 @@
-export type CountryKey = "ssa-ghana" | "sa-bangladesh" | "ssa-nigeria";
+export type CountryKey = "ssa-ghana" | "ssa-nigeria";
 
 export interface CountryConfig {
   key: CountryKey;
@@ -8,7 +8,7 @@ export interface CountryConfig {
   currency: string;
   exchangeToUsd: number;
   language: string;
-  script: "latin" | "bengali";
+  script: "latin";
   // Education taxonomy mapped to ISCED level
   educationLevels: { id: string; label: string; isced: number }[];
   // Calibration: how much to discount global automation scores given infra/task mix
@@ -107,68 +107,6 @@ export const COUNTRIES: Record<CountryKey, CountryConfig> = {
       "Education projections: Wittgenstein Centre WIC 2023 SSP2",
     ],
   },
-  "sa-bangladesh": {
-    key: "sa-bangladesh",
-    region: "South Asia · Rural agricultural",
-    country: "Bangladesh",
-    flag: "🇧🇩",
-    currency: "BDT",
-    exchangeToUsd: 0.0084,
-    language: "Bengali",
-    script: "bengali",
-    educationLevels: [
-      { id: "none", label: "No formal schooling", isced: 0 },
-      { id: "primary", label: "Primary (Class 5)", isced: 1 },
-      { id: "jsc", label: "Junior Secondary / JSC", isced: 2 },
-      { id: "ssc", label: "Secondary / SSC", isced: 3 },
-      { id: "hsc", label: "Higher Secondary / HSC", isced: 3 },
-      { id: "tertiary", label: "Tertiary diploma / degree", isced: 6 },
-    ],
-    automationCalibration: 0.45,
-    opportunityTypes: ["self-employment", "apprenticeship", "training", "formal", "gig"],
-    signals: {
-      medianYouthWageMonthly: 12500,
-      minWageMonthly: 8000,
-      youthUnemployment: 16.8,
-      informalShare: 84,
-      mobileBroadbandPenetration: 41,
-      sectorGrowth: [
-        { sector: "RMG & textiles", growthPct: 4.9, share: 18 },
-        { sector: "Agriculture & livestock", growthPct: 2.1, share: 38 },
-        { sector: "Construction", growthPct: 5.6, share: 9 },
-        { sector: "Digital services", growthPct: 14.5, share: 2 },
-        { sector: "Retail & trade", growthPct: 3.2, share: 17 },
-        { sector: "Light manufacturing", growthPct: 4.0, share: 8 },
-      ],
-      returnsToEducation: [
-        { level: "JSC", premiumPct: 9 },
-        { level: "SSC", premiumPct: 27 },
-        { level: "HSC", premiumPct: 49 },
-        { level: "Tertiary", premiumPct: 118 },
-      ],
-    },
-    wittgenstein: [
-      { year: 2025, tertiaryYouthPct: 14.1 },
-      { year: 2030, tertiaryYouthPct: 18.7 },
-      { year: 2035, tertiaryYouthPct: 24.2 },
-    ],
-    educationProjections: {
-      "2025": { no_education: 0.29, primary: 0.28, lower_secondary: 0.22, upper_secondary: 0.14, post_secondary: 0.07 },
-      "2035": { no_education: 0.19, primary: 0.25, lower_secondary: 0.26, upper_secondary: 0.20, post_secondary: 0.10 },
-    },
-    literacyRate: 74.9,
-    youthLiteracyRate: 93.1,
-    primaryEnrollmentRate: 118,
-    secondaryEnrollmentRate: 73,
-    sourceNotes: [
-      "Wages: BBS Labour Force Survey 2022 (deflated)",
-      "Unemployment: ILOSTAT youth (15–24) 2024",
-      "Informal share: ILO STAT informality 2023",
-      "Broadband: ITU DataHub 2024",
-      "Education projections: Wittgenstein Centre WIC 2023 SSP2",
-    ],
-  },
-
   "ssa-nigeria": {
     key: "ssa-nigeria",
     region: "Sub-Saharan Africa · Urban/Rural mixed",

@@ -23,36 +23,36 @@ function Kv({ k, v }: { k: string; v: string }) {
 
 /* ── Side-by-side reconfiguration story (per brief: "show context A, then reconfigure to context B") ── */
 
-const COMPARISON_ROWS: { label: string; nga: string; bgd: string }[] = [
+const COMPARISON_ROWS: { label: string; nga: string; ind: string }[] = [
   {
     label: "Labour market data",
     nga: "data/nga/wdi_labour.json · NBS Labour Force Survey 2022",
-    bgd: "data/bgd/wdi_labour.json · BBS Labour Force Survey 2022",
+    ind: "data/ind/wdi_labour.json · PLFS / NSO India 2022–23",
   },
   {
     label: "Currency",
     nga: "₦ Naira (NGN) · ~780/USD",
-    bgd: "৳ Taka (BDT) · ~110/USD",
+    ind: "₹ Rupee (INR) · ~83/USD",
   },
   {
     label: "Education taxonomy",
     nga: "WAEC · NECO · JSSC · ND · HND",
-    bgd: "SSC · HSC · Diploma · Bachelor's",
+    ind: "Class 10 · Class 12 · ITI · B.Tech · M.A.",
   },
   {
     label: "UI language & script",
     nga: "English · Hausa · Yoruba (Latin)",
-    bgd: "Bengali · English (Bangla script)",
+    ind: "Hindi · English (Devanagari + Latin)",
   },
   {
     label: "Automation calibration",
     nga: "0.67 — urban informal, growing ICT base",
-    bgd: "0.58 — high RMG exposure, low capital intensity",
+    ind: "0.72 — large IT/services + rural agricultural mix",
   },
   {
     label: "Opportunity types surfaced",
     nga: "Formal · Self-emp · Bolt/OPay · Oga apprenticeship · Fintech agent",
-    bgd: "Formal · Self-emp · Pathao · RMG sector · bKash agent · NGO co-op",
+    ind: "Formal · Self-emp · Swiggy/Ola · ITI/NAPS apprenticeship · UPI agent · SHG",
   },
 ];
 
@@ -67,7 +67,7 @@ function SameProductTwoContexts() {
       </h2>
       <p className="mt-3 max-w-2xl text-sm text-foreground/70">
         The brief asks for one context, then a reconfiguration to a second. Here's what changes
-        between SSA-urban-informal (Nigeria) and South-Asia-garment-mixed (Bangladesh) — every
+        between SSA-urban-informal (Nigeria) and South-Asia rural-agricultural-mixed (India) — every
         row below is a value in <code className="font-mono text-xs">data/config/country_config_*.json</code>,
         not a code path.
       </p>
@@ -92,11 +92,11 @@ function SameProductTwoContexts() {
               </th>
               <th className="w-[36%] py-3 pl-3 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl">🇧🇩</span>
+                  <span className="text-xl">🇮🇳</span>
                   <div>
-                    <div className="font-display text-sm font-black">Bangladesh</div>
+                    <div className="font-display text-sm font-black">India</div>
                     <div className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
-                      South Asia · garment-export
+                      South Asia · rural-agricultural mix
                     </div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ function SameProductTwoContexts() {
                   {row.label}
                 </td>
                 <td className="py-3 pl-3 pr-3 text-sm text-foreground/85">{row.nga}</td>
-                <td className="py-3 pl-3 text-sm text-foreground/85">{row.bgd}</td>
+                <td className="py-3 pl-3 text-sm text-foreground/85">{row.ind}</td>
               </tr>
             ))}
           </tbody>

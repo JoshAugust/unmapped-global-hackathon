@@ -20,7 +20,7 @@ import type { SkillId } from "@/data/skills";
 
 export type AppMode = "demo" | "live" | null;
 export type Audience = "youth" | "policymaker" | null;
-export type PersonaId = "amara" | "kofi" | "rina";
+export type PersonaId = "amara" | "kofi";
 
 export interface PersonaPreset {
   id: PersonaId;
@@ -87,28 +87,6 @@ export const PERSONAS: Record<PersonaId, PersonaPreset> = {
       "bookkeeping",
     ],
     blurb: "Market seller · Kumasi",
-  },
-  rina: {
-    id: "rina",
-    name: "Rina K.",
-    age: 19,
-    flag: "🇧🇩",
-    city: "Khulna",
-    country: "Bangladesh",
-    countryISO3: "BGD",
-    countryKey: "sa-bangladesh",
-    isco08: "7531",
-    isco08_label: "Tailor / garment worker",
-    educationId: "ssc",
-    yearsExperience: 2,
-    skills: [
-      "tailoring",
-      "customer-service",
-      "negotiation",
-      "literacy-numeracy",
-      "smartphone-fluency",
-    ],
-    blurb: "Tailor · Khulna co-op",
   },
 };
 

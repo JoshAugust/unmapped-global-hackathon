@@ -19,14 +19,12 @@ import wdiNGA from "../../data/nga/wdi_labour.json";
 import wdiKEN from "../../data/ken/wdi_labour.json";
 import wdiRWA from "../../data/rwa/wdi_labour.json";
 import wdiIND from "../../data/ind/wdi_labour.json";
-import wdiBGD from "../../data/bgd/wdi_labour.json";
 
 const WDI_FALLBACKS: Record<string, unknown> = {
   NGA: wdiNGA,
   KEN: wdiKEN,
   RWA: wdiRWA,
   IND: wdiIND,
-  BGD: wdiBGD,
   // GHA: no wdi_labour.json shipped yet — falls through to NGA below.
 };
 
@@ -72,7 +70,6 @@ const COUNTRY_LIST: CountryEntry[] = [
   { iso3: "KEN", name: "Kenya", flag: "🇰🇪" },
   { iso3: "RWA", name: "Rwanda", flag: "🇷🇼" },
   { iso3: "IND", name: "India", flag: "🇮🇳" },
-  { iso3: "BGD", name: "Bangladesh", flag: "🇧🇩" },
 ];
 
 // ─── Types ──────────────────────────────────────────────────

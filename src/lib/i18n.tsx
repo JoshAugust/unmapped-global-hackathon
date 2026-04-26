@@ -38,7 +38,6 @@ export const AVAILABLE_LOCALES: LocaleInfo[] = [
   { code: "sw", name: "Swahili",     nativeName: "Kiswahili",  direction: "ltr", flag: "🇰🇪" },
   { code: "hi", name: "Hindi",       nativeName: "हिन्दी",      direction: "ltr", flag: "🇮🇳" },
   { code: "rw", name: "Kinyarwanda", nativeName: "Kinyarwanda",direction: "ltr", flag: "🇷🇼" },
-  { code: "bn", name: "Bengali",     nativeName: "বাংলা",      direction: "ltr", flag: "🇧🇩" },
 ];
 
 const STORAGE_KEY = "unmapped_locale";

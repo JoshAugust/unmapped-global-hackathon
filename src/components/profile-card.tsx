@@ -16,7 +16,6 @@ const COUNTRY_META: Record<string, { flag: string; name: string }> = {
   GHA: { flag: "🇬🇭", name: "Ghana" },
   KEN: { flag: "🇰🇪", name: "Kenya" },
   ZAF: { flag: "🇿🇦", name: "South Africa" },
-  BGD: { flag: "🇧🇩", name: "Bangladesh" },
   IND: { flag: "🇮🇳", name: "India" },
   EGY: { flag: "🇪🇬", name: "Egypt" },
   ETH: { flag: "🇪🇹", name: "Ethiopia" },
