@@ -6,7 +6,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "UNMAPPED — Map informal skills to economic opportunity" },
+      { title: "UNMAPPED — See what your skills are really worth" },
       {
         name: "description",
         content:
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "UNMAPPED — Map informal skills to economic opportunity",
+        content: "UNMAPPED — See what your skills are really worth",
       },
       {
         property: "og:description",
@@ -53,7 +53,7 @@ function Hero() {
           {t("hero.title", "UNMAPPED")}
         </h1>
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-paper/80 md:text-xl">
-          {t("hero.subtitle", "Map informal skills to economic opportunity")}
+          {t("hero.subtitle", "See what your work skills are really worth — and where they could take you")}
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">

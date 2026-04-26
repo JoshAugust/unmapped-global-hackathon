@@ -446,11 +446,6 @@ function StepWork({
             <div className="mt-1 text-sm font-medium leading-snug">
               {opt.label}
             </div>
-            {opt.isco08 && (
-              <div className="mt-0.5 font-mono text-[10px] text-muted-foreground">
-                ISCO {opt.isco08}
-              </div>
-            )}
           </OptionCard>
         ))}
       </div>
@@ -499,8 +494,11 @@ function StepEducation({
           >
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium">{opt.label}</span>
-              <span className="font-mono text-[10px] text-muted-foreground">
-                ISCED {opt.isced}
+              <span
+                className="font-mono text-[9px] text-muted-foreground/50"
+                title={`ISCED level ${opt.isced}`}
+              >
+                L{opt.isced}
               </span>
             </div>
           </OptionCard>

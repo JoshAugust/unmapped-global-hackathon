@@ -128,34 +128,34 @@ const TASK_CATEGORIES: Record<
   { label: string; icon: string; description: string }
 > = {
   routine_manual: {
-    label: "Routine Manual",
+    label: "Repetitive physical tasks",
     icon: "🔧",
     description:
-      "Repetitive physical tasks like assembly, sorting, or basic repairs — highly automatable with robotics.",
+      "Physical tasks like assembly, sorting, or basic repairs that follow a fixed pattern — highly automatable with robotics.",
   },
   routine_cognitive: {
-    label: "Routine Cognitive",
+    label: "Repetitive thinking tasks",
     icon: "📋",
     description:
       "Structured information processing like data entry, bookkeeping, or form filling — vulnerable to AI/software.",
   },
   nonroutine_manual: {
-    label: "Non-Routine Manual",
+    label: "Hands-on problem solving",
     icon: "🤲",
     description:
       "Dexterous, adaptive physical tasks like plumbing, cooking, or care work — harder for machines to replicate.",
   },
   nonroutine_cognitive: {
-    label: "Non-Routine Cognitive",
+    label: "Creative & analytical work",
     icon: "🧠",
     description:
       "Complex problem-solving, creative thinking, and strategic planning — the most AI-resilient category.",
   },
   social: {
-    label: "Social & Interpersonal",
+    label: "People & relationship work",
     icon: "🤝",
     description:
-      "Negotiation, persuasion, teaching, and empathy — skills that require human connection.",
+      "Negotiation, persuasion, teaching, and empathy — skills that require genuine human connection.",
   },
 };
 
@@ -352,8 +352,8 @@ function PathwayCard({ pathway }: { pathway: AdjacencyPathway }) {
         <CardTitle className="text-sm font-semibold leading-snug">
           {pathway.target_title}
         </CardTitle>
-        <CardDescription className="text-xs">
-          ISCO-08: {pathway.target_isco08}
+        <CardDescription className="text-[9px] text-muted-foreground/50" title={`ISCO-08 code: ${pathway.target_isco08}`}>
+          ISCO {pathway.target_isco08}
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
@@ -713,7 +713,145 @@ function ResultsDashboard() {
             </section>
           )}
 
-          {/* ── Section 4: Demand Signals ── */}
+          {/* ── Section 4: What To Do Next ── */}
+          <section className="mt-8 space-y-4">
+            <div className="flex items-center gap-2">
+              <GraduationCap className="h-5 w-5 text-cobalt" />
+              <h2 className="font-display text-xl font-bold text-ink">
+                What To Do Next
+              </h2>
+            </div>
+            <p className="text-sm text-muted-foreground max-w-2xl">
+              Practical next steps to act on your results — whether you want to
+              upskill, find work, or share your profile.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {/* Get Trained */}
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">🎓 Get Trained</CardTitle>
+                  <CardDescription className="text-xs">
+                    Find courses and apprenticeships to build new skills
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>
+                      <a
+                        href="https://www.coursera.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-cobalt hover:underline"
+                      >
+                        • Coursera — free certificates
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://learndigital.withgoogle.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-cobalt hover:underline"
+                      >
+                        • Google Digital Skills
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://alison.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-cobalt hover:underline"
+                      >
+                        • Alison — free vocational training
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.afdb.org/en/topics-and-sectors/initiatives-partnerships/youth-entrepreneurship-and-innovation"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-cobalt hover:underline"
+                      >
+                        • AfDB Youth Skills Programme
+                      </a>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Find Opportunities */}
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">💼 Find Opportunities</CardTitle>
+                  <CardDescription className="text-xs">
+                    Job platforms active in your region
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/jobs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-cobalt hover:underline"
+                      >
+                        • LinkedIn Jobs
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://africa.com/jobs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-cobalt hover:underline"
+                      >
+                        • Local job boards in your country
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.wfp.org/publications/jobs-21st-century"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-cobalt hover:underline"
+                      >
+                        • ILO Global Jobs Portal
+                      </a>
+                    </li>
+                    <li className="text-xs text-muted-foreground/70 italic mt-2">
+                      Check government employment portals in your country for
+                      subsidised placements.
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Share Your Profile */}
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">📊 Share Your Profile</CardTitle>
+                  <CardDescription className="text-xs">
+                    Show employers and training providers what you can do
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground">
+                    Your skills passport is a portable record of your
+                    experience, mapped to international standards — shareable
+                    with anyone.
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Use the profile card above to export as PDF and attach it
+                    to job applications or training enrolments.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
+          {/* ── Section 5: Demand Signals ── */}
           {queryData?.demand_signals && (
             <section className="space-y-4">
               <div className="flex items-center gap-2">
@@ -785,7 +923,7 @@ function ResultsDashboard() {
             </section>
           )}
 
-          {/* ── Section 5: Data Limitations ── */}
+          {/* ── Section 6: Data Limitations ── */}
           {queryData?.data_limitations &&
             queryData.data_limitations.length > 0 && (
               <Card className="border-amber-200 bg-amber-50/50 dark:bg-amber-950/10">
@@ -807,7 +945,7 @@ function ResultsDashboard() {
               </Card>
             )}
 
-          {/* ── Section 6: Econometric Signals Footer ── */}
+          {/* ── Section 7: Econometric Signals Footer ── */}
           {queryData?.econometric_signals && (
             <section className="space-y-4">
               <div className="flex items-center gap-2">
