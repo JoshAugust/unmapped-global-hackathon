@@ -336,7 +336,6 @@ function AutomationBar({
 
 function CrosswalkExplorer() {
   const [selectedIsco, setSelectedIsco] = useState("7422");
-  const [search, setSearch] = useState("");
   const [data, setData] = useState<CrosswalkData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -377,12 +376,6 @@ function CrosswalkExplorer() {
   useEffect(() => {
     fetchCrosswalk(selectedIsco);
   }, [selectedIsco]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const filteredOccupations = PRIORITY_OCCUPATIONS.filter(
-    (o) =>
-      o.title.toLowerCase().includes(search.toLowerCase()) ||
-      o.isco.includes(search)
-  );
 
   const essentialSkills = data?.esco_skills.filter((s) => s.type === "essential") ?? [];
   const optionalSkills = data?.esco_skills.filter((s) => s.type === "optional") ?? [];
@@ -429,20 +422,9 @@ function CrosswalkExplorer() {
           Select occupation (ISCO-08)
         </label>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
-          {/* Search input */}
-          <div className="relative flex-1 sm:max-w-xs">
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search by code or title…"
-              className="w-full rounded border border-line bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-cobalt focus:outline-none focus:ring-1 focus:ring-cobalt"
-            />
-          </div>
-
           {/* Occupation grid */}
           <div className="flex flex-wrap gap-2">
-            {filteredOccupations.map((occ) => {
+            {PRIORITY_OCCUPATIONS.map((occ) => {
               const active = occ.isco === selectedIsco;
               return (
                 <button
@@ -462,9 +444,6 @@ function CrosswalkExplorer() {
                 </button>
               );
             })}
-            {filteredOccupations.length === 0 && (
-              <p className="text-sm text-muted-foreground">No occupations match "{search}"</p>
-            )}
           </div>
         </div>
       </div>
