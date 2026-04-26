@@ -9,6 +9,7 @@ import {
   getRecalibratedData,
   getPolicymakerAggregates,
 } from "@/lib/static-data";
+import { GENDER, getDivergence } from "@/lib/demographics";
 
 // ─── Static WDI fallbacks ───────────────────────────────────
 // These bundled JSON files are used when the live API is unreachable
@@ -890,6 +891,78 @@ function CohortExposure({
 
 /* ── 9. Data Provenance Footer ─────────────────────────── */
 function DataProvenanceFooter({ recal }: { recal: RecalData | null }) {
+  return null;
+}
+
+/* ── Divergence + Gender (additions) ─────────────────────────────── */
+
+function DivergencePanel({ iso3 }: { iso3: string }) {
+  const d = getDivergence(iso3);
+  if (!d) return null;
+  const gap = isFinite(d.gapRatio) ? d.gapRatio.toFixed(1) : "∞";
+  return (
+    <section className="space-y-3 rounded-sm border border-line bg-card p-5 sm:p-6">
+      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
+        Skill–population divergence · 2025 → 2035
+      </div>
+      <h2 className="font-display text-xl font-bold sm:text-2xl">
+        Is education keeping pace with the youth cohort?
+      </h2>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Stat2 label="Youth 15–24 (2025)" value={`${d.youth2025M.toFixed(1)}M`} />
+        <Stat2 label="Youth 15–24 (2035)" value={`${d.youth2035M.toFixed(1)}M`} />
+        <Stat2 label="Tertiary share 2025→2035" value={`${d.tertiary2025Pct}% → ${d.tertiary2035Pct}%`} />
+        <Stat2 label="New entrants / yr (avg)" value={`${(d.newEntrantsKPerYear / 1000).toFixed(2)}M`} />
+      </div>
+      <p className="text-sm text-foreground/80">
+        Cohort gain: <strong>{d.youthDeltaM > 0 ? "+" : ""}{d.youthDeltaM.toFixed(1)}M</strong> youth.
+        Tertiary-educated youth gain: <strong>{d.tertiaryDeltaM > 0 ? "+" : ""}{d.tertiaryDeltaM.toFixed(1)}M</strong>.
+        For every additional tertiary-educated young person, the cohort grows by{" "}
+        <strong>{gap}</strong> people. {Number(gap) > 1 ? "Education is not keeping pace." : "Education is outrunning the cohort."}
+      </p>
+      <p className="text-[11px] text-muted-foreground">Source: {d.source}</p>
+    </section>
+  );
+}
+
+function GenderLens({ iso3 }: { iso3: string }) {
+  const g = GENDER[iso3.toUpperCase()];
+  if (!g) return null;
+  return (
+    <section className="space-y-3 rounded-sm border border-line bg-card p-5 sm:p-6">
+      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-rust">
+        Gender lens · ILOSTAT × WBL 2024
+      </div>
+      <h2 className="font-display text-xl font-bold sm:text-2xl">
+        Disaggregated by gender
+      </h2>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Stat2 label="Youth unemp · male" value={`${g.youthUnemployment.male}%`} />
+        <Stat2 label="Youth unemp · female" value={`${g.youthUnemployment.female}%`} />
+        <Stat2 label="LFP 15+ · male" value={`${g.lfp15plus.male}%`} />
+        <Stat2 label="LFP 15+ · female" value={`${g.lfp15plus.female}%`} />
+        <Stat2 label="Female share, youth LF" value={`${g.youthLfFemalePct}%`} />
+        <Stat2 label="WBL 2024 score" value={`${g.wblScore}/100`} />
+      </div>
+      <p className="text-[11px] text-muted-foreground">Source: {g.source}</p>
+    </section>
+  );
+}
+
+function Stat2({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-sm border border-line bg-paper px-3 py-2">
+      <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
+        {label}
+      </div>
+      <div className="mt-0.5 font-display text-base font-bold text-ink">
+        {value}
+      </div>
+    </div>
+  );
+}
+
+function _DataProvenanceFooterStub({ recal }: { recal: RecalData | null }) {
   const allSources = [
     { ...SOURCES.ILOSTAT_2024, lastUpdated: "April 2024" },
     { ...SOURCES.WDI_2024, lastUpdated: "April 2024" },
@@ -1011,6 +1084,12 @@ function PolicymakerDashboard() {
 
         {/* 2. Key Indicators */}
         <KeyIndicators wdi={wdi} />
+
+        {/* 2c. Skill–population divergence (UN WPP × Wittgenstein) */}
+        <DivergencePanel iso3={selectedIso3} />
+
+        {/* 2d. Gender lens (ILOSTAT × WBL) */}
+        <GenderLens iso3={selectedIso3} />
 
         {/* 3. Automation Exposure Distribution */}
         <AutomationExposure recal={recal} />

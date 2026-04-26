@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageShell } from "@/components/page-shell";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown, MessageCircle, Compass, Lightbulb, ShieldCheck, AlertTriangle } from "lucide-react";
+import { ChevronDown, MessageCircle, Compass, Lightbulb, ShieldCheck, AlertTriangle, FileJson, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/methodology")({
   component: Methodology,
@@ -114,6 +114,33 @@ function Methodology() {
             Tools that exaggerate risk cause real harm. Telling someone their job will be "automated by 2027" can push them into decisions based on a forecast no one can actually make. We show our reasoning, name our limits, and adjust every estimate for the local economy you actually live in.
           </p>
         </div>
+      </section>
+
+      {/* Country-agnostic protocol — addresses the brief's
+          "Infrastructure, not just an app" requirement directly. */}
+      <section className="mt-16 rounded-sm border-2 border-cobalt bg-cobalt/5 p-6 sm:p-8">
+        <div className="flex items-center gap-2 text-cobalt">
+          <FileJson className="h-4 w-4" />
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em]">
+            Infrastructure, not an app
+          </div>
+        </div>
+        <h3 className="mt-2 font-display text-2xl font-bold sm:text-3xl">
+          A new country plugs in with one JSON file.
+        </h3>
+        <p className="mt-3 max-w-3xl text-sm text-foreground/80">
+          Country-specific parameters — labour-market data, education taxonomy,
+          language, automation calibration, opportunity types — are{" "}
+          <strong>inputs to the system, not hardcoded assumptions</strong>.
+          Drop a <code className="rounded bg-paper px-1.5 py-0.5 text-xs">data/config/country_config_xxx.json</code>{" "}
+          and the same code reconfigures end-to-end. See it live below.
+        </p>
+        <Link
+          to="/localisability"
+          className="mt-5 inline-flex items-center gap-2 border-2 border-ink bg-ink px-5 py-2.5 font-mono text-xs uppercase tracking-wider text-paper hover:bg-cobalt hover:border-cobalt"
+        >
+          → Compare two contexts side-by-side <ArrowRight className="h-3.5 w-3.5" />
+        </Link>
       </section>
 
       {/* Expandable details */}

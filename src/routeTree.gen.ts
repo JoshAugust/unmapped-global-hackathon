@@ -16,6 +16,7 @@ import { Route as ReadinessRouteImport } from './routes/readiness'
 import { Route as PolicymakerRouteImport } from './routes/policymaker'
 import { Route as PassportRouteImport } from './routes/passport'
 import { Route as MethodologyRouteImport } from './routes/methodology'
+import { Route as LocalisabilityRouteImport } from './routes/localisability'
 import { Route as InfrastructureRouteImport } from './routes/infrastructure'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as DemoRouteImport } from './routes/demo'
@@ -59,6 +60,11 @@ const PassportRoute = PassportRouteImport.update({
 const MethodologyRoute = MethodologyRouteImport.update({
   id: '/methodology',
   path: '/methodology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocalisabilityRoute = LocalisabilityRouteImport.update({
+  id: '/localisability',
+  path: '/localisability',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InfrastructureRoute = InfrastructureRouteImport.update({
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/localisability': typeof LocalisabilityRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByTo {
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/localisability': typeof LocalisabilityRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -154,6 +162,7 @@ export interface FileRoutesById {
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/localisability': typeof LocalisabilityRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
     | '/demo'
     | '/education'
     | '/infrastructure'
+    | '/localisability'
     | '/methodology'
     | '/passport'
     | '/policymaker'
@@ -192,6 +202,7 @@ export interface FileRouteTypes {
     | '/demo'
     | '/education'
     | '/infrastructure'
+    | '/localisability'
     | '/methodology'
     | '/passport'
     | '/policymaker'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
     | '/demo'
     | '/education'
     | '/infrastructure'
+    | '/localisability'
     | '/methodology'
     | '/passport'
     | '/policymaker'
@@ -229,6 +241,7 @@ export interface RootRouteChildren {
   DemoRoute: typeof DemoRoute
   EducationRoute: typeof EducationRoute
   InfrastructureRoute: typeof InfrastructureRoute
+  LocalisabilityRoute: typeof LocalisabilityRoute
   MethodologyRoute: typeof MethodologyRoute
   PassportRoute: typeof PassportRoute
   PolicymakerRoute: typeof PolicymakerRoute
@@ -287,6 +300,13 @@ declare module '@tanstack/react-router' {
       path: '/methodology'
       fullPath: '/methodology'
       preLoaderRoute: typeof MethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/localisability': {
+      id: '/localisability'
+      path: '/localisability'
+      fullPath: '/localisability'
+      preLoaderRoute: typeof LocalisabilityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/infrastructure': {
@@ -365,6 +385,7 @@ const rootRouteChildren: RootRouteChildren = {
   DemoRoute: DemoRoute,
   EducationRoute: EducationRoute,
   InfrastructureRoute: InfrastructureRoute,
+  LocalisabilityRoute: LocalisabilityRoute,
   MethodologyRoute: MethodologyRoute,
   PassportRoute: PassportRoute,
   PolicymakerRoute: PolicymakerRoute,

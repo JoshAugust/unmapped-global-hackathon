@@ -90,7 +90,7 @@ console.log(`   JS entries: ${allEntryJs.length} files`);
 const routes = [
   "passport", "results", "policymaker", "compare", "education",
   "crosswalk", "coverage", "infrastructure", "methodology", "demo",
-  "readiness", "configure", "dashboard",
+  "readiness", "configure", "dashboard", "start", "localisability",
 ];
 
 const indexPath = join(DIST, "index.html");
