@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageShell } from "@/components/page-shell";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown, MessageCircle, Compass, Lightbulb, ShieldCheck, AlertTriangle, FileJson, ArrowRight } from "lucide-react";
+import { ChevronDown, MessageCircle, Compass, Lightbulb, ShieldCheck, AlertTriangle, FileJson, ArrowRight, EyeOff } from "lucide-react";
 
 export const Route = createFileRoute("/methodology")({
   component: Methodology,
