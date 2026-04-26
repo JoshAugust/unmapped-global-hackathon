@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { CountryPill } from "./country-pill";
 import { LanguageSwitcher } from "./language-switcher";
 import unmappedLogo from "@/assets/unmapped-logo.png";
 
@@ -217,15 +216,12 @@ function MobileDrawer({
             </div>
           ))}
 
-          {/* Country & language in drawer */}
+          {/* Language in drawer */}
           <div className="mt-6 border-t border-line pt-4">
             <div className="px-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               Settings
             </div>
             <div className="mt-2 space-y-2 px-2">
-              <div className="[&_label]:border-ink/20 [&_label]:text-ink [&_select]:text-ink">
-                <CountryPill />
-              </div>
               <LanguageSwitcher variant="full" />
             </div>
           </div>
@@ -267,7 +263,6 @@ export function SiteNav() {
           <div className="flex items-center gap-2 md:gap-3">
             {/* Desktop controls */}
             <div className="hidden items-center gap-2 md:flex">
-              <CountryPill />
               <LanguageSwitcher variant="compact" />
             </div>
             <Link
