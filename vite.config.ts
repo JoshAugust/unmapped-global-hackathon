@@ -10,6 +10,6 @@ const isGhPages = process.env.BUILD_TARGET === "gh-pages";
 
 export default defineConfig({
   vite: {
-    base: isGhPages ? "/unmapped/" : "/",
+    base: isGhPages ? "/unmapped-global-hackathon/" : "/",
   },
 });

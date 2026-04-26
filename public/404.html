@@ -1,9 +1,10 @@
 <!DOCTYPE html><html><head><script>
-const path = location.pathname;
-if (!path.startsWith('/unmapped')) {
-  location.replace('/unmapped/' + location.search + location.hash);
+var base = '/unmapped-global-hackathon';
+var path = location.pathname;
+if (!path.startsWith(base)) {
+  location.replace(base + '/' + location.search + location.hash);
 } else {
   sessionStorage.setItem('redirect', path + location.search + location.hash);
-  location.replace('/unmapped/');
+  location.replace(base + '/');
 }
 </script></head></html>

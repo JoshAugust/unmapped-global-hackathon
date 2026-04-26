@@ -17,7 +17,7 @@ if (!existsSync(assetsDir)) {
   process.exit(1);
 }
 
-const base = "/unmapped/";
+const base = "/unmapped-global-hackathon/";
 
 // Read the server manifest to find the correct entry files
 const serverManifestPath = join(import.meta.dirname, "..", "dist", "server", ".vite", "manifest.json");
