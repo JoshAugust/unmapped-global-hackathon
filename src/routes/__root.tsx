@@ -1,10 +1,12 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 import { I18nProvider } from "../lib/i18n";
 import { initCountryTheme } from "../lib/country-theme";
 import { Toaster } from "@/components/ui/sonner";
+import { SeedBanner } from "@/components/seed-banner";
+import { DemoBar } from "@/components/demo-bar";
 
 function NotFoundComponent() {
   return (
@@ -73,13 +75,27 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const search = useRouterState({ select: s => s.location.search });
+
   useEffect(() => {
     initCountryTheme();
   }, []);
 
+  // ?present=1 → presenter mode (hides chrome, bumps type for projector use)
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const v = (search as Record<string, unknown>).present;
+    const on = v === 1 || v === "1" || v === true || v === "true";
+    document.documentElement.dataset.presenter = on ? "true" : "false";
+  }, [search]);
+
   return (
     <I18nProvider>
+      {/* Skip-to-content link, becomes visible on focus */}
+      <a href="#main" className="sr-only-focusable">Skip to content</a>
+      <SeedBanner />
       <Outlet />
+      <DemoBar />
       <Toaster />
     </I18nProvider>
   );
