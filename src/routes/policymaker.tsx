@@ -9,6 +9,29 @@ import {
   getRecalibratedData,
   getPolicymakerAggregates,
 } from "@/lib/static-data";
+
+// ─── Static WDI fallbacks ───────────────────────────────────
+// These bundled JSON files are used when the live API is unreachable
+// so the dashboard always shows real World Bank / ILO numbers
+// instead of the four blank "—" cards.
+import wdiNGA from "../../data/nga/wdi_labour.json";
+import wdiKEN from "../../data/ken/wdi_labour.json";
+import wdiRWA from "../../data/rwa/wdi_labour.json";
+import wdiIND from "../../data/ind/wdi_labour.json";
+import wdiBGD from "../../data/bgd/wdi_labour.json";
+
+const WDI_FALLBACKS: Record<string, unknown> = {
+  NGA: wdiNGA,
+  KEN: wdiKEN,
+  RWA: wdiRWA,
+  IND: wdiIND,
+  BGD: wdiBGD,
+  // GHA: no wdi_labour.json shipped yet — falls through to NGA below.
+};
+
+function getWdiFallback(iso3: string): unknown {
+  return WDI_FALLBACKS[iso3.toUpperCase()] ?? WDI_FALLBACKS.NGA;
+}
 import {
   PieChart,
   Pie,
@@ -937,7 +960,7 @@ function PolicymakerDashboard() {
     loading: wdiLoading,
   } = useFetchJsonWithFallback<WdiLabour>(
     `${API}/api/country/${iso3Lower}`,
-    () => getCountryConfig(selectedIso3) as unknown as WdiLabour,
+    () => getWdiFallback(selectedIso3) as WdiLabour,
   );
 
   const {
