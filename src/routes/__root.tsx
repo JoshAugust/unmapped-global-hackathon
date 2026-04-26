@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import appCss from "../styles.css?url";
 import { I18nProvider } from "../lib/i18n";
 import { initCountryTheme } from "../lib/country-theme";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -75,6 +76,7 @@ function RootComponent() {
   return (
     <I18nProvider>
       <Outlet />
+      <Toaster />
     </I18nProvider>
   );
 }

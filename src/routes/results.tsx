@@ -28,7 +28,16 @@ import {
   AlertCircle,
   Users,
   BarChart3,
+  Download,
+  Check,
 } from "lucide-react";
+import { generateReportPDF } from "@/lib/report-pdf";
+import {
+  buildReadinessSummary,
+  tierFromScore,
+  type ReportData,
+} from "@/lib/report-data";
+import { toast } from "sonner";
 
 // ────────────────────────────────────────────
 // Route definition
@@ -471,6 +480,7 @@ function ResultsDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [pathwaySort, setPathwaySort] = useState<SortKey>("overlap");
+  const [pdfState, setPdfState] = useState<"idle" | "generating" | "done" | "error">("idle");
 
   const country = onboarding.country || "NGA";
   const isco08 = onboarding.isco08 || "7422";
@@ -531,6 +541,91 @@ function ResultsDashboard() {
     }
   }, [queryData?.adjacency_pathways, pathwaySort]);
 
+  // ── Build a unified report model from current screen state ──
+  // This is the single source of truth for PDF / JSON / shareable-link exports.
+  const reportData: ReportData | null = useMemo(() => {
+    if (!queryData) return null;
+    const riskScore =
+      recalData?.recalibrated_probability ??
+      queryData.ai_risk.recalibrated ??
+      0;
+    const tier = recalData?.risk_tier ?? queryData.ai_risk.tier ?? tierFromScore(riskScore);
+    const taskBreakdown = recalData?.task_risk_breakdown ?? {};
+    const topRisks = Object.entries(taskBreakdown).map(([k, v]) => ({
+      category: k,
+      label: TASK_CATEGORIES[k]?.label ?? k.replace(/_/g, " "),
+      share: v.share,
+      risk: v.risk,
+    }));
+    // Durable skills = informal_skills the user reported, with the lowest-risk task labels appended if sparse.
+    const durableSkills = (onboarding.informal_skills ?? []).slice(0, 6);
+    if (durableSkills.length < 3) {
+      const lowRiskLabels = [...topRisks]
+        .sort((a, b) => a.risk - b.risk)
+        .slice(0, 3 - durableSkills.length)
+        .map(r => r.label);
+      durableSkills.push(...lowRiskLabels);
+    }
+    const pathways = (queryData.adjacency_pathways ?? []).map(p => ({
+      title: p.target_title,
+      isco08: p.target_isco08,
+      overlapPct: p.skill_overlap_pct,
+      missingSkills: p.missing_skills_count,
+      wageUpliftPct: p.wage_uplift_pct,
+      trainingCost: p.training_cost_tier,
+      gapDescription: p.gap_description,
+    }));
+    return {
+      generatedAt: new Date().toISOString(),
+      profileLabel: occupationLabel,
+      occupationTitle: occupationLabel,
+      isco08,
+      countryCode: country,
+      countryName: meta.name,
+      educationLevel: onboarding.education_level || undefined,
+      experienceYears: onboarding.experience_years || undefined,
+      durableSkills,
+      readiness: {
+        riskScore,
+        tier,
+        summary: buildReadinessSummary(tier),
+        originalFreyOsborne: recalData?.original_frey_osborne,
+      },
+      topRisks,
+      pathways,
+      labourMarket: {
+        totalJobs: queryData.demand_signals?.total_jobs,
+        avgSalary: queryData.demand_signals?.avg_salary_ngn,
+        currencySymbol: country === "NGA" ? "₦" : country === "GHA" ? "GH₵ " : "",
+        labourForceParticipationPct: queryData.econometric_signals?.labour_force_participation_pct,
+        youthUnemploymentPct: queryData.econometric_signals?.youth_unemployment_pct,
+        topSectors: queryData.demand_signals?.sector_growth?.map(s => ({
+          sector: s.sector, growthPct: s.growth_pct,
+        })),
+      },
+      notes: recalData?.narrative ? [recalData.narrative] : [],
+      dataLimitations: queryData.data_limitations ?? [],
+    };
+  }, [queryData, recalData, onboarding, occupationLabel, isco08, country, meta.name]);
+
+  const handleDownloadPDF = async () => {
+    if (!reportData) return;
+    setPdfState("generating");
+    try {
+      const filename = await generateReportPDF(reportData);
+      setPdfState("done");
+      toast.success("Report downloaded", { description: filename });
+      setTimeout(() => setPdfState("idle"), 2500);
+    } catch (err) {
+      console.error("PDF generation failed", err);
+      setPdfState("error");
+      toast.error("Couldn’t generate the PDF", {
+        description: "Please try again.",
+        action: { label: "Retry", onClick: () => handleDownloadPDF() },
+      });
+    }
+  };
+
   // ── Render ──
   return (
     <PageShell
@@ -586,6 +681,44 @@ function ResultsDashboard() {
                   : undefined
               }
             />
+          </section>
+
+          {/* ── Export actions ── */}
+          <section className="flex flex-wrap items-center justify-between gap-3 -mt-4">
+            <p className="text-xs text-muted-foreground">
+              Save a one-page summary you can print, email, or share with an employer or trainer.
+            </p>
+            <button
+              type="button"
+              onClick={handleDownloadPDF}
+              disabled={!reportData || pdfState === "generating"}
+              className={cn(
+                "inline-flex items-center gap-2 rounded-md border-2 border-ink px-4 py-2 font-mono text-xs uppercase tracking-wider transition-colors disabled:opacity-60",
+                pdfState === "done"
+                  ? "bg-cobalt text-paper"
+                  : "bg-paper text-ink hover:bg-cobalt hover:text-paper hover:border-cobalt",
+              )}
+              aria-live="polite"
+            >
+              {pdfState === "generating" ? (
+                <>
+                  <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                  Preparing PDF…
+                </>
+              ) : pdfState === "done" ? (
+                <>
+                  <Check className="h-4 w-4" /> Downloaded
+                </>
+              ) : pdfState === "error" ? (
+                <>
+                  <AlertCircle className="h-4 w-4" /> Retry download
+                </>
+              ) : (
+                <>
+                  <Download className="h-4 w-4" /> Download PDF
+                </>
+              )}
+            </button>
           </section>
 
           {/* ── Section 1: AI Readiness Gauge ── */}
