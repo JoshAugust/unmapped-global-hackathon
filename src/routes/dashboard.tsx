@@ -5,7 +5,7 @@ import { COUNTRIES, type CountryConfig } from "@/data/countries";
 import { SKILLS, type SkillId } from "@/data/skills";
 import { useProfile } from "@/lib/profile-store";
 import { matchOpportunities, type YouthProfile, type MatchResult } from "@/lib/engine";
-import { ArrowUpRight, Sparkles, TrendingUp, Wallet } from "lucide-react";
+import { ArrowUpRight, Sparkles, TrendingUp, Wallet, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard")({
   component: Dashboard,
@@ -45,6 +45,77 @@ type RankedMatch = MatchResult & {
   pathwayLabel: string;
   workType: "Self-employment" | "Formal work" | "Gig / flexible" | "Apprenticeship";
 };
+
+/**
+ * Live job-search links per opportunity.
+ *
+ * Honest note: we don't ingest individual job postings yet, so each card
+ * links to a freshly-run search on a real job board for the same role
+ * and country. That gives users a verifiable next step instead of a
+ * fake "apply" button that goes nowhere.
+ */
+interface JobLink {
+  label: string;
+  url: string;
+  source: string;
+}
+
+const COUNTRY_BOARD: Record<string, { name: string; code: string; jiji?: string }> = {
+  "ssa-ghana": { name: "Ghana", code: "Ghana", jiji: "https://jiji.com.gh/jobs?query=" },
+  "ssa-nigeria": { name: "Nigeria", code: "Nigeria", jiji: "https://jiji.ng/jobs?query=" },
+  "sa-bangladesh": { name: "Bangladesh", code: "Bangladesh" },
+};
+
+function buildJobLinks(
+  m: RankedMatch,
+  countryKey: string,
+): JobLink[] {
+  const meta = COUNTRY_BOARD[countryKey] ?? { name: "", code: "", jiji: undefined };
+  const q = encodeURIComponent(m.occupation.title);
+  const qLoc = encodeURIComponent(`${m.occupation.title} ${meta.name}`);
+  const links: JobLink[] = [];
+
+  // Formal / gig / training paths → mainstream boards
+  if (m.workType === "Formal work" || m.workType === "Gig / flexible") {
+    links.push({
+      label: "Search on LinkedIn",
+      url: `https://www.linkedin.com/jobs/search/?keywords=${q}&location=${encodeURIComponent(meta.name)}`,
+      source: "LinkedIn Jobs",
+    });
+    links.push({
+      label: "Search on Google Jobs",
+      url: `https://www.google.com/search?q=${qLoc}+jobs&ibp=htl;jobs`,
+      source: "Google for Jobs",
+    });
+  }
+
+  // Self-employment / apprenticeship → marketplaces and trade platforms
+  if (m.workType === "Self-employment" || m.workType === "Apprenticeship") {
+    if (meta.jiji) {
+      links.push({
+        label: "Find clients on Jiji",
+        url: `${meta.jiji}${q}`,
+        source: "Jiji marketplace",
+      });
+    }
+    links.push({
+      label: "Search on Google",
+      url: `https://www.google.com/search?q=${qLoc}+opportunities`,
+      source: "Google",
+    });
+  }
+
+  // Always offer one fallback if nothing matched
+  if (links.length === 0) {
+    links.push({
+      label: "Search live listings",
+      url: `https://www.google.com/search?q=${qLoc}+jobs&ibp=htl;jobs`,
+      source: "Google for Jobs",
+    });
+  }
+
+  return links;
+}
 
 function workType(m: MatchResult): RankedMatch["workType"] {
   const p = m.occupation.pathways;
@@ -93,7 +164,17 @@ function reachStyle(r: RankedMatch["reachability"]) {
   return { color: "var(--rust)", label: "Stepping-stone path", icon: "◑" };
 }
 
-function OpportunityCard({ m, country, primary }: { m: RankedMatch; country: CountryConfig; primary: boolean }) {
+function OpportunityCard({
+  m,
+  country,
+  countryKey,
+  primary,
+}: {
+  m: RankedMatch;
+  country: CountryConfig;
+  countryKey: string;
+  primary: boolean;
+}) {
   const fmt = (n: number) => `${country.currency} ${n.toLocaleString()}`;
   // Realistic income range: ±25% around estimated monthly
   const low = Math.round(m.estMonthlyWage * 0.75 / 50) * 50;
@@ -114,13 +195,19 @@ function OpportunityCard({ m, country, primary }: { m: RankedMatch; country: Cou
     return match ? s : best;
   }, country.signals.sectorGrowth[0]);
   const reach = reachStyle(m.reachability);
+  const jobLinks = buildJobLinks(m, countryKey);
+  const primaryLink = jobLinks[0];
 
   return (
-    <article
-      className={`relative rounded-sm bg-paper p-5 sm:p-6 transition-all ${
+    <a
+      href={primaryLink.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${m.occupation.title} — open live listings on ${primaryLink.source} (new tab)`}
+      className={`group relative block rounded-sm bg-paper p-5 sm:p-6 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cobalt ${
         primary
-          ? "border-2 border-ink shadow-[6px_6px_0_0_var(--ink)]"
-          : "border border-ink hover:shadow-[4px_4px_0_0_var(--ink)]"
+          ? "border-2 border-ink shadow-[6px_6px_0_0_var(--ink)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_var(--ink)]"
+          : "border border-ink hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_0_var(--ink)]"
       }`}
     >
       {/* Rank ribbon */}
@@ -142,10 +229,10 @@ function OpportunityCard({ m, country, primary }: { m: RankedMatch; country: Cou
           </div>
         </div>
         <div
-          className="shrink-0 rounded-full px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider"
+          className="flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider"
           style={{ background: `color-mix(in oklab, ${reach.color} 15%, transparent)`, color: reach.color }}
         >
-          {reach.label}
+          {reach.label} <ExternalLink className="h-2.5 w-2.5" />
         </div>
       </div>
 
@@ -199,7 +286,41 @@ function OpportunityCard({ m, country, primary }: { m: RankedMatch; country: Cou
           </div>
         </div>
       )}
-    </article>
+
+      {/* Live listings footer — primary CTA + alternate boards */}
+      <div className="mt-5 border-t border-line pt-3">
+        <div className="flex items-center justify-between gap-2">
+          <span className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-cobalt group-hover:underline">
+            {primaryLink.label}
+            <ExternalLink className="h-3 w-3" />
+          </span>
+          <span className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
+            {primaryLink.source}
+          </span>
+        </div>
+        {jobLinks.length > 1 && (
+          <div className="mt-2 flex flex-wrap gap-2">
+            {jobLinks.slice(1).map(l => (
+              <button
+                key={l.url}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  window.open(l.url, "_blank", "noopener,noreferrer");
+                }}
+                className="rounded-full border border-line px-2.5 py-0.5 text-[10px] text-muted-foreground hover:border-cobalt hover:text-cobalt"
+              >
+                {l.source}
+              </button>
+            ))}
+          </div>
+        )}
+        <p className="mt-2 text-[10px] leading-relaxed text-muted-foreground">
+          Opens a live search on {primaryLink.source} — listings are not curated by UNMAPPED.
+        </p>
+      </div>
+    </a>
   );
 }
 
@@ -233,7 +354,13 @@ function YouthView({ profile, country, matches }: { profile: YouthProfile; count
       ) : (
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {ranked.map((m, i) => (
-            <OpportunityCard key={m.occupation.id} m={m} country={country} primary={i === 0} />
+            <OpportunityCard
+              key={m.occupation.id}
+              m={m}
+              country={country}
+              countryKey={profile.countryKey}
+              primary={i === 0}
+            />
           ))}
         </div>
       )}
