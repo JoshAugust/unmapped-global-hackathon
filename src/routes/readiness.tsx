@@ -6,7 +6,11 @@ import { SKILLS } from "@/data/skills";
 import { useProfile } from "@/lib/profile-store";
 import { profileExposure, suggestAdjacencies } from "@/lib/engine";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight, Download, Check, AlertCircle } from "lucide-react";
+import { generateReportPDF } from "@/lib/report-pdf";
+import { buildReadinessSummary, tierFromScore, type ReportData } from "@/lib/report-data";
+import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/readiness")({
   component: Readiness,
