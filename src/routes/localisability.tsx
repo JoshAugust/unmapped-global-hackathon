@@ -168,40 +168,6 @@ function LocalisabilityPage() {
   );
 }
 
-/* ── Selector ─────────────────────────────────────────────────────── */
-
-function ContextSelector({
-  label,
-  value,
-  onChange,
-  accent,
-}: {
-  label: string;
-  value: CountryKey;
-  onChange: (k: CountryKey) => void;
-  accent: "cobalt" | "rust";
-}) {
-  const accentClass = accent === "cobalt" ? "text-cobalt" : "text-rust";
-  return (
-    <label className="block rounded-sm border border-line bg-card p-4">
-      <div className={`font-mono text-[10px] uppercase tracking-[0.2em] ${accentClass}`}>
-        {label}
-      </div>
-      <select
-        value={value}
-        onChange={e => onChange(e.target.value as CountryKey)}
-        className="mt-2 w-full cursor-pointer border border-line bg-paper px-3 py-2 font-display text-base font-bold text-ink outline-none focus:border-cobalt"
-      >
-        {ALL_KEYS.map(k => (
-          <option key={k} value={k}>
-            {COUNTRIES[k].flag}  {COUNTRIES[k].country} — {COUNTRIES[k].region}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
-
 /* ── Side-by-side column ─────────────────────────────────────────── */
 
 function ContextColumn({
