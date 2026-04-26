@@ -6,6 +6,9 @@ const links = [
   { to: "/passport", label: "Skills Passport" },
   { to: "/readiness", label: "AI Readiness" },
   { to: "/dashboard", label: "Opportunity" },
+  { to: "/education", label: "Education" },
+  { to: "/compare", label: "Compare" },
+  { to: "/crosswalk", label: "Crosswalk" },
   { to: "/configure", label: "Configure" },
 ] as const;
 

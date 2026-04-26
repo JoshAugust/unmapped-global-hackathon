@@ -290,5 +290,43 @@
         "rationale": "Formalisation and e-commerce growing"
       }
     ]
+  },
+  "education_projections": {
+    "2025": {
+      "no_education": 0.2,
+      "primary": 0.38,
+      "lower_secondary": 0.22,
+      "upper_secondary": 0.14,
+      "post_secondary": 0.06
+    },
+    "2035": {
+      "no_education": 0.12,
+      "primary": 0.3,
+      "lower_secondary": 0.28,
+      "upper_secondary": 0.2,
+      "post_secondary": 0.1
+    }
+  },
+  "literacy_rate_wdi": {
+    "value": 73.2,
+    "year": 2023,
+    "source": "UNESCO UIS / WDI 2024"
+  },
+  "youth_literacy_rate_wdi": {
+    "value": 85.4,
+    "year": 2023,
+    "source": "UNESCO UIS 2024"
+  },
+  "school_enrollment": {
+    "primary_gross": {
+      "value": 131,
+      "year": 2022,
+      "source": "WDI 2024"
+    },
+    "secondary_gross": {
+      "value": 42,
+      "year": 2022,
+      "source": "WDI 2024"
+    }
   }
 }

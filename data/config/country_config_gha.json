@@ -2,7 +2,6 @@
   "_schema_version": "1.0",
   "_description": "Country configuration schema for UNMAPPED. All country-specific parameters live here. Swap this file to reconfigure the entire system for a new context without changing codebase.",
   "_co_owned_with": "Owner B (UX/product layer reads this for UI config)",
-
   "country": {
     "name": "Ghana",
     "iso3": "GHA",
@@ -11,53 +10,106 @@
     "subregion": "West Africa",
     "economy_type": "urban_informal_mixed",
     "primary_language": "en",
-    "supported_languages": ["en", "tw"],
+    "supported_languages": [
+      "en",
+      "tw"
+    ],
     "currency": "GHS",
-    "currency_symbol": "₵",
+    "currency_symbol": "\u20b5",
     "usd_exchange_rate_approx": 12.5,
     "usd_exchange_rate_year": 2023
   },
-
   "data_paths": {
     "labour_market": "data/gha/wdi_labour.json",
     "occupation_lookup": "data/isco_fo_joined.csv",
     "automation_calibration": "config/calibration.json"
   },
-
   "automation": {
     "calibration_factor": 0.65,
     "calibration_rationale": "Ghana urban informal. ILO (2016) SSA automation ~77% of OECD rate, further reduced 15% for informal task composition difference. See calibration_notes.md",
     "source_dataset": "Frey-Osborne 2013, ISCO-08 crosswalk",
     "recalibration_trigger": "Update when ILO publishes updated task-content indices for Ghana (next expected 2025)"
   },
-
   "education_taxonomy": {
     "levels": [
-      {"code": "L0", "label": "No formal education", "isco_skill_level": 1},
-      {"code": "L1", "label": "Primary (JHS incomplete)", "isco_skill_level": 1},
-      {"code": "L2", "label": "Junior High School (BECE)", "isco_skill_level": 1},
-      {"code": "L3", "label": "Senior High School (WASSCE)", "isco_skill_level": 2},
-      {"code": "L4", "label": "TVET / Apprenticeship certificate", "isco_skill_level": 2},
-      {"code": "L5", "label": "HND / Polytechnic diploma", "isco_skill_level": 3},
-      {"code": "L6", "label": "University degree", "isco_skill_level": 4},
-      {"code": "L7", "label": "Postgraduate", "isco_skill_level": 4}
+      {
+        "code": "L0",
+        "label": "No formal education",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L1",
+        "label": "Primary (JHS incomplete)",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L2",
+        "label": "Junior High School (BECE)",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L3",
+        "label": "Senior High School (WASSCE)",
+        "isco_skill_level": 2
+      },
+      {
+        "code": "L4",
+        "label": "TVET / Apprenticeship certificate",
+        "isco_skill_level": 2
+      },
+      {
+        "code": "L5",
+        "label": "HND / Polytechnic diploma",
+        "isco_skill_level": 3
+      },
+      {
+        "code": "L6",
+        "label": "University degree",
+        "isco_skill_level": 4
+      },
+      {
+        "code": "L7",
+        "label": "Postgraduate",
+        "isco_skill_level": 4
+      }
     ],
     "informal_recognition": {
       "enabled": true,
-      "categories": ["apprenticeship", "self_taught", "community_training", "on_job_experience"],
+      "categories": [
+        "apprenticeship",
+        "self_taught",
+        "community_training",
+        "on_job_experience"
+      ],
       "note": "Ghana's informal apprenticeship system (Ghanaian system of traditional apprenticeship / GSTA) is recognized as a valid credential pathway"
     }
   },
-
   "opportunity_types": {
-    "formal_employment": {"enabled": true, "label": "Formal job"},
-    "self_employment": {"enabled": true, "label": "Run your own business"},
-    "gig_platform": {"enabled": true, "label": "Platform work (Bolt, Glovo, etc.)"},
-    "training_pathway": {"enabled": true, "label": "Training or upskilling"},
-    "apprenticeship": {"enabled": true, "label": "Apprenticeship"},
-    "cooperative": {"enabled": true, "label": "Join a cooperative or group business"}
+    "formal_employment": {
+      "enabled": true,
+      "label": "Formal job"
+    },
+    "self_employment": {
+      "enabled": true,
+      "label": "Run your own business"
+    },
+    "gig_platform": {
+      "enabled": true,
+      "label": "Platform work (Bolt, Glovo, etc.)"
+    },
+    "training_pathway": {
+      "enabled": true,
+      "label": "Training or upskilling"
+    },
+    "apprenticeship": {
+      "enabled": true,
+      "label": "Apprenticeship"
+    },
+    "cooperative": {
+      "enabled": true,
+      "label": "Join a cooperative or group business"
+    }
   },
-
   "econometric_signals": {
     "signal_1": {
       "name": "Sector wage comparison",
@@ -76,7 +128,6 @@
       "display_caveat": "Forward-looking estimate. Actual growth depends on policy and global conditions."
     }
   },
-
   "ui": {
     "default_language": "en",
     "font_stack": "system-ui, sans-serif",
@@ -91,7 +142,6 @@
     "onboarding_tone": "warm_direct",
     "reading_level_target": "secondary_school"
   },
-
   "skill_input_questions": [
     {
       "id": "q_work_activity",
@@ -117,29 +167,95 @@
       "id": "q_education",
       "question_en": "What is your highest level of education?",
       "type": "select",
-      "options_en": ["No formal education", "Primary school", "Junior High School (BECE)", "Senior High School (WASSCE)", "TVET or apprenticeship certificate", "HND or diploma", "University degree", "Postgraduate"],
+      "options_en": [
+        "No formal education",
+        "Primary school",
+        "Junior High School (BECE)",
+        "Senior High School (WASSCE)",
+        "TVET or apprenticeship certificate",
+        "HND or diploma",
+        "University degree",
+        "Postgraduate"
+      ],
       "maps_to": "education_level_code"
     },
     {
       "id": "q_informal_skills",
       "question_en": "Have you taught yourself any skills outside of school? (select all that apply)",
       "type": "multi_select",
-      "options_en": ["Basic computer use", "Using smartphones and apps", "Social media for business", "Accounting or bookkeeping", "A trade through apprenticeship", "A language", "Nothing specific"],
+      "options_en": [
+        "Basic computer use",
+        "Using smartphones and apps",
+        "Social media for business",
+        "Accounting or bookkeeping",
+        "A trade through apprenticeship",
+        "A language",
+        "Nothing specific"
+      ],
       "maps_to": "informal_skills_tags"
     },
     {
       "id": "q_years_experience",
       "question_en": "How many years have you been doing your main work activity?",
       "type": "select",
-      "options_en": ["Less than 1 year", "1-2 years", "3-5 years", "More than 5 years"],
+      "options_en": [
+        "Less than 1 year",
+        "1-2 years",
+        "3-5 years",
+        "More than 5 years"
+      ],
       "maps_to": "experience_years_band"
     },
     {
       "id": "q_goal",
       "question_en": "What are you most hoping to do?",
       "type": "select",
-      "options_en": ["Find a formal job", "Grow my own business", "Learn a new skill", "Understand what jobs pay", "See how AI might affect my work"],
+      "options_en": [
+        "Find a formal job",
+        "Grow my own business",
+        "Learn a new skill",
+        "Understand what jobs pay",
+        "See how AI might affect my work"
+      ],
       "maps_to": "user_goal"
     }
-  ]
+  ],
+  "education_projections": {
+    "2025": {
+      "no_education": 0.22,
+      "primary": 0.3,
+      "lower_secondary": 0.24,
+      "upper_secondary": 0.16,
+      "post_secondary": 0.08
+    },
+    "2035": {
+      "no_education": 0.15,
+      "primary": 0.27,
+      "lower_secondary": 0.26,
+      "upper_secondary": 0.22,
+      "post_secondary": 0.1
+    }
+  },
+  "literacy_rate_wdi": {
+    "value": 79.0,
+    "year": 2023,
+    "source": "UNESCO UIS / WDI 2024"
+  },
+  "youth_literacy_rate_wdi": {
+    "value": 90.6,
+    "year": 2023,
+    "source": "UNESCO UIS 2024"
+  },
+  "school_enrollment": {
+    "primary_gross": {
+      "value": 98,
+      "year": 2022,
+      "source": "WDI 2024"
+    },
+    "secondary_gross": {
+      "value": 67,
+      "year": 2022,
+      "source": "WDI 2024"
+    }
+  }
 }

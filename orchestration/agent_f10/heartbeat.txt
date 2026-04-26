@@ -1,0 +1,1 @@
+COMPLETE - compare.tsx written, routeTree.gen.ts updated, site-nav updated. All acceptance criteria met.

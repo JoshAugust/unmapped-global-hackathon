@@ -284,5 +284,43 @@
         "rationale": "Climate risk, low productivity, youth exodus to urban areas"
       }
     ]
+  },
+  "education_projections": {
+    "2025": {
+      "no_education": 0.18,
+      "primary": 0.28,
+      "lower_secondary": 0.26,
+      "upper_secondary": 0.18,
+      "post_secondary": 0.1
+    },
+    "2035": {
+      "no_education": 0.12,
+      "primary": 0.24,
+      "lower_secondary": 0.28,
+      "upper_secondary": 0.24,
+      "post_secondary": 0.12
+    }
+  },
+  "literacy_rate_wdi": {
+    "value": 81.5,
+    "year": 2023,
+    "source": "UNESCO UIS / WDI 2024"
+  },
+  "youth_literacy_rate_wdi": {
+    "value": 88.1,
+    "year": 2023,
+    "source": "UNESCO UIS 2024"
+  },
+  "school_enrollment": {
+    "primary_gross": {
+      "value": 102,
+      "year": 2022,
+      "source": "WDI 2024"
+    },
+    "secondary_gross": {
+      "value": 62,
+      "year": 2022,
+      "source": "WDI 2024"
+    }
   }
 }

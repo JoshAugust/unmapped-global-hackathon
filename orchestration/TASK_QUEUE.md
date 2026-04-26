@@ -30,20 +30,20 @@
 - [ ] F3: AI follow-up questions for profile strengthening
 - [ ] F4: Rich profile card output (radar chart, ESCO skills, export)
 - [ ] F5: Task-level risk breakdown visualization
-- [→] F6: Wittgenstein education landscape chart
+- [x] F6: Wittgenstein education landscape chart
 - [ ] F7: Resilience pathways panel with adjacency data
 - [ ] F8: Youth matching view with 2 visible econometric signals
 - [x] F9: Policymaker aggregate dashboard
-- [ ] F10: Country comparison mode (side-by-side)
+- [→] F10: Country comparison mode (side-by-side)
 - [x] F11: DataSource citation component (wired throughout)
 - [ ] F12: Expandable data detail panels
-- [→] F13: Calibration & limits panel (honesty text)
+- [x] F13: Calibration & limits panel (honesty text)
 - [x] F14: /infrastructure route with architecture diagram
-- [→] F15: Crosswalk explorer (interactive taxonomy flow)
-- [ ] F16: Data coverage dashboard
+- [x] F15: Crosswalk explorer (interactive taxonomy flow)
+- [→] F16: Data coverage dashboard
 - [x] F17: Country visual identity engine (patterns, palettes, silhouettes)
 - [ ] F18: 5 country configs with real data
-- [ ] F19: Language switcher + i18n externalization
+- [→] F19: Language switcher + i18n externalization
 
 ## Phase 4: Deploy (D1–D5)
 

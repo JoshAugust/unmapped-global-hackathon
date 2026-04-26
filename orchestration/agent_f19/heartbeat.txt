@@ -1,0 +1,1 @@
+ALIVE — started at task F19: Language Switcher + i18n Externalization

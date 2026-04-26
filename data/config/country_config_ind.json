@@ -286,5 +286,43 @@
         "rationale": "Low productivity, fragmented holdings, climate stress"
       }
     ]
+  },
+  "education_projections": {
+    "2025": {
+      "no_education": 0.25,
+      "primary": 0.22,
+      "lower_secondary": 0.25,
+      "upper_secondary": 0.18,
+      "post_secondary": 0.1
+    },
+    "2035": {
+      "no_education": 0.16,
+      "primary": 0.18,
+      "lower_secondary": 0.27,
+      "upper_secondary": 0.24,
+      "post_secondary": 0.15
+    }
+  },
+  "literacy_rate_wdi": {
+    "value": 74.4,
+    "year": 2023,
+    "source": "UNESCO UIS / WDI 2024"
+  },
+  "youth_literacy_rate_wdi": {
+    "value": 91.7,
+    "year": 2023,
+    "source": "UNESCO UIS 2024"
+  },
+  "school_enrollment": {
+    "primary_gross": {
+      "value": 110,
+      "year": 2022,
+      "source": "WDI 2024"
+    },
+    "secondary_gross": {
+      "value": 79,
+      "year": 2022,
+      "source": "WDI 2024"
+    }
   }
 }

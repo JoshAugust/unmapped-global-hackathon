@@ -13,8 +13,10 @@ import { Route as ReadinessRouteImport } from './routes/readiness'
 import { Route as PolicymakerRouteImport } from './routes/policymaker'
 import { Route as PassportRouteImport } from './routes/passport'
 import { Route as InfrastructureRouteImport } from './routes/infrastructure'
+import { Route as EducationRouteImport } from './routes/education'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as CrosswalkRouteImport } from './routes/crosswalk'
+import { Route as CompareRouteImport } from './routes/compare'
 import { Route as ConfigureRouteImport } from './routes/configure'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -23,9 +25,19 @@ const InfrastructureRoute = InfrastructureRouteImport.update({
   path: '/infrastructure',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EducationRoute = EducationRouteImport.update({
+  id: '/education',
+  path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CrosswalkRoute = CrosswalkRouteImport.update({
   id: '/crosswalk',
   path: '/crosswalk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReadinessRoute = ReadinessRouteImport.update({
@@ -61,9 +73,11 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/compare': typeof CompareRoute
   '/configure': typeof ConfigureRoute
   '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -71,9 +85,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/compare': typeof CompareRoute
   '/configure': typeof ConfigureRoute
   '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -82,9 +98,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/compare': typeof CompareRoute
   '/configure': typeof ConfigureRoute
   '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -92,15 +110,17 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/configure' | '/crosswalk' | '/dashboard' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
+  fullPaths: '/' | '/compare' | '/configure' | '/crosswalk' | '/dashboard' | '/education' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/configure' | '/crosswalk' | '/dashboard' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
+  to: '/' | '/compare' | '/configure' | '/crosswalk' | '/dashboard' | '/education' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
   id:
     | '__root__'
     | '/'
+    | '/compare'
     | '/configure'
     | '/crosswalk'
     | '/dashboard'
+    | '/education'
     | '/infrastructure'
     | '/passport'
     | '/policymaker'
@@ -109,9 +129,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CompareRoute: typeof CompareRoute
   ConfigureRoute: typeof ConfigureRoute
   CrosswalkRoute: typeof CrosswalkRoute
   DashboardRoute: typeof DashboardRoute
+  EducationRoute: typeof EducationRoute
   InfrastructureRoute: typeof InfrastructureRoute
   PassportRoute: typeof PassportRoute
   PolicymakerRoute: typeof PolicymakerRoute
@@ -148,6 +170,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PolicymakerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/education': {
+      id: '/education'
+      path: '/education'
+      fullPath: '/education'
+      preLoaderRoute: typeof EducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/infrastructure': {
       id: '/infrastructure'
       path: '/infrastructure'
@@ -160,6 +189,13 @@ declare module '@tanstack/react-router' {
       path: '/crosswalk'
       fullPath: '/crosswalk'
       preLoaderRoute: typeof CrosswalkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare': {
+      id: '/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/configure': {
@@ -181,8 +217,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CompareRoute: CompareRoute,
   ConfigureRoute: ConfigureRoute,
+  CrosswalkRoute: CrosswalkRoute,
   DashboardRoute: DashboardRoute,
+  EducationRoute: EducationRoute,
   InfrastructureRoute: InfrastructureRoute,
   PassportRoute: PassportRoute,
   PolicymakerRoute: PolicymakerRoute,
