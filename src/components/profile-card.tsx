@@ -1,5 +1,14 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  Radar,
+  ResponsiveContainer,
+} from "recharts";
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
 
 /* ── Country metadata ── */
 const COUNTRY_META: Record<string, { flag: string; name: string }> = {
@@ -21,6 +30,14 @@ const RISK_COLORS: Record<string, { bg: string; text: string; border: string }> 
   high: { bg: "bg-red-50", text: "text-red-700", border: "border-red-200" },
 };
 
+export interface TaskComposition {
+  routine_manual: number;
+  routine_cognitive: number;
+  nonroutine_manual: number;
+  nonroutine_cognitive: number;
+  social: number;
+}
+
 export interface ProfileCardProps {
   isco08: string;
   occupationTitle: string;
@@ -31,7 +48,16 @@ export interface ProfileCardProps {
   riskScore: number;
   riskTier: string;
   topPathways: Array<{ title: string; overlapPct: number }>;
+  taskComposition?: TaskComposition;
 }
+
+const TASK_LABELS: Record<string, string> = {
+  routine_manual: "Routine Manual",
+  routine_cognitive: "Routine Cognitive",
+  nonroutine_manual: "Non-Routine Manual",
+  nonroutine_cognitive: "Non-Routine Cognitive",
+  social: "Social",
+};
 
 export function ProfileCard({
   isco08,
@@ -43,11 +69,44 @@ export function ProfileCard({
   riskScore,
   riskTier,
   topPathways,
+  taskComposition,
 }: ProfileCardProps) {
   const [copied, setCopied] = useState(false);
+  const [pdfGenerating, setPdfGenerating] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
   const meta = COUNTRY_META[country] ?? { flag: "🌍", name: country };
   const risk = RISK_COLORS[riskTier] ?? RISK_COLORS.medium;
   const riskPct = Math.round(riskScore * 100);
+
+  const radarData = taskComposition
+    ? Object.entries(taskComposition).map(([key, value]) => ({
+        category: TASK_LABELS[key] ?? key,
+        value: Math.round(value * 100),
+        fullMark: 100,
+      }))
+    : null;
+
+  const handlePdfDownload = useCallback(async () => {
+    if (!cardRef.current || pdfGenerating) return;
+    setPdfGenerating(true);
+    try {
+      const canvas = await html2canvas(cardRef.current, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: "#ffffff",
+      });
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4");
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+      pdf.addImage(imgData, "PNG", 0, 10, pdfWidth, pdfHeight);
+      pdf.save(`unmapped-profile-${isco08}-${country}.pdf`);
+    } catch (err) {
+      console.error("PDF generation failed:", err);
+    } finally {
+      setPdfGenerating(false);
+    }
+  }, [isco08, country, pdfGenerating]);
 
   const handleExport = useCallback(() => {
     const lines = [
@@ -82,7 +141,7 @@ export function ProfileCard({
   }, [isco08, occupationTitle, country, educationLevel, experienceYears, informalSkills, riskScore, riskTier, riskPct, topPathways, meta]);
 
   return (
-    <div className="relative overflow-hidden rounded-lg border-2 border-ink bg-paper shadow-[6px_6px_0_0_var(--ink)]">
+    <div ref={cardRef} className="relative overflow-hidden rounded-lg border-2 border-ink bg-paper shadow-[6px_6px_0_0_var(--ink)]">
       {/* Subtle country-themed top stripe */}
       <div className="h-2 bg-gradient-to-r from-cobalt via-cobalt/60 to-transparent" />
 
@@ -179,6 +238,34 @@ export function ProfileCard({
           </div>
         )}
 
+        {/* Task Composition Radar Chart */}
+        {radarData && radarData.length > 0 && (
+          <div className="mt-4">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+              Task Composition
+            </span>
+            <div className="mt-1.5 h-48 w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
+                  <PolarGrid stroke="hsl(var(--border, 220 13% 91%))" />
+                  <PolarAngleAxis
+                    dataKey="category"
+                    tick={{ fontSize: 9, fill: "hsl(var(--muted-foreground, 220 8.9% 46.1%))" }}
+                  />
+                  <Radar
+                    name="Tasks"
+                    dataKey="value"
+                    stroke="hsl(210 100% 45%)"
+                    fill="hsl(210 100% 45%)"
+                    fillOpacity={0.25}
+                    strokeWidth={2}
+                  />
+                </RadarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        )}
+
         {/* QR placeholder + actions */}
         <div className="mt-5 flex items-end justify-between gap-3">
           {/* QR placeholder */}
@@ -202,12 +289,11 @@ export function ProfileCard({
             </button>
             <button
               type="button"
-              onClick={() => {
-                /* PDF placeholder — no-op for now */
-              }}
-              className="min-h-[36px] rounded-sm border border-line px-4 py-1.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground transition-colors hover:border-ink hover:text-ink"
+              onClick={handlePdfDownload}
+              disabled={pdfGenerating}
+              className="min-h-[36px] rounded-sm border border-line px-4 py-1.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground transition-colors hover:border-ink hover:text-ink disabled:opacity-50"
             >
-              Download PDF
+              {pdfGenerating ? "Generating…" : "Download PDF"}
             </button>
           </div>
         </div>

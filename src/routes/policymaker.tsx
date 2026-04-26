@@ -9,6 +9,13 @@ import {
   getRecalibratedData,
   getPolicymakerAggregates,
 } from "@/lib/static-data";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  ResponsiveContainer,
+  Tooltip as RechartsTooltip,
+} from "recharts";
 
 // ─── API base ───────────────────────────────────────────────
 const API = import.meta.env.VITE_API_URL || "";
@@ -41,6 +48,7 @@ const COUNTRY_LIST: CountryEntry[] = [
   { iso3: "KEN", name: "Kenya", flag: "🇰🇪" },
   { iso3: "RWA", name: "Rwanda", flag: "🇷🇼" },
   { iso3: "IND", name: "India", flag: "🇮🇳" },
+  { iso3: "BGD", name: "Bangladesh", flag: "🇧🇩" },
 ];
 
 // ─── Types ──────────────────────────────────────────────────
@@ -358,6 +366,85 @@ function KeyIndicators({ wdi }: { wdi: WdiLabour | null }) {
         source={<DataSource compact {...SOURCES.HCI_2020} />}
         note={hci?.note}
       />
+    </div>
+  );
+}
+
+/* ── 2b. Risk Tier Donut Chart ──────────────────────────── */
+const DONUT_COLORS = ["#10b981", "#f59e0b", "#ef4444"]; // green, amber, red
+
+function RiskDonutChart({ recal }: { recal: RecalData | null }) {
+  if (!recal) return null;
+  const { risk_distribution: rd, total_occupations: total } = recal;
+  if (total === 0) return null;
+
+  const data = [
+    { name: "Low Risk", value: rd.low, pct: ((rd.low / total) * 100).toFixed(1) },
+    { name: "Medium Risk", value: rd.medium, pct: ((rd.medium / total) * 100).toFixed(1) },
+    { name: "High Risk", value: rd.high, pct: ((rd.high / total) * 100).toFixed(1) },
+  ];
+
+  const renderLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    pct,
+    name,
+  }: any) => {
+    const RADIAN = Math.PI / 180;
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="white"
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontSize={11}
+        fontWeight={700}
+      >
+        {pct}%
+      </text>
+    );
+  };
+
+  return (
+    <div className="flex flex-col items-center gap-3">
+      <div className="h-52 w-52">
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Pie
+              data={data}
+              cx="50%"
+              cy="50%"
+              innerRadius={50}
+              outerRadius={80}
+              dataKey="value"
+              labelLine={false}
+              label={renderLabel}
+            >
+              {data.map((_, i) => (
+                <Cell key={i} fill={DONUT_COLORS[i]} />
+              ))}
+            </Pie>
+            <RechartsTooltip
+              formatter={(value: number, name: string) => [`${value} occupations`, name]}
+            />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="flex gap-4 text-xs">
+        {data.map((d, i) => (
+          <div key={d.name} className="flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full" style={{ background: DONUT_COLORS[i] }} />
+            <span className="text-muted-foreground">{d.name}: {d.pct}%</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -904,6 +991,9 @@ function PolicymakerDashboard() {
 
         {/* 3. Automation Exposure Distribution */}
         <AutomationExposure recal={recal} />
+
+        {/* 3b. Risk Tier Donut Chart */}
+        <RiskDonutChart recal={recal} />
 
         {/* Cohort exposure (if policymaker aggregates available) */}
         <CohortExposure aggregates={aggregates} />

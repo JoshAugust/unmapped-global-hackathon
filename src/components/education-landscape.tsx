@@ -15,6 +15,15 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { DataSource } from "@/components/data-source";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis as RechartsYAxis,
+  CartesianGrid,
+  Tooltip as RechartsTooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 // ─────────────────────────────────────────────────────────────
 // Types
@@ -398,6 +407,48 @@ function Callout({
 // Main component
 // ─────────────────────────────────────────────────────────────
 
+function AreaChartView({
+  projections,
+}: {
+  projections: { [year: string]: EducationDistribution };
+}) {
+  const years = Object.keys(projections).sort();
+  const data = LEVELS.map((level) => {
+    const row: Record<string, string | number> = { level: level.shortLabel };
+    for (const year of years) {
+      row[year] = Math.round(projections[year][level.key] * 100);
+    }
+    return row;
+  });
+
+  const yearColors = ["hsl(210 80% 55%)", "hsl(150 70% 45%)"];
+
+  return (
+    <div className="h-64 sm:h-80 w-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+          <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
+          <XAxis dataKey="level" tick={{ fontSize: 10 }} />
+          <RechartsYAxis tick={{ fontSize: 10 }} unit="%" />
+          <RechartsTooltip />
+          {years.map((year, i) => (
+            <Area
+              key={year}
+              type="monotone"
+              dataKey={year}
+              stackId="1"
+              stroke={yearColors[i % yearColors.length]}
+              fill={yearColors[i % yearColors.length]}
+              fillOpacity={0.4}
+              name={year}
+            />
+          ))}
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
 export function EducationLandscape({
   country,
   countryName = country,
@@ -406,6 +457,7 @@ export function EducationLandscape({
 }: EducationLandscapeProps) {
   const [activeKey, setActiveKey] = React.useState<string | null>(null);
   const [tooltip, setTooltip] = React.useState<TooltipData | null>(null);
+  const [viewMode, setViewMode] = React.useState<"bars" | "chart">("bars");
 
   const years = React.useMemo(
     () => Object.keys(projections).sort(),
@@ -456,45 +508,82 @@ export function EducationLandscape({
     <div className={cn("w-full", compact && "text-sm")}>
       {/* Header */}
       {!compact && (
-        <div className="mb-4">
-          <h3 className="font-display font-black text-xl tracking-tight">
-            Education Attainment Landscape
-          </h3>
-          <p className="text-sm text-muted-foreground mt-1">
-            Population aged 15+ by highest level attained · Wittgenstein SSP2
-          </p>
+        <div className="mb-4 flex items-start justify-between gap-4">
+          <div>
+            <h3 className="font-display font-black text-xl tracking-tight">
+              Education Attainment Landscape
+            </h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              Population aged 15+ by highest level attained · Wittgenstein SSP2
+            </p>
+          </div>
+          <div className="flex shrink-0 gap-1 rounded border border-line p-0.5">
+            <button
+              type="button"
+              onClick={() => setViewMode("bars")}
+              className={cn(
+                "rounded px-3 py-1 text-[10px] font-semibold uppercase tracking-wider transition-colors",
+                viewMode === "bars"
+                  ? "bg-cobalt text-paper"
+                  : "text-muted-foreground hover:text-ink",
+              )}
+            >
+              Bars
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewMode("chart")}
+              className={cn(
+                "rounded px-3 py-1 text-[10px] font-semibold uppercase tracking-wider transition-colors",
+                viewMode === "chart"
+                  ? "bg-cobalt text-paper"
+                  : "text-muted-foreground hover:text-ink",
+              )}
+            >
+              Chart
+            </button>
+          </div>
         </div>
       )}
 
-      {/* Chart area */}
-      <div className="flex items-end gap-3">
-        {/* Y-axis */}
-        <div className="flex flex-col items-end">
-          <div className={compact ? "h-40" : "h-64 sm:h-80"}>
-            <YAxis compact={compact} />
+      {/* Area chart view */}
+      {viewMode === "chart" && !compact && (
+        <AreaChartView projections={projections} />
+      )}
+
+      {/* Bar chart area (default) */}
+      {(viewMode === "bars" || compact) && (
+        <>
+          <div className="flex items-end gap-3">
+            {/* Y-axis */}
+            <div className="flex flex-col items-end">
+              <div className={compact ? "h-40" : "h-64 sm:h-80"}>
+                <YAxis compact={compact} />
+              </div>
+              <div className="h-6" /> {/* spacer for year label */}
+            </div>
+
+            {/* Columns */}
+            <div className="flex gap-4 sm:gap-8 flex-1 items-end">
+              {years.map((year) => (
+                <BarColumn
+                  key={year}
+                  year={year}
+                  distribution={projections[year]}
+                  activeKey={activeKey}
+                  onSegmentActivate={(key, evt) => handleActivate(key, evt)}
+                  compact={compact}
+                />
+              ))}
+            </div>
           </div>
-          <div className="h-6" /> {/* spacer for year label */}
-        </div>
 
-        {/* Columns */}
-        <div className="flex gap-4 sm:gap-8 flex-1 items-end">
-          {years.map((year) => (
-            <BarColumn
-              key={year}
-              year={year}
-              distribution={projections[year]}
-              activeKey={activeKey}
-              onSegmentActivate={(key, evt) => handleActivate(key, evt)}
-              compact={compact}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Y-axis label */}
-      <div className="mt-1 ml-8 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
-        % of adult population (15+)
-      </div>
+          {/* Y-axis label */}
+          <div className="mt-1 ml-8 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+            % of adult population (15+)
+          </div>
+        </>
+      )}
 
       {/* Legend */}
       <Legend activeKey={activeKey} />

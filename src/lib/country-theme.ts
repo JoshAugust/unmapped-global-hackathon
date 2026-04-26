@@ -5,7 +5,7 @@
  * Each country has culturally authentic colors, patterns, silhouettes, and greetings.
  */
 
-export type PatternType = 'adire' | 'kente' | 'maasai' | 'madhubani' | 'imigongo' | 'none';
+export type PatternType = 'adire' | 'kente' | 'maasai' | 'madhubani' | 'imigongo' | 'jamdani' | 'none';
 
 export interface CountryTheme {
   iso3: string;
@@ -133,6 +133,27 @@ const THEMES: Record<string, CountryTheme> = {
     silhouette: '/src/assets/silhouettes/rwa.svg',
     currency: { symbol: 'FRw', code: 'RWF' },
     greeting: 'Muraho',
+  },
+
+  BGD: {
+    iso3: 'BGD',
+    name: 'Bangladesh',
+    flag: '🇧🇩',
+    colors: {
+      primary: '160 100% 21%',        // Bangladesh green #006a4e
+      secondary: '0 0% 100%',         // White
+      accent: '353 91% 51%',          // Bangladesh red accent #f42a41
+      surface: '160 40% 97%',         // Subtle green tint
+    },
+    pattern: {
+      type: 'jamdani',
+      svgPath: '/src/assets/patterns/jamdani.svg',
+      opacity: 0.05,
+    },
+    silhouette: '/src/assets/silhouettes/bgd.svg',
+    currency: { symbol: '৳', code: 'BDT' },
+    greeting: 'Assalamu Alaikum',
+    greetingAlternates: ['Nomoskar'],
   },
 };
 

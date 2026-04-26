@@ -174,10 +174,19 @@ function ReadinessGauge({
   tier: "low" | "medium" | "high";
 }) {
   const clampedPct = Math.max(0, Math.min(100, Math.round(percentage * 100)));
-  // Semicircle arc
   const radius = 80;
   const circumference = Math.PI * radius;
-  const offset = circumference - (clampedPct / 100) * circumference;
+  const targetOffset = circumference - (clampedPct / 100) * circumference;
+
+  // Animate from full offset (empty) to target offset
+  const [animatedOffset, setAnimatedOffset] = useState(circumference);
+  useEffect(() => {
+    // Small delay so the animation is visible after mount
+    const timer = setTimeout(() => setAnimatedOffset(targetOffset), 100);
+    return () => clearTimeout(timer);
+  }, [targetOffset]);
+
+  const offset = animatedOffset;
   const color =
     tier === "low"
       ? "text-emerald-500"
@@ -224,7 +233,7 @@ function ReadinessGauge({
             strokeLinecap="round"
             strokeDasharray={`${circumference}`}
             strokeDashoffset={offset}
-            className={cn("transition-all duration-1000 ease-out", color)}
+            className={cn("transition-[stroke-dashoffset] duration-[1500ms] ease-[cubic-bezier(0.33,1,0.68,1)]", color)}
           />
           {/* Center text */}
           <text
@@ -566,6 +575,15 @@ function ResultsDashboard() {
                   title: p.target_title,
                   overlapPct: p.skill_overlap_pct,
                 }))
+              }
+              taskComposition={
+                recalData?.task_risk_breakdown
+                  ? Object.fromEntries(
+                      Object.entries(recalData.task_risk_breakdown).map(
+                        ([k, v]) => [k, v.share],
+                      ),
+                    ) as any
+                  : undefined
               }
             />
           </section>

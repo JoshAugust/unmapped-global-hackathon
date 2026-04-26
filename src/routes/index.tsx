@@ -148,7 +148,7 @@ function HowItWorks() {
 const STATS = [
   { value: "9", label: "Data Sources" },
   { value: "14,209", label: "Skills Mapped" },
-  { value: "5", label: "Countries" },
+  { value: "6", label: "Countries" },
   { value: "374", label: "Occupations Analyzed" },
   { value: "7", label: "Languages" },
 ];
