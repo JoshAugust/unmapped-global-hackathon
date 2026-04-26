@@ -32,8 +32,6 @@ export const Route = createFileRoute("/localisability")({
   }),
 });
 
-const ALL_KEYS: CountryKey[] = ["ssa-ghana", "ssa-nigeria"];
-
 function LocalisabilityPage() {
   const [leftKey, setLeftKey] = useState<CountryKey>("ssa-nigeria");
   const [rightKey, setRightKey] = useState<CountryKey>("ssa-ghana");
