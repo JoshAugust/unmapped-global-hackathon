@@ -240,9 +240,9 @@ export function SiteNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full overflow-x-clip">
+    <header className="sticky top-0 z-40 w-full">
       {/* Cyan brand bar */}
-      <div className="bg-cobalt">
+      <div className="overflow-x-clip bg-cobalt">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-3 px-4 py-3 md:px-6 md:py-4">
           <Link
             to="/"
