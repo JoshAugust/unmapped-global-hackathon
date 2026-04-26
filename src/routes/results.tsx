@@ -28,7 +28,16 @@ import {
   AlertCircle,
   Users,
   BarChart3,
+  Download,
+  Check,
 } from "lucide-react";
+import { generateReportPDF } from "@/lib/report-pdf";
+import {
+  buildReadinessSummary,
+  tierFromScore,
+  type ReportData,
+} from "@/lib/report-data";
+import { toast } from "sonner";
 
 // ────────────────────────────────────────────
 // Route definition
