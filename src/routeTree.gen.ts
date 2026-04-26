@@ -10,14 +10,32 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ReadinessRouteImport } from './routes/readiness'
+import { Route as PolicymakerRouteImport } from './routes/policymaker'
 import { Route as PassportRouteImport } from './routes/passport'
+import { Route as InfrastructureRouteImport } from './routes/infrastructure'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as CrosswalkRouteImport } from './routes/crosswalk'
 import { Route as ConfigureRouteImport } from './routes/configure'
 import { Route as IndexRouteImport } from './routes/index'
 
+const InfrastructureRoute = InfrastructureRouteImport.update({
+  id: '/infrastructure',
+  path: '/infrastructure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrosswalkRoute = CrosswalkRouteImport.update({
+  id: '/crosswalk',
+  path: '/crosswalk',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReadinessRoute = ReadinessRouteImport.update({
   id: '/readiness',
   path: '/readiness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolicymakerRoute = PolicymakerRouteImport.update({
+  id: '/policymaker',
+  path: '/policymaker',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PassportRoute = PassportRouteImport.update({
@@ -44,44 +62,59 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/configure': typeof ConfigureRoute
+  '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/infrastructure': typeof InfrastructureRoute
   '/passport': typeof PassportRoute
+  '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/configure': typeof ConfigureRoute
+  '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/infrastructure': typeof InfrastructureRoute
   '/passport': typeof PassportRoute
+  '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/configure': typeof ConfigureRoute
+  '/crosswalk': typeof CrosswalkRoute
   '/dashboard': typeof DashboardRoute
+  '/infrastructure': typeof InfrastructureRoute
   '/passport': typeof PassportRoute
+  '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/configure' | '/dashboard' | '/passport' | '/readiness'
+  fullPaths: '/' | '/configure' | '/crosswalk' | '/dashboard' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/configure' | '/dashboard' | '/passport' | '/readiness'
+  to: '/' | '/configure' | '/crosswalk' | '/dashboard' | '/infrastructure' | '/passport' | '/policymaker' | '/readiness'
   id:
     | '__root__'
     | '/'
     | '/configure'
+    | '/crosswalk'
     | '/dashboard'
+    | '/infrastructure'
     | '/passport'
+    | '/policymaker'
     | '/readiness'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ConfigureRoute: typeof ConfigureRoute
+  CrosswalkRoute: typeof CrosswalkRoute
   DashboardRoute: typeof DashboardRoute
+  InfrastructureRoute: typeof InfrastructureRoute
   PassportRoute: typeof PassportRoute
+  PolicymakerRoute: typeof PolicymakerRoute
   ReadinessRoute: typeof ReadinessRoute
 }
 
@@ -108,6 +141,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/policymaker': {
+      id: '/policymaker'
+      path: '/policymaker'
+      fullPath: '/policymaker'
+      preLoaderRoute: typeof PolicymakerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/infrastructure': {
+      id: '/infrastructure'
+      path: '/infrastructure'
+      fullPath: '/infrastructure'
+      preLoaderRoute: typeof InfrastructureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crosswalk': {
+      id: '/crosswalk'
+      path: '/crosswalk'
+      fullPath: '/crosswalk'
+      preLoaderRoute: typeof CrosswalkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/configure': {
       id: '/configure'
       path: '/configure'
@@ -129,7 +183,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ConfigureRoute: ConfigureRoute,
   DashboardRoute: DashboardRoute,
+  InfrastructureRoute: InfrastructureRoute,
   PassportRoute: PassportRoute,
+  PolicymakerRoute: PolicymakerRoute,
   ReadinessRoute: ReadinessRoute,
 }
 export const routeTree = rootRouteImport
