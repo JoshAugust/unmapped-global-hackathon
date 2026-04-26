@@ -429,7 +429,7 @@ function QualityNotes() {
 
   return (
     <section className="mb-16">
-      <SectionHeader eyebrow="05 — Data Quality" title="Known Limitations" />
+      <SectionHeader eyebrow="05 — Data Quality" title="Data Coverage Gaps" />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {notes.map(({ icon: Icon, title, body }) => (
           <div key={title} className="flex gap-4 border border-line bg-sand/40 p-5">
