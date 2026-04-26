@@ -9,6 +9,7 @@ import {
   getRecalibratedData,
   getPolicymakerAggregates,
 } from "@/lib/static-data";
+import { GENDER, getDivergence } from "@/lib/demographics";
 
 // ─── Static WDI fallbacks ───────────────────────────────────
 // These bundled JSON files are used when the live API is unreachable
@@ -1011,6 +1012,12 @@ function PolicymakerDashboard() {
 
         {/* 2. Key Indicators */}
         <KeyIndicators wdi={wdi} />
+
+        {/* 2c. Skill–population divergence (UN WPP × Wittgenstein) */}
+        <DivergencePanel iso3={selectedIso3} />
+
+        {/* 2d. Gender lens (ILOSTAT × WBL) */}
+        <GenderLens iso3={selectedIso3} />
 
         {/* 3. Automation Exposure Distribution */}
         <AutomationExposure recal={recal} />
