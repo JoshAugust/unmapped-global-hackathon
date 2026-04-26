@@ -612,7 +612,6 @@ function StepExperience({
           </div>
         ))}
       </div>
-      </div>
     </div>
   );
 }
