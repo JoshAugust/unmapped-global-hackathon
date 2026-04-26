@@ -6,7 +6,11 @@ import { SKILLS } from "@/data/skills";
 import { useProfile } from "@/lib/profile-store";
 import { profileExposure, suggestAdjacencies } from "@/lib/engine";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight, Download, Check, AlertCircle } from "lucide-react";
+import { generateReportPDF } from "@/lib/report-pdf";
+import { buildReadinessSummary, tierFromScore, type ReportData } from "@/lib/report-data";
+import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/readiness")({
   component: Readiness,
@@ -57,6 +61,7 @@ function Readiness() {
   const pct = (n: number) => `${Math.round(n * 100)}%`;
   const [limitsOpen, setLimitsOpen] = useState(false);
   const [methodOpen, setMethodOpen] = useState(false);
+  const [pdfState, setPdfState] = useState<"idle" | "generating" | "done" | "error">("idle");
 
   const light = trafficLight(overall);
   const meta = LIGHT_META[light];
@@ -67,6 +72,73 @@ function Readiness() {
   const durable = [...items].sort((a, b) => a.exposure - b.exposure).filter(i => i.exposure < 0.45).slice(0, 3);
 
   const placeName = profile.countryKey === "ssa-ghana" ? "Greater Accra" : country.country;
+
+  // Build a ReportData snapshot from current screen state for PDF export.
+  const reportData: ReportData = useMemo(() => {
+    const tier = tierFromScore(overall);
+    const sortedRisks = [...items].sort((a, b) => b.exposure - a.exposure);
+    const topRisks = sortedRisks.slice(0, 4).map(it => ({
+      category: it.id,
+      label: it.label,
+      share: 1 / Math.max(1, items.length),
+      risk: it.exposure,
+    }));
+    const durableSkills = [...items]
+      .sort((a, b) => a.exposure - b.exposure)
+      .slice(0, 6)
+      .map(it => it.label);
+    const pathways = adj.slice(0, 3).map(a => ({
+      title: a.skill.label,
+      isco08: "—",
+      overlapPct: Math.round((1 - a.exposure) * 100),
+      missingSkills: 1,
+      wageUpliftPct: Math.round(Math.max(5, (1 - a.exposure) * 25)),
+      gapDescription: a.reason,
+    }));
+    return {
+      generatedAt: new Date().toISOString(),
+      profileLabel: profile.name || "Your readiness report",
+      occupationTitle: country.educationLevels.find(e => e.id === profile.educationId)?.label ?? "Worker",
+      isco08: "—",
+      countryCode: profile.countryKey,
+      countryName: country.country,
+      educationLevel: country.educationLevels.find(e => e.id === profile.educationId)?.label,
+      experienceYears: String(profile.yearsExperience),
+      durableSkills,
+      readiness: {
+        riskScore: overall,
+        tier,
+        summary: buildReadinessSummary(tier),
+      },
+      topRisks,
+      pathways,
+      labourMarket: {
+        youthUnemploymentPct: country.signals.youthUnemployment,
+      },
+      notes: [],
+      dataLimitations: [
+        `Around ${country.signals.informalShare}% of work is informal — task profiles use regional proxies.`,
+        "Skills are matched by keyword to ESCO/O*NET — approximate, not exact.",
+      ],
+    };
+  }, [overall, items, adj, profile, country]);
+
+  const handleDownloadPDF = async () => {
+    setPdfState("generating");
+    try {
+      const filename = await generateReportPDF(reportData);
+      setPdfState("done");
+      toast.success("Report downloaded", { description: filename });
+      setTimeout(() => setPdfState("idle"), 2500);
+    } catch (err) {
+      console.error("PDF generation failed", err);
+      setPdfState("error");
+      toast.error("Couldn't generate the PDF", {
+        description: "Please try again.",
+        action: { label: "Retry", onClick: () => handleDownloadPDF() },
+      });
+    }
+  };
 
   // Plain-language examples for at-risk skills
   const RISK_EXAMPLE: Record<string, string> = {
@@ -253,12 +325,70 @@ function Readiness() {
           )}
           <Link
             to="/dashboard"
-            className="mt-5 inline-block font-mono text-xs uppercase tracking-wider text-cobalt hover:underline"
+            className="group mt-6 inline-flex items-center gap-2 rounded-sm border-2 border-ink bg-cobalt px-5 py-3 font-mono text-xs uppercase tracking-wider font-bold text-paper shadow-[4px_4px_0_0_var(--ink)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
           >
-            → See matched opportunities
+            See matched opportunities
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </section>
       </div>
+
+      {/* EXPORT YOUR PASSPORT — appears after the assessment */}
+      <section className="mt-10 rounded-sm border-2 border-ink bg-paper p-6 sm:p-8 shadow-[6px_6px_0_0_var(--ink)]">
+        <div className="grid gap-6 md:grid-cols-[1.4fr_auto] md:items-center">
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
+              Your assessment is ready
+            </div>
+            <h3 className="mt-2 font-display text-2xl font-bold">
+              Take your readiness passport with you.
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80 max-w-xl">
+              A clean one-pager with your outlook, durable strengths, and next-step skills —
+              ready to print or share with a trainer, mentor, or employer.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row md:flex-col">
+            <button
+              type="button"
+              onClick={handleDownloadPDF}
+              disabled={pdfState === "generating"}
+              className={cn(
+                "inline-flex items-center justify-center gap-2 rounded-sm border-2 border-ink px-5 py-3 font-mono text-xs uppercase tracking-wider font-bold shadow-[4px_4px_0_0_var(--ink)] transition-all disabled:opacity-60",
+                pdfState === "done"
+                  ? "bg-moss text-paper"
+                  : "bg-ink text-paper hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_var(--cobalt)]",
+              )}
+              aria-live="polite"
+            >
+              {pdfState === "generating" ? (
+                <>
+                  <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                  Preparing PDF…
+                </>
+              ) : pdfState === "done" ? (
+                <>
+                  <Check className="h-4 w-4" /> Downloaded
+                </>
+              ) : pdfState === "error" ? (
+                <>
+                  <AlertCircle className="h-4 w-4" /> Retry
+                </>
+              ) : (
+                <>
+                  <Download className="h-4 w-4" /> Download PDF
+                </>
+              )}
+            </button>
+            <Link
+              to="/share"
+              className="inline-flex items-center justify-center gap-2 rounded-sm border-2 border-ink bg-paper px-5 py-3 font-mono text-xs uppercase tracking-wider font-bold text-ink hover:bg-sand"
+            >
+              More ways to share
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* FUTURE CONTEXT */}
       <section className="mt-10 rounded-sm border border-ink bg-paper p-6 sm:p-8">
