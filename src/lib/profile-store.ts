@@ -98,3 +98,32 @@ export function getOnboardingData(): OnboardingData {
   loadOnboarding();
   return obCurrent;
 }
+
+/* ── External setters (for non-hook code, e.g. demo persona presets) ── */
+
+/**
+ * Update the YouthProfile from outside React (e.g. demo persona). Writes
+ * to localStorage and notifies all live `useProfile` hook consumers so
+ * the UI re-renders without a reload.
+ */
+export function setProfileExternal(p: YouthProfile) {
+  load();
+  current = p;
+  if (typeof window !== "undefined") {
+    try { localStorage.setItem(KEY, JSON.stringify(p)); } catch {}
+  }
+  listeners.forEach(l => l(p));
+}
+
+/**
+ * Replace OnboardingData from outside React. Same notify-listeners
+ * semantics as setProfileExternal.
+ */
+export function setOnboardingExternal(d: OnboardingData) {
+  loadOnboarding();
+  obCurrent = { ...ONBOARDING_DEFAULT, ...d };
+  if (typeof window !== "undefined") {
+    try { localStorage.setItem(ONBOARDING_KEY, JSON.stringify(obCurrent)); } catch {}
+  }
+  obListeners.forEach(l => l(obCurrent));
+}

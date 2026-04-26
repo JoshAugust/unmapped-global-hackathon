@@ -38,6 +38,8 @@ import {
   type ReportData,
 } from "@/lib/report-data";
 import { toast } from "sonner";
+import { ExportBar } from "@/components/export-bar";
+import CalibrationPanel from "@/components/calibration-panel";
 
 // ────────────────────────────────────────────
 // Route definition
@@ -647,7 +649,19 @@ function ResultsDashboard() {
       ) : error ? (
         <ErrorState message={error} />
       ) : (
-        <div className="space-y-14">
+        <>
+          {/* Export actions — shown above the printable target so they don't appear in PDF/print */}
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <p className="text-xs text-muted-foreground">
+              Save, share or scan a QR for this report.
+            </p>
+            <ExportBar
+              printTargetId="results-export-target"
+              filenameStem={`unmapped-${(occupationLabel || "report").toLowerCase().replace(/\s+/g, "-")}`}
+            />
+          </div>
+
+          <div id="results-export-target" className="space-y-14">
           {/* ── Profile Card ── */}
           <section>
             <ProfileCard
@@ -1148,7 +1162,13 @@ function ResultsDashboard() {
               </div>
             </section>
           )}
-        </div>
+          </div>
+
+          {/* Calibration honesty panel — embedded, compact */}
+          <section className="mt-12">
+            <CalibrationPanel country={country} embedded compact />
+          </section>
+        </>
       )}
     </PageShell>
   );

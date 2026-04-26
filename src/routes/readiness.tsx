@@ -11,6 +11,14 @@ import { generateReportPDF } from "@/lib/report-pdf";
 import { buildReadinessSummary, tierFromScore, type ReportData } from "@/lib/report-data";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import CalibrationPanel from "@/components/calibration-panel";
+
+/** Map engine CountryKey → ISO3 used by CalibrationPanel + analytics. */
+const COUNTRY_KEY_TO_ISO3: Record<string, string> = {
+  "ssa-ghana": "GHA",
+  "ssa-nigeria": "NGA",
+  "sa-bangladesh": "BGD",
+};
 
 export const Route = createFileRoute("/readiness")({
   component: Readiness,
@@ -540,6 +548,13 @@ function Readiness() {
           </div>
         </div>
       )}
+      <section className="mt-12">
+        <CalibrationPanel
+          country={COUNTRY_KEY_TO_ISO3[profile.countryKey] ?? "NGA"}
+          embedded
+          compact
+        />
+      </section>
     </PageShell>
   );
 }
