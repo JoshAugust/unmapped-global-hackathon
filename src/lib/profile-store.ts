@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { SAMPLE_AMARA, type YouthProfile } from "./engine";
 
 const KEY = "unmapped-profile-v1";
+const ONBOARDING_KEY = "unmapped-onboarding-v1";
 
 let listeners: Array<(p: YouthProfile) => void> = [];
 let current: YouthProfile = SAMPLE_AMARA;
@@ -33,4 +34,67 @@ export function useProfile(): [YouthProfile, (p: YouthProfile) => void] {
     listeners.forEach(l => l(p));
   };
   return [state, update];
+}
+
+/* ── Onboarding data ── */
+
+export interface OnboardingData {
+  isco08: string | null;
+  isco08_label: string;
+  isco08_freetext: string;
+  education_level: string;
+  informal_skills: string[];
+  experience_years: string;
+  user_goal: string;
+  country: string;
+  completed: boolean;
+}
+
+const ONBOARDING_DEFAULT: OnboardingData = {
+  isco08: null,
+  isco08_label: "",
+  isco08_freetext: "",
+  education_level: "",
+  informal_skills: [],
+  experience_years: "",
+  user_goal: "",
+  country: "NGA",
+  completed: false,
+};
+
+let obListeners: Array<(d: OnboardingData) => void> = [];
+let obCurrent: OnboardingData = { ...ONBOARDING_DEFAULT };
+let obHydrated = false;
+
+function loadOnboarding() {
+  if (obHydrated || typeof window === "undefined") return;
+  try {
+    const raw = localStorage.getItem(ONBOARDING_KEY);
+    if (raw) obCurrent = { ...ONBOARDING_DEFAULT, ...JSON.parse(raw) };
+  } catch {}
+  obHydrated = true;
+}
+
+export function useOnboarding(): [OnboardingData, (d: Partial<OnboardingData>) => void] {
+  const [state, setState] = useState<OnboardingData>(obCurrent);
+  useEffect(() => {
+    loadOnboarding();
+    setState(obCurrent);
+    const fn = (d: OnboardingData) => setState(d);
+    obListeners.push(fn);
+    return () => { obListeners = obListeners.filter(l => l !== fn); };
+  }, []);
+  const update = (partial: Partial<OnboardingData>) => {
+    obCurrent = { ...obCurrent, ...partial };
+    if (typeof window !== "undefined") {
+      try { localStorage.setItem(ONBOARDING_KEY, JSON.stringify(obCurrent)); } catch {}
+    }
+    obListeners.forEach(l => l(obCurrent));
+  };
+  return [state, update];
+}
+
+export function getOnboardingData(): OnboardingData {
+  loadOnboarding();
+  return obCurrent;
 }

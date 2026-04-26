@@ -1,0 +1,261 @@
+{
+  "_metadata": {
+    "country": "Ghana",
+    "country_code": "GHA",
+    "scraped_at": "2025-04-25T00:00:00Z",
+    "data_type": "SEED — compiled from published sources. Replace with live_jobs.json after running scrape_jobs.py --country GHA",
+    "sources": [
+      "Jobberman Ghana — active listings as of April 2025",
+      "WEF Future of Jobs 2025 — Sub-Saharan Africa employer skill demand",
+      "Ghana Statistical Service Labour Force Report 2023 — employment by sector",
+      "World Bank Ghana Economic Update 2024 — formal labour market trends"
+    ],
+    "data_gaps": [
+      "Informal sector jobs not captured — formal job boards only",
+      "Salary data: most Ghanaian postings omit salary; figures derived from GSS LFS 2023 sector medians in GHS converted at 2025 rates",
+      "Geographic bias: Accra and Kumasi account for ~70% of formal listings",
+      "Vacancy counts are order-of-magnitude estimates from published reports, not precise scrape counts"
+    ]
+  },
+
+  "demand_summary": {
+    "total_vacancies_scraped": 2100,
+    "data_vintage": "April 2025",
+    "source": "Jobberman Ghana active listings + GSS Labour Force Report 2023",
+    "note": "Formal sector only. Informal economy vacancies not captured.",
+
+    "sectors_ranked_by_demand": [
+      {
+        "sector": "Financial Services & Fintech",
+        "vacancy_count": 480,
+        "vacancy_share_pct": 22.9,
+        "median_salary_usd_monthly": 320,
+        "salary_range_usd": [120, 700],
+        "salary_source": "GSS LFS 2023 financial sector median (GHS converted)",
+        "salary_caveat": "Fintech roles (MTN MoMo, Zeepay, Hubtel) pay premium over traditional banking.",
+        "occupations": ["Accountant", "Finance Officer", "Bank Teller", "Credit Officer", "Mobile Money Agent"],
+        "growth_signal": "High",
+        "growth_rationale": "Ghana has one of Africa's highest mobile money penetration rates. Fintech sector growing 30%+ YoY.",
+        "top_employers": ["GCB Bank", "Ecobank Ghana", "MTN Ghana", "Absa Ghana", "Fidelity Bank"],
+        "key_skills_demanded": ["Financial analysis", "Mobile money", "Credit risk", "Accounting (ICAG)", "Excel"]
+      },
+      {
+        "sector": "ICT & Telecommunications",
+        "vacancy_count": 390,
+        "vacancy_share_pct": 18.6,
+        "median_salary_usd_monthly": 290,
+        "salary_range_usd": [100, 650],
+        "salary_source": "GSS LFS 2023 ICT sector median",
+        "salary_caveat": "Software engineers and data professionals earn significantly above median.",
+        "occupations": ["Software Developer", "IT Support", "Network Engineer", "Data Analyst", "Cybersecurity Analyst"],
+        "growth_signal": "Very High",
+        "growth_rationale": "Ghana Digital Economy Policy 2023-2028 targeting 1M digital jobs. Accra emerging as West Africa tech hub.",
+        "top_employers": ["MTN Ghana", "Vodafone Ghana", "Rancard Solutions", "Hubtel", "Farmerline"],
+        "key_skills_demanded": ["Python", "JavaScript", "Cloud (AWS/GCP)", "Data analysis", "Networking"]
+      },
+      {
+        "sector": "Healthcare & Pharmaceuticals",
+        "vacancy_count": 310,
+        "vacancy_share_pct": 14.8,
+        "median_salary_usd_monthly": 230,
+        "salary_range_usd": [90, 500],
+        "salary_source": "Ghana Health Service salary bands 2023",
+        "salary_caveat": "Private sector healthcare pays above Ghana Health Service rates.",
+        "occupations": ["Nurse", "Community Health Worker", "Pharmacist", "Laboratory Technician", "Health Officer"],
+        "growth_signal": "High",
+        "growth_rationale": "National Health Insurance Scheme expansion driving demand. WHO Ghana Country Office active hiring.",
+        "top_employers": ["Ghana Health Service", "Korle Bu Teaching Hospital", "Nyaho Medical Centre", "Bank Hospital"],
+        "key_skills_demanded": ["Nursing", "Pharmacy", "Laboratory science", "Community health", "Patient care"]
+      },
+      {
+        "sector": "Agriculture & Agribusiness",
+        "vacancy_count": 280,
+        "vacancy_share_pct": 13.3,
+        "median_salary_usd_monthly": 180,
+        "salary_range_usd": [70, 400],
+        "salary_source": "World Bank Ghana Agriculture 2024 / MOFA salary data",
+        "salary_caveat": "Agribusiness roles (Olam, Cargill) pay above subsistence farming wages.",
+        "occupations": ["Agricultural Extension Officer", "Farm Manager", "Agronomist", "Crop Farm Labourer", "Cooperative Manager"],
+        "growth_signal": "Moderate",
+        "growth_rationale": "Government Planting for Food and Jobs programme. Cocoa sector modernisation ongoing.",
+        "top_employers": ["Olam Ghana", "Cargill Ghana", "MOFA", "Cocoa Board (COCOBOD)", "USAID Ghana"],
+        "key_skills_demanded": ["Agronomy", "Crop science", "Extension services", "Agricultural finance", "Supply chain"]
+      },
+      {
+        "sector": "Trade & Retail",
+        "vacancy_count": 250,
+        "vacancy_share_pct": 11.9,
+        "median_salary_usd_monthly": 140,
+        "salary_range_usd": [60, 300],
+        "salary_source": "GSS LFS 2023 trade/retail sector median",
+        "salary_caveat": "Most retail roles are informal. Formal mall/supermarket roles pay above median.",
+        "occupations": ["Shopkeeper", "Sales Representative", "Customer Service", "Cashier", "Store Manager"],
+        "growth_signal": "Moderate",
+        "growth_rationale": "Accra Mall, West Hills Mall expansion. E-commerce penetration growing from low base.",
+        "top_employers": ["Melcom", "Shoprite Ghana", "Palace Mall", "Accra Mall", "TotalEnergies Retail"],
+        "key_skills_demanded": ["Sales", "Customer service", "Inventory management", "POS operation", "Communication"]
+      },
+      {
+        "sector": "Education & Training",
+        "vacancy_count": 210,
+        "vacancy_share_pct": 10.0,
+        "median_salary_usd_monthly": 170,
+        "salary_range_usd": [70, 380],
+        "salary_source": "Ghana Education Service salary bands 2023",
+        "salary_caveat": "Private international schools pay premium over Ghana Education Service rates.",
+        "occupations": ["Teacher", "Lecturer", "Vocational Trainer", "Education Officer", "School Administrator"],
+        "growth_signal": "Moderate",
+        "growth_rationale": "Double-track school system creating additional teacher demand. TVET Ghana expansion.",
+        "top_employers": ["Ghana Education Service", "University of Ghana", "KNUST", "Ghana TVET Service"],
+        "key_skills_demanded": ["Teaching", "Curriculum development", "STEM", "Classroom management", "Assessment"]
+      },
+      {
+        "sector": "Construction & Real Estate",
+        "vacancy_count": 180,
+        "vacancy_share_pct": 8.6,
+        "median_salary_usd_monthly": 220,
+        "salary_range_usd": [80, 500],
+        "salary_source": "GSS LFS 2023 construction sector median",
+        "salary_caveat": "Skilled trades (electricians, plumbers) earn closer to professional salaries.",
+        "occupations": ["Bricklayer", "Carpenter", "Electrician", "Site Engineer", "Real Estate Agent"],
+        "growth_signal": "Moderate",
+        "growth_rationale": "Accra housing deficit 2M+ units. Infrastructure investment programme ongoing.",
+        "top_employers": ["Regimanuel Gray", "Devtraco Plus", "Trassaco Valley", "Julius Berger Ghana"],
+        "key_skills_demanded": ["Construction management", "Civil engineering", "Carpentry", "Electrical", "AutoCAD"]
+      }
+    ]
+  },
+
+  "occupation_demand": [
+    {
+      "isco08": "2411",
+      "label": "Accountants and Finance Officers",
+      "sector": "Financial Services",
+      "estimated_vacancies": 310,
+      "vacancy_rank": 1,
+      "median_salary_usd_monthly": 320,
+      "salary_range_usd": [120, 700],
+      "skills_demanded": ["ICAG qualification", "Financial reporting", "Excel", "QuickBooks", "Budgeting"],
+      "lmic_relevant": true,
+      "data_source": "Jobberman Ghana + GSS 2023",
+      "notes": "High demand across all sectors. ICAG certification strongly preferred."
+    },
+    {
+      "isco08": "2512",
+      "label": "Software Developers",
+      "sector": "ICT",
+      "estimated_vacancies": 220,
+      "vacancy_rank": 2,
+      "median_salary_usd_monthly": 290,
+      "salary_range_usd": [100, 650],
+      "skills_demanded": ["Python", "JavaScript", "React", "Node.js", "APIs"],
+      "lmic_relevant": true,
+      "data_source": "Jobberman Ghana + LinkedIn Ghana",
+      "notes": "Strong demand from fintech and agritech startups."
+    },
+    {
+      "isco08": "2221",
+      "label": "Nursing and Health Professionals",
+      "sector": "Health",
+      "estimated_vacancies": 200,
+      "vacancy_rank": 3,
+      "median_salary_usd_monthly": 230,
+      "salary_range_usd": [90, 450],
+      "skills_demanded": ["Nursing", "Patient care", "Clinical skills", "Community health"],
+      "lmic_relevant": true,
+      "data_source": "Ghana Health Service vacancy announcements 2024",
+      "notes": "Demand concentrated in regions outside Accra (rural posting requirements)."
+    },
+    {
+      "isco08": "3311",
+      "label": "Banking and Financial Clerks",
+      "sector": "Financial Services",
+      "estimated_vacancies": 170,
+      "vacancy_rank": 4,
+      "median_salary_usd_monthly": 200,
+      "salary_range_usd": [80, 380],
+      "skills_demanded": ["Banking operations", "Customer service", "Cash handling", "KYC"],
+      "lmic_relevant": true,
+      "data_source": "GCB, Ecobank, Fidelity Bank Ghana vacancy boards 2025",
+      "notes": "Mobile money agent roles increasingly included in this category."
+    },
+    {
+      "isco08": "5221",
+      "label": "Shopkeepers and Sales Assistants",
+      "sector": "Trade & Retail",
+      "estimated_vacancies": 250,
+      "vacancy_rank": 5,
+      "median_salary_usd_monthly": 140,
+      "salary_range_usd": [60, 280],
+      "skills_demanded": ["Sales", "Customer service", "Stock management", "Communication"],
+      "lmic_relevant": true,
+      "data_source": "Jobberman Ghana + GSS 2023",
+      "notes": "Largest volume category. Dominated by informal sector (not captured here)."
+    },
+    {
+      "isco08": "2320",
+      "label": "Teachers (Secondary and Vocational)",
+      "sector": "Education",
+      "estimated_vacancies": 160,
+      "vacancy_rank": 6,
+      "median_salary_usd_monthly": 170,
+      "salary_range_usd": [70, 350],
+      "skills_demanded": ["Subject expertise", "Classroom management", "Curriculum", "Assessment"],
+      "lmic_relevant": true,
+      "data_source": "Ghana Education Service 2024 vacancy circular",
+      "notes": "Double-track system created additional demand. STEM teachers especially sought."
+    },
+    {
+      "isco08": "6111",
+      "label": "Crop Farm Workers and Agricultural Extension Officers",
+      "sector": "Agriculture",
+      "estimated_vacancies": 190,
+      "vacancy_rank": 7,
+      "median_salary_usd_monthly": 180,
+      "salary_range_usd": [70, 380],
+      "skills_demanded": ["Agronomy", "Extension services", "Crop management", "Irrigation"],
+      "lmic_relevant": true,
+      "data_source": "MOFA Ghana + USAID Ghana 2024",
+      "notes": "Planting for Food and Jobs programme driving formal agricultural employment."
+    },
+    {
+      "isco08": "7115",
+      "label": "Carpenters and Joiners",
+      "sector": "Construction",
+      "estimated_vacancies": 130,
+      "vacancy_rank": 8,
+      "median_salary_usd_monthly": 190,
+      "salary_range_usd": [80, 420],
+      "skills_demanded": ["Carpentry", "Woodworking", "Blueprint reading", "Site safety"],
+      "lmic_relevant": true,
+      "data_source": "Jobberman Ghana construction listings 2025",
+      "notes": "Real estate construction boom in Accra suburbs driving demand."
+    },
+    {
+      "isco08": "8322",
+      "label": "Car, Taxi and Ride-share Drivers",
+      "sector": "Transport",
+      "estimated_vacancies": 120,
+      "vacancy_rank": 9,
+      "median_salary_usd_monthly": 150,
+      "salary_range_usd": [60, 300],
+      "skills_demanded": ["Driving licence", "Navigation", "Customer service", "Vehicle maintenance"],
+      "lmic_relevant": true,
+      "data_source": "Uber Ghana, Bolt Ghana driver recruitment 2025",
+      "notes": "Gig economy ride-share (Uber/Bolt) is major informal employer in this category."
+    },
+    {
+      "isco08": "2522",
+      "label": "Systems Administrators and IT Support",
+      "sector": "ICT",
+      "estimated_vacancies": 110,
+      "vacancy_rank": 10,
+      "median_salary_usd_monthly": 220,
+      "salary_range_usd": [90, 480],
+      "skills_demanded": ["IT support", "Networking", "Systems admin", "Troubleshooting", "Cloud basics"],
+      "lmic_relevant": true,
+      "data_source": "Jobberman Ghana ICT listings 2025",
+      "notes": "SME IT support roles concentrated in Accra. Remote work increasing."
+    }
+  ]
+}

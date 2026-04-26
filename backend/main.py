@@ -17,7 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 BASE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE / "scripts"))
 
-from backend.routers import country, crosswalk, health, llm, query  # noqa: E402
+from backend.routers import country, crosswalk, health, llm, query, scrape  # noqa: E402
 
 app = FastAPI(
     title="UNMAPPED API",
@@ -40,6 +40,7 @@ app.include_router(country.router)
 app.include_router(query.router)
 app.include_router(crosswalk.router)
 app.include_router(llm.router)
+app.include_router(scrape.router)
 
 
 # ── Additional endpoints not in routers ──

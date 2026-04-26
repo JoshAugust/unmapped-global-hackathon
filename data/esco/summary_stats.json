@@ -1,11 +1,14 @@
 {
-  "total_occupations": 100,
-  "occupations_with_isco": 74,
-  "occupations_without_isco": 26,
-  "occupations_failed": 0,
-  "total_skills": 200,
-  "isco_codes_mapped": 45,
-  "total_essential_links": 1149,
-  "total_optional_links": 1066,
-  "timestamp": "2026-04-25T23:46:51Z"
+  "total_occupations": 3552,
+  "occupations_with_isco": 2933,
+  "occupations_without_isco": 619,
+  "occupations_failed": 106,
+  "total_skills": 14209,
+  "isco_codes_mapped": 426,
+  "total_essential_links": 30657,
+  "total_optional_links": 33765,
+  "elapsed_seconds": 736,
+  "timestamp": "2026-04-26T00:02:51Z",
+  "source_api": "https://ec.europa.eu/esco/api",
+  "source_github": "https://raw.githubusercontent.com/KonstantinosPetrakis/esco-skill-extractor/master/esco_skill_extractor/data"
 }
