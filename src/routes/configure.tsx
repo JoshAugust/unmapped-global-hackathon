@@ -30,6 +30,8 @@ function Configure() {
       title={<>One protocol. <span className="text-cobalt">Many</span> countries.</>}
       lede="Country-specific parameters — labor data, education taxonomy, language, automation calibration, opportunity types — are inputs to the system. Swap the file, get a new context. No code changes."
     >
+      <SameProductTwoContexts />
+
       <div className="grid gap-6 md:grid-cols-2">
         {(Object.keys(COUNTRIES) as CountryKey[]).map(k => {
           const c = COUNTRIES[k];
