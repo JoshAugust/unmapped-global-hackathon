@@ -487,6 +487,7 @@ function ResultsDashboard() {
   const country = onboarding.country || "NGA";
   const isco08 = onboarding.isco08 || "7422";
   const occupationLabel = onboarding.isco08_label || "Your Occupation";
+  const userName = (onboarding.name || "").trim();
   const meta = COUNTRY_META[country] ?? {
     flag: "🌍",
     greeting: "Welcome! 👋",
