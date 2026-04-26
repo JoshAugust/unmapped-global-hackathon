@@ -249,6 +249,11 @@ export function SiteNav() {
             to="/"
             className="flex min-w-0 shrink-0 items-center gap-3 text-paper"
           >
+            <img
+              src={unmappedLogo}
+              alt="unmapped logo"
+              className="h-8 w-8 shrink-0 md:h-9 md:w-9"
+            />
             <span className="font-display text-xl font-black tracking-tight md:text-2xl">
               unmapped
             </span>
