@@ -32,8 +32,8 @@ const NAV_SECTIONS: NavSection[] = [
   {
     label: "About",
     items: [
+      { to: "/methodology", label: "How it works" },
       { to: "/infrastructure", label: "Infrastructure" },
-      { to: "/methodology", label: "Methodology" },
     ],
   },
 ];
