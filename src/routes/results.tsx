@@ -126,7 +126,6 @@ const COUNTRY_META: Record<
   GHA: { flag: "🇬🇭", greeting: "Ɛte sɛn! 👋", name: "Ghana" },
   KEN: { flag: "🇰🇪", greeting: "Habari! 👋", name: "Kenya" },
   ZAF: { flag: "🇿🇦", greeting: "Sawubona! 👋", name: "South Africa" },
-  BGD: { flag: "🇧🇩", greeting: "স্বাগতম! 👋", name: "Bangladesh" },
   IND: { flag: "🇮🇳", greeting: "Namaste! 👋", name: "India" },
   EGY: { flag: "🇪🇬", greeting: "!أهلاً 👋", name: "Egypt" },
   ETH: { flag: "🇪🇹", greeting: "ሰላም! 👋", name: "Ethiopia" },

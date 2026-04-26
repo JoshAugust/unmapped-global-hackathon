@@ -243,7 +243,7 @@ function Infrastructure() {
             { icon: <ImageOff className="h-5 w-5" />, title: "Lazy images, SVG patterns", body: "All hero & cultural imagery defer-loads. Country silhouettes are inline SVG, not bitmaps." },
             { icon: <Smartphone className="h-5 w-5" />, title: "Works on a shared phone", body: "No login, no account, no email. State is local and ephemeral. Hand the phone over and start fresh." },
             { icon: <Lock className="h-5 w-5" />, title: "No credentials required", body: "Informal apprenticeship, self-taught, NGO training and on-the-job experience are first-class inputs — not exceptions." },
-            { icon: <Languages className="h-5 w-5" />, title: "8 locales, native scripts", body: "Bengali, Hausa, Yoruba, Kinyarwanda, Swahili, Hindi, French, English. Switch in the header — instant." },
+            { icon: <Languages className="h-5 w-5" />, title: "7 locales, native scripts", body: "Hausa, Yoruba, Kinyarwanda, Swahili, Hindi, French, English. Switch in the header — instant." },
             { icon: <Clock className="h-5 w-5" />, title: "Full passport in ~2 min", body: "6 questions, no scrolling forms, no jargon. Built for someone using a borrowed device on a break." },
           ].map(item => (
             <div key={item.title} className="rounded-sm border border-line bg-card p-4">

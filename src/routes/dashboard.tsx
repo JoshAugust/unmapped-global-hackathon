@@ -12,7 +12,6 @@ import CalibrationPanel from "@/components/calibration-panel";
 const COUNTRY_KEY_TO_ISO3: Record<string, string> = {
   "ssa-ghana": "GHA",
   "ssa-nigeria": "NGA",
-  "sa-bangladesh": "BGD",
 };
 
 export const Route = createFileRoute("/dashboard")({

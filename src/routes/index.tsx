@@ -195,7 +195,6 @@ const COUNTRY_INPUTS = [
   { flag: "🇰🇪", name: "Kenya", lang: "English · Swahili", currency: "KSh", calib: "0.66" },
   { flag: "🇷🇼", name: "Rwanda", lang: "Kinyarwanda · English", currency: "RWF", calib: "0.58" },
   { flag: "🇮🇳", name: "India", lang: "Hindi · English · +21", currency: "₹", calib: "0.71" },
-  { flag: "🇧🇩", name: "Bangladesh", lang: "Bengali", currency: "৳", calib: "0.59" },
 ];
 
 function ProtocolNotProduct() {

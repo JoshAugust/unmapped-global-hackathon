@@ -59,13 +59,6 @@ export const DEMOGRAPHY: Record<string, DemographyRow> = {
     newEntrantsKPerYear: 12500,
     source: "UN WPP 2024 medium · Wittgenstein WIC 2023 SSP2",
   },
-  BGD: {
-    iso3: "BGD",
-    youth15_24M: { 2025: 31.9, 2035: 32.4 },
-    tertiaryYouthPct: { 2025: 14.1, 2035: 24.2 },
-    newEntrantsKPerYear: 1900,
-    source: "UN WPP 2024 medium · Wittgenstein WIC 2023 SSP2",
-  },
 };
 
 /* ── Gender disaggregation ────────────────────────────────────────── */
@@ -123,14 +116,6 @@ export const GENDER: Record<string, GenderRow> = {
     youthUnemployment: { male: 17.4, female: 24.7 },
     lfp15plus: { male: 73.6, female: 28.3 },
     wblScore: 74.4,
-    source: "ILOSTAT 2024 · WB WBL 2024",
-  },
-  BGD: {
-    iso3: "BGD",
-    youthLfFemalePct: 31.4,
-    youthUnemployment: { male: 12.1, female: 14.8 },
-    lfp15plus: { male: 79.2, female: 38.4 },
-    wblScore: 49.4,
     source: "ILOSTAT 2024 · WB WBL 2024",
   },
 };

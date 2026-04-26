@@ -15,8 +15,6 @@ const PATTERN_MAP: Record<PatternType, string> = {
   maasai: maasaiSvg,
   madhubani: madhubaniSvg,
   imigongo: imigongoSvg,
-  // Bangladesh pattern not yet bundled — fallback to empty so render is skipped.
-  jamdani: '',
   none: '',
 };
 
