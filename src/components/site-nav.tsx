@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { CountryPill } from "./country-pill";
 import { LanguageSwitcher } from "./language-switcher";
+import unmappedLogo from "@/assets/unmapped-logo.png";
 
 /* ─── Nav structure ────────────────────────────────────────────────────── */
 
