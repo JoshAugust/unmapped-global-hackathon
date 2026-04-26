@@ -1,1 +1,6 @@
-ALIVE — started at task F19: Language Switcher + i18n Externalization
+COMPLETE — all 7 acceptance criteria met. Files written:
+- src/lib/i18n.tsx (context, hook, t(), lazy-loader, localStorage persist)
+- src/locales/{en,fr,yo,ha,sw,hi,rw}.json (40+ keys each)
+- src/components/language-switcher.tsx (compact + full variants, a11y)
+- src/routes/__root.tsx (I18nProvider wraps Outlet)
+- src/components/site-nav.tsx (LanguageSwitcher added between CountryPill and Youth Summit link)

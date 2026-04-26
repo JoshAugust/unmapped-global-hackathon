@@ -34,7 +34,7 @@
 - [ ] F7: Resilience pathways panel with adjacency data
 - [ ] F8: Youth matching view with 2 visible econometric signals
 - [x] F9: Policymaker aggregate dashboard
-- [→] F10: Country comparison mode (side-by-side)
+- [x] F10: Country comparison mode (side-by-side)
 - [x] F11: DataSource citation component (wired throughout)
 - [ ] F12: Expandable data detail panels
 - [x] F13: Calibration & limits panel (honesty text)
@@ -43,12 +43,12 @@
 - [→] F16: Data coverage dashboard
 - [x] F17: Country visual identity engine (patterns, palettes, silhouettes)
 - [ ] F18: 5 country configs with real data
-- [→] F19: Language switcher + i18n externalization
+- [x] F19: Language switcher + i18n externalization
 
 ## Phase 4: Deploy (D1–D5)
 
 - [ ] D1: Deploy backend (Railway/Fly.io)
 - [ ] D2: Deploy frontend to joshuaaugustine.page/unmapped
 - [ ] D3: Mobile responsiveness pass
-- [ ] D4: Demo flow & narrative
+- [→] D4: Demo flow & narrative
 - [ ] D5: Error handling & edge cases

@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { CountryPill } from "./country-pill";
+import { LanguageSwitcher } from "./language-switcher";
 
 const links = [
   { to: "/", label: "Overview" },
@@ -9,6 +10,7 @@ const links = [
   { to: "/education", label: "Education" },
   { to: "/compare", label: "Compare" },
   { to: "/crosswalk", label: "Crosswalk" },
+  { to: "/coverage", label: "Coverage" },
   { to: "/configure", label: "Configure" },
 ] as const;
 
@@ -26,6 +28,7 @@ export function SiteNav() {
           </Link>
           <div className="flex min-w-0 flex-1 items-center justify-end gap-2 md:flex-none md:gap-3">
             <CountryPill />
+            <LanguageSwitcher variant="compact" />
             <a href="https://www.worldbank.org/en/events/2026/06/11/youth-summit-2026-future-works-designing-jobs-for-the-digital-age" target="_blank" rel="noreferrer"
               className="hidden rounded-none border-2 border-paper px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-paper hover:text-cobalt md:inline-block">
               Youth Summit

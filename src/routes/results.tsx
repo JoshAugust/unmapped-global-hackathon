@@ -4,6 +4,7 @@ import { PageShell } from "@/components/page-shell";
 import { DataSource } from "@/components/data-source";
 import { SOURCES } from "@/lib/sources";
 import { useOnboarding } from "@/lib/profile-store";
+import { ProfileCard } from "@/components/profile-card";
 import {
   Card,
   CardContent,

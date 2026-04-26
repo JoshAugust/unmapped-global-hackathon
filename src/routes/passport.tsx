@@ -1,6 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState, useCallback } from "react";
 import { PageShell } from "@/components/page-shell";
+import { LlmInput } from "@/components/llm-input";
+import { FollowupQuestions } from "@/components/followup-questions";
 import { useOnboarding } from "@/lib/profile-store";
 
 export const Route = createFileRoute("/passport")({
@@ -110,6 +112,12 @@ function Passport() {
     onboarding.user_goal || "",
   );
 
+  // LLM-related state
+  const [llmIsco08, setLlmIsco08] = useState<string | null>(null);
+  const [llmLabel, setLlmLabel] = useState<string>("");
+  const [detectedSkills, setDetectedSkills] = useState<string[]>([]);
+  const [showFollowup, setShowFollowup] = useState(false);
+
   const goTo = useCallback(
     (next: number) => {
       if (animating) return;
@@ -127,7 +135,7 @@ function Passport() {
     switch (step) {
       case 1:
         return selectedWork === "Something else"
-          ? freeText.trim().length > 0
+          ? llmIsco08 !== null
           : selectedWork !== null;
       case 2:
         return selectedEdu !== "";
@@ -142,11 +150,12 @@ function Passport() {
     }
   };
 
-  const handleComplete = useCallback(() => {
+  const commitAndNavigate = useCallback(() => {
     const workOption = WORK_OPTIONS.find((o) => o.label === selectedWork);
+    const isLlm = selectedWork === "Something else" && llmIsco08;
     setOnboarding({
-      isco08: workOption?.isco08 ?? null,
-      isco08_label: selectedWork || "",
+      isco08: isLlm ? llmIsco08 : (workOption?.isco08 ?? null),
+      isco08_label: isLlm ? llmLabel : (selectedWork || ""),
       isco08_freetext: selectedWork === "Something else" ? freeText : "",
       education_level: selectedEdu,
       informal_skills: selectedInformal,
@@ -162,6 +171,8 @@ function Passport() {
   }, [
     selectedWork,
     freeText,
+    llmIsco08,
+    llmLabel,
     selectedEdu,
     selectedInformal,
     selectedExp,
@@ -169,6 +180,16 @@ function Passport() {
     setOnboarding,
     navigate,
   ]);
+
+  const handleComplete = useCallback(() => {
+    // If user used LLM path, show follow-up questions before building
+    const usedLlm = selectedWork === "Something else" && llmIsco08;
+    if (usedLlm && !showFollowup) {
+      setShowFollowup(true);
+      return;
+    }
+    commitAndNavigate();
+  }, [selectedWork, llmIsco08, showFollowup, commitAndNavigate]);
 
   const handleNext = () => {
     if (!canNext()) return;
@@ -178,6 +199,30 @@ function Passport() {
       handleComplete();
     }
   };
+
+  /* ── Follow-up questions (post-Step 5, LLM path only) ── */
+  if (showFollowup && !building) {
+    return (
+      <PageShell
+        eyebrow="Module 01 · Skills Signal Engine"
+        title={<>A few more questions&hellip;</>}
+        lede="Help us refine your results with a couple of quick follow-ups."
+      >
+        <FollowupQuestions
+          isco08={llmIsco08 || ""}
+          detectedSkills={detectedSkills}
+          country="NGA"
+          onComplete={(_answers) => {
+            // Answers captured — proceed to build
+            commitAndNavigate();
+          }}
+          onSkip={() => {
+            commitAndNavigate();
+          }}
+        />
+      </PageShell>
+    );
+  }
 
   /* ── Building state ── */
   if (building) {
@@ -235,9 +280,29 @@ function Passport() {
           {step === 1 && (
             <StepWork
               selected={selectedWork}
-              onSelect={setSelectedWork}
-              freeText={freeText}
-              onFreeText={setFreeText}
+              onSelect={(v) => {
+                setSelectedWork(v);
+                // Reset LLM state when switching away from "Something else"
+                if (v !== "Something else") {
+                  setLlmIsco08(null);
+                  setLlmLabel("");
+                  setDetectedSkills([]);
+                }
+              }}
+              llmConfirmed={llmIsco08 !== null}
+              llmLabel={llmLabel}
+              onLlmConfirm={(isco08, label, skills) => {
+                if (!isco08) {
+                  // Reset (user clicked "Change")
+                  setLlmIsco08(null);
+                  setLlmLabel("");
+                  setDetectedSkills([]);
+                } else {
+                  setLlmIsco08(isco08);
+                  setLlmLabel(label);
+                  setDetectedSkills(skills);
+                }
+              }}
             />
           )}
           {step === 2 && (
@@ -340,13 +405,15 @@ function OptionCard({
 function StepWork({
   selected,
   onSelect,
-  freeText,
-  onFreeText,
+  llmConfirmed,
+  llmLabel,
+  onLlmConfirm,
 }: {
   selected: string | null;
   onSelect: (v: string) => void;
-  freeText: string;
-  onFreeText: (v: string) => void;
+  llmConfirmed: boolean;
+  llmLabel: string;
+  onLlmConfirm: (isco08: string, label: string, skills: string[]) => void;
 }) {
   return (
     <div>
@@ -373,21 +440,21 @@ function StepWork({
           </OptionCard>
         ))}
       </div>
-      {selected === "Something else" && (
-        <div className="mt-4">
-          <label className="block">
-            <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-              Tell us what you do
-            </span>
-            <input
-              type="text"
-              value={freeText}
-              onChange={(e) => onFreeText(e.target.value)}
-              placeholder="e.g. Barbing / hairdressing, Photography…"
-              className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-cobalt"
-              autoFocus
-            />
-          </label>
+      {selected === "Something else" && !llmConfirmed && (
+        <LlmInput country="NGA" onConfirm={onLlmConfirm} />
+      )}
+      {selected === "Something else" && llmConfirmed && (
+        <div className="mt-4 rounded-sm border border-emerald-200 bg-emerald-50 p-3">
+          <p className="text-sm font-medium text-emerald-800">
+            ✓ Matched: <strong>{llmLabel}</strong>
+          </p>
+          <button
+            type="button"
+            onClick={() => onLlmConfirm("", "", [])}
+            className="mt-1 text-xs text-emerald-600 underline hover:text-emerald-800"
+          >
+            Change
+          </button>
         </div>
       )}
     </div>
