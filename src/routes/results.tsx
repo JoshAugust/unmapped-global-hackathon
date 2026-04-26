@@ -1162,7 +1162,13 @@ function ResultsDashboard() {
               </div>
             </section>
           )}
-        </div>
+          </div>
+
+          {/* Calibration honesty panel — embedded, compact */}
+          <section className="mt-12">
+            <CalibrationPanel country={country} embedded compact />
+          </section>
+        </>
       )}
     </PageShell>
   );
