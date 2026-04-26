@@ -39,6 +39,8 @@ export function useProfile(): [YouthProfile, (p: YouthProfile) => void] {
 /* ── Onboarding data ── */
 
 export interface OnboardingData {
+  name: string;
+  age: string;
   isco08: string | null;
   isco08_label: string;
   isco08_freetext: string;
@@ -51,6 +53,8 @@ export interface OnboardingData {
 }
 
 const ONBOARDING_DEFAULT: OnboardingData = {
+  name: "",
+  age: "",
   isco08: null,
   isco08_label: "",
   isco08_freetext: "",

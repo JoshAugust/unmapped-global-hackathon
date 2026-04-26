@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { PageShell } from "@/components/page-shell";
 import { COUNTRIES } from "@/data/countries";
 import { SKILLS } from "@/data/skills";
-import { useProfile } from "@/lib/profile-store";
+import { useProfile, useOnboarding } from "@/lib/profile-store";
 import { profileExposure, suggestAdjacencies } from "@/lib/engine";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown, ArrowRight, Download, Check, AlertCircle } from "lucide-react";
@@ -63,6 +63,8 @@ const LIGHT_META: Record<Light, { color: string; label: string; headline: string
 
 function Readiness() {
   const [profile] = useProfile();
+  const [onboarding] = useOnboarding();
+  const userName = (onboarding.name || "").trim();
   const country = COUNTRIES[profile.countryKey];
   const { overall, items } = useMemo(() => profileExposure(profile), [profile]);
   const adj = useMemo(() => suggestAdjacencies(profile), [profile]);
@@ -174,7 +176,13 @@ function Readiness() {
   return (
     <PageShell
       eyebrow="Module 02 · AI Readiness Lens"
-      title={<>Where you stand. <span className="text-cobalt">Where to go next.</span></>}
+      title={
+        userName ? (
+          <>{userName}, here&rsquo;s where you stand. <span className="text-cobalt">And where to go next.</span></>
+        ) : (
+          <>Where you stand. <span className="text-cobalt">Where to go next.</span></>
+        )
+      }
       lede={`A clear-eyed look at how AI and automation will touch your work over the next 10 years — calibrated for ${placeName}, not Silicon Valley.`}
     >
       {/* TRAFFIC LIGHT HERO */}

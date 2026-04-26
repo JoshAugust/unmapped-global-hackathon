@@ -85,6 +85,7 @@ const GOAL_OPTIONS = [
 ];
 
 const TOTAL_STEPS = 5;
+const TOTAL_STEPS_WITH_INTRO = 6;
 
 /* ── Main component ── */
 
@@ -107,6 +108,8 @@ function Passport() {
   const [building, setBuilding] = useState(false);
 
   // Local draft state (committed to store on completion)
+  const [nameInput, setNameInput] = useState(onboarding.name || "");
+  const [ageInput, setAgeInput] = useState(onboarding.age || "");
   const [selectedWork, setSelectedWork] = useState<string | null>(
     onboarding.isco08_label || null,
   );
@@ -146,17 +149,17 @@ function Passport() {
   const canNext = (): boolean => {
     switch (step) {
       case 1:
+        return nameInput.trim().length >= 1 && nameInput.trim().length <= 60 &&
+          /^\d{1,3}$/.test(ageInput.trim()) &&
+          Number(ageInput) >= 10 && Number(ageInput) <= 99;
+      case 2:
         return selectedWork === "Something else"
           ? llmIsco08 !== null
           : selectedWork !== null;
-      case 2:
-        return selectedEdu !== "";
-      case 3:
-        return selectedInformal.length > 0;
-      case 4:
-        return selectedExp !== "";
-      case 5:
-        return selectedGoal !== "";
+      case 3: return selectedEdu !== "";
+      case 4: return selectedInformal.length > 0;
+      case 5: return selectedExp !== "";
+      case 6: return selectedGoal !== "";
       default:
         return false;
     }
@@ -166,6 +169,8 @@ function Passport() {
     const workOption = WORK_OPTIONS.find((o) => o.label === selectedWork);
     const isLlm = selectedWork === "Something else" && llmIsco08;
     setOnboarding({
+      name: nameInput.trim().slice(0, 60),
+      age: ageInput.trim(),
       isco08: isLlm ? llmIsco08 : (workOption?.isco08 ?? null),
       isco08_label: isLlm ? llmLabel : (selectedWork || ""),
       isco08_freetext: selectedWork === "Something else" ? freeText : "",
@@ -181,6 +186,8 @@ function Passport() {
       navigate({ to: "/readiness" });
     }, 2200);
   }, [
+    nameInput,
+    ageInput,
     selectedWork,
     freeText,
     llmIsco08,
@@ -191,6 +198,7 @@ function Passport() {
     selectedGoal,
     setOnboarding,
     navigate,
+    currentCountry,
   ]);
 
   const handleComplete = useCallback(() => {
@@ -205,7 +213,7 @@ function Passport() {
 
   const handleNext = () => {
     if (!canNext()) return;
-    if (step < TOTAL_STEPS) {
+    if (step < TOTAL_STEPS_WITH_INTRO) {
       goTo(step + 1);
     } else {
       handleComplete();
@@ -267,13 +275,13 @@ function Passport() {
       {/* Progress bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          <span>Step {step} of {TOTAL_STEPS}</span>
-          <span>{Math.round((step / TOTAL_STEPS) * 100)}%</span>
+          <span>Step {step} of {TOTAL_STEPS_WITH_INTRO}</span>
+          <span>{Math.round((step / TOTAL_STEPS_WITH_INTRO) * 100)}%</span>
         </div>
         <div className="mt-2 h-1.5 w-full rounded-full bg-line">
           <div
             className="h-full rounded-full bg-cobalt transition-all duration-500 ease-out"
-            style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
+            style={{ width: `${(step / TOTAL_STEPS_WITH_INTRO) * 100}%` }}
           />
         </div>
       </div>
@@ -290,6 +298,14 @@ function Passport() {
           }`}
         >
           {step === 1 && (
+            <StepIntro
+              name={nameInput}
+              age={ageInput}
+              onName={setNameInput}
+              onAge={setAgeInput}
+            />
+          )}
+          {step === 2 && (
             <StepWork
               selected={selectedWork}
               onSelect={(v) => {
@@ -318,13 +334,13 @@ function Passport() {
               currentCountry={currentCountry}
             />
           )}
-          {step === 2 && (
+          {step === 3 && (
             <StepEducation
               selected={selectedEdu}
               onSelect={setSelectedEdu}
             />
           )}
-          {step === 3 && (
+          {step === 4 && (
             <StepInformalSkills
               selected={selectedInformal}
               onToggle={(skill) =>
@@ -336,13 +352,13 @@ function Passport() {
               }
             />
           )}
-          {step === 4 && (
+          {step === 5 && (
             <StepExperience
               selected={selectedExp}
               onSelect={setSelectedExp}
             />
           )}
-          {step === 5 && (
+          {step === 6 && (
             <StepGoal selected={selectedGoal} onSelect={setSelectedGoal} />
           )}
         </div>
@@ -361,7 +377,7 @@ function Passport() {
             disabled={!canNext()}
             className="min-h-[44px] min-w-[100px] rounded-sm border border-ink bg-ink px-6 py-2.5 font-mono text-xs uppercase tracking-wider text-paper transition-colors hover:bg-ink/90 disabled:cursor-not-allowed disabled:opacity-30"
           >
-            {step === TOTAL_STEPS ? "Build passport →" : "Next →"}
+            {step === TOTAL_STEPS_WITH_INTRO ? "Build passport →" : "Next →"}
           </button>
         </div>
       </div>
@@ -644,6 +660,66 @@ function StepGoal({
             </div>
           </OptionCard>
         ))}
+      </div>
+    </div>
+  );
+}
+
+/* Step 0: Name + age */
+function StepIntro({
+  name,
+  age,
+  onName,
+  onAge,
+}: {
+  name: string;
+  age: string;
+  onName: (v: string) => void;
+  onAge: (v: string) => void;
+}) {
+  const ageNum = age === "" ? null : Number(age);
+  const ageInvalid = age !== "" && (!/^\d{1,3}$/.test(age) || ageNum! < 10 || ageNum! > 99);
+  return (
+    <div>
+      <StepHeading number={1} question="First — what should we call you?" />
+      <p className="mb-6 text-sm text-muted-foreground">
+        We&rsquo;ll use your name across your passport and on the report you can download.
+      </p>
+      <div className="space-y-5">
+        <label className="block">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            Your name
+          </span>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => onName(e.target.value.slice(0, 60))}
+            maxLength={60}
+            autoComplete="given-name"
+            placeholder="e.g. Amara"
+            className="mt-2 block w-full min-h-[44px] rounded-sm border border-line bg-paper px-4 py-2.5 text-base font-medium text-ink placeholder:text-muted-foreground/50 focus:border-ink focus:outline-none"
+          />
+        </label>
+        <label className="block">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            Your age
+          </span>
+          <input
+            type="number"
+            inputMode="numeric"
+            min={10}
+            max={99}
+            value={age}
+            onChange={(e) => onAge(e.target.value.replace(/[^\d]/g, "").slice(0, 3))}
+            placeholder="e.g. 22"
+            className="mt-2 block w-full min-h-[44px] max-w-[140px] rounded-sm border border-line bg-paper px-4 py-2.5 text-base font-medium text-ink placeholder:text-muted-foreground/50 focus:border-ink focus:outline-none"
+          />
+          {ageInvalid && (
+            <span className="mt-1 block text-xs text-rust">
+              Please enter an age between 10 and 99.
+            </span>
+          )}
+        </label>
       </div>
     </div>
   );

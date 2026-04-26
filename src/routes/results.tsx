@@ -487,6 +487,7 @@ function ResultsDashboard() {
   const country = onboarding.country || "NGA";
   const isco08 = onboarding.isco08 || "7422";
   const occupationLabel = onboarding.isco08_label || "Your Occupation";
+  const userName = (onboarding.name || "").trim();
   const meta = COUNTRY_META[country] ?? {
     flag: "🌍",
     greeting: "Welcome! 👋",
@@ -579,7 +580,7 @@ function ResultsDashboard() {
     }));
     return {
       generatedAt: new Date().toISOString(),
-      profileLabel: occupationLabel,
+      profileLabel: userName || occupationLabel,
       occupationTitle: occupationLabel,
       isco08,
       countryCode: country,
@@ -634,13 +635,14 @@ function ResultsDashboard() {
       eyebrow="Results"
       title={
         <>
-          {meta.flag} {occupationLabel}
+          {meta.flag} {userName ? `${userName} · ` : ""}{occupationLabel}
         </>
       }
       lede={
         <>
-          {meta.greeting} Here&rsquo;s your personalised AI readiness
-          assessment for <strong>{meta.name}</strong>.
+          {userName ? `Hi ${userName} — ` : `${meta.greeting} `}
+          here&rsquo;s your personalised AI readiness assessment for{" "}
+          <strong>{meta.name}</strong>.
         </>
       }
     >

@@ -229,6 +229,8 @@ export function applyPersona(id: PersonaId) {
 
   // 2. OnboardingData (used by /results to call query API).
   const ob: OnboardingData = {
+    name: p.name,
+    age: String(p.age),
     isco08: p.isco08,
     isco08_label: p.isco08_label,
     isco08_freetext: "",
