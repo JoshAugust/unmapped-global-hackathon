@@ -217,7 +217,7 @@ function Passport() {
     return (
       <PageShell
         eyebrow="Module 01 · Skills Signal Engine"
-        title={<>A few more questions&hellip;</>}
+        title={<>{"A few more questions…"}</>}
         lede="Help us refine your results with a couple of quick follow-ups."
       >
         <FollowupQuestions
@@ -241,7 +241,7 @@ function Passport() {
     return (
       <PageShell
         eyebrow="Module 01 · Skills Signal Engine"
-        title={<>Building your profile&hellip;</>}
+        title={<>{"Building your profile…"}</>}
       >
         <div className="flex flex-col items-center justify-center py-20">
           <div className="h-12 w-12 animate-spin rounded-full border-4 border-line border-t-cobalt" />
