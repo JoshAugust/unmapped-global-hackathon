@@ -635,13 +635,14 @@ function ResultsDashboard() {
       eyebrow="Results"
       title={
         <>
-          {meta.flag} {occupationLabel}
+          {meta.flag} {userName ? `${userName} · ` : ""}{occupationLabel}
         </>
       }
       lede={
         <>
-          {meta.greeting} Here&rsquo;s your personalised AI readiness
-          assessment for <strong>{meta.name}</strong>.
+          {userName ? `Hi ${userName} — ` : `${meta.greeting} `}
+          here&rsquo;s your personalised AI readiness assessment for{" "}
+          <strong>{meta.name}</strong>.
         </>
       }
     >
