@@ -61,6 +61,7 @@ function Readiness() {
   const pct = (n: number) => `${Math.round(n * 100)}%`;
   const [limitsOpen, setLimitsOpen] = useState(false);
   const [methodOpen, setMethodOpen] = useState(false);
+  const [pdfState, setPdfState] = useState<"idle" | "generating" | "done" | "error">("idle");
 
   const light = trafficLight(overall);
   const meta = LIGHT_META[light];
@@ -71,6 +72,73 @@ function Readiness() {
   const durable = [...items].sort((a, b) => a.exposure - b.exposure).filter(i => i.exposure < 0.45).slice(0, 3);
 
   const placeName = profile.countryKey === "ssa-ghana" ? "Greater Accra" : country.country;
+
+  // Build a ReportData snapshot from current screen state for PDF export.
+  const reportData: ReportData = useMemo(() => {
+    const tier = tierFromScore(overall);
+    const sortedRisks = [...items].sort((a, b) => b.exposure - a.exposure);
+    const topRisks = sortedRisks.slice(0, 4).map(it => ({
+      category: it.id,
+      label: it.label,
+      share: 1 / Math.max(1, items.length),
+      risk: it.exposure,
+    }));
+    const durableSkills = [...items]
+      .sort((a, b) => a.exposure - b.exposure)
+      .slice(0, 6)
+      .map(it => it.label);
+    const pathways = adj.slice(0, 3).map(a => ({
+      title: a.skill.label,
+      isco08: "—",
+      overlapPct: Math.round((1 - a.exposure) * 100),
+      missingSkills: 1,
+      wageUpliftPct: Math.round(Math.max(5, (1 - a.exposure) * 25)),
+      gapDescription: a.reason,
+    }));
+    return {
+      generatedAt: new Date().toISOString(),
+      profileLabel: profile.name || "Your readiness report",
+      occupationTitle: country.educationLevels.find(e => e.id === profile.educationId)?.label ?? "Worker",
+      isco08: "—",
+      countryCode: profile.countryKey,
+      countryName: country.country,
+      educationLevel: country.educationLevels.find(e => e.id === profile.educationId)?.label,
+      experienceYears: String(profile.yearsExperience),
+      durableSkills,
+      readiness: {
+        riskScore: overall,
+        tier,
+        summary: buildReadinessSummary(tier),
+      },
+      topRisks,
+      pathways,
+      labourMarket: {
+        labourForceParticipationPct: country.signals.youthLfprPct,
+      },
+      notes: [],
+      dataLimitations: [
+        `Around ${country.signals.informalShare}% of work is informal — task profiles use regional proxies.`,
+        "Skills are matched by keyword to ESCO/O*NET — approximate, not exact.",
+      ],
+    };
+  }, [overall, items, adj, profile, country]);
+
+  const handleDownloadPDF = async () => {
+    setPdfState("generating");
+    try {
+      const filename = await generateReportPDF(reportData);
+      setPdfState("done");
+      toast.success("Report downloaded", { description: filename });
+      setTimeout(() => setPdfState("idle"), 2500);
+    } catch (err) {
+      console.error("PDF generation failed", err);
+      setPdfState("error");
+      toast.error("Couldn't generate the PDF", {
+        description: "Please try again.",
+        action: { label: "Retry", onClick: () => handleDownloadPDF() },
+      });
+    }
+  };
 
   // Plain-language examples for at-risk skills
   const RISK_EXAMPLE: Record<string, string> = {
