@@ -33,6 +33,7 @@ function Index() {
       <SiteNav />
       <Hero />
       <HowItWorks />
+      <JobMarketPulse />
       <ImpactStrip />
       <BuiltForAmara />
       <Footer />
@@ -147,6 +148,61 @@ function HowItWorks() {
               </p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Job Market Pulse ─────────────────────────────────────────────────── */
+
+function JobMarketPulse() {
+  return (
+    <section className="border-b border-line bg-card">
+      <div className="mx-auto max-w-[1400px] px-6 py-12 md:py-16">
+        <div className="mx-auto max-w-3xl">
+          <div className="rounded-lg border-2 border-cobalt/20 bg-cobalt/5 p-6 md:p-8">
+            <div className="flex items-start gap-4">
+              <span
+                className="text-3xl shrink-0"
+                style={{ animation: "pulse 2s ease-in-out infinite" }}
+              >
+                🔍
+              </span>
+              <div className="space-y-3">
+                <h3 className="font-display text-xl font-black md:text-2xl">
+                  Live Job Intelligence
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+                  We scrape LinkedIn, Indeed, and Jobberman to show you real demand
+                  signals — not just theory, but which jobs are actually hiring in
+                  your country right now.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs font-semibold text-muted-foreground">
+                      Tracking <strong className="text-ink">374+</strong> occupation
+                      categories
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs font-semibold text-muted-foreground">
+                      Across <strong className="text-ink">3</strong> major job
+                      platforms
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs font-semibold text-muted-foreground">
+                      Updated <strong className="text-ink">April 2025</strong>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

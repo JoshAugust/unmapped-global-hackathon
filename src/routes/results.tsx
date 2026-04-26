@@ -29,6 +29,7 @@ import {
   Users,
   BarChart3,
 } from "lucide-react";
+import { JobDemandSection } from "@/components/job-demand-section";
 
 // ────────────────────────────────────────────
 // Route definition
@@ -665,6 +666,13 @@ function ResultsDashboard() {
               </div>
             </section>
           )}
+
+          {/* ── Job Demand Signals ── */}
+          <JobDemandSection
+            country={country}
+            countryName={meta.name}
+            userIsco08={isco08}
+          />
 
           {/* ── Section 3: Transition Pathways ── */}
           {sortedPathways.length > 0 && (

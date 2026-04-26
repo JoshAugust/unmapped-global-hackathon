@@ -30,6 +30,7 @@ import {
   FileText,
 } from "lucide-react";
 import html2canvas from "html2canvas";
+import { PolicymakerJobDemand } from "@/components/policymaker-job-demand";
 import { jsPDF } from "jspdf";
 
 // ─── Route ──────────────────────────────────────────────────
@@ -893,6 +894,9 @@ function PolicymakerDashboard() {
 
         {/* ── STEP 2: Skill Gap Heatmap ───────────────────── */}
         <SkillGapHeatmap />
+
+        {/* ── Labour Market Demand Signals ─────────────────── */}
+        <PolicymakerJobDemand iso3={selectedIso3} countryName={country.name} />
 
         {/* ── STEP 3: Sector Demand & Supply ──────────────── */}
         <SectorDemandChart />
