@@ -84,7 +84,7 @@ function LocalisabilityPage() {
         <div className="flex items-center gap-2 text-cobalt">
           <FileJson className="h-4 w-4" />
           <div className="font-mono text-[10px] uppercase tracking-[0.2em]">
-            Adding a 7th country
+            Adding another country
           </div>
         </div>
         <h3 className="mt-2 font-display text-xl font-bold">
