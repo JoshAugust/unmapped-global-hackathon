@@ -270,7 +270,7 @@ export function SiteNav() {
               🎬 Demo
             </Link>
             <Link
-              to="/passport"
+              to="/start"
               className="shrink-0 whitespace-nowrap rounded-none bg-paper px-3 py-2 text-xs font-semibold text-cobalt hover:bg-ink hover:text-paper md:px-5 md:text-sm"
             >
               Get started

@@ -65,16 +65,15 @@ function Hero() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
-            to="/passport"
+            to="/start"
             className="group inline-flex items-center gap-3 bg-cobalt px-8 py-4 text-base font-semibold text-paper transition-colors hover:bg-paper hover:text-cobalt"
           >
-            <span className="text-xl">🎓</span>
+            <span className="text-xl">🚀</span>
             <span>
-              {t("hero.cta_youth", "I'm a young person")}{" "}
+              {t("hero.cta_get_started", "Get started")}{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1">
                 →
-              </span>{" "}
-              {t("hero.cta_youth_sub", "Start your skills passport")}
+              </span>
             </span>
           </Link>
           <Link
