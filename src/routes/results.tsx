@@ -580,7 +580,7 @@ function ResultsDashboard() {
     }));
     return {
       generatedAt: new Date().toISOString(),
-      profileLabel: occupationLabel,
+      profileLabel: userName || occupationLabel,
       occupationTitle: occupationLabel,
       isco08,
       countryCode: country,
