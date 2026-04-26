@@ -325,9 +325,10 @@ function Readiness() {
           )}
           <Link
             to="/dashboard"
-            className="mt-5 inline-block font-mono text-xs uppercase tracking-wider text-cobalt hover:underline"
+            className="group mt-6 inline-flex items-center gap-2 rounded-sm border-2 border-ink bg-cobalt px-5 py-3 font-mono text-xs uppercase tracking-wider font-bold text-paper shadow-[4px_4px_0_0_var(--ink)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
           >
-            → See matched opportunities
+            See matched opportunities
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </section>
       </div>
