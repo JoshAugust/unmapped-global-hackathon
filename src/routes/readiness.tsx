@@ -113,7 +113,7 @@ function Readiness() {
       topRisks,
       pathways,
       labourMarket: {
-        labourForceParticipationPct: country.signals.youthLfprPct,
+        youthUnemploymentPct: country.signals.youthUnemployment,
       },
       notes: [],
       dataLimitations: [
