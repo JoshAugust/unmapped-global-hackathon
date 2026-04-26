@@ -147,15 +147,15 @@ function Methodology() {
       <section className="mt-16">
         {/* Honest limits — promoted to a visible block per brief: "Be honest about
             limits. The best teams know exactly what they don't know." */}
-        <div className="mb-10 rounded-sm border-2 border-rust bg-rust/5 p-6 sm:p-8">
-          <div className="flex items-center gap-2 text-rust">
+        <div className="mb-10 rounded-sm border border-line bg-sand/40 p-6 sm:p-8">
+          <div className="flex items-center gap-2 text-ink/70">
             <EyeOff className="h-4 w-4" />
             <div className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em]">
               Limitations
             </div>
           </div>
           <h2 className="mt-2 font-display text-2xl font-black leading-snug md:text-3xl">
-            Five <span className="text-rust">limitations</span> we name up front.
+            Five limitations we name up front.
           </h2>
           <p className="mt-3 max-w-3xl text-sm text-foreground/80">
             Tools that hide their gaps cause real harm. These are the limits we hold ourselves to —
@@ -189,16 +189,16 @@ function Methodology() {
                 body: "Wittgenstein 2025–2035 figures assume current education-policy trajectories hold. They do not. We show projections to make the system legible, not as forecasts.",
               },
             ].map(item => (
-              <li key={item.n} className="rounded-sm border border-rust/30 bg-paper p-4">
+              <li key={item.n} className="rounded-sm border border-line bg-paper p-4">
                 <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-xs font-semibold text-rust">{item.n}</span>
+                  <span className="font-mono text-xs font-semibold text-ink/50">{item.n}</span>
                   <h3 className="font-display text-base font-bold leading-tight">{item.title}</h3>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-foreground/75">{item.body}</p>
               </li>
             ))}
           </ol>
-          <p className="mt-6 border-t border-rust/20 pt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-rust">
+          <p className="mt-6 border-t border-line pt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">
             Prototype · figures are illustrative composites of cited sources · not for production decisions
           </p>
         </div>
