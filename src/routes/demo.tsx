@@ -361,12 +361,21 @@ function DemoPage() {
         <Link to="/" className="font-display text-lg font-black text-paper/80 hover:text-paper">
           unmapped
         </Link>
-        <button
-          onClick={() => setPaused((p) => !p)}
-          className="text-xs font-medium uppercase tracking-wider text-paper/60 hover:text-paper"
-        >
-          {paused ? "▶ Resume" : "⏸ Pause"}
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setPaused((p) => !p)}
+            className="text-xs font-medium uppercase tracking-wider text-paper/60 hover:text-paper"
+          >
+            {paused ? "▶ Resume" : "⏸ Pause"}
+          </button>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1 border border-paper/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-paper/80 hover:border-paper hover:bg-paper hover:text-ink"
+            aria-label="Exit demo"
+          >
+            ✕ Exit
+          </Link>
+        </div>
       </div>
 
       {/* Progress bar */}
