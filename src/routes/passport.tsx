@@ -664,3 +664,63 @@ function StepGoal({
     </div>
   );
 }
+
+/* Step 0: Name + age */
+function StepIntro({
+  name,
+  age,
+  onName,
+  onAge,
+}: {
+  name: string;
+  age: string;
+  onName: (v: string) => void;
+  onAge: (v: string) => void;
+}) {
+  const ageNum = age === "" ? null : Number(age);
+  const ageInvalid = age !== "" && (!/^\d{1,3}$/.test(age) || ageNum! < 10 || ageNum! > 99);
+  return (
+    <div>
+      <StepHeading number={1} question="First — what should we call you?" />
+      <p className="mb-6 text-sm text-muted-foreground">
+        We&rsquo;ll use your name across your passport and on the report you can download.
+      </p>
+      <div className="space-y-5">
+        <label className="block">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            Your name
+          </span>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => onName(e.target.value.slice(0, 60))}
+            maxLength={60}
+            autoComplete="given-name"
+            placeholder="e.g. Amara"
+            className="mt-2 block w-full min-h-[44px] rounded-sm border border-line bg-paper px-4 py-2.5 text-base font-medium text-ink placeholder:text-muted-foreground/50 focus:border-ink focus:outline-none"
+          />
+        </label>
+        <label className="block">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            Your age
+          </span>
+          <input
+            type="number"
+            inputMode="numeric"
+            min={10}
+            max={99}
+            value={age}
+            onChange={(e) => onAge(e.target.value.replace(/[^\d]/g, "").slice(0, 3))}
+            placeholder="e.g. 22"
+            className="mt-2 block w-full min-h-[44px] max-w-[140px] rounded-sm border border-line bg-paper px-4 py-2.5 text-base font-medium text-ink placeholder:text-muted-foreground/50 focus:border-ink focus:outline-none"
+          />
+          {ageInvalid && (
+            <span className="mt-1 block text-xs text-rust">
+              Please enter an age between 10 and 99.
+            </span>
+          )}
+        </label>
+      </div>
+    </div>
+  );
+}
