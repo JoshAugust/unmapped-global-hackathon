@@ -20,6 +20,7 @@ import { EducationLandscape } from "@/components/education-landscape";
 import { getCountryTheme, getAllCountryThemes } from "@/lib/country-theme";
 import { SOURCES } from "@/lib/sources";
 import { cn } from "@/lib/utils";
+import { useViewMode } from "@/lib/view-mode";
 import { fetchWithFallback } from "@/lib/api-client";
 import { getCountryConfig, getRecalibratedData } from "@/lib/static-data";
 
@@ -678,6 +679,7 @@ function CountryCard({
 // ─────────────────────────────────────────────────────────────
 
 function ComparePage() {
+  const { isMobile } = useViewMode();
   const [isoA, setIsoA] = React.useState("NGA");
   const [isoB, setIsoB] = React.useState("GHA");
   const [focusedIso, setFocusedIso] = React.useState<string | null>(null);
@@ -766,7 +768,7 @@ function ComparePage() {
 
         {/* ── Country Header Cards ────────────────────────── */}
         <section>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className={`grid gap-5 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2'}`}>
             <CountryCard theme={themeA} config={dataA.config} loading={dataA.loading} />
             <CountryCard theme={themeB} config={dataB.config} loading={dataB.loading} />
           </div>
@@ -914,7 +916,7 @@ function ComparePage() {
             Wittgenstein Centre SSP2 scenario · Population 15+ · 2025 vs 2035
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'}`}>
             {/* Country A education */}
             <div className="rounded-xl border-2 border-border p-5" style={{ borderColor: `hsl(${themeA.colors.primary})20` }}>
               <div className="flex items-center gap-2 mb-4">

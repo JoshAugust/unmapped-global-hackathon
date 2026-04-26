@@ -7,6 +7,7 @@ import { useOnboarding } from "@/lib/profile-store";
 import { fetchWithFallback } from "@/lib/api-client";
 import { getQueryResponse, getRecalibratedData } from "@/lib/static-data";
 import { useI18n } from "@/lib/i18n";
+import { useViewMode } from "@/lib/view-mode";
 import { ProfileCard } from "@/components/profile-card";
 import {
   Card,
@@ -463,6 +464,7 @@ function ErrorState({ message }: { message: string }) {
 
 function ResultsDashboard() {
   const { t } = useI18n();
+  const { isMobile } = useViewMode();
   const [onboarding] = useOnboarding();
   const [queryData, setQueryData] = useState<QueryResponse | null>(null);
   const [recalData, setRecalData] = useState<RecalibrationOccupation | null>(
@@ -650,7 +652,7 @@ function ResultsDashboard() {
                 How your occupation&rsquo;s tasks split across categories, and
                 the automation risk for each.
               </p>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
                 {Object.entries(recalData.task_risk_breakdown).map(
                   ([key, val]) => (
                     <TaskCard
@@ -702,7 +704,7 @@ function ResultsDashboard() {
                   </button>
                 ))}
               </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
                 {sortedPathways.map((pw) => (
                   <PathwayCard
                     key={pw.target_isco08}
@@ -725,7 +727,7 @@ function ResultsDashboard() {
               Practical next steps to act on your results — whether you want to
               upskill, find work, or share your profile.
             </p>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'sm:grid-cols-3'}`}>
               {/* Get Trained */}
               <Card>
                 <CardHeader className="pb-2">
@@ -860,7 +862,7 @@ function ResultsDashboard() {
                   {t('results.demand.title', 'Demand for Your Skills')}
                 </h2>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
                 {/* Total jobs */}
                 <Card>
                   <CardHeader className="pb-2">

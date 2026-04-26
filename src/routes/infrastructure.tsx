@@ -10,6 +10,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ChevronDown, ChevronRight, Database, GitMerge, Cpu, Zap, Monitor, ExternalLink, CheckCircle, AlertCircle, Clock } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
 import { cn } from "@/lib/utils";
+import { useViewMode } from "@/lib/view-mode";
 
 export const Route = createFileRoute("/infrastructure")({
   component: InfrastructurePage,
@@ -692,6 +693,7 @@ function Legend() {
 // ─────────────────────────────────────────────────────────────────────────────
 
 function InfrastructurePage() {
+  const { isMobile } = useViewMode();
   return (
     <PageShell
       eyebrow="Data Architecture"
@@ -703,7 +705,7 @@ function InfrastructurePage() {
         <Legend />
 
         {/* Mobile: vertical stack. Desktop: horizontal columns with arrows */}
-        <div className="flex flex-col gap-4 xl:flex-row xl:gap-0 xl:items-start">
+        <div className={`flex flex-col gap-4 ${isMobile ? '' : 'xl:flex-row xl:gap-0 xl:items-start'}`}>
           {LAYERS.map((layer, i) => (
             <React.Fragment key={layer.id}>
               <LayerColumn layer={layer} isLast={i === LAYERS.length - 1} />

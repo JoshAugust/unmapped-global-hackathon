@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { CountryPill } from "./country-pill";
 import { LanguageSwitcher } from "./language-switcher";
+import { useViewMode } from "../lib/view-mode";
 
 /* ─── Nav structure ────────────────────────────────────────────────────── */
 
@@ -213,7 +214,7 @@ function MobileDrawer({
             </div>
           ))}
 
-          {/* Country & language in drawer */}
+          {/* Country, language & view mode in drawer */}
           <div className="mt-6 border-t border-line pt-4">
             <div className="px-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               Settings
@@ -223,11 +224,46 @@ function MobileDrawer({
                 <CountryPill />
               </div>
               <LanguageSwitcher variant="full" />
+              <div className="pt-1">
+                <ViewModeToggle />
+              </div>
             </div>
           </div>
         </nav>
       </div>
     </>
+  );
+}
+
+/* ─── SiteNav ──────────────────────────────────────────────────────────── */
+
+/* ─── View Mode Toggle ─────────────────────────────────────────────────── */
+
+function ViewModeToggle({ compact }: { compact?: boolean }) {
+  const { viewMode, setViewMode, isMobile } = useViewMode();
+  return (
+    <div className="flex rounded-full border border-line p-0.5 bg-paper">
+      <button
+        type="button"
+        onClick={() => setViewMode("mobile")}
+        title="Mobile view"
+        className={`rounded-full px-2 py-1 text-xs font-medium transition-colors ${
+          isMobile ? "bg-cobalt text-paper" : "text-muted-foreground hover:bg-sand"
+        }`}
+      >
+        📱{compact ? "" : " Mobile"}
+      </button>
+      <button
+        type="button"
+        onClick={() => setViewMode("desktop")}
+        title="Desktop view"
+        className={`rounded-full px-2 py-1 text-xs font-medium transition-colors ${
+          !isMobile ? "bg-cobalt text-paper" : "text-muted-foreground hover:bg-sand"
+        }`}
+      >
+        🖥️{compact ? "" : " Desktop"}
+      </button>
+    </div>
   );
 }
 
@@ -258,6 +294,7 @@ export function SiteNav() {
           <div className="flex items-center gap-2 md:gap-3">
             {/* Desktop controls */}
             <div className="hidden items-center gap-2 md:flex">
+              <ViewModeToggle compact />
               <CountryPill />
               <LanguageSwitcher variant="compact" />
             </div>

@@ -6,6 +6,7 @@ import { FollowupQuestions } from "@/components/followup-questions";
 import { useOnboarding } from "@/lib/profile-store";
 import { useI18n } from "@/lib/i18n";
 import { getCountryTheme } from "@/lib/country-theme";
+import { useViewMode } from "@/lib/view-mode";
 
 export const Route = createFileRoute("/passport")({
   component: Passport,
@@ -90,6 +91,7 @@ const TOTAL_STEPS = 5;
 
 function Passport() {
   const { t } = useI18n();
+  const { isMobile } = useViewMode();
   const [onboarding, setOnboarding] = useOnboarding();
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
@@ -270,7 +272,7 @@ function Passport() {
           <span>Step {step} of {TOTAL_STEPS}</span>
           <span>{Math.round((step / TOTAL_STEPS) * 100)}%</span>
         </div>
-        <div className="mt-2 h-1.5 w-full rounded-full bg-line">
+        <div className={`mt-2 w-full rounded-full bg-line ${isMobile ? 'h-2.5' : 'h-1.5'}`}>
           <div
             className="h-full rounded-full bg-cobalt transition-all duration-500 ease-out"
             style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
@@ -279,7 +281,7 @@ function Passport() {
       </div>
 
       {/* Step content */}
-      <div className="mx-auto max-w-2xl">
+      <div className={`mx-auto ${isMobile ? 'max-w-full px-1' : 'max-w-2xl'}`}>
         <div
           className={`transition-all duration-250 ease-out ${
             animating

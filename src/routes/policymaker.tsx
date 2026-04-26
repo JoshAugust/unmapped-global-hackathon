@@ -3,6 +3,7 @@ import { useMemo, useState, useRef, useCallback } from "react";
 import { PageShell } from "@/components/page-shell";
 import { DataSource } from "@/components/data-source";
 import { SOURCES } from "@/lib/sources";
+import { useViewMode } from "@/lib/view-mode";
 import {
   getCountryConfig,
   getRecalibratedData,
@@ -790,11 +791,8 @@ function PolicymakerDashboard() {
   const [ageBand, setAgeBand] = useState("all");
   const [gender, setGender] = useState("all");
   const [education, setEducation] = useState("all");
-  const [viewMode, setViewMode] = useState<"mobile" | "desktop">(() =>
-    typeof window !== "undefined" && window.innerWidth < 768 ? "mobile" : "desktop"
-  );
+  const { isMobile } = useViewMode();
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const isMobile = viewMode === "mobile";
   const dashRef = useRef<HTMLDivElement>(null);
 
   const country = COUNTRY_LIST.find((c) => c.iso3 === selectedIso3) ?? COUNTRY_LIST[0];
@@ -873,31 +871,6 @@ function PolicymakerDashboard() {
       <div className={`space-y-10 ${isMobile ? "px-0" : ""}`} ref={dashRef}>
         {/* ── HEADER: Country selector + view toggle ───────── */}
         <div className="flex flex-col gap-4">
-          {/* View mode toggle */}
-          <div className="flex items-center justify-end gap-2">
-            <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">View:</span>
-            <div className="flex rounded-full border border-line p-0.5 bg-paper">
-              <button
-                type="button"
-                onClick={() => setViewMode("mobile")}
-                className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
-                  isMobile ? "bg-cobalt text-white" : "text-muted-foreground hover:bg-sand"
-                }`}
-              >
-                📱 Mobile
-              </button>
-              <button
-                type="button"
-                onClick={() => setViewMode("desktop")}
-                className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
-                  !isMobile ? "bg-cobalt text-white" : "text-muted-foreground hover:bg-sand"
-                }`}
-              >
-                🖥️ Desktop
-              </button>
-            </div>
-          </div>
-
           {/* Country pills + perspective toggle */}
           <div className={`flex gap-4 ${isMobile ? "flex-col" : "flex-row items-center justify-between"}`}>
             <div className={`flex gap-2 ${isMobile ? "flex-wrap [&>*]:basis-[calc(50%-4px)]" : "flex-wrap"}`}>
