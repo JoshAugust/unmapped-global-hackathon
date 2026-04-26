@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, BookOpen, AlertTriangle, Scale, Users } from "lucide-react";
 import CalibrationPanel from "../components/calibration-panel";
-import { useViewMode } from "@/lib/view-mode";
 
 export const Route = createFileRoute("/methodology")({
   component: Methodology,
@@ -70,7 +69,6 @@ function ComparisonRow({
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function Methodology() {
-  const { isMobile } = useViewMode();
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Top nav */}
@@ -152,7 +150,7 @@ export default function Methodology() {
             <BookOpen className="w-5 h-5 text-slate-500 mt-0.5 shrink-0" />
             <h2 className="text-base font-semibold text-slate-800">Research foundations</h2>
           </div>
-          <div className={`space-y-3 ${isMobile ? 'grid grid-cols-1' : ''}`}>
+          <div className="space-y-3">
             <LiteratureCard
               citation="Frey & Osborne (2013)"
               finding="Estimated ~47% of US jobs at high risk of automation using O*NET task data and a machine learning classifier across 702 occupations. The foundational automation risk dataset — but US-centric and now over a decade old."
@@ -191,7 +189,7 @@ export default function Methodology() {
             <h2 className="text-base font-semibold text-slate-800">How we compare to other automation risk tools</h2>
             <p className="text-xs text-slate-500 mt-1">Different approaches, different answers — here's why</p>
           </div>
-          <div className={`overflow-x-auto ${isMobile ? '-mx-4 px-4' : ''}`}>
+          <div className="overflow-x-auto">
             <table className="w-full text-sm min-w-[600px]">
               <thead className="bg-slate-50">
                 <tr>

@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Database, Globe, ArrowRight, AlertTriangle, CheckCircle2, Info } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
 import { DataSource } from "@/components/data-source";
-import { useViewMode } from "@/lib/view-mode";
 
 export const Route = createFileRoute("/coverage")({
   component: CoverageDashboard,
@@ -238,13 +237,13 @@ function SectionHeader({ eyebrow, title }: { eyebrow: string; title: string }) {
 
 // ─── Coverage Matrix ──────────────────────────────────────────────────────────
 
-function CoverageMatrix({ isMobile }: { isMobile: boolean }) {
+function CoverageMatrix() {
   const countries = ["NGA", "GHA", "KEN", "IND", "RWA"];
   return (
     <section className="mb-16">
       <SectionHeader eyebrow="02 — Source × Country" title="Coverage Matrix" />
       <Legend />
-      <div className={`mt-4 rounded-none border border-line ${isMobile ? 'overflow-x-auto -mx-4 px-4' : 'overflow-x-auto'}`}>
+      <div className={`mt-4 rounded-none border border-line $"overflow-x-auto"`}>
         <table className="min-w-full border-collapse text-sm">
           <thead>
             <tr className="border-b border-line bg-sand">
@@ -340,11 +339,11 @@ function CrosswalkFunnel() {
 
 // ─── Per-Country Cards ────────────────────────────────────────────────────────
 
-function CountryCards({ isMobile }: { isMobile: boolean }) {
+function CountryCards() {
   return (
     <section className="mb-16">
       <SectionHeader eyebrow="04 — Country Detail" title="Per-Country Coverage" />
-      <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5'}`}>
+      <div className={`grid gap-4 $"grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"`}>
         {COUNTRIES_DETAIL.map((c) => {
           const pct = Math.round((c.occupationCoverage / c.occupationTotal) * 100);
           return (
@@ -399,7 +398,7 @@ function CountryCards({ isMobile }: { isMobile: boolean }) {
 
 // ─── Quality Notes ────────────────────────────────────────────────────────────
 
-function QualityNotes({ isMobile }: { isMobile: boolean }) {
+function QualityNotes() {
   const notes = [
     {
       icon: AlertTriangle,
@@ -431,7 +430,7 @@ function QualityNotes({ isMobile }: { isMobile: boolean }) {
   return (
     <section className="mb-16">
       <SectionHeader eyebrow="05 — Data Quality" title="Known Limitations" />
-      <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
+      <div className={`grid gap-4 $"grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"`}>
         {notes.map(({ icon: Icon, title, body }) => (
           <div key={title} className="flex gap-4 border border-line bg-sand/40 p-5">
             <Icon className="mt-0.5 h-5 w-5 shrink-0 text-cobalt" strokeWidth={1.5} />
@@ -458,7 +457,6 @@ function QualityNotes({ isMobile }: { isMobile: boolean }) {
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 function CoverageDashboard() {
-  const { isMobile } = useViewMode();
   return (
     <PageShell
       eyebrow="Data Coverage"
@@ -507,16 +505,16 @@ function CoverageDashboard() {
       </section>
 
       {/* ── 02 Matrix ── */}
-      <CoverageMatrix isMobile={isMobile} />
+      <CoverageMatrix />
 
       {/* ── 03 Crosswalk ── */}
       <CrosswalkFunnel />
 
       {/* ── 04 Countries ── */}
-      <CountryCards isMobile={isMobile} />
+      <CountryCards />
 
       {/* ── 05 Quality ── */}
-      <QualityNotes isMobile={isMobile} />
+      <QualityNotes />
     </PageShell>
   );
 }

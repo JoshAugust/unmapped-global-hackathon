@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 import { I18nProvider } from "../lib/i18n";
-import { ViewModeProvider } from "../lib/view-mode";
 import { initCountryTheme } from "../lib/country-theme";
 
 function NotFoundComponent() {
@@ -75,9 +74,7 @@ function RootComponent() {
 
   return (
     <I18nProvider>
-      <ViewModeProvider>
-        <Outlet />
-      </ViewModeProvider>
+      <Outlet />
     </I18nProvider>
   );
 }

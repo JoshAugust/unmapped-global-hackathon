@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { CulturalPattern } from "@/components/cultural-pattern";
-import { useViewMode } from "@/lib/view-mode";
 
 
 export const Route = createFileRoute("/demo")({
@@ -294,7 +293,6 @@ function SlideVisual({ type }: { type: Slide["visual"] }) {
 /* ─── Demo Page ────────────────────────────────────────────────────────── */
 
 function DemoPage() {
-  const { isMobile } = useViewMode();
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -383,7 +381,7 @@ function DemoPage() {
 
       {/* Slide content */}
       <div
-        className={`relative z-10 mx-auto flex min-h-[calc(100vh-120px)] max-w-[1400px] flex-col items-center justify-center ${isMobile ? 'px-4 py-8' : 'px-6 py-12'}`}
+        className="relative z-10 mx-auto flex min-h-[calc(100vh-120px)] max-w-[1400px] flex-col items-center justify-center px-4 py-8 md:px-6 md:py-12"
         onTouchStart={(e) => {
           touchStart.current = e.touches[0].clientX;
         }}

@@ -14,7 +14,6 @@ import { EducationLandscape } from "@/components/education-landscape";
 import { DataSource } from "@/components/data-source";
 import { COUNTRIES, type CountryKey, type CountryConfig } from "@/data/countries";
 import { cn } from "@/lib/utils";
-import { useViewMode } from "@/lib/view-mode";
 import { GraduationCap, TrendingUp, BookOpen, Users } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
@@ -225,7 +224,6 @@ function ReturnsChart({ config }: { config: CountryConfig }) {
 // ─────────────────────────────────────────────────────────────
 
 function EducationPage() {
-  const { isMobile } = useViewMode();
   const [selectedKey, setSelectedKey] = useState<CountryKey>("ssa-nigeria");
 
   const config = useMemo(() => COUNTRIES[selectedKey], [selectedKey]);
@@ -276,7 +274,7 @@ function EducationPage() {
         )}
 
         {/* Two-column: scenario note + returns chart */}
-        <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'sm:grid-cols-2'}`}>
+        <div className={`grid gap-4 $"grid-cols-1 sm:grid-cols-2"`}>
           <ScenarioNote />
           <ReturnsChart config={config} />
         </div>

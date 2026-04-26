@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav, SiteFooter } from "@/components/site-nav";
 import { CulturalPattern } from "@/components/cultural-pattern";
 import { useI18n } from "@/lib/i18n";
-import { useViewMode } from "@/lib/view-mode";
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -29,14 +28,13 @@ export const Route = createFileRoute("/")({
 /* ─── Root ──────────────────────────────────────────────────────────────── */
 
 function Index() {
-  const { isMobile } = useViewMode();
   return (
     <div className="min-h-screen overflow-x-hidden bg-paper text-ink">
       <SiteNav />
-      <Hero isMobile={isMobile} />
-      <HowItWorks isMobile={isMobile} />
-      <ImpactStrip isMobile={isMobile} />
-      <BuiltForAmara isMobile={isMobile} />
+      <Hero />
+      <HowItWorks />
+      <ImpactStrip />
+      <BuiltForAmara />
       <Footer />
     </div>
   );
@@ -44,7 +42,7 @@ function Index() {
 
 /* ─── Hero ──────────────────────────────────────────────────────────────── */
 
-function Hero({ isMobile }: { isMobile: boolean }) {
+function Hero() {
   const { t } = useI18n();
   return (
     <section className="relative overflow-hidden bg-ink">
@@ -57,7 +55,7 @@ function Hero({ isMobile }: { isMobile: boolean }) {
       <div className="absolute inset-0 z-[1] bg-ink/70" aria-hidden="true" />
       <CulturalPattern opacity={0.04} size={120} />
 
-      <div className={`relative z-[2] mx-auto flex min-h-[80vh] max-w-[1400px] flex-col items-center justify-center px-6 text-center ${isMobile ? 'py-12' : 'py-24'}`}>
+      <div className="relative z-[2] mx-auto flex min-h-[80vh] max-w-[1400px] flex-col items-center justify-center px-6 text-center py-12 md:py-24">
         <h1 className="font-display text-[clamp(3rem,8vw,7rem)] font-black leading-[0.95] tracking-tight text-paper">
           {t("hero.title", "UNMAPPED")}
         </h1>
@@ -118,11 +116,11 @@ const STEPS = [
   },
 ];
 
-function HowItWorks({ isMobile }: { isMobile: boolean }) {
+function HowItWorks() {
   const { t } = useI18n();
   return (
     <section className="border-b border-line bg-paper">
-      <div className={`mx-auto max-w-[1400px] px-6 ${isMobile ? 'py-12' : 'py-20'}`}>
+      <div className="mx-auto max-w-[1400px] px-6 py-12 md:py-20">
         <div className="text-center">
           <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cobalt">
             How it works
@@ -132,7 +130,7 @@ function HowItWorks({ isMobile }: { isMobile: boolean }) {
           </h2>
         </div>
 
-        <div className={`mt-14 grid gap-8 ${isMobile ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
+        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
           {STEPS.map((step, i) => (
             <div key={i} className="flex flex-col items-center text-center">
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-cobalt/10 text-4xl">
@@ -165,10 +163,10 @@ const STATS = [
   { value: "7", label: "Languages" },
 ];
 
-function ImpactStrip({ isMobile }: { isMobile: boolean }) {
+function ImpactStrip() {
   return (
     <section className="bg-cobalt">
-      <div className={`mx-auto grid max-w-[1400px] gap-px bg-cobalt/80 ${isMobile ? 'grid-cols-2' : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-5'}`}>
+      <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px bg-cobalt/80 sm:grid-cols-3 md:grid-cols-5">
         {STATS.map((s) => (
           <div
             key={s.label}
@@ -189,10 +187,10 @@ function ImpactStrip({ isMobile }: { isMobile: boolean }) {
 
 /* ─── Built for Amara ──────────────────────────────────────────────────── */
 
-function BuiltForAmara({ isMobile }: { isMobile: boolean }) {
+function BuiltForAmara() {
   return (
     <section className="border-b border-line bg-card">
-      <div className={`mx-auto max-w-[1400px] px-6 ${isMobile ? 'py-12' : 'py-20'}`}>
+      <div className="mx-auto max-w-[1400px] px-6 py-12 md:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cobalt">
             Built for real people
@@ -200,7 +198,7 @@ function BuiltForAmara({ isMobile }: { isMobile: boolean }) {
           <h2 className="mt-3 font-display text-3xl font-black md:text-4xl">
             Meet Amara.
           </h2>
-          <div className={`mt-8 rounded-none border border-line bg-paper text-left ${isMobile ? 'p-5' : 'p-8'}`}>
+          <div className="mt-8 rounded-none border border-line bg-paper p-5 text-left md:p-8">
             <p className="text-lg leading-relaxed">
               Amara repairs phones in Lagos Market. She's 22, taught herself
               from YouTube. Is her livelihood at risk from AI? Where should she
