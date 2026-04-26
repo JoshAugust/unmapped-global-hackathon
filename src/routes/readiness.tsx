@@ -176,7 +176,13 @@ function Readiness() {
   return (
     <PageShell
       eyebrow="Module 02 · AI Readiness Lens"
-      title={<>Where you stand. <span className="text-cobalt">Where to go next.</span></>}
+      title={
+        userName ? (
+          <>{userName}, here&rsquo;s where you stand. <span className="text-cobalt">And where to go next.</span></>
+        ) : (
+          <>Where you stand. <span className="text-cobalt">Where to go next.</span></>
+        )
+      }
       lede={`A clear-eyed look at how AI and automation will touch your work over the next 10 years — calibrated for ${placeName}, not Silicon Valley.`}
     >
       {/* TRAFFIC LIGHT HERO */}
