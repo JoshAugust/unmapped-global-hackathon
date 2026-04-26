@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageShell } from "@/components/page-shell";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown, MessageCircle, Compass, Lightbulb, ShieldCheck, AlertTriangle, FileJson, ArrowRight } from "lucide-react";
+import { ChevronDown, MessageCircle, Compass, Lightbulb, ShieldCheck, AlertTriangle, FileJson, ArrowRight, EyeOff } from "lucide-react";
 
 export const Route = createFileRoute("/methodology")({
   component: Methodology,
@@ -145,6 +145,64 @@ function Methodology() {
 
       {/* Expandable details */}
       <section className="mt-16">
+        {/* Honest limits — promoted to a visible block per brief: "Be honest about
+            limits. The best teams know exactly what they don't know." */}
+        <div className="mb-10 rounded-sm border-2 border-rust bg-rust/5 p-6 sm:p-8">
+          <div className="flex items-center gap-2 text-rust">
+            <EyeOff className="h-4 w-4" />
+            <div className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em]">
+              What we don't know
+            </div>
+          </div>
+          <h2 className="mt-2 font-display text-2xl font-black leading-snug md:text-3xl">
+            Five things we are <span className="text-rust">explicitly not</span> good at — and why we say so up front.
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm text-foreground/80">
+            Tools that hide their gaps cause real harm. These are the limits we hold ourselves to.
+            Each one is a known, named blind spot — not a bug we plan to fix quietly.
+          </p>
+          <ol className="mt-6 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                n: "01",
+                title: "Informal-sector wages are estimates",
+                body: "Most labour data captures formal employment. In countries where 70–85% of work is informal, our wage figures lean on regional proxies, not direct measurement. Treat as a directional signal.",
+              },
+              {
+                n: "02",
+                title: "Frey-Osborne is over a decade old",
+                body: "We use it because nothing better has the same coverage, and we recalibrate per LMIC. But the underlying task scoring is from 2013 and pre-dates large language models. We are honest about the lag.",
+              },
+              {
+                n: "03",
+                title: "No real-time job-board integration",
+                body: "Pathways are derived from skill adjacency, not live vacancies. The job you can reach in theory may not be hiring on your block today.",
+              },
+              {
+                n: "04",
+                title: "Calibration is best-effort, not validated",
+                body: "Country calibration factors are grounded in capital-intensity and infrastructure proxies. We have not back-tested them against panel data — because that data does not yet exist for most LMICs.",
+              },
+              {
+                n: "05",
+                title: "Demographic projections are deterministic",
+                body: "Wittgenstein 2025–2035 figures assume current education-policy trajectories hold. They do not. We show projections to make the system legible, not as forecasts.",
+              },
+            ].map(item => (
+              <li key={item.n} className="rounded-sm border border-rust/30 bg-paper p-4">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-mono text-xs font-semibold text-rust">{item.n}</span>
+                  <h3 className="font-display text-base font-bold leading-tight">{item.title}</h3>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/75">{item.body}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 border-t border-rust/20 pt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-rust">
+            Prototype · figures are illustrative composites of cited sources · not for production decisions
+          </p>
+        </div>
+
         <h2 className="font-display text-2xl font-bold">Want the details?</h2>
         <p className="mt-2 text-sm text-muted-foreground max-w-2xl">
           The simple story above is enough for most people. If you're a researcher, policymaker, or curious — open the panels below.

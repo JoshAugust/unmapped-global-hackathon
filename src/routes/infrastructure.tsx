@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageShell } from "@/components/page-shell";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown, ExternalLink, Database, Globe, BookOpen, Building2 } from "lucide-react";
+import { ChevronDown, ExternalLink, Database, Globe, BookOpen, Building2, Wifi, Smartphone, Lock, Clock, ImageOff, Languages } from "lucide-react";
 
 export const Route = createFileRoute("/infrastructure")({
   component: Infrastructure,
@@ -221,6 +221,37 @@ function Infrastructure() {
               Each source below is open and free to inspect. We don't use any private or proprietary data.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Built for constraint — addresses brief: "design for constraint —
+          low bandwidth, shared devices, incomplete credentials". */}
+      <section className="mb-12 rounded-sm border-2 border-ink bg-paper p-6 shadow-[6px_6px_0_0_var(--ink)] sm:p-8">
+        <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-cobalt">
+          Designed for constraint
+        </div>
+        <h2 className="mt-2 font-display text-2xl font-black leading-snug md:text-3xl">
+          Built for a shared family phone on patchy 3G — <span className="text-cobalt">not a Macbook in San Francisco.</span>
+        </h2>
+        <p className="mt-3 max-w-3xl text-sm text-foreground/80">
+          Every design decision assumes the user has limited data, a shared device, no email account,
+          and credentials a global system has never heard of. These are constraints, not edge cases.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { icon: <Wifi className="h-5 w-5" />, title: "≤150 KB initial payload", body: "Page weight budget enforced per country config (`max_initial_payload_kb`). Loads on EDGE if needed." },
+            { icon: <ImageOff className="h-5 w-5" />, title: "Lazy images, SVG patterns", body: "All hero & cultural imagery defer-loads. Country silhouettes are inline SVG, not bitmaps." },
+            { icon: <Smartphone className="h-5 w-5" />, title: "Works on a shared phone", body: "No login, no account, no email. State is local and ephemeral. Hand the phone over and start fresh." },
+            { icon: <Lock className="h-5 w-5" />, title: "No credentials required", body: "Informal apprenticeship, self-taught, NGO training and on-the-job experience are first-class inputs — not exceptions." },
+            { icon: <Languages className="h-5 w-5" />, title: "8 locales, native scripts", body: "Bengali, Hausa, Yoruba, Kinyarwanda, Swahili, Hindi, French, English. Switch in the header — instant." },
+            { icon: <Clock className="h-5 w-5" />, title: "Full passport in ~2 min", body: "6 questions, no scrolling forms, no jargon. Built for someone using a borrowed device on a break." },
+          ].map(item => (
+            <div key={item.title} className="rounded-sm border border-line bg-card p-4">
+              <div className="flex items-center gap-2 text-cobalt">{item.icon}</div>
+              <div className="mt-2 font-display text-sm font-bold">{item.title}</div>
+              <p className="mt-1 text-xs leading-relaxed text-foreground/70">{item.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -90,7 +90,7 @@ const TOTAL_STEPS_WITH_INTRO = 6;
 /* ── Main component ── */
 
 function Passport() {
-  const { t } = useI18n();
+  const { t, locale, setLocale, availableLocales } = useI18n();
   const [onboarding, setOnboarding] = useOnboarding();
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
@@ -272,6 +272,34 @@ function Passport() {
       }
       lede="Answer 5 quick questions so we can map your experience into a portable, human-readable profile."
     >
+      {/* Live language strip — proves the localisation is real, not a slide.
+          Tap any chip and the step heading & hint re-render in that script. */}
+      <div className="mb-6 flex flex-wrap items-center gap-2 rounded-sm border border-cobalt/30 bg-cobalt/5 px-4 py-3">
+        <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-cobalt">
+          Try this passport in →
+        </span>
+        {availableLocales.map(l => {
+          const active = l.code === locale;
+          return (
+            <button
+              key={l.code}
+              type="button"
+              onClick={() => setLocale(l.code)}
+              className={
+                active
+                  ? "rounded-full border border-ink bg-ink px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-paper"
+                  : "rounded-full border border-cobalt/30 bg-paper px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-cobalt hover:border-ink hover:text-ink"
+              }
+              aria-pressed={active}
+              title={l.name}
+            >
+              <span className="mr-1">{l.flag}</span>
+              <span style={{ fontFamily: "system-ui, sans-serif" }}>{l.nativeName}</span>
+            </button>
+          );
+        })}
+      </div>
+
       {/* Progress bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
