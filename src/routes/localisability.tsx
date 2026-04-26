@@ -14,7 +14,6 @@
 
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/page-shell";
-import { COUNTRIES, type CountryConfig } from "@/data/countries";
 import { ArrowRight, Check, FileJson } from "lucide-react";
 
 export const Route = createFileRoute("/localisability")({
@@ -32,9 +31,6 @@ export const Route = createFileRoute("/localisability")({
 });
 
 function LocalisabilityPage() {
-  const left = COUNTRIES["ssa-nigeria"];
-  const right = COUNTRIES["ssa-ghana"];
-
   return (
     <PageShell
       eyebrow="About · Country-agnostic protocol"
@@ -46,14 +42,8 @@ function LocalisabilityPage() {
       }
       lede="Our tool is not hardcoded to any one country. It can be directly plugged into any geographic context — every difference you see is driven by a JSON config, not a separate codebase."
     >
-      {/* Side-by-side comparison */}
-      <section className="grid gap-6 md:grid-cols-2">
-        <ContextColumn config={left} accent="cobalt" />
-        <ContextColumn config={right} accent="rust" />
-      </section>
-
       {/* Diff summary — what actually changes */}
-      <section className="mt-12 rounded-sm border-2 border-ink bg-paper p-6 sm:p-8">
+      <section className="rounded-sm border-2 border-ink bg-paper p-6 sm:p-8">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
           What changes between the two configs
         </div>
