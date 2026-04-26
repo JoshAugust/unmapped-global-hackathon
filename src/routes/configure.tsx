@@ -23,36 +23,36 @@ function Kv({ k, v }: { k: string; v: string }) {
 
 /* ── Side-by-side reconfiguration story (per brief: "show context A, then reconfigure to context B") ── */
 
-const COMPARISON_ROWS: { label: string; nga: string; ind: string }[] = [
+const COMPARISON_ROWS: { label: string; nga: string; gha: string }[] = [
   {
     label: "Labour market data",
     nga: "data/nga/wdi_labour.json · NBS Labour Force Survey 2022",
-    ind: "data/ind/wdi_labour.json · PLFS / NSO India 2022–23",
+    gha: "data/gha/wdi_labour.json · GLSS-7 / Ghana Statistical Service",
   },
   {
     label: "Currency",
     nga: "₦ Naira (NGN) · ~780/USD",
-    ind: "₹ Rupee (INR) · ~83/USD",
+    gha: "₵ Cedi (GHS) · ~15.6/USD",
   },
   {
     label: "Education taxonomy",
     nga: "WAEC · NECO · JSSC · ND · HND",
-    ind: "Class 10 · Class 12 · ITI · B.Tech · M.A.",
+    gha: "BECE · WASSCE · TVET · HND · Degree",
   },
   {
     label: "UI language & script",
     nga: "English · Hausa · Yoruba (Latin)",
-    ind: "Hindi · English (Devanagari + Latin)",
+    gha: "English · Twi · Ewe (Latin)",
   },
   {
     label: "Automation calibration",
     nga: "0.67 — urban informal, growing ICT base",
-    ind: "0.72 — large IT/services + rural agricultural mix",
+    gha: "0.55 — urban informal, emerging digital services",
   },
   {
     label: "Opportunity types surfaced",
     nga: "Formal · Self-emp · Bolt/OPay · Oga apprenticeship · Fintech agent",
-    ind: "Formal · Self-emp · Swiggy/Ola · ITI/NAPS apprenticeship · UPI agent · SHG",
+    gha: "Formal · Self-emp · Bolt/Yango · Master-craftsman apprenticeship · MoMo agent",
   },
 ];
 
@@ -92,11 +92,11 @@ function SameProductTwoContexts() {
               </th>
               <th className="w-[36%] py-3 pl-3 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl">🇮🇳</span>
+                  <span className="text-xl">🇬🇭</span>
                   <div>
-                    <div className="font-display text-sm font-black">India</div>
+                    <div className="font-display text-sm font-black">Ghana</div>
                     <div className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
-                      South Asia · rural-agricultural mix
+                      SSA · urban informal
                     </div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ function SameProductTwoContexts() {
                   {row.label}
                 </td>
                 <td className="py-3 pl-3 pr-3 text-sm text-foreground/85">{row.nga}</td>
-                <td className="py-3 pl-3 text-sm text-foreground/85">{row.ind}</td>
+                <td className="py-3 pl-3 text-sm text-foreground/85">{row.gha}</td>
               </tr>
             ))}
           </tbody>
