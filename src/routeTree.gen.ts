@@ -14,6 +14,7 @@ import { Route as ReadinessRouteImport } from './routes/readiness'
 import { Route as PolicymakerRouteImport } from './routes/policymaker'
 import { Route as PassportRouteImport } from './routes/passport'
 import { Route as MethodologyRouteImport } from './routes/methodology'
+import { Route as InfrastructureRouteImport } from './routes/infrastructure'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as DashboardRouteImport } from './routes/dashboard'
@@ -46,6 +47,11 @@ const PassportRoute = PassportRouteImport.update({
 const MethodologyRoute = MethodologyRouteImport.update({
   id: '/methodology',
   path: '/methodology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InfrastructureRoute = InfrastructureRouteImport.update({
+  id: '/infrastructure',
+  path: '/infrastructure',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EducationRoute = EducationRouteImport.update({
@@ -98,6 +104,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof DashboardRoute
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
+  '/infrastructure': typeof InfrastructureRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardRoute
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
+  '/infrastructure': typeof InfrastructureRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -129,6 +137,7 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRoute
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
+  '/infrastructure': typeof InfrastructureRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
@@ -146,6 +155,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/demo'
     | '/education'
+    | '/infrastructure'
     | '/methodology'
     | '/passport'
     | '/policymaker'
@@ -161,6 +171,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/demo'
     | '/education'
+    | '/infrastructure'
     | '/methodology'
     | '/passport'
     | '/policymaker'
@@ -176,6 +187,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/demo'
     | '/education'
+    | '/infrastructure'
     | '/methodology'
     | '/passport'
     | '/policymaker'
@@ -192,6 +204,7 @@ export interface RootRouteChildren {
   DashboardRoute: typeof DashboardRoute
   DemoRoute: typeof DemoRoute
   EducationRoute: typeof EducationRoute
+  InfrastructureRoute: typeof InfrastructureRoute
   MethodologyRoute: typeof MethodologyRoute
   PassportRoute: typeof PassportRoute
   PolicymakerRoute: typeof PolicymakerRoute
@@ -234,6 +247,13 @@ declare module '@tanstack/react-router' {
       path: '/methodology'
       fullPath: '/methodology'
       preLoaderRoute: typeof MethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/infrastructure': {
+      id: '/infrastructure'
+      path: '/infrastructure'
+      fullPath: '/infrastructure'
+      preLoaderRoute: typeof InfrastructureRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/education': {
@@ -304,6 +324,7 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRoute: DashboardRoute,
   DemoRoute: DemoRoute,
   EducationRoute: EducationRoute,
+  InfrastructureRoute: InfrastructureRoute,
   MethodologyRoute: MethodologyRoute,
   PassportRoute: PassportRoute,
   PolicymakerRoute: PolicymakerRoute,
