@@ -39,7 +39,7 @@ import {
 } from "@/lib/report-data";
 import { toast } from "sonner";
 import { ExportBar } from "@/components/export-bar";
-import { CalibrationPanel } from "@/components/calibration-panel";
+import CalibrationPanel from "@/components/calibration-panel";
 
 // ────────────────────────────────────────────
 // Route definition
