@@ -1,0 +1,50 @@
+{
+  "total_soc_codes_in_source": 702,
+  "total_soc_codes_mapped": 674,
+  "total_isco_codes_mapped": 378,
+  "total_crosswalk_rows": 1634,
+  "unmapped_soc_count": 28,
+  "unmapped_soc_codes": [
+    "13-1011",
+    "19-4011",
+    "19-4099",
+    "27-1013",
+    "33-3052",
+    "33-9031",
+    "39-3012",
+    "39-3021",
+    "39-5091",
+    "39-5092",
+    "41-4011",
+    "41-4012",
+    "43-5032",
+    "43-9051",
+    "45-4021",
+    "45-4022",
+    "45-4023",
+    "47-2073",
+    "47-3011",
+    "47-5031",
+    "49-9044",
+    "51-4041",
+    "51-8012",
+    "53-1021",
+    "53-2012",
+    "53-3011",
+    "53-6041",
+    "53-7062"
+  ],
+  "coverage_percentage": 96.0,
+  "mapping_quality_distribution": {
+    "partial": 923,
+    "approximate": 348,
+    "direct": 363
+  },
+  "frey_osborne_isco_count": 378,
+  "frey_osborne_confidence_distribution": {
+    "medium": 170,
+    "low": 173,
+    "high": 35
+  },
+  "method": "algorithmic_title_matching"
+}

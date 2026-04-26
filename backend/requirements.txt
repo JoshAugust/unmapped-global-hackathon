@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+python-jobspy
+pandas
+openai>=1.0

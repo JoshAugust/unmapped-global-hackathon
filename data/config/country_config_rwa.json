@@ -1,0 +1,294 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Rwanda configuration. Swap this file for country_config_nga.json to reconfigure UNMAPPED for Rwanda. No codebase changes required.",
+  "country": {
+    "name": "Rwanda",
+    "iso3": "RWA",
+    "iso2": "RW",
+    "region": "Sub-Saharan Africa",
+    "subregion": "East Africa",
+    "economy_type": "rapidly_digitalising_agrarian",
+    "primary_language": "en",
+    "supported_languages": [
+      "en",
+      "fr",
+      "rw"
+    ],
+    "currency": "RWF",
+    "currency_symbol": "FRw",
+    "usd_exchange_rate_approx": 1280,
+    "usd_exchange_rate_year": 2024
+  },
+  "data_paths": {
+    "labour_market": "data/rwa/wdi_labour.json",
+    "occupation_lookup": "data/isco_fo_joined.csv",
+    "automation_calibration": "config/calibration.json"
+  },
+  "automation": {
+    "calibration_factor": 0.58,
+    "calibration_rationale": "Rwanda has lower formal sector share and lower automation exposure overall. Rapidly digitalising but from a low base. Strong governance and Vision 2050 push for services/tech.",
+    "source_dataset": "Frey-Osborne 2013, ISCO-08 crosswalk",
+    "recalibration_trigger": "TODO: Update when Rwanda publishes updated occupation-level task data"
+  },
+  "education_taxonomy": {
+    "levels": [
+      {
+        "code": "L0",
+        "label": "No formal education",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L1",
+        "label": "Primary (incomplete)",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L2",
+        "label": "Primary leaving certificate (P6)",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L3",
+        "label": "Lower Secondary / Ordinary Level (S3)",
+        "isco_skill_level": 1
+      },
+      {
+        "code": "L4",
+        "label": "Upper Secondary / Advanced Level (S6)",
+        "isco_skill_level": 2
+      },
+      {
+        "code": "L5",
+        "label": "TVET certificate / Diploma",
+        "isco_skill_level": 2
+      },
+      {
+        "code": "L6",
+        "label": "Advanced Diploma / Higher National Diploma",
+        "isco_skill_level": 3
+      },
+      {
+        "code": "L7",
+        "label": "University degree (Bachelor's)",
+        "isco_skill_level": 4
+      },
+      {
+        "code": "L8",
+        "label": "Postgraduate (Masters / PhD)",
+        "isco_skill_level": 4
+      }
+    ],
+    "informal_recognition": {
+      "enabled": true,
+      "categories": [
+        "apprenticeship",
+        "self_taught",
+        "community_training",
+        "umuganda_skills"
+      ],
+      "note": "Rwanda's 6-3-3 education system. Strong government push for TVET and digital literacy. Umuganda (community work) builds practical skills."
+    }
+  },
+  "opportunity_types": {
+    "formal_employment": {
+      "enabled": true,
+      "label": "Formal job"
+    },
+    "self_employment": {
+      "enabled": true,
+      "label": "Start or grow a business"
+    },
+    "gig_platform": {
+      "enabled": true,
+      "label": "Platform work (Yego Moto, Bolt)"
+    },
+    "training_pathway": {
+      "enabled": true,
+      "label": "Training or upskilling"
+    },
+    "apprenticeship": {
+      "enabled": true,
+      "label": "TVET apprenticeship"
+    },
+    "fintech_agent": {
+      "enabled": true,
+      "label": "Mobile money agent (MTN MoMo, Airtel Money)"
+    },
+    "cooperative": {
+      "enabled": true,
+      "label": "Cooperative (strong tradition \u2014 Tontine/Ikimina)"
+    }
+  },
+  "econometric_signals": {
+    "signal_1": {
+      "name": "Sector wage comparison",
+      "description": "Monthly earnings by economic sector (formal sector only)",
+      "data_field": "wages.mean_monthly_earnings_usd",
+      "vintage": "TODO: Rwanda Labour Force Survey",
+      "display_unit": "USD/month",
+      "display_caveat": "Formal sector only. Informal sector wages typically lower."
+    },
+    "signal_2": {
+      "name": "Sector growth outlook",
+      "description": "Which sectors are growing or declining",
+      "data_field": "sector_growth_outlook",
+      "vintage": "World Bank Rwanda Economic Update 2023",
+      "display_unit": "Qualitative (Very High / High / Medium / Declining)",
+      "display_caveat": "Forward-looking estimate."
+    }
+  },
+  "ui": {
+    "default_language": "en",
+    "font_stack": "system-ui, sans-serif",
+    "locale": "en-RW",
+    "number_format": "1,234.56",
+    "date_format": "DD/MM/YYYY",
+    "low_bandwidth_mode": true,
+    "image_loading": "lazy",
+    "max_initial_payload_kb": 150,
+    "primary_color": "#FAD201",
+    "accent_color": "#00A1DE",
+    "onboarding_tone": "warm_direct",
+    "reading_level_target": "secondary_school"
+  },
+  "skill_input_questions": [
+    {
+      "id": "q_work_activity",
+      "question_en": "What do you spend most of your working time doing?",
+      "question_fr": "TODO",
+      "question_rw": "TODO",
+      "type": "select_with_freetext",
+      "options_en": [
+        "Selling goods (market, shop, online)",
+        "Repairing phones, electronics, or appliances",
+        "Sewing, tailoring, or making clothes",
+        "Driving (moto-taxi, Yego Moto)",
+        "Cooking, food prep, or catering",
+        "Construction or building work",
+        "Farming or growing food",
+        "Mobile money agent work (MTN MoMo)",
+        "Teaching or training others",
+        "Office or admin work",
+        "Healthcare or caring for others",
+        "IT, tech, or computer work",
+        "Creative work (content, design, music)",
+        "Something else"
+      ],
+      "maps_to": "isco08_primary"
+    },
+    {
+      "id": "q_education",
+      "question_en": "What is your highest level of education?",
+      "question_fr": "TODO",
+      "question_rw": "TODO",
+      "type": "select",
+      "options_en": [
+        "No formal education",
+        "Primary (incomplete)",
+        "Primary leaving certificate (P6)",
+        "Lower Secondary / Ordinary Level (S3)",
+        "Upper Secondary / Advanced Level (S6)",
+        "TVET certificate / Diploma",
+        "Advanced Diploma / Higher National Diploma",
+        "University degree (Bachelor's)",
+        "Postgraduate (Masters / PhD)"
+      ],
+      "maps_to": "education_level_code"
+    },
+    {
+      "id": "q_informal_skills",
+      "question_en": "Have you taught yourself any skills? (select all that apply)",
+      "question_fr": "TODO",
+      "question_rw": "TODO",
+      "type": "multi_select",
+      "options_en": [
+        "Basic computer use",
+        "Using smartphones and apps",
+        "Social media for business",
+        "Accounting or bookkeeping",
+        "A trade through apprenticeship",
+        "Skills from Umuganda community work",
+        "Coding or tech skills",
+        "A language",
+        "Nothing specific"
+      ],
+      "maps_to": "informal_skills_tags"
+    },
+    {
+      "id": "q_years_experience",
+      "question_en": "How many years have you been doing your main work?",
+      "question_fr": "TODO",
+      "question_rw": "TODO",
+      "type": "select",
+      "options_en": [
+        "Less than 1 year",
+        "1-2 years",
+        "3-5 years",
+        "More than 5 years"
+      ],
+      "maps_to": "experience_years_band"
+    },
+    {
+      "id": "q_goal",
+      "question_en": "What are you most hoping to do?",
+      "question_fr": "TODO",
+      "question_rw": "TODO",
+      "type": "select",
+      "options_en": [
+        "Find a formal job",
+        "Grow my own business",
+        "Learn a new skill or get certified",
+        "Understand what different jobs pay",
+        "See how AI might affect my work"
+      ],
+      "maps_to": "user_goal"
+    }
+  ],
+  "sector_growth_outlook": {
+    "_source": "World Bank Rwanda Economic Update 2023; MINICOM; Rwanda Vision 2050",
+    "sectors_growing": [
+      {
+        "sector": "ICT & Digital Services",
+        "growth_tag": "Very High",
+        "rationale": "Kigali Innovation City, Carnegie Mellon Africa campus, government digitisation push."
+      },
+      {
+        "sector": "Tourism & Hospitality",
+        "growth_tag": "Very High",
+        "rationale": "Gorilla trekking premium tourism, MICE (Kigali Convention Centre), Visit Rwanda campaign."
+      },
+      {
+        "sector": "Financial Services & Mobile Money",
+        "growth_tag": "High",
+        "rationale": "MTN MoMo, Irembo digital government platform, fintech growth."
+      },
+      {
+        "sector": "Manufacturing & Made in Rwanda",
+        "growth_tag": "High",
+        "rationale": "Import substitution strategy, Kigali Special Economic Zone, textile/garment."
+      },
+      {
+        "sector": "Agriculture & Agriprocessing",
+        "growth_tag": "Medium",
+        "rationale": "Coffee/tea value addition, horticulture. Moving up the value chain."
+      }
+    ],
+    "sectors_at_risk": [
+      {
+        "sector": "Routine Clerical & Admin",
+        "growth_tag": "Declining",
+        "rationale": "Government digitisation (Irembo) reducing manual admin"
+      },
+      {
+        "sector": "Subsistence Agriculture",
+        "growth_tag": "Stagnant",
+        "rationale": "Land scarcity, small plot sizes. Government pushing land consolidation."
+      },
+      {
+        "sector": "Traditional Retail",
+        "growth_tag": "Declining",
+        "rationale": "Formalisation and e-commerce growing"
+      }
+    ]
+  }
+}

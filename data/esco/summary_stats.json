@@ -1,0 +1,11 @@
+{
+  "total_occupations": 100,
+  "occupations_with_isco": 74,
+  "occupations_without_isco": 26,
+  "occupations_failed": 0,
+  "total_skills": 200,
+  "isco_codes_mapped": 45,
+  "total_essential_links": 1149,
+  "total_optional_links": 1066,
+  "timestamp": "2026-04-25T23:46:51Z"
+}

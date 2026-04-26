@@ -1,0 +1,388 @@
+uri,title,isco_code,description,num_essential_skills,num_optional_skills
+http://data.europa.eu/esco/occupation/fc35b7ca-ecec-40d7-91b5-5065f662d955,airport director,1324,"Airport directors oversee a group of managers who lead or supervise a particular area of the airport, programme or a project.\
+",23,8
+http://data.europa.eu/esco/occupation/a79170ad-0b7b-4697-864f-1748359aa10a,ICT product manager,1330,"ICT product managers analyse and define current and target status for ICT products, services or solutions. They estimate the cost effectiveness, points of risk, opportunities, strengths and weaknesses of products or services provided. ICT product managers create structured plans and establish time scales and milestones, ensuring optimisation of activities and resources.",22,26
+http://data.europa.eu/esco/occupation/3ce4691e-ecea-4278-939e-b89ab01087b8,telecommunications manager,1330,"Telecommunications managers coordinate telecommunications staff activities for installing, troubleshooting, repairing and maintaining telecommunications equipment and infrastructure. They oversee the research, evaluation and implementation of new technologies and ensure a safe working environment for the employees. They supervise the inventory of supplies as well as user and customer assistance actions.",10,16
+http://data.europa.eu/esco/occupation/50760da6-abc3-424c-b159-8ddf0818e016,business valuer,2412,"Business valuers provide valuation assessements of business entities, stock and other securities and intangible assets, in order to assist their clients in strategic decision-making procedures such as mergers and acquisitions, litigation cases, bankruptcy, taxation compliance and general restructuring of the companies.",17,22
+http://data.europa.eu/esco/occupation/21de0f3b-a71a-4263-a9ba-90c5f3721b4d,financial planner,2412,"Financial planners assist people dealing with various personal financial issues. They are specialised in financial planning, such as retirement planning, investment planning, risk management and insurance planning, and tax planning. They advise a strategy tailored to the client's needs. They ensure the accuracy of bank and other financial records while maintaining a customer-orientated approach and following ethical standards.",23,44
+http://data.europa.eu/esco/occupation/38d9c76b-1a7b-4d65-879b-733ae7e9364e,investment adviser,2412,"Investment advisers are professionals who offer transparent advice by recommending suitable solutions on financial matters to their clients. They advise on investing pension or free funds in securities such as stocks, bonds, mutual funds and exchange-traded funds to customers. Investment advisers serve individuals, households, families and owners of small companies.",22,20
+http://data.europa.eu/esco/occupation/643a2225-6a01-4899-81b0-e867ca09b9c9,government planning inspector,2422,"Government planning inspectors monitor the development and implementation of government plans and policies, as well as processing planning and policy proposals, and performing inspections of planning procedures.",10,21
+http://data.europa.eu/esco/occupation/7819669b-30c2-42e6-a1c4-0bcd6f0379ff,international relations officer,2422,"International relations officers ensure the development of cooperation between international public organisations and governments. They facilitate communication between their organisation and foreign organisations and develop collaboration strategies, promoting a collaborative relationship beneficial for both parties.",10,20
+http://data.europa.eu/esco/occupation/e5a63940-57d3-4065-8713-74b4e2c93063,product and services manager,2431,Product and services managers are in charge of defining the content and structure of a catalogue or portfolio within a company.,18,7
+http://data.europa.eu/esco/occupation/c2e6609d-0abe-4a38-b295-e06edbd52e82,fundraising manager,2432,"
+Fundraising managers are responsible for raising money on behalf of organisations, often non-profit such as charities. Moreover, they manage the fundraised resources developing programs for its use. They perform a variety of tasks to raise money such as developing corporate partnerships, coordinating direct mail campaigns, organizing fundraisers, contacting donators or sponsors, and sourcing grant income from trusts, foundations and other statutory bodies.",24,18
+http://data.europa.eu/esco/occupation/903dc1bf-2da8-477d-83b2-687d360cf1da,intercultural communication consultant,2432,"Intercultural communication consultants specialise in social interaction between parties of different cultures, advise organisations on international interactions in order to optimise their performance, and facilitiate cooperation and positive interaction with organisations and individuals from other cultures.",14,23
+http://data.europa.eu/esco/occupation/c0489e22-6a1b-4e52-974a-eb71bbb42134,public relations officer,2432,Public relations officers represent a company or organisation to stakeholders and the public. They use communications strategies to promote an understanding of the activities and image of their clients in a favourable way.,23,31
+http://data.europa.eu/esco/occupation/246dda29-70f6-408b-b205-aa17b2ffb168,election observer,2619,Election observers are skilled and trained spectators of  the elections in a functioning democracy in order to enhance the transparency and credibility of the observed elections.,13,10
+http://data.europa.eu/esco/occupation/7556c748-15b4-4e44-97d9-00d885d4cd7d,conservator,2621,"Conservators organise and valorise works of art, buildings, books and furniture. They work in a wide range of areas such as creating and implementing new collections of art, preserving heritage buildings by applying restoration techniques as well as foreseeing the conservation of literary works, films, and valuable objects.",14,18
+http://data.europa.eu/esco/occupation/5727b567-993d-4d41-a13d-81a6af1a9a8e,social counsellor,2635,"Social counsellors provide support and guidance to individuals in the social work area, to help them solve specific problems in their personal life. It involves addressing personal and relationship issues, dealing with inner conflicts, crisis moments such as depression and addiction, in an attempt to empower individuals to achieve change and improve their life quality.",42,46
+http://data.europa.eu/esco/occupation/4bef1707-a251-427e-9d8b-96595ec38d45,book editor,2641,Book editors find manuscripts that can be published. They review texts from writers to evaluate the commercial potential or they ask writers to take on projects that the publishing company wishes to publish. Book editors maintain good relationships with writers.,15,16
+http://data.europa.eu/esco/occupation/9a2147aa-a72f-4f83-8653-c3f50d4e1e73,sign language interpreter,2643,Sign language interpreters understand and convert sign language into spoken language and vice versa. They maintain the nuances and the stress of the message in the recipient language.,11,14
+http://data.europa.eu/esco/occupation/b2f5ed56-c83f-40d0-b861-f5253cd3d1d9,glass artist,2651,"Glass artists create original artworks by assembling pieces of glass. They can be involved in restoration processes (such as those going on in cathedrals, churches, etc.) and can create accessoires, windows or decorations.",16,8
+http://data.europa.eu/esco/occupation/94d94bd0-9ac3-4bd8-81c0-c3fdf551aa16,sculptor,2651,"Sculptors may use a wide variety of materials to create sculptures, such as stone, clay, glass, wood, plaster, or any material of their choice. Those materials can be carved, modelled, moulded, cast, wrought, welded, and so on, in order to reach the desired shape.",12,6
+http://data.europa.eu/esco/occupation/7beefadd-ea05-4f59-bc4b-01075f27b937,video artist,2651,"Video artists create videos using analogue or digital techniques to obtain special effects, animation, or other animated visuals using films, videos, images, computer or other electronic tools.",23,16
+http://data.europa.eu/esco/occupation/d23fbcdc-d5e9-4724-a83f-99a0cfa8adb0,répétiteur,2652,"Répétiteurs accompany performers, usually singers, following the instructions of musical conductors in directing rehearsals and guiding the artists in the rehearsal process.",23,10
+http://data.europa.eu/esco/occupation/ae73f0dc-05a7-4e23-a234-9bb7e6d86975,door to door seller,5243,Door to door sellers sell goods and services door to door.,20,10
+http://data.europa.eu/esco/occupation/41beead9-98ad-4c89-b6e0-a14149f4eeab,fuel station specialised seller,5245,"Fuel station specialised sellers sell fuel, ​lubricating and cooling products for motor vehicles and motorcycles in a fuel station.",32,7
+http://data.europa.eu/esco/occupation/3cc87d40-f402-4f57-9353-4b36a031cfc5,vehicle rental agent,5249," 
+ Vehicle rental agents represent businesses involved in renting out vehicles and determine short periods of usage. They document transactions, insurances and payments. 
+ 
+",23,17
+http://data.europa.eu/esco/occupation/b2678105-9d5c-403f-b822-274aff706309,sheep breeder,6121,Sheep breeders oversee the production and day-to-day care of sheep. They maintain the health and welfare of sheep.,30,13
+http://data.europa.eu/esco/occupation/7aedaa07-3884-4c5b-88f9-80997b2aa54b,welder,7212,"
+Welders operate welding equipment in order to join metal workpieces together. They can use fusion welding processes based on different techniques and materials. They also perform simple visual inspection of welds.",31,47
+http://data.europa.eu/esco/occupation/1a1ea837-0103-4230-8756-533a77c5f9f4,container equipment assembler,7213,Container equipment assemblers manufacture containers such as boilers or pressure vessels. They read blueprints and technical drawings to assemble parts and to build piping and fittings.,12,24
+http://data.europa.eu/esco/occupation/ebe42b55-4801-493f-af18-04a35ebfbb9c,drilling machine operator,7223,"Drilling machine operators set up, program and control drilling machines, designed to drill holes in workpieces using a computer-controlled, rotary-cutting, multipointed cutting tool, inserted into the workpiece axially. They read drilling machine blueprints and tooling instructions, perform regular machine maintenance, and make adjustments to the drilling controls, such as the depth of drills or the rotation speed.",20,33
+http://data.europa.eu/esco/occupation/5d46e448-b6bb-48e5-b245-5aad68e06085,oxy fuel burning machine operator,7223,"Oxy fuel burning machine operators set up and tend machines designed to cut, or rather burn off, excess material from the metal workpiece using a torch that heats the metal workpiece to its kindling temperature and subsequently burns it into a metal oxide upon its reaction with an emitted stream of oxygen, flowing out of the workpiece's created kerf as slag.",19,28
+http://data.europa.eu/esco/occupation/3b4eb248-6b40-42fe-9d10-cba8ccfe6613,vehicle maintenance attendant,7231,"Vehicle maintenance attendants execute basic tasks such as changing oil, changing filters, changing spark plugs at a vehicle maintenance station.",13,12
+http://data.europa.eu/esco/occupation/4ad4024e-d1d3-4dea-b6d1-2c7948111dce,vehicle technician,7231,"Vehicle technicians inspect, test and maintain vehicles, motorcycles, engine tune-ups and tyre replacements. They repair engine failures, lube replacements. Vehicle technicians replace vehicle components and evaluate warranty options. 
+ 
+ ",34,31
+http://data.europa.eu/esco/occupation/91373a70-79b6-47a2-aa50-07dfe20dd258,aircraft maintenance technician,7232,"Aircraft maintenance technicians perform preventive maintenance to aircrafts, aircrafts components, engines and assemblies, such as airframes and hydraulic and pneumatic systems. They perform inspections following strict protocols and aviation laws.",29,8
+http://data.europa.eu/esco/occupation/6b46ea2f-403a-473c-b2e5-9fcf0c2bd634,fisheries assistant engineer,7233,"Fisheries assistant engineers assist the marine chief engineer with checking operations and maintenance of the propulsion plant, machinery and auxiliary equipment of the ship. They collaborate on security, survival and health care on board, observing the national and international standards of application.",14,6
+http://data.europa.eu/esco/occupation/00c8d1cf-24f2-47d1-9f10-765e1c102811,land-based machinery technician,7233,"Land-based machinery technicians maintain, overhaul and repair agricultural equipment and machinery.",12,18
+http://data.europa.eu/esco/occupation/2aa7fbbb-f06e-4454-8ff8-2d799e86ba51,textile machinery technician,7233,"Textile machinery technicians set up, maintain, inspect and repair mechanical and computer-controlled machinery used in textile manufacturing such as weaving, dyeing and finishing machines. 
+ ",25,37
+http://data.europa.eu/esco/occupation/06bd6285-13ed-4ea7-90cc-e9638a0600a9,automotive battery technician,7412,"Automotive battery technicians assemble, install, inspect, maintain and repair batteries in motor vehicles. They use electrical test equipment to confirm good working condition after installation. They evaluate batteries to determine the nature of power problems. They also prepare old batteries for disposal.",9,12
+http://data.europa.eu/esco/occupation/9422c30d-c5ef-4fcc-a493-d67ee42189c0,marine electrician,7412,"Marine electricians install, maintain and repair electrical and electronic systems in vessels such as air conditioning systems, lamps, radios, heating systems, batteries, electrical wiring and alternators. They use diagnostic testing equipment to inspect vessels and find faults. To do repair work, they use hand tools and specialised electrical instruments and machines.",18,18
+http://data.europa.eu/esco/occupation/b7aa4b4e-dbb6-4f58-b36c-35b9a7267972,computer hardware repair technician,7422,"Computer hardware repair technicians install, examine, test and repair computer hardware and peripheral components. They test computers' functionality, identify the problems and replace damaged components and parts.",18,20
+http://data.europa.eu/esco/occupation/4542ff68-f809-4ba1-857c-fd26d0914eaa,dewatering technician,8111,"Dewatering technicians install and operate pumps, spares, pipe ranges, and vacuum dewatering systems to collect and remove liquids and chemicals.",8,9
+http://data.europa.eu/esco/occupation/2a7d4b37-e831-4e20-827c-0682fe7e370e,pipeline pump operator,8113,"Pipeline pump operators tend pump equipment and systems to transfer liquids and substances (e.g. such as chemical solutions, crude oil, gases, and others) from one point to the next. They operate hoses, pumps, and other equipment according to the good to be transferred. They ensure smooth circulation and flow of the goods in the pipelines.",18,10
+http://data.europa.eu/esco/occupation/8d3fd879-986d-42e7-bf67-c3c415592fe3,precast moulder,8114,"Precast moulders handcast decorative and structural concrete building products such as fireplace units, blocks or coloured tiles. They use a portable concrete-mixing machine.",10,10
+http://data.europa.eu/esco/occupation/0477b9b0-8d2d-4eec-aaad-bac11092e98b,slate mixer,8114,Slate mixers operate and maintain slate mixing machines that mix multicolored slate granules used for asphalt-coated roofing felt surfacing.,8,4
+http://data.europa.eu/esco/occupation/b322bb4c-bbef-45c2-bd7e-00a97c3ab268,rustproofer,8122,"Rustproofers use the proper equipment and machinery to provide metal workpieces with a hard, durable finishing coat, composed of specific chemical formulas, that prevents or delays iron and steel pieces from rusting and protects against corrosion.",15,30
+http://data.europa.eu/esco/occupation/782ced63-e234-42a4-a7bd-a2d9a12ee61a,capsule filling machine operator,8131,Capsule filling machine operators control the filling of gelatine capsules with the specific medicinal preparations.,14,6
+http://data.europa.eu/esco/occupation/daa6197d-dba6-49b5-8223-b31b7a126e4e,wax bleacher,8131,"Wax bleachers operate and maintain filter presses and tanks, used in wax bleaching, for candle production processes.",12,7
+http://data.europa.eu/esco/occupation/7180a7be-68cd-4636-8c12-706722ad8862,photographic developer,8132,"Photographic developers use chemicals, instruments, and darkroom photographic techniques in specialised rooms in order to develop photographic films into visible images.",14,18
+http://data.europa.eu/esco/occupation/b0c6f284-f3ed-4820-a62e-4e87869f5a3e,rubber products machine operator,8141,"Rubber products machine operators operate machines which knead, blend, calender, mould, extrude and cure rubber products from natural and synthetic rubber. They measure the ingredients for mixing and load them into the machine. Rubber products machine operators monitor and control the tempature, pressure and speed during production.",11,26
+http://data.europa.eu/esco/occupation/65b88636-2ebb-4049-b509-2f6da5d6ea1c,envelope maker,8143,"Envelope makers tend a machine that takes in paper and executes the steps to creat envelopes: cut and fold the paper and glue it, then apply a weaker food-grade glue to the flap of the envelope for the consumer to seal it.",15,19
+http://data.europa.eu/esco/occupation/06461fc3-1274-40a1-9322-dfc2753f5eea,spinning textile technician,8151,Spinning textile technicians perform operations related to setting up spinning processes.,5,5
+http://data.europa.eu/esco/occupation/4c86c7c1-0839-456e-856f-65396d1f39d7,winding machine operator,8151,"Winding machine operators tend machines that wrap strings, cords, yarns, ropes, threads onto reels, bobbins, or spools. They handle materials, prepare them for processing, and use winding machines for the purpose. They also perform routine maintenance of the machinery.",14,17
+http://data.europa.eu/esco/occupation/15502187-a1da-407a-843b-ce991d5f65fe,braiding machine operator,8159,"Braiding machine operators supervise the braiding process of a group of machines, monitoring fabric quality and braiding conditions. They inspect braiding machines after set up, start up, and during production to ensure the product being braided is meeting specs and quality standards.",12,3
+http://data.europa.eu/esco/occupation/7dbb116c-a4e7-41e8-9f28-c8a738d93e28,beverage filtration technician,8160,"Beverage filtration technicians operate machines that clarify beverages prior to filtering. For the purpose, they transfer fermented beverages from settling casks into clarifying tanks and spreads chemicals over the surface of beverages to aid their clarification. Then, they pump beverages to transfer them to filtering tanks.",19,20
+http://data.europa.eu/esco/occupation/5520bfd0-49d3-47e5-abe0-d72354711bc0,cacao beans cleaner,8160,"Cacao beans cleaners operate machines for the removal of foreign materials such as stones, string and dirt from cacao beans. They operate silos as to move beans from there to hoppers. They direct the cleaned beans to specified silos. They operate air-cleaning system in order to remove further foreign materials.",14,13
+http://data.europa.eu/esco/occupation/0fdc5efb-d38e-4019-bede-0ce55404549d,candy machine operator,8160,"Candy machine operators tend machines that mix candy ingredients. They tend machines that weigh, measure, and mix ingredients. They form soft candies by spreading candy onto cooling and warming slabs cutting them manually or mechanically. They cast candies in moulds or by machine that extrudes candy. ",18,17
+http://data.europa.eu/esco/occupation/2a2da883-8af5-4b98-832e-00e6681b22c3,chilling operator,8160,"Chilling operators perform various processes and tend specific machines for manufacturing prepared meals and dishes. They apply chilling, sealing, and freezing methods to foodstuffs for non-immediate consumption.",22,9
+http://data.europa.eu/esco/occupation/9ae8251e-cb8e-4324-9d77-d967d43e6b46,fat-purification worker,8160," Fat-purification workers operate acidulation tanks and equipment that help with the separation of undesirable components from oils. 
+",22,13
+http://data.europa.eu/esco/occupation/3b46ee4d-a220-4c83-ad90-937456596889,kettle tender,8160,Kettle tenders operate machines that mix chewing gum base with sugar or sweetener. They follow procedures to place gum base in containers and then direct it to flow into mixers.,12,7
+http://data.europa.eu/esco/occupation/b69d9b94-a40c-434d-af8f-e584257314f6,milk heat treatment process operator,8160,"Milk heat treatment process operators use equipments to perform different methods of pasteurisation and/or sterilisation to dairy liquid products. They operate equipment such as raw product booster pumps, homogenisers, flavour control equipment, clarifiers, separators, auxiliary pumps, and filters.",18,22
+http://data.europa.eu/esco/occupation/9161b2df-624c-4f5e-ad6c-0392439fa5c3,starch extraction operator,8160," Starch extraction operators use equipment to extract starch from raw material such as corn, potatoes, rice, tapioca, wheat, etc. 
+",25,10
+http://data.europa.eu/esco/occupation/ca2da084-3bfa-47d8-84ba-ef890191708d,vermouth manufacturer,8160,"Vermouth manufacturers perform all the production processes required to produce vermouth. They mix ingredients and botanicals with wine and other spirits. They perform maceration, mixing and filtering of beverages together with the botanicals. Moreover, they manage the maturation of the beverages and forecast when the vermouth is ready for bottling.",16,10
+http://data.europa.eu/esco/occupation/e19a0f13-da49-42cb-8b3a-27da8ce44c8c,glass forming machine operator,8181,"Glass forming machine operators operate and maintain machines that press or blow molten glass in moulds to form or shape products, such as neons, bottles, jars and drinking glasses. They set up and adjust machines, and weigh, measure and check production samples to check conformity to the set specifications.",17,22
+http://data.europa.eu/esco/occupation/d9e4581a-91b3-47f9-a2d5-70eb542caac5,footwear finishing and packing operator,8183,"Footwear finishing and packing operators apply several techniques for assuring an appropriate final appearance of the packed pairs of footwear that are going to be sold. They perform according to the information received from their supervisor about the shoes that are going to be finished, about the means and materials to be used and the sequence of operations.",10,3
+http://data.europa.eu/esco/occupation/2be85651-c94a-4531-9df8-3cc56932960e,heat sealing machine operator,8183,"Heat sealing machine operators operate sealing and gluing machines to join items together for further processing or to seal products or packages, using heat.",12,17
+http://data.europa.eu/esco/occupation/976f752c-5f10-42ca-84fb-89aa529af04f,patient transport services driver,8322,"Patient transport services drivers transfer disabled, vulnerable and elderly patients to and from health care facilities such as hospitals or social care settings. They drive the ambulance and maintain all the related equipment but under non-emergency circumstances.",14,10
+http://data.europa.eu/esco/occupation/1e9e18cb-80b6-4598-acdb-ae3b51047720,aircraft fuel system operator,8332,Aircraft fuel system operators maintain fuel distribution systems and ensure the refuelling of planes. ,10,2
+http://data.europa.eu/esco/occupation/c5d779f4-345b-4918-872b-a1cbaeb1d9be,dangerous goods driver,8332,"Dangerous goods drivers transport fuel and bulk liquid, hazardous products and chemicals by road.",21,2
+http://data.europa.eu/esco/occupation/eedbf8b1-9432-4f42-ab7f-db5cd3eb2a05,excavator operator,8342,"Excavator operators use excavators to dig into earth or other materials to remove it. They are involved in a variety of projects, such as demolition, dredging, and the of digging holes, foundations and trenches.",18,20
+http://data.europa.eu/esco/occupation/b4f4b21e-7664-45ca-9697-9123cfd8c9ef,pile driving hammer operator,8342,Pile driving hammer operators work with a piece of heavy equipment that positions piles and hammers them into the ground using a rigging mechanism.,15,16
+http://data.europa.eu/esco/occupation/1bcc6461-4cc2-4732-a6d0-901687046443,snow-clearing worker,8342,"Snow-clearing workers operate trucks and plows to remove snow and ice from public sidewalks, streets and other locations. They also dump salt and sand on the ground to de-ice the concerning locations.",11,9
+http://data.europa.eu/esco/occupation/dc90cee4-bf4a-4d62-b729-faf49e62643e,container crane operator,8343,"Container crane operators operate electrically powered cranes equipped with cantilevers on which hoisting gear is supported to load or unload container cargo. They move towers in position alongside vessel and lower cantilevers over the deck or hold of a vessel. They lift and move container along the cantilever and position the container on the dock, on the vessel deck or in the hold.",14,8
+http://data.europa.eu/esco/occupation/837502a6-57d9-4df4-903a-8a67dd53927f,engine minder,8350,Engine minders perform work related to the deck department of an inland water transport vessel. They use their experience on-board a motorised inland navigation vessel as an ordinary crewmember and have a basic knowledge of engines.,26,8
+http://data.europa.eu/esco/occupation/503ea267-93e9-4b8c-ae5e-817fe7e4a245,street sweeper,9613,"Street sweepers operate sweeping equipment and machinery to remove waste, leaves or debris from streets. They maintain records of sweeping operations and maintain, clean and perform minor repairs to the equipment used.",13,13
+http://data.europa.eu/esco/occupation/e31c83ac-cb74-4936-88f1-90ed0997b29b,amusement and recreation attendant,9629,"Amusement and recreation attendants perform a variety of attending duties at amusement or recreation facility. They may schedule the use of recreation facilities, maintain and provide equipment to participants of sporting events or recreational pursuits or operate amusement concessions and rides.",9,7
+http://data.europa.eu/esco/occupation/1f1a45a8-8f5c-4b66-a8a1-e02490addc55,locker room attendant,9629,"Locker room attendants assist customers in handling personal items and articles in changing rooms, usually in sports or theatre areas. They also maintain the overall cleanliness of the designated areas and help with lost and found issues.",7,13
+http://data.europa.eu/esco/isco/C242,Administration professionals,,"Administration professionals apply various concepts and theories related to improving the effectiveness of organizations and the individuals within the organization.
+Tasks performed usually include:  evaluating the structure of organizations and suggesting areas of improvement; ensuring that the operational activities of an organization are consistent with the policy objectives of the organization; recruiting, training, developing and counselling personnel within an organization.
+Occupations in this minor group are classified into the following unit groups:
+2421 Management and Organization Analysts
+2422 Policy Administration Professionals
+2423 Personnel and Careers Professionals
+2424 Training and Staff Development Professionals
+",0,0
+http://data.europa.eu/esco/isco/C2514,Applications programmers,,"Applications programmers write and maintain programmable code outlined in technical instructions and specifications for software applications and operating systems.
+Tasks include -
+(a)  writing and maintaining program code outlined in instructions and specifications in accordance with quality accredited standards;
+(b)  revising, repairing or expanding existing programs to increase operating efficiency or adapt to new requirements;
+(c)  conducting trial runs of programs and software applications to confirm that they will produce the desired information;
+(d)  compiling and writing documentation of program development;
+(e)  identifying and communicating technical problems, processes and solutions.
+Examples of the occupations classified here:
+- Applications programmer
+Some related occupations classified elsewhere: 
+- Programmer analyst - 2512
+- Software developer - 2512
+- Multimedia programmer - 2513
+",0,0
+http://data.europa.eu/esco/isco/C0,Armed forces occupations,,"Armed forces occupations include all jobs held by members of the armed forces.  Members of the armed forces are those personnel who are currently serving in the armed forces, including auxiliary services, whether on a voluntary or compulsory basis, and who are not free to accept civilian employment and are subject to military discipline. Included are regular members of the army, navy, air force and other military services, as well as conscripts enrolled for military training or other service for a specified period.
+Occupations in this major group are classified into the following sub-major groups:
+01  Commissioned Armed Forces Officers
+02  Non-commissioned Armed Forces Officers
+03  Armed Forces Occupations, Other Ranks
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+Notes
+Many jobs performed by members of the armed forces are similar, in terms of the nature of the work performed, to civilian occupations such as medical doctors, radio operators, cooks, secretaries and heavy truck drivers.  Conceptually, it may be appropriate, therefore, to classify such jobs in the armed forces with similar civilian jobs.  This approach is adopted in several national occupation classifications.  Typically such classifications also identify a number of military-specific occupational groups.  In many countries, however, it is not possible to produce information about the nature of the work performed by members of the armed forces.  In adapting ISCO-08 for national purposes countries may wish, therefore, to consider what approach best suits their circumstances and user needs.  For purposes of international comparability, however, where data pertaining to members of the armed forces are reported and classified by occupation, they should be included, where possible, in ISCO-08 Major Group 0: Armed Forces Occupations.
+",0,0
+http://data.europa.eu/esco/isco/C264,"Authors, journalists and linguists",,"Authors, journalists and linguists conceive and create literary works; interpret and communicate news and public affairs through the media; and translate or interpret from one language into another.
+Tasks performed usually include: writing literary works; appraising merits of literary and other works of art; collecting information about current affairs and writing about them; researching, investigating, interpreting and communicating news and public affairs through newspapers, television, radio and other media; translating written material from one language to another; simultaneously translating from one language to another.
+Occupations in this minor group are classified into the following unit groups:
+2641 Authors and Related Writers 
+2642 Journalists
+2643 Translators, Interpreters and Other Linguists
+",0,0
+http://data.europa.eu/esco/isco/C2523,Computer network professionals,,"Computer network professionals research, analyse, design, test and recommend strategies for network architecture and development.  They implement, manage, maintain and configure network hardware and software, and monitor, troubleshoot and optimize performance.
+Tasks include -
+(a)  analysing, developing, interpreting and evaluating complex system design and architecture specifications, data models and diagrams in the development, configuration and integration of computer systems;
+(b)  researching, analysing, evaluating and monitoring network infrastructure to ensure that networks are configured to operate at optimal performance;
+(c)  assessing and recommending improvements to network operations and integrated hardware, software, communications and operating systems;
+(d)  providing specialist skills in supporting and troubleshooting network problems and emergencies;
+(e)  installing, configuring, testing, maintaining and administering new and upgraded networks, software database applications, servers and workstations;
+(f)  preparing and maintaining procedures and documentation for network inventory, and recording diagnosis and resolution of network faults, enhancements and modifications to networks and maintenance instructions;
+(g)  monitoring network traffic and activity, capacity and usage to ensure continued integrity and optimal network performance.
+Examples of the occupations classified here:
+-  Communications analyst (computers)
+-  Network analyst
+Some related occupations classified elsewhere:
+- Systems analysts - 2511
+- Network administrator - 2522
+",0,0
+http://data.europa.eu/esco/isco/C7,Craft and related trades workers,,"Craft and related trades workers apply specific technical and practical knowledge and skills to construct and maintain buildings; form metal; erect metal structures; set machine tools or make, fit, maintain and repair machinery, equipment or tools; carry out printing work; and produce or process foodstuffs, textiles, wooden, metal and other articles, including handicraft goods. Competent performance in most occupations in this major group requires skills at the second ISCO skill level.
+The work is carried out by hand and by hand-powered and other tools which are used to reduce the amount of physical effort and time required for specific tasks, as well as to improve the quality of the products. The tasks call for an understanding of all stages of the production process, the materials and tools used, and the nature and purpose of the final product. 
+Tasks performed by craft and related trades workers usually include: constructing, maintaining and repairing buildings and other structures; casting, welding and shaping metal; installing and erecting heavy metal structures, tackle and related equipment; making machinery, tools, equipment and other metal articles; setting for operators, or setting and operating various machine tools; fitting, maintaining and repairing industrial machinery, engines, vehicles, electrical and electronic instruments and other equipment; making precision instruments, jewellery, household and other precious metal articles, pottery, glass and related products; producing handicrafts; executing printing work; producing and processing foodstuffs and various articles made of wood, textiles, leather and related materials. Supervision of other workers may be included.  Self-employed craft and related trades workers, who operate their own businesses either independently or with assistance from a small number of others, may also perform a range of tasks associated with management of the business, account and record keeping and client service, although such tasks would not normally comprise the major component of the work.
+Occupations in this major group are classified into the following sub-major groups:
+71 Building and Related Trades Workers (excluding electricians)
+72 Metal, Machinery and Related Trades Workers
+73 Handicraft and Printing Workers
+74 Electrical and Electronics Trades Workers
+75 Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers
+",0,0
+http://data.europa.eu/esco/isco/C265,Creative and performing artists,,"Creative and performing artists communicate ideas, impressions and facts in a wide range of media to achieve particular effects; interpret a composition such as a musical score or a script to perform or direct the performance; and host the presentation of such performance and other media events.
+Tasks performed usually include: conceiving and creating visual art forms; conceiving and writing original music; devising, directing, rehearsing and performing in music, dance, theatrical and film productions; assuming creative, financial and organizational responsibilities in the production of television programmes, films, and stage presentations; studying script, play or book and preparing and rehearsing interpretation; selecting and introducing music, videos and other entertainment material for broadcast and making commercial and public service announcements.
+Occupations in this minor group are classified into the following unit groups:
+2651 Visual Artists
+2652 Musicians, Singers and Composers
+2653 Dancers and Choreographers
+2654 Film, Stage and Related Directors and Producers
+2655 Actors
+2656 Announcers on Radio, Television and Other Media
+2659 Creative and Performing Artists Not Elsewhere Classified
+",0,0
+http://data.europa.eu/esco/isco/C2529,Database and network professionals not elsewhere classified,,"This unit group includes database and network professionals not classified elsewhere in Minor Group 252: Database and Network Professionals.  For instance, the group includes information and communications technology security specialists.
+In such cases tasks would include -
+(a)  developing plans to safeguard computer files against accidental or unauthorized modification, destruction or disclosure and to meet emergency data processing needs;
+(b)  training users and promoting security awareness to ensure system security and to improve server and network efficiency;
+(c)  conferring with users to discuss issues such as computer data access needs, security violations and programming changes; 
+(d)  monitoring current reports of computer viruses to determine when to update virus protection systems;
+(e)  modifying computer security files to incorporate new software, correct errors or change individual access status;
+(f)  monitoring use of data files and regulate access to safeguard information in computer files;
+(g)  performing risk assessments and executing tests of data processing system to ensure functioning of data processing activities and security measures;
+(h)  encrypting data transmissions and erecting firewalls to conceal confidential information as it is being transmitted and to keep out tainted digital transfers.
+Examples of the occupations classified here:
+- Data miner
+- Digital forensic specialist
+- Security specialist (ICT)
+",0,0
+http://data.europa.eu/esco/isco/C2521,Database designers and administrators,,"Database designers and administrators design, develop, control, maintain and support the optimal performance and security of databases.
+Tasks include -
+(a)  designing and developing database architecture, data structures, tables, dictionaries and naming conventions for information systems projects;
+(b)  designing, constructing, modifying, integrating, implementing and testing database management systems;
+(c)  conducting research and providing advice on the selection, application and implementation of database management tools;
+(d)  developing and implementing data administration policy, documentation, standards and models;
+(e)  developing policies and procedures for database access and usage and for the backup and recovery of data;
+(f)  performing the operational establishment and preventive maintenance of backups, recovery procedures, and enforcing security and integrity controls.
+Examples of the occupations classified here:
+- Data administrator 
+- Database administrator 
+- Database analyst
+- Database architect
+Some related occupations classified elsewhere:
+- Network administrator - 2522
+- Systems administrator (computers) - 2522
+- Webmaster - 3514
+- Website administrator - 3514
+",0,0
+http://data.europa.eu/esco/isco/C9,Elementary occupations,,"Elementary occupations involve the performance of simple and routine tasks which may require the use of hand-held tools and considerable physical effort. Most occupations in this major group require skills at the first ISCO skill level.
+Tasks performed by workers in elementary occupations usually include:  cleaning, restocking supplies and performing basic maintenance in apartments, houses, kitchens, hotels, offices and other buildings; washing cars and windows; helping in kitchens and performing simple tasks in food preparation; delivering messages or goods; carrying luggage and handling baggage and freight;  stocking vending-machines or reading and emptying meters; collecting and sorting refuse; sweeping streets and similar places;  performing various simple farming, fishing, hunting or trapping tasks;  performing simple tasks connected with mining, construction and manufacturing including product-sorting; packing and unpacking produce by hand, and filling shelves; providing various street services; pedalling or hand-guiding vehicles to transport passengers and goods; driving animal-drawn vehicles or machinery.  Supervision of other workers may be included.
+Occupations in this major group are classified into the following sub-major groups:
+91 Cleaners and Helpers
+92 Agricultural, Forestry and Fishery Labourers
+93 Labourers in Mining, Construction, Manufacturing and Transport
+94 Food Preparation Assistants
+95 Street and Related Sales and Services Workers
+96 Refuse Workers and Other Elementary Workers
+",0,0
+http://data.europa.eu/esco/isco/C241,Finance professionals,,"Finance professionals plan, develop, organize, administer, invest, manage and conduct quantitative analyses of either financial accounting systems or funds for individuals, establishments and public or private institutions.
+Tasks performed usually include: preparing and organizing financial statements for an organization; reviewing financial materials of an organization; providing financial advice to individuals and organizations; preparing analytic reports concerning segments of the economy and the economy as a whole.
+Occupations in this minor group are classified into the following unit groups:
+2411 Accountants
+2412 Financial and Investment Advisers
+2413 Financial Analysts
+",0,0
+http://data.europa.eu/esco/isco/C261,Legal professionals,,"Legal professionals conduct research on legal problems, advise clients on legal aspects of problems, plead cases or conduct prosecutions in courts of law, preside over judicial proceedings in courts of law and draft laws and regulations.
+Tasks performed usually include: giving clients legal advice, undertaking legal business on clients’ behalf and conducting litigation when necessary, or presiding over judicial proceedings and pronouncing judgement in courts of law. Supervision of other workers may be included.
+Occupations in this minor group are classified into the following unit groups:
+2611 Lawyers
+2612 Judges
+2619 Legal Professionals Not Elsewhere Classified
+",0,0
+http://data.europa.eu/esco/isco/C262,"Librarians, archivists and curators",,"Librarians, archivists and curators develop and maintain the collections of archives, libraries, museums, art galleries and similar establishments.
+Tasks performed usually include: appraising or developing and organizing the contents of archives and artefacts of historical, cultural and artistic interest, and ensuring their safekeeping and preservation; organizing the collections of and exhibitions at museums, art galleries and similar establishments; developing and maintaining the systematic collection of recorded and published material and making it available to users in libraries and related institutions; preparing scholarly papers and reports; conducting research.
+Occupations in this minor group are classified into the following unit groups:
+2621 Archivists and Curators 
+2622 Librarians and Related Information Professionals
+",0,0
+http://data.europa.eu/esco/isco/C1,Managers,,"Managers plan, direct, coordinate and evaluate the overall activities of enterprises, governments and other organizations, or of organizational units within them, and formulate and review their policies, laws, rules and regulations. Competent performance in most occupations in this major group requires skills at the fourth ISCO skill level, except for Sub-major Group 14: Hospitality, Retail and Other Services Managers, for which skills at the third ISCO skill level are generally required. 
+Tasks performed by managers usually include: formulating and advising on the policy, budgets, laws and regulations of enterprises, governments and other organizational units; establishing objectives and standards and formulating and evaluating programmes and policies and procedures for their implementation; ensuring appropriate systems and procedures are developed and implemented to provide budgetary control; authorizing material, human and financial resources to implement policies and programmes; monitoring and evaluating performance of the organization or enterprise and of its staff; selecting or approving the selection of  staff;  ensuring compliance with health and safety requirements; planning and directing daily operations; representing and negotiating on behalf of the government, enterprise or organizational unit managed in meetings and other forums.
+Occupations in this major group are classified into the following sub-major groups:
+11 Chief Executives, Senior Officials and Legislators
+12 Administrative and Commercial Managers
+13 Production and Specialized Services Managers
+14 Hospitality, Retail and Other Services Managers
+Notes
+In distinguishing between managers classified in Major Group 1: Managers, and supervisors, classified in other major groups, it should be noted that both managers and supervisors may plan, organize, coordinate, control and direct the work done by others.  In addition, managers usually have responsibility for and make decisions about: the overall strategic and operational direction of a business or organizational unit (for example about the kinds, quantity and quality of goods to be produced); budgets (how much money is to be spent and for what purposes); and the selection, appointment and dismissal of staff.  Supervisors may provide advice and assistance to managers on these matters, especially in relation to staff selection and dismissal, but do not have authority to make decisions.
+It should be noted that it is not a necessary condition that managers have responsibility for all three of strategic and operational direction, budgets and staff selection and dismissal. The degree of autonomy they exercise may also vary. The critical difference is that supervisors are responsible only for the supervision of the activities of other workers, whereas managers have overall responsibility for the operations of an organizational unit.
+",0,0
+http://data.europa.eu/esco/isco/C8,Plant and machine operators and assemblers,,"Plant and machine operators and assemblers operate and monitor industrial and agricultural machinery and equipment on the spot or by remote control; drive and operate trains, motor vehicles and mobile machinery and equipment; or assemble products from component parts according to strict specifications and procedures. Competent performance in most occupations in this major group requires skills at the second ISCO skill level.
+The work mainly calls for experience with and an understanding of industrial and agricultural machinery and equipment, as well as an ability to cope with machine-paced operations and to adapt to technological innovations.  
+Tasks performed by plant and machine operators and assemblers usually  include: operating and monitoring mining or other industrial machinery and equipment for processing metal, minerals, glass, ceramics, wood, paper or  chemicals; operating and monitoring machinery and equipment used to produce articles made of metal,  minerals, chemicals, rubber, plastics, wood, paper, textiles, fur or leather, and which process foodstuffs and related products; driving and operating trains and motor vehicles;  driving, operating and monitoring mobile industrial and agricultural machinery  and equipment; and assembling products from component parts according to strict  specifications and procedures. Supervision of other workers may be included.
+Occupations in this major group are classified into the following sub-major groups:
+81 Stationary Plant and Machine Operators
+82 Assemblers
+83 Drivers and Mobile Plant Operators
+Note
+Operators of machinery that involves automated control of multiple processes or functions are included in Minor Group 313:  Process control technicians.
+",0,0
+http://data.europa.eu/esco/isco/C2,Professionals,,"Professionals increase the existing stock of knowledge; apply scientific or artistic concepts and theories; teach about the foregoing in a systematic manner; or engage in any combination of these activities. Competent performance in most occupations in this major group requires skills at the fourth ISCO skill level.
+Tasks performed by professionals usually include: conducting analysis and  research, and developing concepts, theories and operational methods; advising on or applying existing knowledge related to physical sciences, mathematics, engineering and technology, life sciences, medical and health services, social sciences and humanities; teaching the theory and practice of one or more disciplines at different educational levels; teaching and educating persons with learning difficulties or special needs;  providing various business, legal and social services; creating and performing works of art; providing spiritual guidance; preparing scientific papers and reports. Supervision of other workers may be included.
+Occupations in this major group are classified into the following sub-major groups:
+21 Science and Engineering Professionals
+22 Health Professionals
+23 Teaching Professionals
+24 Business and Administration Professionals
+25 Information and Communications Technology Professionals
+26 Legal, Social and Cultural Professionals
+",0,0
+http://data.europa.eu/esco/isco/C243,"Sales, marketing and public relations professionals",,"Sales, marketing and public relations professionals plan, develop, coordinate and implement programmes of information dissemination to promote organizations, goods and services; and represent companies in selling a range of technical, industrial, medical, pharmaceutical and ICT goods and services.
+Tasks performed usually include: commissioning and undertaking market research, analysing the findings and planning advertising, marketing and public relations activities; supporting business growth and development through the preparation and execution of marketing objectives, policies and programmes; planning and organizing publicity campaigns; appraising and selecting material submitted by writers, photographers, illustrators and others to create favourable publicity; acquiring and updating knowledge of employers’ and competitors’ goods and services, and of market conditions; assessing customers’ needs and explaining and demonstrating goods and services to them; visiting regular and prospective client businesses to establish and act on marketing opportunities; quoting and negotiating prices and credit terms, and completing contracts.
+Occupations in this minor group are classified into the following unit groups:
+2431 Advertising and Marketing Professionals
+2432 Public Relations Professionals
+2433 Technical and Medical Sales Professionals (excluding ICT)
+2434 Information and Communications Technology Sales Professionals
+",0,0
+http://data.europa.eu/esco/isco/C5,Service and sales workers,,"Services and sales workers provide personal and protective services related to travel, housekeeping, catering, personal care, protection against fire and unlawful acts; or demonstrate and sell goods in wholesale or retail shops and similar establishments, as well as at stalls and on markets.   Competent performance in most occupations in this major group requires skills at the second ISCO skill level.
+Tasks performed by services and sales workers usually include: organizing and providing services during travel;  housekeeping; preparing and serving of food and beverages; caring for children;  providing personal and basic health care at homes or in institutions, as well as hairdressing, beauty treatment and companionship; telling fortunes; embalming and arranging funerals; providing security services and protecting individuals and property against fire and unlawful acts; enforcing of law and order;  posing as models for advertising, artistic creation and display of goods;  selling goods in wholesale or retail establishments, as well as at stalls and on markets; and demonstrating goods to potential customers.  Supervision of other workers may be included.
+Occupations in this major group are classified into the following sub-major groups:
+51 Personal Services Workers
+52 Sales Workers
+53 Personal Care Workers
+54 Protective Services Workers
+",0,0
+http://data.europa.eu/esco/isco/C6,"Skilled agricultural, forestry and fishery workers",,"Skilled agricultural, forestry and fishery workers grow and harvest field or tree and shrub crops; gather wild fruits and plants; breed, tend or hunt animals; produce a variety of animal husbandry products; cultivate, conserve and exploit forests; breed or catch fish; and cultivate or gather other forms of aquatic life in order to provide food, shelter and income for themselves and their households.  Competent performance in most occupations in this major group requires skills at the second ISCO skill level.
+Tasks performed by skilled agricultural, forestry and fishery workers usually include: preparing the soil; sowing, planting, spraying, fertilizing and harvesting field crops; growing fruit and other tree and shrub crops; growing garden vegetables and horticultural products; gathering wild fruits and plants; breeding, raising, tending or hunting animals mainly to obtain meat, milk, hair, fur, skin, or sericultural, apiarian or other products; cultivating, conserving and exploiting forests; breeding or catching fish; cultivating or gathering other forms of aquatic life; storing and carrying out some basic  processing of their produce; selling their products to purchasers, marketing organizations or at markets. Supervision of other workers may be included.
+Occupations in this major group are classified into the following sub-major groups:
+61 Market-oriented Skilled Agricultural Workers
+62 Market-oriented Skilled Forestry, Fishery and Hunting Workers
+63 Subsistence Farmers, Fishers, Hunters and Gatherers
+",0,0
+http://data.europa.eu/esco/isco/C263,Social and religious professionals,,"Social and religious professionals conduct research; improve or develop concepts, theories and operational methods; apply knowledge relating to philosophy, politics, economics, sociology, anthropology, history, psychology and other social sciences; or provide social services to meet the needs of individuals and families in a community.
+Tasks performed usually include: formulating and applying solutions to present or projected economic, political or social problems; researching into and analysing past events and activities and tracing the origin and evolution of the human race; studying mental processes and behaviour of individuals and groups; providing social services; preparing scholarly papers and reports.  Supervision of other workers may be included.
+Occupations in this minor group are classified into the following unit groups:
+2631 Economists
+2632 Sociologists, Anthropologists and Related Professionals
+2633 Philosophers, Historians and Political Scientists
+2634 Psychologists
+2635 Social Work and Counselling Professionals
+2636 Religious Professionals
+",0,0
+http://data.europa.eu/esco/isco/C2519,Software and applications developers and analysts not elsewhere classified,,"This unit group covers software and applications developers and analysts not classified elsewhere in Minor Group 251: Software and Applications Developers and Analysts. For instance, the group includes those professionals specializing in quality assurance, including software testing.
+In such cases tasks would include -
+(a)  developing and documenting software testing plans;
+(b)  installing software and hardware and configuring operating system software in preparation for testing;
+(c)  verifying that programs function according to user requirements and established guidelines;
+(d)  executing, analysing and documenting results of software application tests and information and telecommunication systems tests;
+(e)  developing and implementing software and information system testing policies, procedures and scripts.
+Examples of the occupations classified here:
+- Quality assurance analyst (computers)
+- Software tester 
+- Systems tester
+",0,0
+http://data.europa.eu/esco/isco/C2512,Software developers,,"Software developers research, analyse and evaluate requirements for existing or new software applications and operating systems, and design, develop, test and maintain software solutions to meet these requirements.
+Tasks include -
+(a)  researching, analysing and evaluating requirements for software applications and operating systems;
+(b)  researching, designing and developing computer software systems;
+(c)  consulting with engineering staff to evaluate interfaces between hardware and software;
+(d)  developing and directing software testing and validation procedures;
+(e)  modifying existing software to correct errors, to adapt it to new hardware or to upgrade interfaces and improve performance;
+(f)  directing software programming and development of documentation;
+(g)  assessing, developing, upgrading and documenting maintenance procedures for operating systems, communications environments and applications software;
+(h)  consulting with customers concerning maintenance of software systems.
+Examples of the occupations classified here:
+- Programmer analyst
+- Software designer 
+- Software developer
+- Software engineer
+Some related occupations classified elsewhere:
+- Applications programmers - 2514
+",0,0
+http://data.europa.eu/esco/isco/C2522,Systems administrators,,"Systems administrators develop, control, maintain and support the optimal performance and security of information technology systems.
+Tasks include -
+(a)  maintaining and administering computer networks and related computing environments, including computer hardware, systems software, applications software and all configurations;
+(b)  recommending changes to improve systems and network configurations, and determining hardware or software requirements related to such changes;
+(c)  diagnosing hardware and software problems;
+(d)  performing data backups and disaster recovery operations;
+(e)  operating master consoles to monitor the performance of computer systems and networks, and to coordinate computer network access and use.
+Examples of the occupations classified here:
+- Network administrator
+- Systems administrator (computers)
+Some related occupations classified elsewhere:
+- Database administrator - 2521
+- Network analyst - 2523
+- Webmaster - 3514
+- Website administrator -  3514
+- Website technician - 3514
+",0,0
+http://data.europa.eu/esco/isco/C2511,Systems analysts,,"Systems analysts conduct research, analyse and evaluate client information technology requirements, procedures or problems, and develop and implement proposals, recommendations, and plans to improve current or future information systems.
+Tasks include -
+(a)  consulting with users to formulate document requirements and with management to ensure agreement on systems principles;
+(b)  identifying and analysing business processes, procedures and work practices;
+(c)  identifying and evaluating inefficiencies and recommending optimal business practices and system functionality and behaviour;
+(d)  taking responsibility for deploying functional solutions, such as creating, adopting and implementing system test plans;
+(e)  developing functional specifications for use by systems developers;
+(f)  expanding or modifying systems to improve workflow or serve new purposes;
+(g)  coordinating and linking the computer systems within an organization to increase compatibility.
+Examples of the occupations classified here: 
+- Business analyst (IT)
+- Computer scientist
+- Information systems analyst
+- Systems consultant
+- Systems designer (IT)
+Some related occupations classified elsewhere:
+-  Systems administrator (computers) - 2522
+-  Communications analyst (computers) - 2523
+-  Network analyst - 2523
+",0,0
+http://data.europa.eu/esco/isco/C3,Technicians and associate professionals,,"Technicians and associate professionals perform technical and related tasks connected with research and the application of scientific or artistic concepts and operational methods, and government or business regulations.  Competent performance in most occupations in this major group requires skills at the third ISCO skill level.
+Tasks performed by technicians and associate professionals usually include: undertaking and carrying out technical work connected with research and the application of concepts and operational methods in the fields of physical sciences including engineering and technology, life sciences including the medical profession, and social sciences and humanities; initiating and carrying out various technical  services related to trade, finance and administration including administration of government laws and regulations, and to social work; providing technical support for the arts and entertainment; participating in sporting activities; executing some religious tasks. Supervision of other workers may be included.
+Occupations in this major group are classified into the following sub-major groups:
+31 Science and Engineering Associate Professionals
+32 Health Associate Professionals 
+33 Business and Administration Associate Professionals
+34 Legal, Social, Cultural and Related Associate Professionals
+35 Information and Communications Technicians
+",0,0
+http://data.europa.eu/esco/isco/C2513,Web and multimedia developers,,"Web and multimedia development professionals combine design and technical knowledge to research, analyse, evaluate, design, program and modify websites and applications that draw together text, graphics, animations, imaging, audio and video displays and other interactive media.
+Tasks include -
+(a)  analysing, designing and developing Internet sites by applying a mixture of artistry and creativity with software programming and scripting languages and interfacing with operating environments;
+(b)  designing and developing digital animations, imaging, presentations, games, audio and video clips and Internet applications using multimedia software, tools and utilities, interactive graphics and programming languages;
+(c)  communicating with network specialists regarding web-related issues such as security and hosting websites, to control and enforce Internet and web server security, space allocation, user access, business continuity, website backup and disaster recovery planning; 
+(d)  designing, developing and integrating computer code with other specialized inputs such as image files, audio files and scripting languages, to produce, maintain and support websites;
+(e)  assisting in analysing, specifying and developing Internet strategies, web-based methodologies and development plans.
+Examples of the occupations classified here:
+- Animation programmer
+- Computer games programmer
+- Internet developer 
+- Multimedia programmer
+- Website architect
+- Website developer
+Some related occupations classified elsewhere:
+- Website designer - 2166 
+- Webmaster - 3514
+- Website administrator - 3514
+- Website technician - 3514
+",0,0

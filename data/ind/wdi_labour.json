@@ -1,0 +1,205 @@
+{
+  "_metadata": {
+    "country": "India",
+    "iso3": "IND",
+    "region": "South Asia",
+    "income_group": "Lower Middle Income",
+    "last_updated": "2024-04",
+    "sources": {
+      "WDI": "World Bank World Development Indicators, https://data.worldbank.org",
+      "ILOSTAT": "International Labour Organization, ILOSTAT, https://ilostat.ilo.org",
+      "Wittgenstein": "Wittgenstein Centre for Demography and Global Human Capital"
+    },
+    "data_gaps": [
+      "Informal sector wage data: limited systematic coverage",
+      "Occupation-level wage data: Not available at ISCO-08 disaggregation",
+      "TODO: Add country-specific data gap notes"
+    ]
+  },
+  "macro": {
+    "gdp_per_capita_usd": {
+      "value": 2695,
+      "year": 2024,
+      "source": "WDI NY.GDP.PCAP.CD"
+    },
+    "population_millions": {
+      "value": 1450.9,
+      "year": 2024,
+      "source": "WDI SP.POP.TOTL"
+    },
+    "urban_population_pct": {
+      "value": "TODO",
+      "year": "TODO",
+      "source": "WDI SP.URB.TOTL.IN.ZS"
+    }
+  },
+  "labour_market": {
+    "unemployment_rate_pct": {
+      "value": 4.2,
+      "year": 2024,
+      "source": "WDI SL.UEM.TOTL.ZS"
+    },
+    "youth_unemployment_rate_pct": {
+      "value": 15.7,
+      "year": 2024,
+      "source": "WDI SL.UEM.1524.ZS"
+    },
+    "youth_neet_pct": {
+      "value": 15.6,
+      "year": 2024,
+      "source": "ILO modelled estimate, ILOSTAT SDG 8.6.1"
+    },
+    "labour_force_participation_pct": {
+      "value": 55.6,
+      "year": 2024,
+      "source": "WDI SL.TLF.CACT.ZS"
+    },
+    "female_labour_participation_pct": {
+      "value": 32.4,
+      "year": 2024,
+      "source": "WDI SL.TLF.CACT.FE.ZS"
+    },
+    "self_employment_pct": {
+      "value": 57.3,
+      "year": 2022,
+      "source": "PLFS 2022-23"
+    },
+    "informal_employment_pct": {
+      "value": 89.0,
+      "year": 2022,
+      "source": "ILO India; PLFS 2022-23 estimate"
+    },
+    "employment_by_sector": {
+      "agriculture_pct": {
+        "value": 42.4,
+        "year": 2024,
+        "source": "WDI SL.AGR.EMPL.ZS"
+      },
+      "industry_pct": {
+        "value": 25.4,
+        "year": 2024,
+        "source": "WDI SL.IND.EMPL.ZS"
+      },
+      "services_pct": {
+        "value": 32.3,
+        "year": 2024,
+        "source": "WDI SL.SRV.EMPL.ZS"
+      }
+    }
+  },
+  "wages": {
+    "_note": "Formal sector estimates. India's massive informal sector (80%+ of employment) has lower wages. Regional variation extreme.",
+    "mean_monthly_earnings_usd": {
+      "all_sectors": {
+        "value": 220,
+        "year": 2022,
+        "source": "PLFS 2022-23; ILO estimates"
+      },
+      "agriculture": {
+        "value": 68,
+        "year": 2022,
+        "source": "PLFS estimate"
+      },
+      "industry_manufacturing": {
+        "value": 175,
+        "year": 2022,
+        "source": "PLFS"
+      },
+      "wholesale_retail_trade": {
+        "value": 155,
+        "year": 2022,
+        "source": "PLFS"
+      },
+      "information_communication": {
+        "value": 850,
+        "year": 2022,
+        "source": "NASSCOM; PLFS; IT sector premium"
+      },
+      "construction": {
+        "value": 125,
+        "year": 2022,
+        "source": "PLFS"
+      },
+      "health_social_work": {
+        "value": 290,
+        "year": 2022,
+        "source": "PLFS"
+      },
+      "education": {
+        "value": 265,
+        "year": 2022,
+        "source": "PLFS"
+      },
+      "public_admin": {
+        "value": 420,
+        "year": 2022,
+        "source": "7th Pay Commission rates; PLFS"
+      }
+    },
+    "minimum_wage_usd_monthly": {
+      "value": 80,
+      "year": 2024,
+      "source": "National floor wage ~INR 178/day; varies hugely by state. Delhi minimum wage higher."
+    }
+  },
+  "education": {
+    "primary_completion_rate_pct": {
+      "value": 94.5,
+      "year": 2024,
+      "source": "WDI SE.PRM.CMPT.ZS"
+    },
+    "secondary_enrollment_gross_pct": {
+      "value": 78.1,
+      "year": 2024,
+      "source": "WDI SE.SEC.ENRR"
+    },
+    "tertiary_enrollment_gross_pct": {
+      "value": 34.4,
+      "year": 2024,
+      "source": "WDI SE.TER.ENRR"
+    },
+    "mean_years_schooling": {
+      "value": 6.7,
+      "year": 2021,
+      "source": "UNDP HDI data"
+    },
+    "human_capital_index": {
+      "value": 0.49,
+      "year": 2020,
+      "source": "World Bank Human Capital Index"
+    }
+  },
+  "digital": {
+    "internet_penetration_pct": {
+      "value": 64.9,
+      "year": 2024,
+      "source": "WDI IT.NET.USER.ZS"
+    },
+    "mobile_money_adoption_pct_adults": {
+      "value": 40.0,
+      "year": 2022,
+      "source": "Global Findex / national surveys",
+      "note": "UPI adoption. 300M+ active UPI users. Digital payments growing exponentially post-demonetisation."
+    }
+  },
+  "wittgenstein_projections": {
+    "_source": "Wittgenstein Centre for Demography and Global Human Capital (2018), Education projection v.2.0",
+    "_note": "Education level distribution for India, all ages 15+, 2025 vs 2035 (SSP2)",
+    "ages_15_plus": {
+      "2025": {
+        "no_education_pct": 24.0,
+        "primary_pct": 17.7,
+        "lower_secondary_pct": 14.4,
+        "upper_secondary_pct": 29.8,
+        "post_secondary_pct": 14.2
+      },
+      "2035": {
+        "no_education_pct": 18.2,
+        "primary_pct": 15.1,
+        "lower_secondary_pct": 14.0,
+        "upper_secondary_pct": 34.4,
+        "post_secondary_pct": 18.4
+      }
+    }
+  }
+}
