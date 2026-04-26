@@ -75,7 +75,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  const search = useRouterState({ select: s => s.location.search });
+  const search = useRouterState({ select: s => s.location.search }) as unknown as Record<string, unknown>;
 
   useEffect(() => {
     initCountryTheme();
@@ -84,7 +84,7 @@ function RootComponent() {
   // ?present=1 → presenter mode (hides chrome, bumps type for projector use)
   useEffect(() => {
     if (typeof document === "undefined") return;
-    const v = (search as Record<string, unknown>).present;
+    const v = search?.present;
     const on = v === 1 || v === "1" || v === true || v === "true";
     document.documentElement.dataset.presenter = on ? "true" : "false";
   }, [search]);
