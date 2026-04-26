@@ -683,6 +683,44 @@ function ResultsDashboard() {
             />
           </section>
 
+          {/* ── Export actions ── */}
+          <section className="flex flex-wrap items-center justify-between gap-3 -mt-4">
+            <p className="text-xs text-muted-foreground">
+              Save a one-page summary you can print, email, or share with an employer or trainer.
+            </p>
+            <button
+              type="button"
+              onClick={handleDownloadPDF}
+              disabled={!reportData || pdfState === "generating"}
+              className={cn(
+                "inline-flex items-center gap-2 rounded-md border-2 border-ink px-4 py-2 font-mono text-xs uppercase tracking-wider transition-colors disabled:opacity-60",
+                pdfState === "done"
+                  ? "bg-cobalt text-paper"
+                  : "bg-paper text-ink hover:bg-cobalt hover:text-paper hover:border-cobalt",
+              )}
+              aria-live="polite"
+            >
+              {pdfState === "generating" ? (
+                <>
+                  <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                  Preparing PDF…
+                </>
+              ) : pdfState === "done" ? (
+                <>
+                  <Check className="h-4 w-4" /> Downloaded
+                </>
+              ) : pdfState === "error" ? (
+                <>
+                  <AlertCircle className="h-4 w-4" /> Retry download
+                </>
+              ) : (
+                <>
+                  <Download className="h-4 w-4" /> Download PDF
+                </>
+              )}
+            </button>
+          </section>
+
           {/* ── Section 1: AI Readiness Gauge ── */}
           <section className="flex flex-col items-center gap-6">
             <h2 className="font-display text-2xl font-bold text-ink">
