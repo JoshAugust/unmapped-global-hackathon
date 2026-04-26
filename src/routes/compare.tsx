@@ -133,11 +133,15 @@ function useCountryData(iso3: string): CountryData {
             const rd = getRecalibratedData(iso3, isco);
             const occ = rd.occupations?.[0];
             if (!occ) return null;
+            const calibrationFactor =
+              "calibration_factor" in rd
+                ? (rd as { calibration_factor: number }).calibration_factor
+                : 0;
             return {
               isco08: isco,
               base_risk: occ.original_frey_osborne,
               recalibrated_risk: occ.recalibrated_probability,
-              calibration_factor: rd.calibration_factor,
+              calibration_factor: calibrationFactor,
             };
           },
         )
@@ -148,7 +152,7 @@ function useCountryData(iso3: string): CountryData {
 
     Promise.all([fetchConfig, fetchRisks])
       .then(([cfg, riskResults]) => {
-        setConfig(cfg);
+        setConfig(cfg as unknown as CountryConfig | null);
         const riskMap: Record<string, RecalibratedRisk> = {};
         for (const { isco, data } of riskResults) {
           if (data) riskMap[isco] = data;
@@ -235,7 +239,8 @@ function CountrySelector({
           className="w-full appearance-none rounded-lg border-2 border-border bg-background pl-10 pr-10 py-3 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 transition-colors"
           style={{
             borderColor: `hsl(${themeColor})`,
-            focusRingColor: `hsl(${themeColor})`,
+            // `focusRingColor` is not a real CSS property; the focus ring is
+            // handled by Tailwind's focus:ring utilities above.
           }}
         >
           {ALL_COUNTRIES.filter((c) => c.iso3 !== excludeIso).map((c) => (

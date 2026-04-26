@@ -421,12 +421,14 @@ function StepWork({
   llmConfirmed,
   llmLabel,
   onLlmConfirm,
+  currentCountry,
 }: {
   selected: string | null;
   onSelect: (v: string) => void;
   llmConfirmed: boolean;
   llmLabel: string;
   onLlmConfirm: (isco08: string, label: string, skills: string[]) => void;
+  currentCountry: string;
 }) {
   const { t } = useI18n();
   return (
