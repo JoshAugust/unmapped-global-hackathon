@@ -14,7 +14,6 @@
 
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/page-shell";
-import { COUNTRIES, type CountryConfig } from "@/data/countries";
 import { ArrowRight, Check, FileJson } from "lucide-react";
 
 export const Route = createFileRoute("/localisability")({
@@ -32,9 +31,6 @@ export const Route = createFileRoute("/localisability")({
 });
 
 function LocalisabilityPage() {
-  const left = COUNTRIES["ssa-nigeria"];
-  const right = COUNTRIES["ssa-ghana"];
-
   return (
     <PageShell
       eyebrow="About · Country-agnostic protocol"
@@ -46,14 +42,8 @@ function LocalisabilityPage() {
       }
       lede="Our tool is not hardcoded to any one country. It can be directly plugged into any geographic context — every difference you see is driven by a JSON config, not a separate codebase."
     >
-      {/* Side-by-side comparison */}
-      <section className="grid gap-6 md:grid-cols-2">
-        <ContextColumn config={left} accent="cobalt" />
-        <ContextColumn config={right} accent="rust" />
-      </section>
-
       {/* Diff summary — what actually changes */}
-      <section className="mt-12 rounded-sm border-2 border-ink bg-paper p-6 sm:p-8">
+      <section className="rounded-sm border-2 border-ink bg-paper p-6 sm:p-8">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
           What changes between the two configs
         </div>
@@ -145,157 +135,6 @@ function LocalisabilityPage() {
 }
 
 /* ── Side-by-side column ─────────────────────────────────────────── */
-
-function ContextColumn({
-  config,
-  accent,
-}: {
-  config: CountryConfig;
-  accent: "cobalt" | "rust";
-}) {
-  const border = accent === "cobalt" ? "border-cobalt" : "border-rust";
-  const ring = accent === "cobalt" ? "bg-cobalt/5" : "bg-rust/5";
-  return (
-    <article
-      className={`rounded-sm border-2 ${border} ${ring} p-5 sm:p-6 shadow-[6px_6px_0_0_var(--ink)]`}
-    >
-      <header className="flex items-center gap-3 border-b border-ink/10 pb-4">
-        <span className="text-3xl" aria-hidden="true">{config.flag}</span>
-        <div className="min-w-0">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            {config.region}
-          </div>
-          <h3 className="truncate font-display text-2xl font-black leading-tight">
-            {config.country}
-          </h3>
-        </div>
-      </header>
-
-      <dl className="mt-5 space-y-4 text-sm">
-        <Row k="Currency / FX→USD" v={`${config.currency} (×${config.exchangeToUsd})`} />
-        <Row k="UI language · script" v={`${config.language} · ${config.script}`} />
-        <Row
-          k="Automation calibration"
-          v={`×${config.automationCalibration.toFixed(2)} of global Frey-Osborne baseline`}
-        />
-        <Row
-          k="Opportunity types surfaced"
-          v={config.opportunityTypes.join(" · ")}
-        />
-        <Row
-          k="Education taxonomy"
-          v={`${config.educationLevels.length} levels (ISCED ${Math.min(...config.educationLevels.map(e => e.isced))}–${Math.max(...config.educationLevels.map(e => e.isced))})`}
-        />
-
-        {/* Education ladder */}
-        <div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            Local credentials
-          </div>
-          <ul className="mt-2 space-y-1">
-            {config.educationLevels.map(lvl => (
-              <li
-                key={lvl.id}
-                className="flex items-baseline justify-between gap-3 border-b border-line/60 py-1"
-              >
-                <span className="truncate text-foreground">{lvl.label}</span>
-                <span className="shrink-0 font-mono text-[10px] uppercase text-muted-foreground">
-                  ISCED {lvl.isced}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Real signals snapshot */}
-        <div className="grid grid-cols-2 gap-3 pt-2">
-          <Stat
-            label="Median youth wage"
-            value={`${config.currency} ${config.signals.medianYouthWageMonthly.toLocaleString()}/mo`}
-          />
-          <Stat
-            label="Min wage"
-            value={`${config.currency} ${config.signals.minWageMonthly.toLocaleString()}/mo`}
-          />
-          <Stat
-            label="Youth unemployment"
-            value={`${config.signals.youthUnemployment}%`}
-          />
-          <Stat
-            label="Informal share"
-            value={`${config.signals.informalShare}%`}
-          />
-          <Stat
-            label="Mobile broadband"
-            value={`${config.signals.mobileBroadbandPenetration}%`}
-          />
-          <Stat
-            label="Tertiary youth (2035)"
-            value={`${config.wittgenstein[config.wittgenstein.length - 1].tertiaryYouthPct}%`}
-          />
-        </div>
-
-        {/* Top-3 sector growth */}
-        <div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            Top growth sectors
-          </div>
-          <ul className="mt-2 space-y-1">
-            {[...config.signals.sectorGrowth]
-              .sort((a, b) => b.growthPct - a.growthPct)
-              .slice(0, 3)
-              .map(s => (
-                <li
-                  key={s.sector}
-                  className="flex items-baseline justify-between gap-3 border-b border-line/60 py-1"
-                >
-                  <span className="truncate text-foreground">{s.sector}</span>
-                  <span className="shrink-0 font-mono text-xs font-semibold text-cobalt">
-                    +{s.growthPct.toFixed(1)}%
-                  </span>
-                </li>
-              ))}
-          </ul>
-        </div>
-      </dl>
-
-      <footer className="mt-5 border-t border-ink/10 pt-3">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          Sources
-        </div>
-        <ul className="mt-1 space-y-0.5 text-xs text-muted-foreground">
-          {config.sourceNotes.map(n => (
-            <li key={n}>· {n}</li>
-          ))}
-        </ul>
-      </footer>
-    </article>
-  );
-}
-
-function Row({ k, v }: { k: string; v: string }) {
-  return (
-    <div className="flex items-baseline justify-between gap-3">
-      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-        {k}
-      </span>
-      <span className="text-right font-medium text-foreground">{v}</span>
-    </div>
-  );
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-sm border border-line bg-paper px-3 py-2">
-      <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
-        {label}
-      </div>
-      <div className="mt-0.5 font-display text-sm font-bold text-ink">
-        {value}
-      </div>
-    </div>
-  );
-}
 
 function DiffItem({ label, keyName }: { label: string; keyName: string }) {
   return (
