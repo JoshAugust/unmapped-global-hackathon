@@ -47,8 +47,8 @@
 
 ## Phase 4: Deploy (D1–D5)
 
-- [ ] D1: Deploy backend (Railway/Fly.io)
-- [ ] D2: Deploy frontend to joshuaaugustine.page/unmapped
-- [ ] D3: Mobile responsiveness pass
+- [→] D1: Deploy backend (Railway/Fly.io) (combined D1-D5)
+- [→] D2: Deploy frontend to joshuaaugustine.page/unmapped (combined D1-D5)
+- [→] D3: Mobile responsiveness pass (combined D1-D5)
 - [x] D4: Demo flow & narrative
-- [ ] D5: Error handling & edge cases
+- [→] D5: Error handling & edge cases (combined D1-D5)

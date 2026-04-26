@@ -4,6 +4,8 @@ import { PageShell } from "@/components/page-shell";
 import { DataSource } from "@/components/data-source";
 import { SOURCES } from "@/lib/sources";
 import { useOnboarding } from "@/lib/profile-store";
+import { fetchWithFallback } from "@/lib/api-client";
+import { getQueryResponse, getRecalibratedData } from "@/lib/static-data";
 import { ProfileCard } from "@/components/profile-card";
 import {
   Card,
@@ -49,7 +51,7 @@ export const Route = createFileRoute("/results")({
 // Constants & types
 // ────────────────────────────────────────────
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "";
 
 interface TaskBreakdown {
   share: number;
@@ -477,16 +479,16 @@ function ResultsDashboard() {
       setLoading(true);
       setError(null);
       try {
-        const [queryRes, recalRes] = await Promise.all([
-          fetch(`${API}/api/query?isco08=${isco08}&country=${country}`),
-          fetch(`${API}/api/recalibrated/${country}/${isco08}`),
+        const [qData, rData] = await Promise.all([
+          fetchWithFallback<QueryResponse>(
+            `/api/query?isco08=${isco08}&country=${country}`,
+            () => getQueryResponse(isco08, country) as unknown as QueryResponse,
+          ),
+          fetchWithFallback<RecalibrationResponse>(
+            `/api/recalibrated/${country}/${isco08}`,
+            () => getRecalibratedData(country, isco08) as unknown as RecalibrationResponse,
+          ),
         ]);
-        if (!queryRes.ok)
-          throw new Error(`Query API returned ${queryRes.status}`);
-        if (!recalRes.ok)
-          throw new Error(`Recalibration API returned ${recalRes.status}`);
-        const qData: QueryResponse = await queryRes.json();
-        const rData: RecalibrationResponse = await recalRes.json();
         if (!cancelled) {
           setQueryData(qData);
           setRecalData(rData.occupations?.[0] ?? null);

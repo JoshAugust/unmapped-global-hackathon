@@ -11,12 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as ReadinessRouteImport } from './routes/readiness'
-import { Route as DemoRouteImport } from './routes/demo'
 import { Route as PolicymakerRouteImport } from './routes/policymaker'
 import { Route as PassportRouteImport } from './routes/passport'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as InfrastructureRouteImport } from './routes/infrastructure'
 import { Route as EducationRouteImport } from './routes/education'
+import { Route as DemoRouteImport } from './routes/demo'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as CrosswalkRouteImport } from './routes/crosswalk'
 import { Route as CoverageRouteImport } from './routes/coverage'
@@ -32,11 +32,6 @@ const ResultsRoute = ResultsRouteImport.update({
 const ReadinessRoute = ReadinessRouteImport.update({
   id: '/readiness',
   path: '/readiness',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoRoute = DemoRouteImport.update({
-  id: '/demo',
-  path: '/demo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PolicymakerRoute = PolicymakerRouteImport.update({
@@ -62,6 +57,11 @@ const InfrastructureRoute = InfrastructureRouteImport.update({
 const EducationRoute = EducationRouteImport.update({
   id: '/education',
   path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardRoute = DashboardRouteImport.update({
@@ -228,13 +228,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReadinessRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/demo': {
-      id: '/demo'
-      path: '/demo'
-      fullPath: '/demo'
-      preLoaderRoute: typeof DemoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/policymaker': {
       id: '/policymaker'
       path: '/policymaker'
@@ -268,6 +261,13 @@ declare module '@tanstack/react-router' {
       path: '/education'
       fullPath: '/education'
       preLoaderRoute: typeof EducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard': {

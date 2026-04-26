@@ -22,7 +22,7 @@ export const Route = createFileRoute("/crosswalk")({
 // Constants
 // ─────────────────────────────────────────────────────────────────────────────
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "";
 
 const PRIORITY_OCCUPATIONS = [
   { isco: "7422", title: "Electronics Mechanics and Servicers" },

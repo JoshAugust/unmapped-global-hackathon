@@ -20,6 +20,8 @@ import { EducationLandscape } from "@/components/education-landscape";
 import { getCountryTheme, getAllCountryThemes } from "@/lib/country-theme";
 import { SOURCES } from "@/lib/sources";
 import { cn } from "@/lib/utils";
+import { fetchWithFallback } from "@/lib/api-client";
+import { getCountryConfig, getRecalibratedData } from "@/lib/static-data";
 
 // ─────────────────────────────────────────────────────────────
 // Route
@@ -43,7 +45,7 @@ export const Route = createFileRoute("/compare")({
 // Constants
 // ─────────────────────────────────────────────────────────────
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "";
 
 const ALL_COUNTRIES = getAllCountryThemes();
 
@@ -118,14 +120,27 @@ function useCountryData(iso3: string): CountryData {
     setLoading(true);
     setError(null);
 
-    const fetchConfig = fetch(`${API}/api/country/${iso3}`)
-      .then((r) => r.json())
-      .catch(() => null);
+    const fetchConfig = fetchWithFallback(
+      `/api/country/${iso3}`,
+      () => getCountryConfig(iso3),
+    ).catch(() => null);
 
     const fetchRisks = Promise.all(
       SELECTED_ISOS.map((isco) =>
-        fetch(`${API}/api/recalibrated/${iso3}/${isco}`)
-          .then((r) => r.json())
+        fetchWithFallback(
+          `/api/recalibrated/${iso3}/${isco}`,
+          () => {
+            const rd = getRecalibratedData(iso3, isco);
+            const occ = rd.occupations?.[0];
+            if (!occ) return null;
+            return {
+              isco08: isco,
+              base_risk: occ.original_frey_osborne,
+              recalibrated_risk: occ.recalibrated_probability,
+              calibration_factor: rd.calibration_factor,
+            };
+          },
+        )
           .then((d) => ({ isco, data: d }))
           .catch(() => ({ isco, data: null })),
       ),

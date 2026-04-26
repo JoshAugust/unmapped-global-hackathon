@@ -3,9 +3,15 @@ import { useEffect, useMemo, useState } from "react";
 import { PageShell } from "@/components/page-shell";
 import { DataSource } from "@/components/data-source";
 import { SOURCES } from "@/lib/sources";
+import { fetchWithFallback } from "@/lib/api-client";
+import {
+  getCountryConfig,
+  getRecalibratedData,
+  getPolicymakerAggregates,
+} from "@/lib/static-data";
 
 // ─── API base ───────────────────────────────────────────────
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "";
 
 // ─── Route ──────────────────────────────────────────────────
 export const Route = createFileRoute("/policymaker")({
@@ -211,7 +217,7 @@ function pct(n: number): string {
 }
 
 // ─── Data hooks ─────────────────────────────────────────────
-function useFetchJson<T>(url: string) {
+function useFetchJsonWithFallback<T>(url: string, fallbackFn: () => T) {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -221,13 +227,11 @@ function useFetchJson<T>(url: string) {
     setLoading(true);
     setError(null);
     setData(null);
-    fetch(url)
-      .then((r) => {
-        if (!r.ok) throw new Error(`${r.status}`);
-        return r.json();
-      })
+
+    const endpoint = url.replace(API, '');
+    fetchWithFallback<T>(endpoint, fallbackFn)
       .then((d) => {
-        if (!cancelled) setData(d as T);
+        if (!cancelled) setData(d);
       })
       .catch((e) => {
         if (!cancelled) setError(e.message);
@@ -840,22 +844,29 @@ function PolicymakerDashboard() {
   const country = COUNTRY_LIST.find((c) => c.iso3 === selectedIso3) ?? COUNTRY_LIST[0];
   const iso3Lower = selectedIso3.toLowerCase();
 
-  // Fetch all three data sources
+  // Fetch all three data sources with static fallbacks
   const {
     data: wdi,
     loading: wdiLoading,
-  } = useFetchJson<WdiLabour>(`${API}/api/country/${iso3Lower}`);
+  } = useFetchJsonWithFallback<WdiLabour>(
+    `${API}/api/country/${iso3Lower}`,
+    () => getCountryConfig(selectedIso3) as unknown as WdiLabour,
+  );
 
   const {
     data: recal,
     loading: recalLoading,
-  } = useFetchJson<RecalData>(`${API}/api/country/${iso3Lower}/recalibrated`);
+  } = useFetchJsonWithFallback<RecalData>(
+    `${API}/api/country/${iso3Lower}/recalibrated`,
+    () => getRecalibratedData(selectedIso3) as unknown as RecalData,
+  );
 
   const {
     data: aggregates,
     loading: aggLoading,
-  } = useFetchJson<PolicymakerAggregates>(
-    `${API}/api/policymaker/${iso3Lower}`
+  } = useFetchJsonWithFallback<PolicymakerAggregates>(
+    `${API}/api/policymaker/${iso3Lower}`,
+    () => getPolicymakerAggregates(selectedIso3) as unknown as PolicymakerAggregates,
   );
 
   // Compute top 10 resilient / exposed from recal data
