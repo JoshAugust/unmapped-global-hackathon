@@ -2,12 +2,10 @@ import { COUNTRIES } from "@/data/countries";
 import { useProfile } from "@/lib/profile-store";
 import type { CountryKey } from "@/data/countries";
 
-// All three configured contexts are exposed in the header pill so a judge
-// (or any user) can switch between SSA-urban-informal, SSA-urban/rural-mixed,
-// and South-Asia-rural-agricultural without leaving the current page —
-// satisfying the brief's "Country-Agnostic Requirement" demonstration in
-// the live UX. Adding a new country is a JSON edit, not a code change.
-const VISIBLE_COUNTRIES: CountryKey[] = ["ssa-ghana", "ssa-nigeria", "sa-bangladesh"];
+// Configured contexts exposed in the header pill so a user can switch
+// between SSA-urban-informal contexts without leaving the current page.
+// Adding a new country is a JSON edit, not a code change.
+const VISIBLE_COUNTRIES: CountryKey[] = ["ssa-ghana", "ssa-nigeria"];
 
 export function CountryPill() {
   const [profile, setProfile] = useProfile();
