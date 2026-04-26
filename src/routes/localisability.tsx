@@ -242,9 +242,9 @@ function LocalisabilityPage() {
           Five inputs. Zero code changes.
         </h2>
         <p className="mt-3 max-w-3xl text-sm text-foreground/80">
-          The brief's "configurable without changing your codebase" requirement
-          is satisfied by a single JSON file per country. Here are the five
-          dimensions the brief calls out, mapped to their config keys:
+          Reconfiguring the platform for a new country is a single JSON file —
+          no code changes, no redeploy gymnastics. These are the five
+          dimensions that vary by context, mapped to their config keys:
         </p>
         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
           <DiffItem
