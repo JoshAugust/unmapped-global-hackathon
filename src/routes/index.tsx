@@ -34,6 +34,7 @@ function Index() {
       <Hero />
       <HowItWorks />
       <ImpactStrip />
+      <ProtocolNotProduct />
       <BuiltForAmara />
       <Footer />
     </div>
