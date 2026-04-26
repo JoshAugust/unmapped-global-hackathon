@@ -2,7 +2,6 @@
   "app.title": "UNMAPPED",
   "app.subtitle": "Map your skills to opportunity",
   "app.tagline": "for every young person",
-
   "onboarding.step1.title": "What do you spend most of your working time doing?",
   "onboarding.step1.hint": "Think about your typical day — what takes up most of your hours?",
   "onboarding.step2.title": "What is your highest level of education?",
@@ -13,7 +12,6 @@
   "onboarding.step4.hint": "Approximate is fine.",
   "onboarding.step5.title": "What are you most hoping to do?",
   "onboarding.step5.hint": "Pick whatever feels most true right now.",
-
   "results.title": "Your Skills Profile",
   "results.subtitle": "Based on your answers, here is how your work maps to opportunity.",
   "results.ai_gauge.title": "AI Readiness",
@@ -24,10 +22,8 @@
   "results.pathways.description": "Roles your skills already qualify you for — or nearly do.",
   "results.demand.title": "Demand for Your Skills",
   "results.demand.description": "How employers in your region are hiring for what you know.",
-
   "policymaker.title": "Workforce Intelligence Dashboard",
   "policymaker.subtitle": "Aggregate skill gaps and readiness across regions and sectors.",
-
   "common.back": "Back",
   "common.next": "Next",
   "common.loading": "Loading…",
@@ -39,7 +35,6 @@
   "common.select": "Select…",
   "common.close": "Close",
   "common.save": "Save",
-
   "nav.overview": "Overview",
   "nav.passport": "Skills Passport",
   "nav.readiness": "AI Readiness",
@@ -53,7 +48,22 @@
   "nav.methodology": "Methodology",
   "nav.configure": "Configure",
   "nav.get_started": "Get started",
-
   "language.label": "Language",
-  "language.select": "Select language"
+  "language.select": "Select language",
+  "hero.title": "UNMAPPED",
+  "hero.subtitle": "Map informal skills to economic opportunity",
+  "hero.cta_youth": "I'm a young person",
+  "hero.cta_youth_sub": "Start your skills passport",
+  "hero.cta_policy": "I'm a policymaker",
+  "hero.cta_policy_sub": "View workforce intelligence",
+  "how.title": "Three steps. Real outcomes.",
+  "how.step1": "Tell us what you do",
+  "how.step1_body": "Describe your work in any language",
+  "how.step2": "We bridge the gap",
+  "how.step2_body": "9 data sources, 4 taxonomy systems, 5 countries",
+  "how.step3": "See your future",
+  "how.step3_body": "AI readiness, career pathways, real signals",
+  "nav.home": "Home",
+  "nav.demo": "Demo",
+  "nav.coverage": "Coverage"
 }

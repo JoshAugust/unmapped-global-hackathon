@@ -2,7 +2,6 @@
   "app.title": "UNMAPPED",
   "app.subtitle": "Ṣe àpẹẹrẹ ìmọ̀ rẹ fún àǹfààní",
   "app.tagline": "fún ọ̀dọ́ gbogbo",
-
   "onboarding.step1.title": "Kí ni o máa ń ṣe jù lọ ní àkókò iṣẹ́ rẹ?",
   "onboarding.step1.hint": "Rò ojú ọjọ́ àṣà rẹ — kí ni ó máa ń gbà àkókò rẹ jù lọ?",
   "onboarding.step2.title": "Ìpele ẹ̀kọ́ tó ga jù lọ tí o ti dé?",
@@ -13,7 +12,6 @@
   "onboarding.step4.hint": "Iye àfiyèsí tó sunmọ tó.",
   "onboarding.step5.title": "Kí ni irètí rẹ jù lọ?",
   "onboarding.step5.hint": "Yan ohun tó bá ìmọ̀lára rẹ mu dáadáa ní àsìkò yìí.",
-
   "results.title": "Àkójọpọ̀ Ìmọ̀ Rẹ",
   "results.subtitle": "Dán mọ àwọn ìdáhùn rẹ, bẹ́ẹ̀ ni a ṣe ṣàpẹẹrẹ bó ṣe dara fún iṣẹ́ rẹ.",
   "results.ai_gauge.title": "Ìmúrasílẹ̀ Fún AI",
@@ -24,10 +22,8 @@
   "results.pathways.description": "Àwọn iṣẹ́ tí ìmọ̀ rẹ ti tọ́ọ̀ rẹ sílẹ̀ tẹ́lẹ̀ — tàbí tó fẹ́rẹ̀ẹ́ tọ́ọ̀ rẹ sílẹ̀.",
   "results.demand.title": "Ìbéèrè Fún Ìmọ̀ Rẹ",
   "results.demand.description": "Bí àwọn agbanisiṣẹ́ ní àgbègbè rẹ ṣe ń gbà ọ̀pọ̀ ènìyàn fún ohun tí o mọ.",
-
   "policymaker.title": "Ojú Ìtàn Ọgbọ́n Iṣẹ́ Àgbáyé",
   "policymaker.subtitle": "Àpapọ̀ àìpé ìmọ̀ àti ìmúrasílẹ̀ ní àwọn ẹkùn àti ọ̀wọ́ iṣẹ́.",
-
   "common.back": "Padà",
   "common.next": "Ẹ̀yìn",
   "common.loading": "Ń gbéra…",
@@ -39,7 +35,6 @@
   "common.select": "Yan…",
   "common.close": "Pa",
   "common.save": "Fi pamọ́",
-
   "nav.overview": "Àkọsílẹ̀",
   "nav.passport": "Ìwé-ìrìnnà Ìmọ̀",
   "nav.readiness": "Ìmúrasílẹ̀ AI",
@@ -53,7 +48,22 @@
   "nav.methodology": "Ọ̀nà Ìṣiṣẹ́",
   "nav.configure": "Ṣètò",
   "nav.get_started": "Bẹ̀rẹ̀",
-
   "language.label": "Èdè",
-  "language.select": "Yan èdè"
+  "language.select": "Yan èdè",
+  "hero.title": "UNMAPPED",
+  "hero.subtitle": "Map informal skills to economic opportunity",
+  "hero.cta_youth": "I'm a young person",
+  "hero.cta_youth_sub": "Start your skills passport",
+  "hero.cta_policy": "I'm a policymaker",
+  "hero.cta_policy_sub": "View workforce intelligence",
+  "how.title": "Three steps. Real outcomes.",
+  "how.step1": "Tell us what you do",
+  "how.step1_body": "Describe your work in any language",
+  "how.step2": "We bridge the gap",
+  "how.step2_body": "9 data sources, 4 taxonomy systems, 5 countries",
+  "how.step3": "See your future",
+  "how.step3_body": "AI readiness, career pathways, real signals",
+  "nav.home": "Home",
+  "nav.demo": "Demo",
+  "nav.coverage": "Coverage"
 }

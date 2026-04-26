@@ -2,7 +2,6 @@
   "app.title": "UNMAPPED",
   "app.subtitle": "Valorisez vos compétences, ouvrez de nouvelles portes",
   "app.tagline": "pour chaque jeune",
-
   "onboarding.step1.title": "Que faites-vous la majeure partie de votre temps de travail ?",
   "onboarding.step1.hint": "Pensez à votre journée type — qu'est-ce qui occupe la plupart de vos heures ?",
   "onboarding.step2.title": "Quel est votre niveau d'études le plus élevé ?",
@@ -13,7 +12,6 @@
   "onboarding.step4.hint": "Une estimation suffit.",
   "onboarding.step5.title": "Qu'espérez-vous le plus accomplir ?",
   "onboarding.step5.hint": "Choisissez ce qui vous correspond le mieux en ce moment.",
-
   "results.title": "Votre profil de compétences",
   "results.subtitle": "Sur la base de vos réponses, voici comment vos compétences s'ouvrent à des opportunités.",
   "results.ai_gauge.title": "Préparation à l'IA",
@@ -24,10 +22,8 @@
   "results.pathways.description": "Les métiers que vos compétences vous qualifient déjà — ou presque.",
   "results.demand.title": "Demande pour vos compétences",
   "results.demand.description": "Comment les employeurs de votre région recrutent pour ce que vous savez faire.",
-
   "policymaker.title": "Tableau de bord d'intelligence sur le marché du travail",
   "policymaker.subtitle": "Lacunes de compétences et niveaux de préparation agrégés par région et secteur.",
-
   "common.back": "Retour",
   "common.next": "Suivant",
   "common.loading": "Chargement…",
@@ -39,7 +35,6 @@
   "common.select": "Choisir…",
   "common.close": "Fermer",
   "common.save": "Enregistrer",
-
   "nav.overview": "Aperçu",
   "nav.passport": "Passeport de compétences",
   "nav.readiness": "Préparation à l'IA",
@@ -53,7 +48,22 @@
   "nav.methodology": "Méthodologie",
   "nav.configure": "Configurer",
   "nav.get_started": "Commencer",
-
   "language.label": "Langue",
-  "language.select": "Choisir une langue"
+  "language.select": "Choisir une langue",
+  "hero.title": "UNMAPPED",
+  "hero.subtitle": "Map informal skills to economic opportunity",
+  "hero.cta_youth": "I'm a young person",
+  "hero.cta_youth_sub": "Start your skills passport",
+  "hero.cta_policy": "I'm a policymaker",
+  "hero.cta_policy_sub": "View workforce intelligence",
+  "how.title": "Three steps. Real outcomes.",
+  "how.step1": "Tell us what you do",
+  "how.step1_body": "Describe your work in any language",
+  "how.step2": "We bridge the gap",
+  "how.step2_body": "9 data sources, 4 taxonomy systems, 5 countries",
+  "how.step3": "See your future",
+  "how.step3_body": "AI readiness, career pathways, real signals",
+  "nav.home": "Home",
+  "nav.demo": "Demo",
+  "nav.coverage": "Coverage"
 }

@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav, SiteFooter } from "@/components/site-nav";
 import { CulturalPattern } from "@/components/cultural-pattern";
+import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -42,16 +43,17 @@ function Index() {
 /* ─── Hero ──────────────────────────────────────────────────────────────── */
 
 function Hero() {
+  const { t } = useI18n();
   return (
     <section className="relative overflow-hidden bg-ink">
       <CulturalPattern opacity={0.06} size={120} />
 
       <div className="relative mx-auto flex min-h-[80vh] max-w-[1400px] flex-col items-center justify-center px-6 py-24 text-center">
         <h1 className="font-display text-[clamp(3rem,8vw,7rem)] font-black leading-[0.95] tracking-tight text-paper">
-          UNMAPPED
+          {t("hero.title", "UNMAPPED")}
         </h1>
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-paper/80 md:text-xl">
-          Map informal skills to economic opportunity
+          {t("hero.subtitle", "Map informal skills to economic opportunity")}
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -61,11 +63,11 @@ function Hero() {
           >
             <span className="text-xl">🎓</span>
             <span>
-              I'm a young person{" "}
+              {t("hero.cta_youth", "I'm a young person")}{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1">
                 →
               </span>{" "}
-              Start your skills passport
+              {t("hero.cta_youth_sub", "Start your skills passport")}
             </span>
           </Link>
           <Link
@@ -74,11 +76,11 @@ function Hero() {
           >
             <span className="text-xl">📊</span>
             <span>
-              I'm a policymaker{" "}
+              {t("hero.cta_policy", "I'm a policymaker")}{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1">
                 →
               </span>{" "}
-              View workforce intelligence
+              {t("hero.cta_policy_sub", "View workforce intelligence")}
             </span>
           </Link>
         </div>
@@ -108,6 +110,7 @@ const STEPS = [
 ];
 
 function HowItWorks() {
+  const { t } = useI18n();
   return (
     <section className="border-b border-line bg-paper">
       <div className="mx-auto max-w-[1400px] px-6 py-20">
@@ -116,7 +119,7 @@ function HowItWorks() {
             How it works
           </div>
           <h2 className="mt-3 font-display text-3xl font-black md:text-4xl">
-            Three steps. Real outcomes.
+            {t("how.title", "Three steps. Real outcomes.")}
           </h2>
         </div>
 
