@@ -664,6 +664,28 @@ function ResultsDashboard() {
           </div>
 
           <div id="results-export-target" className="space-y-14">
+          {/* ── Real signals badge row (visible-not-buried per brief M3) ── */}
+          <div className="flex flex-wrap items-center gap-2 rounded-sm border border-cobalt/30 bg-cobalt/5 px-4 py-3">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-cobalt">
+              Live signals on this page ·
+            </span>
+            {[
+              "Avg salary",
+              "Youth unemployment",
+              "Labour-force participation",
+              "Sector growth",
+              "Frey-Osborne (LMIC-recalibrated)",
+              "ESCO-mapped pathways",
+            ].map(s => (
+              <span
+                key={s}
+                className="rounded-full border border-cobalt/30 bg-paper px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cobalt"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+
           {/* ── Profile Card ── */}
           <section>
             <ProfileCard
