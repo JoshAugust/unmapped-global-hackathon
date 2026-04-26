@@ -25,7 +25,7 @@
 
 ## Phase 3: Frontend (F1–F19)
 
-- [→] F1: Structured 5-step onboarding flow from country config
+- [x] F1: Structured 5-step onboarding flow from country config
 - [ ] F2: LLM free-text skills fallback input
 - [ ] F3: AI follow-up questions for profile strengthening
 - [ ] F4: Rich profile card output (radar chart, ESCO skills, export)
@@ -33,15 +33,15 @@
 - [ ] F6: Wittgenstein education landscape chart
 - [ ] F7: Resilience pathways panel with adjacency data
 - [ ] F8: Youth matching view with 2 visible econometric signals
-- [ ] F9: Policymaker aggregate dashboard
+- [→] F9: Policymaker aggregate dashboard
 - [ ] F10: Country comparison mode (side-by-side)
-- [→] F11: DataSource citation component (wired throughout)
+- [x] F11: DataSource citation component (wired throughout)
 - [ ] F12: Expandable data detail panels
 - [ ] F13: Calibration & limits panel (honesty text)
-- [ ] F14: /infrastructure route with architecture diagram
+- [→] F14: /infrastructure route with architecture diagram
 - [ ] F15: Crosswalk explorer (interactive taxonomy flow)
 - [ ] F16: Data coverage dashboard
-- [→] F17: Country visual identity engine (patterns, palettes, silhouettes)
+- [x] F17: Country visual identity engine (patterns, palettes, silhouettes)
 - [ ] F18: 5 country configs with real data
 - [ ] F19: Language switcher + i18n externalization
 
