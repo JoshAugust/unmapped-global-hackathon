@@ -35,6 +35,7 @@ function Index() {
       <HowItWorks />
       <JobMarketPulse />
       <ImpactStrip />
+      <ProtocolNotProduct />
       <BuiltForAmara />
       <Footer />
     </div>
@@ -66,16 +67,15 @@ function Hero() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
-            to="/passport"
+            to="/start"
             className="group inline-flex items-center gap-3 bg-cobalt px-8 py-4 text-base font-semibold text-paper transition-colors hover:bg-paper hover:text-cobalt"
           >
-            <span className="text-xl">🎓</span>
+            <span className="text-xl">🚀</span>
             <span>
-              {t("hero.cta_youth", "I'm a young person")}{" "}
+              {t("hero.cta_get_started", "Get started")}{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1">
                 →
-              </span>{" "}
-              {t("hero.cta_youth_sub", "Start your skills passport")}
+              </span>
             </span>
           </Link>
           <Link
@@ -242,6 +242,100 @@ function ImpactStrip() {
 }
 
 /* ─── Built for Amara ──────────────────────────────────────────────────── */
+
+/* ─── Protocol, not product ───────────────────────────────────────────── */
+
+const COUNTRY_INPUTS = [
+  { flag: "🇳🇬", name: "Nigeria", lang: "English · Hausa · Yoruba", currency: "₦", calib: "0.62" },
+  { flag: "🇬🇭", name: "Ghana", lang: "English · Twi", currency: "GH₵", calib: "0.65" },
+  { flag: "🇰🇪", name: "Kenya", lang: "English · Swahili", currency: "KSh", calib: "0.66" },
+  { flag: "🇷🇼", name: "Rwanda", lang: "Kinyarwanda · English", currency: "RWF", calib: "0.58" },
+  { flag: "🇮🇳", name: "India", lang: "Hindi · English · +21", currency: "₹", calib: "0.71" },
+];
+
+function ProtocolNotProduct() {
+  return (
+    <section className="border-b border-line bg-sand">
+      <div className="mx-auto max-w-[1400px] px-6 py-20">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+          {/* Left — the claim */}
+          <div>
+            <div className="inline-block border-l-4 border-cobalt bg-cobalt/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cobalt">
+              Infrastructure, not just an app
+            </div>
+            <h2 className="mt-4 font-display text-3xl font-black leading-tight md:text-4xl">
+              A protocol any government, NGO or training provider can{" "}
+              <span className="text-cobalt">plug into.</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-foreground/80 md:text-lg">
+              Country-specific parameters — labour data, education taxonomy, language,
+              automation calibration — are <strong>inputs to the system, not hardcoded
+              assumptions</strong>. Adding a new country is a JSON edit, not a code change.
+            </p>
+            <div className="mt-6 grid gap-3 text-sm">
+              {[
+                { k: "Labour data", v: "ILOSTAT · WDI · per-country signals JSON" },
+                { k: "Education taxonomy", v: "ISCED-mapped levels per config" },
+                { k: "Language", v: "8 locale files · swap without redeploying" },
+                { k: "Automation calibration", v: "Frey-Osborne recalibrated per LMIC" },
+              ].map(row => (
+                <div key={row.k} className="grid grid-cols-[160px_1fr] items-baseline gap-3 border-b border-line pb-2">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-cobalt">{row.k}</span>
+                  <span className="text-foreground/80">{row.v}</span>
+                </div>
+              ))}
+            </div>
+            <Link
+              to="/configure"
+              className="mt-7 inline-flex items-center gap-2 border-2 border-ink bg-ink px-5 py-3 text-sm font-semibold text-paper hover:bg-cobalt hover:border-cobalt"
+            >
+              See the live config switcher →
+            </Link>
+          </div>
+
+          {/* Right — visual proof: country configs as inputs */}
+          <div className="rounded-sm border-2 border-ink bg-paper p-5 shadow-[8px_8px_0_0_var(--ink)]">
+            <div className="flex items-center justify-between border-b border-line pb-3">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                /data/config/country_config_*.json
+              </span>
+              <span className="rounded-full bg-cobalt/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cobalt">
+                6 active
+              </span>
+            </div>
+            <div className="mt-4 grid gap-2">
+              {COUNTRY_INPUTS.map(c => (
+                <div
+                  key={c.name}
+                  className="grid grid-cols-[auto_1fr_auto] items-center gap-3 rounded-sm border border-line bg-sand/40 px-3 py-2.5 text-sm"
+                >
+                  <span className="text-xl leading-none">{c.flag}</span>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-ink">{c.name}</div>
+                    <div className="truncate font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                      {c.lang}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">calib · {c.calib}</div>
+                    <div className="font-mono text-xs font-semibold text-ink">{c.currency}</div>
+                  </div>
+                </div>
+              ))}
+              <div className="mt-1 grid grid-cols-[auto_1fr_auto] items-center gap-3 rounded-sm border border-dashed border-cobalt/40 bg-cobalt/5 px-3 py-2.5 text-sm">
+                <span className="text-xl leading-none">＋</span>
+                <div className="font-mono text-xs uppercase tracking-wider text-cobalt">
+                  Add a country = add a JSON file
+                </div>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-cobalt/70">no code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function BuiltForAmara() {
   return (

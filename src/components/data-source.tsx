@@ -34,12 +34,12 @@ import type { SourceDefinition } from "@/lib/sources";
 // ────────────────────────────────────────────
 
 export interface DataSourceProps {
-  /** Short label shown inline, e.g. "ILOSTAT 2024" */
-  label: string;
-  /** Full dataset name */
-  dataset: string;
-  /** Year or date range */
-  vintage: string;
+  /** Short label shown inline, e.g. "ILOSTAT 2024". Optional when `sources` is provided. */
+  label?: string;
+  /** Full dataset name. Optional when `sources` is provided. */
+  dataset?: string;
+  /** Year or date range. Optional when `sources` is provided. */
+  vintage?: string;
   /** Brief methodology description */
   methodology?: string;
   /** Known data gaps or caveats */
@@ -141,12 +141,19 @@ export function DataSource({
   // Normalise into an array of sources
   const allSources: SourceDefinition[] = sources?.length
     ? sources
-    : [{ label, dataset, vintage, methodology, caveat, url }];
+    : [{
+        label: label ?? "Source",
+        dataset: dataset ?? "",
+        vintage: vintage ?? "",
+        methodology,
+        caveat,
+        url,
+      }];
 
   // Build the display label for multi-source mode
   const displayLabel = sources?.length
     ? sources.map((s) => s.label).join("; ")
-    : label;
+    : (label ?? "Source");
 
   return (
     <Popover>

@@ -1,9 +1,12 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 import { I18nProvider } from "../lib/i18n";
 import { initCountryTheme } from "../lib/country-theme";
+import { Toaster } from "@/components/ui/sonner";
+import { SeedBanner } from "@/components/seed-banner";
+import { DemoBar } from "@/components/demo-bar";
 
 function NotFoundComponent() {
   return (
@@ -32,14 +35,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Global Skills Connect Platform for Youth" },
+      { name: "description", content: "Global Connect Platform helps informal workers in all over the world understand their skills' economic value and future opportunities." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Global Skills Connect Platform for Youth" },
+      { property: "og:description", content: "Global Connect Platform helps informal workers in all over the world understand their skills' economic value and future opportunities." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Global Skills Connect Platform for Youth" },
+      { name: "twitter:description", content: "Global Connect Platform helps informal workers in all over the world understand their skills' economic value and future opportunities." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/PsKxWhCPo2RR5rotuq3emcD3cKN2/social-images/social-1777204122673-WhatsApp_Image_2026-04-26_at_12.47.13.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/PsKxWhCPo2RR5rotuq3emcD3cKN2/social-images/social-1777204122673-WhatsApp_Image_2026-04-26_at_12.47.13.webp" },
     ],
     links: [
       {
@@ -68,13 +75,28 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const search = useRouterState({ select: s => s.location.search }) as unknown as Record<string, unknown>;
+
   useEffect(() => {
     initCountryTheme();
   }, []);
 
+  // ?present=1 → presenter mode (hides chrome, bumps type for projector use)
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const v = search?.present;
+    const on = v === 1 || v === "1" || v === true || v === "true";
+    document.documentElement.dataset.presenter = on ? "true" : "false";
+  }, [search]);
+
   return (
     <I18nProvider>
+      {/* Skip-to-content link, becomes visible on focus */}
+      <a href="#main" className="sr-only-focusable">Skip to content</a>
+      <SeedBanner />
       <Outlet />
+      <DemoBar />
+      <Toaster />
     </I18nProvider>
   );
 }

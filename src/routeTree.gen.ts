@@ -9,11 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StartRouteImport } from './routes/start'
+import { Route as ShareRouteImport } from './routes/share'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as ReadinessRouteImport } from './routes/readiness'
 import { Route as PolicymakerRouteImport } from './routes/policymaker'
 import { Route as PassportRouteImport } from './routes/passport'
 import { Route as MethodologyRouteImport } from './routes/methodology'
+import { Route as LocalisabilityRouteImport } from './routes/localisability'
 import { Route as InfrastructureRouteImport } from './routes/infrastructure'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as DemoRouteImport } from './routes/demo'
@@ -24,6 +27,16 @@ import { Route as ConfigureRouteImport } from './routes/configure'
 import { Route as CompareRouteImport } from './routes/compare'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StartRoute = StartRouteImport.update({
+  id: '/start',
+  path: '/start',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShareRoute = ShareRouteImport.update({
+  id: '/share',
+  path: '/share',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResultsRoute = ResultsRouteImport.update({
   id: '/results',
   path: '/results',
@@ -47,6 +60,11 @@ const PassportRoute = PassportRouteImport.update({
 const MethodologyRoute = MethodologyRouteImport.update({
   id: '/methodology',
   path: '/methodology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocalisabilityRoute = LocalisabilityRouteImport.update({
+  id: '/localisability',
+  path: '/localisability',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InfrastructureRoute = InfrastructureRouteImport.update({
@@ -105,11 +123,14 @@ export interface FileRoutesByFullPath {
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/localisability': typeof LocalisabilityRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
   '/results': typeof ResultsRoute
+  '/share': typeof ShareRoute
+  '/start': typeof StartRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -121,11 +142,14 @@ export interface FileRoutesByTo {
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/localisability': typeof LocalisabilityRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
   '/results': typeof ResultsRoute
+  '/share': typeof ShareRoute
+  '/start': typeof StartRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -138,11 +162,14 @@ export interface FileRoutesById {
   '/demo': typeof DemoRoute
   '/education': typeof EducationRoute
   '/infrastructure': typeof InfrastructureRoute
+  '/localisability': typeof LocalisabilityRoute
   '/methodology': typeof MethodologyRoute
   '/passport': typeof PassportRoute
   '/policymaker': typeof PolicymakerRoute
   '/readiness': typeof ReadinessRoute
   '/results': typeof ResultsRoute
+  '/share': typeof ShareRoute
+  '/start': typeof StartRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -156,11 +183,14 @@ export interface FileRouteTypes {
     | '/demo'
     | '/education'
     | '/infrastructure'
+    | '/localisability'
     | '/methodology'
     | '/passport'
     | '/policymaker'
     | '/readiness'
     | '/results'
+    | '/share'
+    | '/start'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -172,11 +202,14 @@ export interface FileRouteTypes {
     | '/demo'
     | '/education'
     | '/infrastructure'
+    | '/localisability'
     | '/methodology'
     | '/passport'
     | '/policymaker'
     | '/readiness'
     | '/results'
+    | '/share'
+    | '/start'
   id:
     | '__root__'
     | '/'
@@ -188,11 +221,14 @@ export interface FileRouteTypes {
     | '/demo'
     | '/education'
     | '/infrastructure'
+    | '/localisability'
     | '/methodology'
     | '/passport'
     | '/policymaker'
     | '/readiness'
     | '/results'
+    | '/share'
+    | '/start'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -205,15 +241,32 @@ export interface RootRouteChildren {
   DemoRoute: typeof DemoRoute
   EducationRoute: typeof EducationRoute
   InfrastructureRoute: typeof InfrastructureRoute
+  LocalisabilityRoute: typeof LocalisabilityRoute
   MethodologyRoute: typeof MethodologyRoute
   PassportRoute: typeof PassportRoute
   PolicymakerRoute: typeof PolicymakerRoute
   ReadinessRoute: typeof ReadinessRoute
   ResultsRoute: typeof ResultsRoute
+  ShareRoute: typeof ShareRoute
+  StartRoute: typeof StartRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/start': {
+      id: '/start'
+      path: '/start'
+      fullPath: '/start'
+      preLoaderRoute: typeof StartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/share': {
+      id: '/share'
+      path: '/share'
+      fullPath: '/share'
+      preLoaderRoute: typeof ShareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/results': {
       id: '/results'
       path: '/results'
@@ -247,6 +300,13 @@ declare module '@tanstack/react-router' {
       path: '/methodology'
       fullPath: '/methodology'
       preLoaderRoute: typeof MethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/localisability': {
+      id: '/localisability'
+      path: '/localisability'
+      fullPath: '/localisability'
+      preLoaderRoute: typeof LocalisabilityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/infrastructure': {
@@ -325,21 +385,15 @@ const rootRouteChildren: RootRouteChildren = {
   DemoRoute: DemoRoute,
   EducationRoute: EducationRoute,
   InfrastructureRoute: InfrastructureRoute,
+  LocalisabilityRoute: LocalisabilityRoute,
   MethodologyRoute: MethodologyRoute,
   PassportRoute: PassportRoute,
   PolicymakerRoute: PolicymakerRoute,
   ReadinessRoute: ReadinessRoute,
   ResultsRoute: ResultsRoute,
+  ShareRoute: ShareRoute,
+  StartRoute: StartRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

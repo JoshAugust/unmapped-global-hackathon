@@ -22,6 +22,10 @@ import { SOURCES } from "@/lib/sources";
 import { cn } from "@/lib/utils";
 import { fetchWithFallback } from "@/lib/api-client";
 import { getCountryConfig, getRecalibratedData } from "@/lib/static-data";
+import wdiNGA from "../../data/nga/wdi_labour.json";
+import wdiKEN from "../../data/ken/wdi_labour.json";
+import wdiIND from "../../data/ind/wdi_labour.json";
+import wdiRWA from "../../data/rwa/wdi_labour.json";
 
 // ─────────────────────────────────────────────────────────────
 // Route
@@ -48,6 +52,72 @@ export const Route = createFileRoute("/compare")({
 const API = import.meta.env.VITE_API_URL || "";
 
 const ALL_COUNTRIES = getAllCountryThemes();
+
+// ─────────────────────────────────────────────────────────────
+// Country-config → flat metric shape used by the compare UI.
+// The raw country_config_*.json files are nested (`automation.calibration_factor`,
+// no `wdi` block), but this page reads `config.calibration_factor`,
+// `config.hci`, and `config.wdi.*`. We bridge the two here so the UI
+// stays simple and the data files stay canonical.
+// ─────────────────────────────────────────────────────────────
+
+type RawWdiLabour = {
+  macro?: { gdp_per_capita_usd?: { value?: number } };
+  labour_market?: {
+    youth_unemployment_rate_pct?: { value?: number };
+    labour_force_participation_pct?: { value?: number };
+    female_labour_participation_pct?: { value?: number };
+  };
+  education?: { human_capital_index?: { value?: number } };
+  digital?: { internet_penetration_pct?: { value?: number } };
+};
+
+const WDI_LABOUR_BY_ISO: Record<string, RawWdiLabour> = {
+  NGA: wdiNGA as RawWdiLabour,
+  KEN: wdiKEN as RawWdiLabour,
+  IND: wdiIND as RawWdiLabour,
+  RWA: wdiRWA as RawWdiLabour,
+  // Ghana has no wdi_labour.json yet — supply the same shape inline so
+  // the comparison UI is fully populated without a separate fetch.
+  GHA: {
+    macro: { gdp_per_capita_usd: { value: 2238 } },
+    labour_market: {
+      youth_unemployment_rate_pct: { value: 8.5 },
+      labour_force_participation_pct: { value: 67.0 },
+      female_labour_participation_pct: { value: 63.4 },
+    },
+    education: { human_capital_index: { value: 0.45 } },
+    digital: { internet_penetration_pct: { value: 68.2 } },
+  },
+};
+
+function enrichConfig(iso3: string, raw: unknown) {
+  if (!raw || typeof raw !== "object") return raw;
+  const cfg = raw as Record<string, unknown>;
+  const wdiRaw = WDI_LABOUR_BY_ISO[iso3.toUpperCase()] ?? {};
+  const educationProjections =
+    (cfg.educationProjections as CountryConfig["educationProjections"] | undefined) ??
+    (cfg.education_projections as CountryConfig["educationProjections"] | undefined);
+  const wdi = {
+    gdp_per_capita: wdiRaw.macro?.gdp_per_capita_usd?.value,
+    youth_unemployment: wdiRaw.labour_market?.youth_unemployment_rate_pct?.value,
+    labour_force_participation:
+      wdiRaw.labour_market?.labour_force_participation_pct?.value
+      ?? wdiRaw.labour_market?.female_labour_participation_pct?.value,
+    literacy_rate:
+      (cfg.literacy_rate_wdi as { value?: number } | undefined)?.value,
+    internet_penetration: wdiRaw.digital?.internet_penetration_pct?.value,
+  };
+  return {
+    ...cfg,
+    calibration_factor:
+      (cfg.automation as { calibration_factor?: number } | undefined)
+        ?.calibration_factor,
+    educationProjections,
+    hci: wdiRaw.education?.human_capital_index?.value,
+    wdi,
+  };
+}
 
 // 5 selected ISCO-08 codes for the occupation comparison table
 const SELECTED_ISOS = ["7422", "4110", "2330", "5321", "8343"] as const;
@@ -123,7 +193,9 @@ function useCountryData(iso3: string): CountryData {
     const fetchConfig = fetchWithFallback(
       `/api/country/${iso3}`,
       () => getCountryConfig(iso3),
-    ).catch(() => null);
+    )
+      .then((cfg) => enrichConfig(iso3, cfg))
+      .catch(() => null);
 
     const fetchRisks = Promise.all(
       SELECTED_ISOS.map((isco) =>
@@ -133,11 +205,15 @@ function useCountryData(iso3: string): CountryData {
             const rd = getRecalibratedData(iso3, isco);
             const occ = rd.occupations?.[0];
             if (!occ) return null;
+            const calibrationFactor =
+              "calibration_factor" in rd
+                ? (rd as { calibration_factor: number }).calibration_factor
+                : 0;
             return {
               isco08: isco,
               base_risk: occ.original_frey_osborne,
               recalibrated_risk: occ.recalibrated_probability,
-              calibration_factor: rd.calibration_factor,
+              calibration_factor: calibrationFactor,
             };
           },
         )
@@ -148,7 +224,7 @@ function useCountryData(iso3: string): CountryData {
 
     Promise.all([fetchConfig, fetchRisks])
       .then(([cfg, riskResults]) => {
-        setConfig(cfg);
+        setConfig(cfg as unknown as CountryConfig | null);
         const riskMap: Record<string, RecalibratedRisk> = {};
         for (const { isco, data } of riskResults) {
           if (data) riskMap[isco] = data;
@@ -235,7 +311,8 @@ function CountrySelector({
           className="w-full appearance-none rounded-lg border-2 border-border bg-background pl-10 pr-10 py-3 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 transition-colors"
           style={{
             borderColor: `hsl(${themeColor})`,
-            focusRingColor: `hsl(${themeColor})`,
+            // `focusRingColor` is not a real CSS property; the focus ring is
+            // handled by Tailwind's focus:ring utilities above.
           }}
         >
           {ALL_COUNTRIES.filter((c) => c.iso3 !== excludeIso).map((c) => (

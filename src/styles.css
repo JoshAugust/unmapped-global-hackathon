@@ -187,4 +187,67 @@
   .ticker-rule {
     background-image: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 8px);
   }
+
+  /* Skip-to-content link: invisible until focused. */
+  .sr-only-focusable {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  .sr-only-focusable:focus,
+  .sr-only-focusable:focus-visible {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 12px color-mix(in oklab, var(--ink) 30%, transparent);
+  }
+}
+
+/* ── Global focus-visible outline using --cobalt ── */
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── Presenter mode (?present=1): hide chrome, bump type ── */
+html[data-presenter="true"] [data-presenter-hide="true"] {
+  display: none !important;
+}
+html[data-presenter="true"] body {
+  font-size: 1.075rem;
+}
+html[data-presenter="true"] h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+}
+html[data-presenter="true"] h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem) !important;
+}
+
+/* ── Print: clean exports for /results, hide chrome ── */
+@media print {
+  [data-presenter-hide="true"],
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  main {
+    padding: 0 !important;
+  }
 }
