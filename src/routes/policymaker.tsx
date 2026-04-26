@@ -280,6 +280,9 @@ function FilterBar({
   setGender,
   education,
   setEducation,
+  isMobile,
+  filtersOpen,
+  setFiltersOpen,
 }: {
   regions: string[];
   region: string;
@@ -290,9 +293,65 @@ function FilterBar({
   setGender: (g: string) => void;
   education: string;
   setEducation: (e: string) => void;
+  isMobile?: boolean;
+  filtersOpen?: boolean;
+  setFiltersOpen?: (v: boolean) => void;
 }) {
   const selectClass =
     "rounded-md border border-line bg-paper px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-cobalt";
+
+  if (isMobile) {
+    return (
+      <div className="rounded-lg border border-line bg-sand/40">
+        <button
+          type="button"
+          onClick={() => setFiltersOpen?.(!filtersOpen)}
+          className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold"
+        >
+          <span>🔽 Filters</span>
+          <span className="text-muted-foreground text-xs">{filtersOpen ? "Hide" : "Show"}</span>
+        </button>
+        {filtersOpen && (
+          <div className="flex flex-col gap-3 px-4 pb-4">
+            <div className="flex flex-col gap-1">
+              <label className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Region</label>
+              <select className={selectClass} value={region} onChange={(e) => setRegion(e.target.value)}>
+                {regions.map((r) => <option key={r} value={r}>{r}</option>)}
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Age Band</label>
+              <select className={selectClass} value={ageBand} onChange={(e) => setAgeBand(e.target.value)}>
+                <option value="all">All (18-28)</option>
+                <option value="18-21">18-21</option>
+                <option value="22-25">22-25</option>
+                <option value="26-28">26-28</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Gender</label>
+              <select className={selectClass} value={gender} onChange={(e) => setGender(e.target.value)}>
+                <option value="all">All</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Education</label>
+              <select className={selectClass} value={education} onChange={(e) => setEducation(e.target.value)}>
+                <option value="all">All</option>
+                <option value="none">No formal</option>
+                <option value="primary">Primary</option>
+                <option value="secondary">Secondary</option>
+                <option value="tertiary">Tertiary</option>
+              </select>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-wrap gap-3 rounded-lg border border-line bg-sand/40 p-4">
       <div className="flex flex-col gap-1">
@@ -374,7 +433,7 @@ function HeadlineCard({
 }
 
 // ─── Skill heatmap ──────────────────────────────────────────
-function SkillGapHeatmap() {
+function SkillGapHeatmap({ isMobile }: { isMobile?: boolean }) {
   return (
     <section className="space-y-4">
       <div className="flex items-center gap-2">
@@ -386,7 +445,7 @@ function SkillGapHeatmap() {
         />
       </div>
 
-      <div className="overflow-x-auto">
+      <div className={isMobile ? "overflow-x-auto -mx-3 px-3" : "overflow-x-auto"}>
         <div className="min-w-[500px]">
           {/* Header row */}
           <div className="grid grid-cols-[1fr_120px_120px_100px] gap-1 mb-2">
@@ -450,16 +509,17 @@ function SkillGapHeatmap() {
 }
 
 // ─── Sector demand chart ────────────────────────────────────
-function SectorDemandChart() {
+function SectorDemandChart({ isMobile }: { isMobile?: boolean }) {
   return (
     <section className="space-y-4">
       <div className="flex items-center gap-2">
         <h2 className="font-display text-xl font-bold">Sector Demand &amp; Supply</h2>
         <DataSource compact {...SOURCES.ILOSTAT_2024} />
       </div>
-      <div className="h-80">
+      <div className={isMobile ? "overflow-x-auto -mx-3" : ""}>
+      <div className={isMobile ? "h-48 min-w-[480px] px-3" : "h-80"}>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={SECTOR_DATA} layout="vertical" margin={{ left: 120 }}>
+          <BarChart data={SECTOR_DATA} layout="vertical" margin={{ left: isMobile ? 80 : 120 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--color-line, #e5e7eb)" />
             <XAxis type="number" domain={[0, 35]} unit="%" tick={{ fontSize: 11 }} />
             <YAxis
@@ -487,6 +547,7 @@ function SectorDemandChart() {
           </BarChart>
         </ResponsiveContainer>
       </div>
+      </div>
       <p className="text-sm text-muted-foreground italic">
         ICT services represent the largest skills gap. Agriculture alignment is strong but
         offers limited wage growth.
@@ -499,9 +560,11 @@ function SectorDemandChart() {
 function AutomationHistogram({
   cohort,
   calibration,
+  isMobile,
 }: {
   cohort: YouthProfile[];
   calibration: number;
+  isMobile?: boolean;
 }) {
   const bands = useMemo(() => {
     const b = [
@@ -546,7 +609,7 @@ function AutomationHistogram({
         · <span className="font-semibold text-amber-600">{medHighPct}%</span> of cohort in
         medium-to-high risk band
       </p>
-      <div className="h-64">
+      <div className={isMobile ? "h-48" : "h-64"}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={bands}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--color-line, #e5e7eb)" />
@@ -572,7 +635,7 @@ function AutomationHistogram({
 }
 
 // ─── Education trajectory ───────────────────────────────────
-function EducationTrajectoryChart({ iso3 }: { iso3: string }) {
+function EducationTrajectoryChart({ iso3, isMobile }: { iso3: string; isMobile?: boolean }) {
   const data = useMemo(() => getEducationTrajectory(iso3), [iso3]);
 
   return (
@@ -585,7 +648,7 @@ function EducationTrajectoryChart({ iso3 }: { iso3: string }) {
         Wittgenstein Centre SSP2 projections — 2025 (actual) vs 2035 (projected). Investment
         in secondary completion shifts outcomes most.
       </p>
-      <div className="h-72">
+      <div className={isMobile ? "h-48" : "h-72"}>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={data}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--color-line, #e5e7eb)" />
@@ -727,6 +790,11 @@ function PolicymakerDashboard() {
   const [ageBand, setAgeBand] = useState("all");
   const [gender, setGender] = useState("all");
   const [education, setEducation] = useState("all");
+  const [viewMode, setViewMode] = useState<"mobile" | "desktop">(() =>
+    typeof window !== "undefined" && window.innerWidth < 768 ? "mobile" : "desktop"
+  );
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const isMobile = viewMode === "mobile";
   const dashRef = useRef<HTMLDivElement>(null);
 
   const country = COUNTRY_LIST.find((c) => c.iso3 === selectedIso3) ?? COUNTRY_LIST[0];
@@ -802,35 +870,63 @@ function PolicymakerDashboard() {
         </>
       }
     >
-      <div className="space-y-10" ref={dashRef}>
+      <div className={`space-y-10 ${isMobile ? "px-0" : ""}`} ref={dashRef}>
         {/* ── HEADER: Country selector + view toggle ───────── */}
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap gap-2">
-            {COUNTRY_LIST.map((c) => (
+        <div className="flex flex-col gap-4">
+          {/* View mode toggle */}
+          <div className="flex items-center justify-end gap-2">
+            <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">View:</span>
+            <div className="flex rounded-full border border-line p-0.5 bg-paper">
               <button
-                key={c.iso3}
                 type="button"
-                onClick={() => handleCountryChange(c.iso3)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  c.iso3 === selectedIso3
-                    ? "bg-cobalt text-white"
-                    : "border border-line bg-paper hover:bg-sand"
+                onClick={() => setViewMode("mobile")}
+                className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
+                  isMobile ? "bg-cobalt text-white" : "text-muted-foreground hover:bg-sand"
                 }`}
               >
-                {c.flag} {c.name}
+                📱 Mobile
               </button>
-            ))}
+              <button
+                type="button"
+                onClick={() => setViewMode("desktop")}
+                className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
+                  !isMobile ? "bg-cobalt text-white" : "text-muted-foreground hover:bg-sand"
+                }`}
+              >
+                🖥️ Desktop
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-2 rounded-full border border-line p-1">
-            <Link
-              to="/passport"
-              className="rounded-full px-4 py-1.5 text-sm font-medium text-muted-foreground hover:bg-sand transition-colors"
-            >
-              View as youth
-            </Link>
-            <span className="rounded-full bg-cobalt px-4 py-1.5 text-sm font-medium text-white">
-              View as policymaker
-            </span>
+
+          {/* Country pills + perspective toggle */}
+          <div className={`flex gap-4 ${isMobile ? "flex-col" : "flex-row items-center justify-between"}`}>
+            <div className={`flex gap-2 ${isMobile ? "flex-wrap [&>*]:basis-[calc(50%-4px)]" : "flex-wrap"}`}>
+              {COUNTRY_LIST.map((c) => (
+                <button
+                  key={c.iso3}
+                  type="button"
+                  onClick={() => handleCountryChange(c.iso3)}
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                    c.iso3 === selectedIso3
+                      ? "bg-cobalt text-white"
+                      : "border border-line bg-paper hover:bg-sand"
+                  } ${isMobile ? "flex-1 text-center" : ""}`}
+                >
+                  {c.flag} {c.name}
+                </button>
+              ))}
+            </div>
+            <div className={`flex items-center gap-2 rounded-full border border-line p-1 ${isMobile ? "w-full justify-center" : ""}`}>
+              <Link
+                to="/passport"
+                className={`rounded-full px-4 py-1.5 text-sm font-medium text-muted-foreground hover:bg-sand transition-colors ${isMobile ? "flex-1 text-center" : ""}`}
+              >
+                View as youth
+              </Link>
+              <span className={`rounded-full bg-cobalt px-4 py-1.5 text-sm font-medium text-white ${isMobile ? "flex-1 text-center" : ""}`}>
+                View as policymaker
+              </span>
+            </div>
           </div>
         </div>
 
@@ -845,12 +941,15 @@ function PolicymakerDashboard() {
           setGender={setGender}
           education={education}
           setEducation={setEducation}
+          isMobile={isMobile}
+          filtersOpen={filtersOpen}
+          setFiltersOpen={setFiltersOpen}
         />
 
         {/* ── STEP 1: Cohort Overview (4 headline cards) ──── */}
-        <section className="space-y-4">
+        <section className={`space-y-4 ${isMobile ? "px-0" : ""}`}>
           <h2 className="font-display text-xl font-bold">Cohort Overview</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2 lg:grid-cols-4"}`}>
             <HeadlineCard
               icon={<Users className="h-5 w-5" />}
               value={`${stats.count}`}
@@ -875,29 +974,29 @@ function PolicymakerDashboard() {
               accent="text-amber-600"
             />
           </div>
-          <p className="text-sm text-muted-foreground italic border-l-2 border-cobalt pl-4">
+          <p className={`${isMobile ? "text-base" : "text-sm"} text-muted-foreground italic border-l-2 border-cobalt pl-4`}>
             This cohort has more skills than the formal economy recognises. Two in five face
             meaningful AI disruption in the next decade.
           </p>
         </section>
 
         {/* ── STEP 2: Skill Gap Heatmap ───────────────────── */}
-        <SkillGapHeatmap />
+        <SkillGapHeatmap isMobile={isMobile} />
 
         {/* ── STEP 3: Sector Demand & Supply ──────────────── */}
-        <SectorDemandChart />
+        <SectorDemandChart isMobile={isMobile} />
 
         {/* ── STEP 4: Automation Exposure Distribution ────── */}
-        <AutomationHistogram cohort={filteredCohort} calibration={calibration} />
+        <AutomationHistogram cohort={filteredCohort} calibration={calibration} isMobile={isMobile} />
 
         {/* ── STEP 5: Education Trajectory ────────────────── */}
-        <EducationTrajectoryChart iso3={selectedIso3} />
+        <EducationTrajectoryChart iso3={selectedIso3} isMobile={isMobile} />
 
         {/* ── STEP 7: Export ──────────────────────────────── */}
-        <section className="flex flex-wrap gap-3 pt-2">
+        <section className={`flex gap-3 pt-2 ${isMobile ? "flex-col" : "flex-wrap"}`}>
           <button
             type="button"
-            className="inline-flex items-center gap-2 rounded-md bg-cobalt px-5 py-2.5 text-sm font-semibold text-white hover:bg-cobalt/90 transition-colors"
+            className={`inline-flex items-center justify-center gap-2 rounded-md bg-cobalt px-5 py-2.5 text-sm font-semibold text-white hover:bg-cobalt/90 transition-colors ${isMobile ? "w-full" : ""}`}
             onClick={() =>
               exportPDF(dashRef, country.name, {
                 medianAge: stats.medianAge,
@@ -911,7 +1010,7 @@ function PolicymakerDashboard() {
           </button>
           <button
             type="button"
-            className="inline-flex items-center gap-2 rounded-md border border-line bg-paper px-5 py-2.5 text-sm font-semibold hover:bg-sand transition-colors"
+            className={`inline-flex items-center justify-center gap-2 rounded-md border border-line bg-paper px-5 py-2.5 text-sm font-semibold hover:bg-sand transition-colors ${isMobile ? "w-full" : ""}`}
             onClick={() => downloadCohortJSON(filteredCohort, country.name)}
           >
             <Download className="h-4 w-4" />
